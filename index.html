@@ -1,0 +1,481 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>StockPicker — Daily Picks Tracker</title>
+  <style>
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+
+    body {
+      background: #060b14;
+      color: #c9d1d9;
+      font-family: 'SF Mono', 'Fira Code', 'Consolas', 'Menlo', monospace;
+      font-size: 13px;
+      min-height: 100vh;
+    }
+
+    /* ── Header ─────────────────────────────────────────── */
+    .header {
+      background: #0d1117;
+      border-bottom: 1px solid #1e2d3d;
+      padding: 14px 24px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+    }
+    .logo {
+      font-size: 16px;
+      font-weight: bold;
+      color: #f0f6ff;
+      letter-spacing: 2px;
+      text-transform: uppercase;
+    }
+    .logo span { color: #00d4aa; }
+    .header-right { text-align: right; }
+    .header-meta { font-size: 10px; color: #3d5166; margin-top: 2px; }
+
+    /* ── Stats bar ──────────────────────────────────────── */
+    .stats-bar {
+      background: #0a0f1e;
+      border-bottom: 1px solid #111c2e;
+      padding: 10px 24px;
+      display: flex;
+      gap: 36px;
+      flex-wrap: wrap;
+      align-items: center;
+    }
+    .stat { display: flex; flex-direction: column; gap: 1px; }
+    .stat-label {
+      font-size: 9px;
+      text-transform: uppercase;
+      letter-spacing: 1.2px;
+      color: #3d5166;
+    }
+    .stat-value { font-size: 20px; font-weight: bold; color: #e2e8f0; }
+    .stat-value.green { color: #00d4aa; }
+    .stat-value.red   { color: #f87171; }
+    .stat-value.dim   { color: #64748b; }
+
+    /* ── Toolbar ─────────────────────────────────────────── */
+    .toolbar {
+      background: #060b14;
+      padding: 10px 24px;
+      display: flex;
+      align-items: center;
+      gap: 16px;
+      border-bottom: 1px solid #0f1923;
+    }
+    .filter-btn {
+      background: #0d1424;
+      border: 1px solid #1e2d3d;
+      color: #64748b;
+      padding: 4px 12px;
+      border-radius: 4px;
+      font-size: 10px;
+      font-family: inherit;
+      text-transform: uppercase;
+      letter-spacing: 0.5px;
+      cursor: pointer;
+    }
+    .filter-btn.active, .filter-btn:hover {
+      border-color: #00d4aa;
+      color: #00d4aa;
+      background: #042b24;
+    }
+
+    /* ── Table ───────────────────────────────────────────── */
+    .table-wrap {
+      padding: 16px 24px;
+      overflow-x: auto;
+    }
+
+    table { width: 100%; border-collapse: collapse; min-width: 1100px; }
+
+    thead th {
+      background: #0d1117;
+      color: #3d5166;
+      font-size: 9px;
+      text-transform: uppercase;
+      letter-spacing: 1px;
+      padding: 9px 12px;
+      text-align: left;
+      border-bottom: 1px solid #1e2d3d;
+      white-space: nowrap;
+      cursor: pointer;
+      user-select: none;
+    }
+    thead th:hover { color: #60a5fa; }
+    thead th.sort-asc::after  { content: ' \2191'; color: #00d4aa; }
+    thead th.sort-desc::after { content: ' \2193'; color: #00d4aa; }
+
+    tbody tr { border-bottom: 1px solid #0d1424; transition: background 0.08s; }
+    tbody tr:hover { background: #0a1020; }
+    td { padding: 11px 12px; vertical-align: middle; }
+
+    /* Ticker */
+    .ticker-link {
+      font-size: 15px;
+      font-weight: bold;
+      color: #60a5fa;
+      text-decoration: none;
+      letter-spacing: 0.5px;
+    }
+    .ticker-link:hover { color: #93c5fd; }
+    .theme-label { font-size: 9px; color: #3d5166; margin-top: 3px; letter-spacing: 0.3px; }
+
+    /* Conviction badge */
+    .badge {
+      display: inline-block;
+      padding: 2px 8px;
+      border-radius: 10px;
+      font-size: 9px;
+      font-weight: bold;
+      text-transform: uppercase;
+      letter-spacing: 0.8px;
+    }
+    .badge-sb  { background: #042b24; color: #00d4aa; border: 1px solid #065f46; }
+    .badge-buy { background: #0c1f3f; color: #60a5fa; border: 1px solid #1e3a6e; }
+    .badge-w   { background: #111827; color: #64748b; border: 1px solid #1e2d3d; }
+
+    /* Prices */
+    .price { color: #e2e8f0; font-size: 13px; white-space: nowrap; }
+    .price-sub { font-size: 10px; color: #3d5166; margin-top: 2px; }
+
+    /* Return */
+    .ret-pos  { color: #00d4aa; font-size: 15px; font-weight: bold; }
+    .ret-neg  { color: #f87171; font-size: 15px; font-weight: bold; }
+    .ret-zero { color: #64748b; font-size: 15px; font-weight: bold; }
+
+    /* Target upside */
+    .tgt-pos { color: #34d399; font-size: 12px; }
+    .tgt-neg { color: #f87171; font-size: 12px; }
+    .tgt-dim { color: #3d5166; font-size: 12px; }
+
+    /* Signals */
+    .sig-wrap { display: flex; flex-wrap: wrap; gap: 3px; max-width: 200px; }
+    .sig {
+      background: #0d1424;
+      border: 1px solid #1a2744;
+      border-radius: 3px;
+      padding: 1px 5px;
+      font-size: 9px;
+      color: #60a5fa;
+      white-space: nowrap;
+    }
+
+    /* Macro */
+    .macro-cell { font-size: 11px; white-space: nowrap; }
+    .risk-on  { color: #00d4aa; }
+    .risk-off { color: #f87171; }
+
+    /* Status dot */
+    .dot-open   { color: #00d4aa; }
+    .dot-closed { color: #3d5166; }
+
+    /* Mktcap / days */
+    .dim12 { color: #3d5166; font-size: 12px; }
+
+    /* Empty / loading */
+    #loading, #empty-state {
+      text-align: center;
+      padding: 60px 24px;
+      color: #3d5166;
+    }
+    #empty-state .empty-title { font-size: 16px; color: #60a5fa; margin-bottom: 8px; }
+
+    /* Footer */
+    .footer {
+      border-top: 1px solid #0f1923;
+      padding: 10px 24px;
+      font-size: 10px;
+      color: #1e2d3d;
+      text-align: center;
+      letter-spacing: 0.5px;
+    }
+  </style>
+</head>
+<body>
+
+<!-- Header -->
+<div class="header">
+  <div>
+    <div class="logo">STOCK<span>PICKER</span></div>
+    <div class="header-meta" id="last-updated">Loading...</div>
+  </div>
+  <div class="header-right">
+    <div style="font-size:11px;color:#60a5fa;" id="pick-count">—</div>
+    <div class="header-meta">prices from last script run</div>
+  </div>
+</div>
+
+<!-- Stats bar -->
+<div class="stats-bar">
+  <div class="stat">
+    <div class="stat-label">Total Picks</div>
+    <div class="stat-value dim" id="s-total">—</div>
+  </div>
+  <div class="stat">
+    <div class="stat-label">Win Rate</div>
+    <div class="stat-value" id="s-wr">—</div>
+  </div>
+  <div class="stat">
+    <div class="stat-label">Avg Return</div>
+    <div class="stat-value" id="s-avg">—</div>
+  </div>
+  <div class="stat">
+    <div class="stat-label">Best Pick</div>
+    <div class="stat-value green" id="s-best">—</div>
+  </div>
+  <div class="stat">
+    <div class="stat-label">Worst Pick</div>
+    <div class="stat-value red" id="s-worst">—</div>
+  </div>
+  <div class="stat">
+    <div class="stat-label">Avg Days Held</div>
+    <div class="stat-value dim" id="s-days">—</div>
+  </div>
+  <div class="stat">
+    <div class="stat-label">Open Positions</div>
+    <div class="stat-value dim" id="s-open">—</div>
+  </div>
+</div>
+
+<!-- Toolbar -->
+<div class="toolbar">
+  <button class="filter-btn active" onclick="setFilter('all', this)">All</button>
+  <button class="filter-btn" onclick="setFilter('Open', this)">Open</button>
+  <button class="filter-btn" onclick="setFilter('Strong Buy', this)">Strong Buy</button>
+  <button class="filter-btn" onclick="setFilter('Buy', this)">Buy</button>
+  <span style="margin-left:auto;font-size:10px;color:#3d5166;" id="row-count"></span>
+</div>
+
+<!-- Table -->
+<div class="table-wrap">
+  <div id="loading">Loading picks...</div>
+  <table id="picks-table" style="display:none;">
+    <thead>
+      <tr>
+        <th onclick="sortBy('date')">Date</th>
+        <th onclick="sortBy('ticker')">Ticker</th>
+        <th>Conviction</th>
+        <th onclick="sortBy('entry_price')">Entry</th>
+        <th onclick="sortBy('cur_price')">Current</th>
+        <th onclick="sortBy('pct_chg')">Return</th>
+        <th onclick="sortBy('analyst_target')">Target</th>
+        <th onclick="sortBy('tgt_upside_rem')">Tgt Upside</th>
+        <th onclick="sortBy('implied_upside_at_entry')">Upside @ Entry</th>
+        <th onclick="sortBy('days_held')">Days</th>
+        <th onclick="sortBy('mktcap')">Mkt Cap</th>
+        <th>VIX / Macro</th>
+        <th>Signals</th>
+        <th>Status</th>
+      </tr>
+    </thead>
+    <tbody id="picks-body"></tbody>
+  </table>
+  <div id="empty-state" style="display:none;">
+    <div class="empty-title">No picks yet</div>
+    <div>Run stock_alert.py to log the first pick</div>
+  </div>
+</div>
+
+<div class="footer">STOCKPICKER &nbsp;·&nbsp; NOT FINANCIAL ADVICE &nbsp;·&nbsp; DATA FROM LAST SCRIPT RUN</div>
+
+<script>
+let allPicks   = [];
+let sortKey    = 'date';
+let sortDir    = -1;
+let activeFilter = 'all';
+
+async function loadPicks() {
+  try {
+    const res = await fetch('data/picks.json?t=' + Date.now());
+    if (!res.ok) throw new Error('not found');
+    allPicks = await res.json();
+    render();
+  } catch (e) {
+    document.getElementById('loading').textContent =
+      'No picks data yet — run the script to populate.';
+  }
+}
+
+/* ── Formatting helpers ──────────────────────────────── */
+function fmtPrice(v) {
+  return (v && v > 0) ? '$' + parseFloat(v).toFixed(2) : '—';
+}
+function fmtMktCap(v) {
+  if (!v || v === 0) return '—';
+  if (v >= 1e12) return '$' + (v / 1e12).toFixed(2) + 'T';
+  if (v >= 1e9)  return '$' + (v / 1e9).toFixed(1)  + 'B';
+  if (v >= 1e6)  return '$' + (v / 1e6).toFixed(0)  + 'M';
+  return '$' + v;
+}
+function daysSince(d) {
+  return Math.max(0, Math.floor((Date.now() - new Date(d + 'T00:00:00').getTime()) / 86400000));
+}
+function convBadge(c) {
+  if (c === 'Strong Buy') return `<span class="badge badge-sb">Strong Buy</span>`;
+  if (c === 'Buy')        return `<span class="badge badge-buy">Buy</span>`;
+  return                         `<span class="badge badge-w">Watch</span>`;
+}
+
+/* ── Stats ───────────────────────────────────────────── */
+function renderStats(picks) {
+  const n = picks.length;
+  document.getElementById('s-total').textContent = n;
+  document.getElementById('pick-count').textContent = n + ' picks tracked';
+
+  if (n === 0) return;
+
+  const rets  = picks.map(p => p.pct_chg || 0);
+  const wins  = rets.filter(r => r > 0).length;
+  const avg   = rets.reduce((a, b) => a + b, 0) / n;
+  const best  = Math.max(...rets);
+  const worst = Math.min(...rets);
+  const avgD  = picks.reduce((a, p) => a + daysSince(p.date), 0) / n;
+  const open  = picks.filter(p => (p.status || 'Open') === 'Open').length;
+
+  const bestTicker  = picks[rets.indexOf(best)]?.ticker  || '';
+  const worstTicker = picks[rets.indexOf(worst)]?.ticker || '';
+
+  const wrEl  = document.getElementById('s-wr');
+  wrEl.textContent = (wins / n * 100).toFixed(0) + '%';
+  wrEl.className   = 'stat-value ' + (wins / n >= 0.5 ? 'green' : 'red');
+
+  const avgEl = document.getElementById('s-avg');
+  avgEl.textContent = (avg >= 0 ? '+' : '') + avg.toFixed(1) + '%';
+  avgEl.className   = 'stat-value ' + (avg >= 0 ? 'green' : 'red');
+
+  document.getElementById('s-best').textContent  = bestTicker + ' +' + best.toFixed(1) + '%';
+  document.getElementById('s-worst').textContent = worstTicker + ' ' + worst.toFixed(1) + '%';
+  document.getElementById('s-days').textContent  = avgD.toFixed(0) + 'd';
+  document.getElementById('s-open').textContent  = open;
+
+  const dates = picks.map(p => p.last_price_update || p.date).sort().reverse();
+  document.getElementById('last-updated').textContent = 'Last updated: ' + (dates[0] || '—');
+}
+
+/* ── Table rows ──────────────────────────────────────── */
+function renderTable(picks) {
+  const tbody = document.getElementById('picks-body');
+  tbody.innerHTML = '';
+
+  picks.forEach(p => {
+    const pct     = p.pct_chg || 0;
+    const pctCls  = pct > 0 ? 'ret-pos' : (pct < 0 ? 'ret-neg' : 'ret-zero');
+    const pctStr  = (pct >= 0 ? '▲ +' : '▼ ') + pct.toFixed(1) + '%';
+
+    const cur  = p.cur_price    || 0;
+    const tgt  = p.analyst_target || 0;
+    const tgtU = (tgt > 0 && cur > 0) ? (tgt - cur) / cur * 100 : null;
+    const tgtHtml = tgtU !== null
+      ? `<span class="${tgtU >= 0 ? 'tgt-pos' : 'tgt-neg'}">${tgtU >= 0 ? '+' : ''}${tgtU.toFixed(1)}%</span><div class="tgt-dim">${fmtPrice(tgt)}</div>`
+      : '<span class="tgt-dim">—</span>';
+
+    const entryU = p.implied_upside_at_entry;
+    const entryUHtml = entryU != null
+      ? `<span class="${entryU >= 25 ? 'tgt-pos' : 'tgt-dim'}">${entryU >= 0 ? '+' : ''}${entryU.toFixed(1)}%</span>`
+      : '<span class="tgt-dim">—</span>';
+
+    const signals = (p.signals || []).slice(0, 6).map(s =>
+      `<span class="sig">${s.replace(/_/g, ' ')}</span>`
+    ).join('');
+
+    const vix      = p.vix_at_entry;
+    const vixColor = vix > 30 ? '#f87171' : (vix > 20 ? '#fbbf24' : '#00d4aa');
+    const riskHtml = p.risk_on_at_entry
+      ? '<span class="risk-on">RISK ON</span>'
+      : '<span class="risk-off">RISK OFF</span>';
+
+    const status   = p.status || 'Open';
+    const dotClass = status === 'Open' ? 'dot-open' : 'dot-closed';
+
+    const tr = document.createElement('tr');
+    tr.innerHTML = `
+      <td><span class="dim12">${p.date}</span></td>
+      <td>
+        <a class="ticker-link" href="https://finviz.com/quote.ashx?t=${p.ticker}" target="_blank">${p.ticker}</a>
+        <div class="theme-label">${(p.theme || '').replace(' / ', ' / ')}</div>
+      </td>
+      <td>${convBadge(p.conviction)}</td>
+      <td class="price">${fmtPrice(p.entry_price)}</td>
+      <td class="price">
+        ${fmtPrice(p.cur_price)}
+        <div class="price-sub">${p.last_price_update ? 'as of ' + p.last_price_update : ''}</div>
+      </td>
+      <td><span class="${pctCls}">${pctStr}</span></td>
+      <td>${tgtHtml}</td>
+      <td>${tgtHtml !== '<span class="tgt-dim">—</span>' ? tgtHtml : '<span class="tgt-dim">—</span>'}</td>
+      <td>${entryUHtml}</td>
+      <td class="dim12">${daysSince(p.date)}d</td>
+      <td class="dim12">${fmtMktCap(p.mktcap)}</td>
+      <td class="macro-cell">
+        <span style="color:${vixColor}">VIX ${vix != null ? vix : '—'}</span>
+        &nbsp;${riskHtml}
+        <div class="dim12">10Y ${p.yield_10y_at_entry != null ? p.yield_10y_at_entry + '%' : '—'}</div>
+      </td>
+      <td><div class="sig-wrap">${signals}</div></td>
+      <td><span class="${dotClass}">&#9679; ${status}</span></td>
+    `;
+    tbody.appendChild(tr);
+  });
+}
+
+/* ── Full render ─────────────────────────────────────── */
+function render() {
+  let picks = [...allPicks];
+
+  // Filter
+  if (activeFilter === 'Open') {
+    picks = picks.filter(p => (p.status || 'Open') === 'Open');
+  } else if (activeFilter === 'Strong Buy' || activeFilter === 'Buy') {
+    picks = picks.filter(p => p.conviction === activeFilter);
+  }
+
+  // Sort
+  picks.sort((a, b) => {
+    let av = a[sortKey], bv = b[sortKey];
+    if (sortKey === 'days_held') { av = daysSince(a.date); bv = daysSince(b.date); }
+    if (sortKey === 'tgt_upside_rem') {
+      const ac = a.cur_price, at = a.analyst_target;
+      const bc = b.cur_price, bt = b.analyst_target;
+      av = (ac && at) ? (at - ac) / ac : -999;
+      bv = (bc && bt) ? (bt - bc) / bc : -999;
+    }
+    if (typeof av === 'string') return sortDir * av.localeCompare(bv || '');
+    return sortDir * ((av || 0) - (bv || 0));
+  });
+
+  renderStats(allPicks);
+  renderTable(picks);
+
+  document.getElementById('row-count').textContent = picks.length + ' rows';
+  document.getElementById('loading').style.display       = 'none';
+  document.getElementById('empty-state').style.display   = picks.length === 0 ? 'block' : 'none';
+  document.getElementById('picks-table').style.display   = picks.length > 0   ? 'table' : 'none';
+}
+
+/* ── Sort ────────────────────────────────────────────── */
+function sortBy(key) {
+  if (sortKey === key) sortDir *= -1;
+  else { sortKey = key; sortDir = -1; }
+  document.querySelectorAll('thead th').forEach(th => th.classList.remove('sort-asc', 'sort-desc'));
+  const keys = ['date','ticker',null,'entry_price','cur_price','pct_chg','analyst_target','tgt_upside_rem','implied_upside_at_entry','days_held','mktcap',null,null,null];
+  const idx = keys.indexOf(key);
+  if (idx >= 0) document.querySelectorAll('thead th')[idx].classList.add(sortDir === 1 ? 'sort-asc' : 'sort-desc');
+  render();
+}
+
+/* ── Filter ──────────────────────────────────────────── */
+function setFilter(f, btn) {
+  activeFilter = f;
+  document.querySelectorAll('.filter-btn').forEach(b => b.classList.remove('active'));
+  btn.classList.add('active');
+  render();
+}
+
+loadPicks();
+</script>
+</body>
+</html>
