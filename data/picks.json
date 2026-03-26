@@ -1,1 +1,37 @@
-[]
+[
+  {
+    "date": "2026-03-26",
+    "ticker": "VNRX",
+    "theme": "Nuclear / Next-Gen Energy",
+    "conviction": "Strong Buy",
+    "entry_price": 0.19,
+    "analyst_target": 2.06,
+    "implied_upside_at_entry": 976.8,
+    "mktcap": 25933648.0,
+    "vix_at_entry": 26.95,
+    "yield_10y_at_entry": 4.39,
+    "risk_on_at_entry": false,
+    "signals": [
+      "analyst_target",
+      "analyst_upside",
+      "insider_buys",
+      "days_to_catalyst",
+      "vol_ratio",
+      "pct_above_52w_low",
+      "pct_below_52w_high"
+    ],
+    "signal_values": {
+      "analyst_target": 2.06,
+      "analyst_upside": 976.8,
+      "insider_buys": 18,
+      "days_to_catalyst": 5,
+      "vol_ratio": 16.7,
+      "pct_above_52w_low": 12.5,
+      "pct_below_52w_high": 79.6
+    },
+    "status": "Open",
+    "cur_price": 0.19,
+    "pct_chg": 0.0,
+    "last_price_update": "2026-03-26"
+  }
+]
