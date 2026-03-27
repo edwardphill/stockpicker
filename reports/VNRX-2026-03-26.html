@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width,initial-scale=1.0">
+<title>StockPicker — VNRX 2026-03-26</title>
+<style>
+  *{box-sizing:border-box;margin:0;padding:0}
+  body{background:#060b14;color:#c9d1d9;font-family:Arial,sans-serif;font-size:14px;min-height:100vh}
+  .hdr{background:#0d1117;border-bottom:1px solid #1e2d3d;padding:16px 24px;display:flex;align-items:center;justify-content:space-between;flex-wrap:wrap;gap:10px}
+  .logo{font-size:16px;font-weight:bold;color:#f0f6ff;letter-spacing:2px;text-transform:uppercase}
+  .logo span{color:#00d4aa}
+  .badge{display:inline-block;padding:3px 12px;border-radius:12px;font-size:12px;font-weight:bold;text-transform:uppercase;background:#065f46;color:#00d4aa;border:1px solid #00d4aa;margin-right:8px}
+  .risk{display:inline-block;padding:3px 10px;border-radius:12px;font-size:11px;font-weight:bold;color:#f87171;border:1px solid #f87171}
+  .meta{font-size:11px;color:#3d5166;margin-top:6px}
+  .body{max-width:900px;margin:32px auto;padding:0 24px}
+  .card{background:#0d1117;border:1px solid #1e2d3d;border-radius:8px;padding:24px;margin-bottom:20px}
+  .card-title{font-size:11px;text-transform:uppercase;letter-spacing:1.5px;color:#3d5166;margin-bottom:16px;padding-bottom:8px;border-bottom:1px solid #0f1923}
+  .grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(160px,1fr));gap:16px}
+  .stat-label{font-size:10px;text-transform:uppercase;letter-spacing:1px;color:#3d5166;margin-bottom:4px}
+  .stat-value{font-size:22px;font-weight:bold;color:#e2e8f0}
+  .green{color:#00d4aa} .blue{color:#60a5fa} .dim{color:#64748b}
+  .note{background:#0a0f1e;border:1px solid #111c2e;border-radius:6px;padding:14px 18px;font-size:12px;color:#3d5166;margin-top:20px;line-height:1.6}
+  .print-btn{background:#0d1424;border:1px solid #1e2d3d;color:#64748b;padding:5px 14px;border-radius:4px;font-size:11px;cursor:pointer;font-family:inherit;text-transform:uppercase;letter-spacing:0.5px}
+  .print-btn:hover{border-color:#00d4aa;color:#00d4aa}
+  .back{color:#3d5166;font-size:11px;text-decoration:none}
+  .back:hover{color:#60a5fa}
+  @media print{.hdr button,.print-btn{display:none}body{background:white;color:black}.card{border-color:#ccc}.stat-value,.green,.blue{color:black!important}}
+</style>
+</head>
+<body>
+<div class="hdr">
+  <div>
+    <div class="logo">STOCK<span>PICKER</span> &nbsp;·&nbsp; <span style="color:#e2e8f0;font-size:15px;letter-spacing:1px">VNRX</span></div>
+    <div class="meta" style="margin-top:6px">2026-03-26 &nbsp;·&nbsp; <span class="badge">Strong Buy</span><span class="risk">RISK OFF</span></div>
+    <div class="meta" style="margin-top:4px">Nuclear / Next-Gen Energy</div>
+  </div>
+  <div style="display:flex;gap:10px;align-items:center">
+    <a href="../index.html" class="back">← Dashboard</a>
+    <button class="print-btn" onclick="window.print()">⎙ Save PDF</button>
+  </div>
+</div>
+
+<div class="body">
+  <div class="card">
+    <div class="card-title">Pick Summary</div>
+    <div class="grid">
+      <div>
+        <div class="stat-label">Entry Price</div>
+        <div class="stat-value">$0.19</div>
+        <div style="font-size:11px;color:#3d5166;margin-top:3px">at time of pick</div>
+      </div>
+      <div>
+        <div class="stat-label">Analyst Target</div>
+        <div class="stat-value green">$2.06</div>
+      </div>
+      <div>
+        <div class="stat-label">Implied Upside</div>
+        <div class="stat-value green">+984.2%</div>
+      </div>
+      <div>
+        <div class="stat-label">Market Cap</div>
+        <div class="stat-value dim">$26M</div>
+      </div>
+      <div>
+        <div class="stat-label">VIX @ Entry</div>
+        <div class="stat-value dim">26.95</div>
+      </div>
+      <div>
+        <div class="stat-label">10Y Yield @ Entry</div>
+        <div class="stat-value dim">4.39%</div>
+      </div>
+    </div>
+  </div>
+
+  <div class="card">
+    <div class="card-title">Signals Fired</div>
+    <div style="line-height:2"><span style="background:#0d1424;border:1px solid #1a2744;border-radius:3px;padding:2px 6px;font-size:11px;color:#60a5fa;margin:2px;display:inline-block;">analyst target</span><span style="background:#0d1424;border:1px solid #1a2744;border-radius:3px;padding:2px 6px;font-size:11px;color:#60a5fa;margin:2px;display:inline-block;">analyst upside</span><span style="background:#0d1424;border:1px solid #1a2744;border-radius:3px;padding:2px 6px;font-size:11px;color:#60a5fa;margin:2px;display:inline-block;">insider buys</span><span style="background:#0d1424;border:1px solid #1a2744;border-radius:3px;padding:2px 6px;font-size:11px;color:#60a5fa;margin:2px;display:inline-block;">days to catalyst</span><span style="background:#0d1424;border:1px solid #1a2744;border-radius:3px;padding:2px 6px;font-size:11px;color:#60a5fa;margin:2px;display:inline-block;">vol ratio</span><span style="background:#0d1424;border:1px solid #1a2744;border-radius:3px;padding:2px 6px;font-size:11px;color:#60a5fa;margin:2px;display:inline-block;">pct above 52w low</span><span style="background:#0d1424;border:1px solid #1a2744;border-radius:3px;padding:2px 6px;font-size:11px;color:#60a5fa;margin:2px;display:inline-block;">pct below 52w high</span></div>
+  </div>
+
+  <div class="note">
+    Full bull / bear analyst report was generated and sent via email on 2026-03-26.
+    Future picks will have the complete AI analysis displayed here.
+    &nbsp;·&nbsp;
+    <a href="https://finviz.com/quote.ashx?t=VNRX" target="_blank" style="color:#60a5fa">View on Finviz ↗</a>
+    &nbsp;·&nbsp;
+    <a href="https://finance.yahoo.com/quote/VNRX" target="_blank" style="color:#60a5fa">Yahoo Finance ↗</a>
+  </div>
+</div>
+</body>
+</html>
