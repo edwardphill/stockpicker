@@ -33,5 +33,42 @@
     "cur_price": 0.19,
     "pct_chg": 0.0,
     "last_price_update": "2026-03-26"
+  },
+  {
+    "date": "2026-03-27",
+    "ticker": "WVE",
+    "theme": "Nuclear / Next-Gen Energy",
+    "conviction": "Strong Buy",
+    "entry_price": 6.2,
+    "analyst_target": 28.8,
+    "implied_upside_at_entry": 364.5,
+    "mktcap": 1167180672.0,
+    "vix_at_entry": 25.33,
+    "yield_10y_at_entry": 4.33,
+    "risk_on_at_entry": false,
+    "signals": [
+      "analyst_target",
+      "analyst_upside",
+      "insider_buys",
+      "days_to_catalyst",
+      "vol_ratio",
+      "rev_accel",
+      "pct_above_52w_low",
+      "pct_below_52w_high"
+    ],
+    "signal_values": {
+      "analyst_target": 28.8,
+      "analyst_upside": 364.5,
+      "insider_buys": 3,
+      "days_to_catalyst": 41,
+      "vol_ratio": 15.4,
+      "rev_accel": 1.392,
+      "pct_above_52w_low": 23.5,
+      "pct_below_52w_high": 71.5
+    },
+    "status": "Open",
+    "cur_price": 6.2,
+    "pct_chg": 0.0,
+    "last_price_update": "2026-03-27"
   }
 ]
