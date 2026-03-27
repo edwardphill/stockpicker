@@ -396,10 +396,13 @@ function renderTable(picks) {
         <div class="theme-label">${(p.theme || '').replace(' / ', ' / ')}</div>
       </td>
       <td>${convBadge(p.conviction)}</td>
-      <td class="price">${fmtPrice(p.entry_price)}</td>
+      <td class="price">
+        ${fmtPrice(p.entry_price)}
+        <div class="price-sub">${p.entry_timestamp || p.date}</div>
+      </td>
       <td class="price">
         ${fmtPrice(p.cur_price)}
-        <div class="price-sub">${p.last_price_update ? 'as of ' + p.last_price_update : ''}</div>
+        <div class="price-sub">${p.last_price_update ? p.last_price_update : '—'}</div>
       </td>
       <td><span class="${pctCls}">${pctStr}</span></td>
       <td>${tgtHtml}</td>
