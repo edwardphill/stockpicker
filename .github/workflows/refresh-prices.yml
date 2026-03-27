@@ -1,0 +1,24 @@
+name: Refresh Stock Prices
+
+on:
+  schedule:
+    # Every 30 min Mon-Fri 9:30-16:30 ET (13:30-21:30 UTC)
+    - cron: '0,30 13,14,15,16,17,18,19,20,21 * * 1-5'
+  workflow_dispatch:   # manual trigger from GitHub UI
+
+jobs:
+  refresh:
+    runs-on: ubuntu-latest
+    permissions:
+      contents: write
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+      - name: Install deps
+        run: pip install yfinance
+      - name: Refresh prices
+        run: python scripts/refresh_prices.py
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
