@@ -268,7 +268,7 @@
         <th onclick="sortBy('date')">Date</th>
         <th onclick="sortBy('ticker')">Ticker</th>
         <th>Conviction</th>
-        <th onclick="sortBy('entry_price')">Entry</th>
+        <th onclick="sortBy('entry_price')">Entry @ Pick</th>
         <th onclick="sortBy('cur_price')">Current</th>
         <th onclick="sortBy('pct_chg')">Return</th>
         <th onclick="sortBy('analyst_target')">Target</th>
@@ -296,18 +296,6 @@ let allPicks   = [];
 let sortKey    = 'date';
 let sortDir    = -1;
 let activeFilter = 'all';
-
-async function loadPicks() {
-  try {
-    const res = await fetch('data/picks.json?t=' + Date.now());
-    if (!res.ok) throw new Error('not found');
-    allPicks = await res.json();
-    render();
-  } catch (e) {
-    document.getElementById('loading').textContent =
-      'No picks data yet — run the script to populate.';
-  }
-}
 
 /* ── Formatting helpers ──────────────────────────────── */
 function fmtPrice(v) {
@@ -404,7 +392,7 @@ function renderTable(picks) {
     tr.innerHTML = `
       <td><span class="dim12">${p.date}</span></td>
       <td>
-        <a class="ticker-link" href="https://finviz.com/quote.ashx?t=${p.ticker}" target="_blank">${p.ticker}</a>
+        <a class="ticker-link" href="${p.report_url || 'https://finviz.com/quote.ashx?t=' + p.ticker}" target="_blank">${p.ticker}</a>
         <div class="theme-label">${(p.theme || '').replace(' / ', ' / ')}</div>
       </td>
       <td>${convBadge(p.conviction)}</td>
@@ -482,6 +470,18 @@ function setFilter(f, btn) {
   document.querySelectorAll('.filter-btn').forEach(b => b.classList.remove('active'));
   btn.classList.add('active');
   render();
+}
+
+async function loadPicks() {
+  try {
+    const res = await fetch('data/picks.json?t=' + Date.now());
+    if (!res.ok) throw new Error('not found');
+    allPicks = await res.json();
+    render();
+  } catch (e) {
+    document.getElementById('loading').textContent =
+      'No picks data yet — run the script to populate.';
+  }
 }
 
 loadPicks();
