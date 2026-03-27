@@ -31,8 +31,8 @@
     },
     "status": "Open",
     "cur_price": 0.19,
-    "pct_chg": 0.0,
-    "last_price_update": "2026-03-26"
+    "pct_chg": 2.42,
+    "last_price_update": "2026-03-27 17:14 UTC"
   },
   {
     "date": "2026-03-27",
@@ -67,8 +67,8 @@
       "pct_below_52w_high": 71.5
     },
     "status": "Open",
-    "cur_price": 6.2,
-    "pct_chg": 0.0,
-    "last_price_update": "2026-03-27"
+    "cur_price": 6.72,
+    "pct_chg": 8.37,
+    "last_price_update": "2026-03-27 17:14 UTC"
   }
 ]
