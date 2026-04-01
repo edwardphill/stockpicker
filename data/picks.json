@@ -30,9 +30,9 @@
       "pct_below_52w_high": 79.6
     },
     "status": "Open",
-    "cur_price": 0.2,
-    "pct_chg": 6.32,
-    "last_price_update": "2026-03-31 22:01 UTC",
+    "cur_price": 0.19,
+    "pct_chg": 1.63,
+    "last_price_update": "2026-04-01 14:27 UTC",
     "report_url": "https://edwardphill.github.io/stockpicker/reports/VNRX-2026-03-26.html",
     "entry_timestamp": "2026-03-26 (time unknown)"
   },
@@ -69,9 +69,9 @@
       "pct_below_52w_high": 71.5
     },
     "status": "Open",
-    "cur_price": 7.25,
-    "pct_chg": 16.94,
-    "last_price_update": "2026-03-31 22:01 UTC",
+    "cur_price": 7.2,
+    "pct_chg": 16.05,
+    "last_price_update": "2026-04-01 14:27 UTC",
     "report_url": "https://edwardphill.github.io/stockpicker/reports/WVE-2026-03-27.html",
     "entry_timestamp": "2026-03-27 (time unknown)"
   }
