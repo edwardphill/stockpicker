@@ -154,5 +154,48 @@
     "pct_chg": 4.79,
     "last_price_update": "2026-04-14 14:45 UTC",
     "report_url": "https://edwardphill.github.io/stockpicker/reports/ILMN-2026-04-13.html"
+  },
+  {
+    "date": "2026-04-14",
+    "entry_timestamp": "2026-04-14 09:57 UTC",
+    "ticker": "HII",
+    "theme": "Space / Satellite",
+    "conviction": "Buy",
+    "entry_price": 397.2,
+    "analyst_target": 405.64,
+    "implied_upside_at_entry": 2.1,
+    "mktcap": 15640612864.0,
+    "vix_at_entry": 19.12,
+    "yield_10y_at_entry": 4.31,
+    "risk_on_at_entry": true,
+    "signals": [
+      "analyst_target",
+      "analyst_upside",
+      "insider_buys",
+      "days_to_catalyst",
+      "rev_accel",
+      "eps_growth",
+      "fcf_yield",
+      "pct_above_52w_low",
+      "pct_below_52w_high",
+      "rel_strength"
+    ],
+    "signal_values": {
+      "analyst_target": 405.64,
+      "analyst_upside": 2.1,
+      "insider_buys": 1,
+      "days_to_catalyst": 16,
+      "rev_accel": 0.057,
+      "eps_growth": 32.3,
+      "fcf_yield": 4.4,
+      "pct_above_52w_low": 87.8,
+      "pct_below_52w_high": 13.7,
+      "rel_strength": 32.1
+    },
+    "status": "Open",
+    "cur_price": 397.2,
+    "pct_chg": 0.0,
+    "last_price_update": "2026-04-14 09:57 UTC",
+    "report_url": "https://edwardphill.github.io/stockpicker/reports/HII-2026-04-14.html"
   }
 ]
