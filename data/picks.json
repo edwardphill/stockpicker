@@ -74,5 +74,42 @@
     "last_price_update": "2026-04-13 22:06 UTC",
     "report_url": "https://edwardphill.github.io/stockpicker/reports/WVE-2026-03-27.html",
     "entry_timestamp": "2026-03-27 (time unknown)"
+  },
+  {
+    "date": "2026-04-13",
+    "entry_timestamp": "2026-04-13 21:56 UTC",
+    "ticker": "MSFT",
+    "theme": "Quantum / Emerging Tech",
+    "conviction": "Strong Buy",
+    "entry_price": 378.42,
+    "analyst_target": 585.41,
+    "implied_upside_at_entry": 54.7,
+    "mktcap": 2812565520384.0,
+    "vix_at_entry": 19.23,
+    "yield_10y_at_entry": 4.31,
+    "risk_on_at_entry": true,
+    "signals": [
+      "analyst_target",
+      "analyst_upside",
+      "insider_buys",
+      "days_to_catalyst",
+      "rev_accel",
+      "pct_above_52w_low",
+      "pct_below_52w_high"
+    ],
+    "signal_values": {
+      "analyst_target": 585.41,
+      "analyst_upside": 54.7,
+      "insider_buys": 2,
+      "days_to_catalyst": 16,
+      "rev_accel": 0.079,
+      "pct_above_52w_low": 6.4,
+      "pct_below_52w_high": 31.9
+    },
+    "status": "Open",
+    "cur_price": 378.42,
+    "pct_chg": 0.0,
+    "last_price_update": "2026-04-13 21:56 UTC",
+    "report_url": "https://edwardphill.github.io/stockpicker/reports/MSFT-2026-04-13.html"
   }
 ]
