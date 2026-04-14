@@ -111,5 +111,48 @@
     "pct_chg": 0.0,
     "last_price_update": "2026-04-13 21:56 UTC",
     "report_url": "https://edwardphill.github.io/stockpicker/reports/MSFT-2026-04-13.html"
+  },
+  {
+    "date": "2026-04-13",
+    "entry_timestamp": "2026-04-13 22:09 UTC",
+    "ticker": "ILMN",
+    "theme": "Biotech / Life Sciences",
+    "conviction": "Buy",
+    "entry_price": 122.86,
+    "analyst_target": 136.11,
+    "implied_upside_at_entry": 10.8,
+    "mktcap": 18786058240.0,
+    "vix_at_entry": 19.23,
+    "yield_10y_at_entry": 4.31,
+    "risk_on_at_entry": true,
+    "signals": [
+      "analyst_target",
+      "analyst_upside",
+      "insider_buys",
+      "days_to_catalyst",
+      "rev_accel",
+      "eps_growth",
+      "fcf_yield",
+      "pct_above_52w_low",
+      "pct_below_52w_high",
+      "rel_strength"
+    ],
+    "signal_values": {
+      "analyst_target": 136.11,
+      "analyst_upside": 10.8,
+      "insider_buys": 4,
+      "days_to_catalyst": 17,
+      "rev_accel": 0.175,
+      "eps_growth": 6.9,
+      "fcf_yield": 4.2,
+      "pct_above_52w_low": 75.9,
+      "pct_below_52w_high": 21.0,
+      "rel_strength": 35.3
+    },
+    "status": "Open",
+    "cur_price": 122.86,
+    "pct_chg": 0.0,
+    "last_price_update": "2026-04-13 22:09 UTC",
+    "report_url": "https://edwardphill.github.io/stockpicker/reports/ILMN-2026-04-13.html"
   }
 ]
