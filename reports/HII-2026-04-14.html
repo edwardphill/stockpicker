@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width,initial-scale=1.0">
+<title>StockPicker — HII 2026-04-14</title>
+<style>
+  *{box-sizing:border-box;margin:0;padding:0}
+  body{background:#060b14;color:#c9d1d9;font-family:Arial,sans-serif;font-size:14px;min-height:100vh}
+  .hdr{background:#0d1117;border-bottom:1px solid #1e2d3d;padding:16px 24px;display:flex;align-items:center;justify-content:space-between}
+  .logo{font-size:16px;font-weight:bold;color:#f0f6ff;letter-spacing:2px;text-transform:uppercase}
+  .logo span{color:#00d4aa}
+  .badge{display:inline-block;padding:3px 12px;border-radius:12px;font-size:12px;font-weight:bold;text-transform:uppercase;background:#0c1f3f;color:#60a5fa;border:1px solid #60a5fa;margin-right:8px}
+  .risk{display:inline-block;padding:3px 10px;border-radius:12px;font-size:11px;font-weight:bold;color:#00d4aa;border:1px solid #00d4aa}
+  .meta{font-size:11px;color:#3d5166;margin-top:6px}
+  .cols{display:grid;grid-template-columns:1fr 1fr;gap:0;min-height:calc(100vh - 80px)}
+  .col{padding:24px;border-right:1px solid #0f1923}
+  .col:last-child{border-right:none}
+  .col-hdr{font-size:11px;text-transform:uppercase;letter-spacing:1.5px;font-weight:bold;padding:6px 0 14px;border-bottom:1px solid #1e2d3d;margin-bottom:18px}
+  .bull-hdr{color:#00d4aa}
+  .bear-hdr{color:#f87171}
+  .col h3{font-size:13px;color:#e2e8f0;margin:18px 0 6px;padding-bottom:4px;border-bottom:1px solid #0f1923}
+  .col h3:first-child{margin-top:0}
+  .col p,.col li{line-height:1.65;color:#c9d1d9;font-size:13px;margin-bottom:6px}
+  .col ul,.col ol{padding-left:18px;margin-bottom:8px}
+  .col a{color:#60a5fa}
+  .col strong{color:#e2e8f0}
+  .print-btn{background:#0d1424;border:1px solid #1e2d3d;color:#64748b;padding:5px 14px;border-radius:4px;font-size:11px;cursor:pointer;font-family:inherit;text-transform:uppercase;letter-spacing:0.5px}
+  .print-btn:hover{border-color:#00d4aa;color:#00d4aa}
+  .back{color:#3d5166;font-size:11px;text-decoration:none}
+  .back:hover{color:#60a5fa}
+  @media(max-width:768px){.cols{grid-template-columns:1fr}.col{border-right:none;border-bottom:1px solid #0f1923}}
+  @media print{.hdr button,.print-btn{display:none}.cols{grid-template-columns:1fr 1fr}.col{border:1px solid #ccc;margin:4px}body{background:white;color:black}.col h3{color:black}.col p,.col li{color:#111}}
+</style>
+</head>
+<body>
+<div class="hdr">
+  <div>
+    <div class="logo">STOCK<span>PICKER</span> &nbsp;·&nbsp; <span style="color:#e2e8f0;font-size:15px;letter-spacing:1px">HII</span></div>
+    <div class="meta">2026-04-14 &nbsp;·&nbsp; <span class="badge">Buy</span><span class="risk">RISK ON</span></div>
+    <div class="meta" style="margin-top:6px">
+      Entry $397.2 &nbsp;·&nbsp; Target $405.64 &nbsp;·&nbsp;
+      Analyst upside +2.1% &nbsp;·&nbsp;
+      Mkt Cap $15.64B &nbsp;·&nbsp;
+      VIX 19.12 &nbsp;·&nbsp; 10Y 4.31%
+    </div>
+  </div>
+  <div style="display:flex;gap:10px;align-items:center">
+    <a href="../index.html" class="back">← Dashboard</a>
+    <button class="print-btn" onclick="window.print()">⎙ Save PDF</button>
+  </div>
+</div>
+<div class="cols">
+  <div class="col">
+    <div class="col-hdr bull-hdr">▲ Bull Case</div>
+    
+
+<h3>Rating & Price Target</h3>
+
+<p><strong>Rating: Buy</strong> | <strong>12-Month Price Target: $405.64</strong> | Current Price: $397.20 | Implied Upside: +2.1%</p>
+
+<p>We initiate coverage of Huntington Ingalls Industries (HII) with a Buy rating, predicated on improving earnings trajectory, structural defense spending tailwinds, and a valuation that remains undemanding on forward estimates despite the stock's strong relative performance.</p>
+
+<h3>Investment Thesis</h3>
+
+<p>We believe the market has not fully priced in the earnings inflection underway at HII. Forward EPS sits 32.3% above trailing figures, suggesting a meaningful step-up in profitability that compresses the forward P/E to 19.5x — a notable discount to the trailing 25.8x and, in our view, an attractive entry point for a business with near-monopoly positioning in U.S. nuclear shipbuilding. The 15.7% year-over-year revenue growth, accompanied by a 5.7% quarter-over-quarter acceleration, signals operational momentum that is not yet consensus. Recent insider activity — one open-market purchase in the last 30 days — provides a modest but directionally supportive signal from those with the deepest visibility into near-term execution.</p>
+
+<p>Structurally, HII benefits from a U.S. Navy procurement environment that is hardening, not softening. The company's recent engagement around the Navy's <a href="https://finnhub.io/api/news?id=15da7764630c291e37df5ea254fde33d30eaccf24b3a673d54801453f25d59fa">"Hedge Strategy"</a> underscores its role as a critical node in great-power competition readiness. HII is one of only two shipyards capable of building nuclear-powered aircraft carriers and one of two constructing nuclear submarines — a duopoly with exceptionally high barriers to entry. The bipartisan consensus around defense recapitalization, particularly in naval assets, provides multi-year revenue visibility that few industrial businesses can match. Additionally, HII's Mission Technologies segment — which includes satellite, C5ISR, and unmanned systems capabilities — positions the company to capture incremental share of the expanding space and ISR budget lines.</p>
+
+<p>The stock has rallied <a href="https://finnhub.io/api/news?id=19a00f772c1f7ed34e8d8199c9d0e314669be4ad683aa7bb8eda00de0dacc5d2">approximately 83% over the past year</a>, which invites the question of how much upside remains. Our analysis suggests the rally has largely reflected a re-rating from depressed levels rather than an overshoot, and that forward fundamentals — particularly the earnings trajectory and FCF generation — support current levels with room for modest further appreciation. A 4.4% FCF yield provides downside support and capital return optionality.</p>
+
+<h3>Valuation</h3>
+
+<p>Our $405.64 price target is derived primarily from a forward P/E framework. At 19.5x forward earnings, HII trades at a discount to the broader A&D peer group (General Dynamics: ~20.5x; Northrop Grumman: ~21x; L3Harris: ~20x), which we view as partially justified by HII's lower margin profile (4.8% net margin, 12.7% gross margin) but insufficiently reflective of revenue growth that outpaces most large-cap defense names. On an EV/EBITDA basis, applying the current ~14x multiple to our EBITDA estimate yields a valuation broadly consistent with the target. The 0.59x debt/equity ratio is conservative relative to peers and provides balance sheet flexibility for both shareholder returns and potential M&A in adjacent technology domains. We see limited multiple expansion from current levels but believe earnings growth — not re-rating — will drive returns from here.</p>
+
+<h3>Catalysts</h3>
+
+<table style="width:100%; border-collapse:collapse; font-size:0.95em;">
+<tr style="border-bottom:1px solid #ccc;"><td style="padding:4px;"><strong>Q1 2025 Earnings (May 5)</strong></td><td style="padding:4px;">Revenue acceleration and margin commentary should validate the improving growth trajectory. A beat on the top line, combined with guidance affirmation or raise, would likely drive consensus estimate revisions higher, supporting the stock near our target. <a href="https://finnhub.io/api/news?id=e6241a39359bb86e7e9437c87ff9fa3e4e2bbef8ad6eb7262151c1295202a8af">[Details]</a></td></tr>
+<tr style="border-bottom:1px solid #ccc;"><td style="padding:4px;"><strong>FY2026 Defense Budget Markup (Summer 2025)</strong></td><td style="padding:4px;">Congressional markups of the Navy's shipbuilding account — particularly submarine and carrier line items — will provide visibility into outyear backlog. Upward revisions to the Columbia-class or Virginia-class programs would be directly accretive to HII's multi-year revenue outlook.</td></tr>
+<tr style="border-bottom:1px solid #ccc;"><td style="padding:4px;"><strong>Mission Technologies Contract Awards (Ongoing)</strong></td><td style="padding:4px;">Incremental wins in space, satellite, and C5ISR would validate the segment's growth thesis and could prompt sell-side re-evaluation of the segment's margin potential and contribution mix.</td></tr>
+</table>
+
+<h3>Financial Summary</h3>
+
+<table style="width:100%; border-collapse:collapse; font-size:0.95em;">
+<tr style="background:#f2f2f2; border-bottom:1px solid #ccc;"><td style="padding:4px;"><strong>Metric</strong></td><td style="padding:4px;"><strong>Value</strong></td></tr>
+<tr style="border-bottom:1px solid #ddd;"><td style="padding:4px;">Revenue (TTM)</td><td style="padding:4px;">$12.48B</td></tr>
+<tr style="border-bottom:1px solid #ddd;"><td style="padding:4px;">Revenue Growth (YoY)</td><td style="padding:4px;">15.7%</td></tr>
+<tr style="border-bottom:1px solid #ddd;"><td style="padding:4px;">QoQ Revenue Growth Acceleration</td><td style="padding:4px;">+5.7pp</td></tr>
+<tr style="border-bottom:1px solid #ddd;"><td style="padding:4px;">EBITDA</td><td style="padding:4px;">$1.13B</td></tr>
+<tr style="border-bottom:1px solid #ddd;"><td style="padding:4px;">Gross Margin</td><td style="padding:4px;">12.7%</td></tr>
+<tr style="border-bottom:1px solid #ddd;"><td style="padding:4px;">Net Margin</td><td style="padding:4px;">4.8%</td></tr>
+<tr style="border-bottom:1px solid #ddd;"><td style="padding:4px;">Trailing P/E</td><td style="padding:4<p style='color:#94a3b8;font-size:12px;'>No notable institutional activity in last 90 days.</p>
+<div style="margin-top:14px;">
+  <div style="font-size:11px;font-weight:bold;color:#7c3aed;text-transform:uppercase;
+              letter-spacing:.4px;margin-bottom:8px;">🔮 Polymarket Prediction Markets</div>
+  <table width="100%" cellpadding="0" cellspacing="0"
+         style="border-collapse:collapse;font-size:12px;background:#faf5ff;
+                border:1px solid #e9d5ff;border-radius:6px;overflow:hidden;">
+    <thead>
+      <tr style="background:#f3e8ff;border-bottom:1px solid #e9d5ff;">
+        <th style="padding:8px 10px;text-align:left;font-size:10px;color:#7c3aed;text-transform:uppercase;">Market Question</th>
+        <th style="padding:8px 10px;text-align:left;font-size:10px;color:#7c3aed;text-transform:uppercase;">Odds</th>
+        <th style="padding:8px 10px;text-align:left;font-size:10px;color:#7c3aed;text-transform:uppercase;">Signal</th>
+      </tr>
+    </thead>
+    <tbody>
+<tr style="border-bottom:1px solid #f1f5f9;">
+  <td style="padding:8px 10px;font-size:12px;color:#1e293b;width:55%;">
+    <a href="https://polymarket.com" target="_blank"
+       style="color:#1e293b;text-decoration:none;">Will the Houston Rockets win the 2026 NBA Finals?</a>
+    <div style="font-size:10px;color:#94a3b8;margin-top:2px;">
+      Vol: $4,689,825 · Ends: 2026-07-01
+    </div>
+  </td>
+  <td style="padding:8px 10px;width:25%;">
+    <div style="font-size:13px;font-weight:bold;color:#16a34a;">50% Yes</div>
+    <div style="background:#f1f5f9;border-radius:4px;height:6px;width:80px;margin-top:4px;overflow:hidden;">
+      <div style="background:#16a34a;height:6px;width:40px;border-radius:4px;opacity:.7;"></div>
+    </div>
+  </td>
+  <td style="padding:8px 10px;font-size:11px;font-weight:bold;color:#64748b;">Neutral</td>
+</tr></tbody>
+  </table>
+  <div style="font-size:10px;color:#94a3b8;margin-top:4px;">
+    Real-money prediction markets via <a href="https://polymarket.com" style="color:#7c3aed;">Polymarket</a>.
+    Prices = implied probability.
+  </div>
+</div><h3 style='font-size:13px;'>References</h3><ul style='font-size:12px;'><li><a href="https://finnhub.io/api/news?id=e6241a39359bb86e7e9437c87ff9fa3e4e2bbef8ad6eb7262151c1295202a8af" style="color:#1d4ed8;" target="_blank">[Finnhub] HII to Host First Quarter Earnings Conference Call and Webcast on May 5</a></li><li><a href="https://finnhub.io/api/news?id=19a00f772c1f7ed34e8d8199c9d0e314669be4ad683aa7bb8eda00de0dacc5d2" style="color:#1d4ed8;" target="_blank">[Yahoo] Is It Too Late To Consider Huntington Ingalls (HII) After An 83% One Year Rally?</a></li><li><a href="https://finnhub.io/api/news?id=3a0971d4ed5d61d5b3b620537beb75ffbdb67f78e11da5b3dbd6af0fbcfccfbc" style="color:#1d4ed8;" target="_blank">[Yahoo] Howmet Aerospace Announces New Executive Leadership Member</a></li><li><a href="https://finnhub.io/api/news?id=15da7764630c291e37df5ea254fde33d30eaccf24b3a673d54801453f25d59fa" style="color:#1d4ed8;" target="_blank">[Yahoo] Media Advisory — You Are Invited: HII’s Approach to Supporting the US Navy’s “Hedge Strategy”</a></li><li><a href="https://finnhub.io/api/news?id=3cadf94c06dfe936858e4739d72f44ac2052ed3997bf6c5220aa49983a5a5467" style="color:#1d4ed8;" target="_blank">[Yahoo] HII Hosts PAE Maritime Christopher Miller at Ingalls Shipbuilding</a></li><li><a href="https://finance.yahoo.com/quote/HII" style="color:#1d4ed8;" target="_blank">Yahoo Finance: HII</a></li><li><a href="https://finviz.com/quote.ashx?t=HII" style="color:#1d4ed8;" target="_blank">Finviz: HII</a></li></ul>
+  </div>
+  <div class="col">
+    <div class="col-hdr bear-hdr">▼ Bear Case</div>
+    
+
+<h3>Bear Case Thesis</h3>
+
+<p>The market is correctly pricing HII as a low-margin, capital-intensive cost-plus contractor that has already re-rated 83% off depressed levels — and the bull note's own price target implicitly concedes this, offering just 2.1% upside. The bull frames this as a Buy on "earnings inflection," but the structural reality is that HII operates at a 4.8% net margin and 12.7% gross margin — metrics that are not temporary compression but rather endemic to fixed-price and cost-plus naval shipbuilding, where labor scarcity, schedule overruns, and EAC adjustments routinely erode profitability. The forward EPS step-up the bull relies upon assumes execution improvement on programs (Columbia-class, Virginia-class) that have a documented history of cost growth and delivery delays. After an 83% rally, the stock is priced for flawless execution, and the asymmetry of outcomes skews negatively.</p>
+
+<h3>Challenging the Bull's Assumptions</h3>
+
+<p><strong>1. "Forward EPS 32.3% above trailing compresses P/E to 19.5x"</strong><br>
+Bear alternative: This forward estimate embeds aggressive margin recovery assumptions on shipbuilding programs where HII has repeatedly taken negative EAC adjustments. In Q4 2023 and Q1 2024, the company recorded significant unfavorable cumulative catch-up adjustments on submarine programs. The base rate for large fixed-price shipbuilding contracts is that cost overruns are the norm, not the exception — GAO has flagged the Columbia-class program for schedule risk repeatedly. If forward EPS disappoints by even 10–15%, the "compressed" P/E re-expands to 22–23x, which is premium pricing for this margin profile.</p>
+
+<p><strong>2. "15.7% revenue growth signals operational momentum"</strong><br>
+Bear alternative: Revenue growth in cost-plus shipbuilding is substantially a function of labor hours billed and material pass-through, not operating leverage. HII's shipbuilding labor force remains constrained — the company itself has cited workforce challenges as a key bottleneck. Revenue growth without commensurate margin expansion is value-neutral at best. The 5.7pp QoQ acceleration likely reflects timing of milestone billings rather than a structural inflection; shipbuilding revenue is inherently lumpy.</p>
+
+<p><strong>3. "Near-monopoly positioning ensures multi-year revenue visibility"</strong><br>
+Bear alternative: Monopoly positioning cuts both ways. It makes HII a target for procurement reform, schedule pressure from the Navy, and political scrutiny on cost overruns. The Navy has publicly explored alternatives (including foreign yards and modular construction) to reduce dependence on HII and General Dynamics. Furthermore, the DOGE-era emphasis on defense spending efficiency creates headline risk even if actual budget cuts are unlikely to hit nuclear shipbuilding. Program stretch-outs — extending procurement timelines to manage annual outlays — are the more probable risk than outright cancellation, and they directly impair near-term revenue and working capital.</p>
+
+<p><strong>4. "Mission Technologies provides growth optionality"</strong><br>
+Bear alternative: Mission Technologies operates in a crowded, competitive IT/C5ISR market against Leidos, SAIC, Booz Allen, L3Harris, and others with superior scale and margins. The segment's margin profile has been underwhelming relative to peers, and contract wins are lumpy. This is not a differentiated franchise; it is a subscale IT services business that HII acquired (Alion) at a premium. Assigning meaningful option value here requires evidence of sustained above-market win rates, which has not materialized.</p>
+
+<p><strong>5. "4.4% FCF yield provides downside support"</strong><br>
+Bear alternative: FCF in shipbuilding is heavily influenced by advance payments, progress billing timing, and working capital swings. HII's capex requirements are rising as it invests in shipyard modernization (Ingalls and Newport News). A single quarter of adverse working capital movement can eliminate the FCF cushion. The bull note does not address the ~$3.5B in total debt or the rising interest expense burden in a 4.3% rate environment.</p>
+
+<p><strong>6. "Insider purchase is directionally supportive"</strong><br>
+Bear alternative: One open-market purchase in 30 days is statistically meaningless. There has been no notable institutional activity in the last 90 days per the note's own data. This is not a signal; it is noise.</p>
+
+<h3>Downside Scenario & Valuation</h3>
+
+<p>In a scenario where (a) forward EPS misses by 15% due to EAC adjustments or program delays, and (b) the multiple contracts modestly as the market recalibrates growth expectations post-rally, we model:</p>
+
+<ul>
+<li><strong>Bear-case EPS:</strong> ~$17.30 (vs. implied forward ~$20.40 in the bull note)</li>
+<li><strong>Bear-case multiple:</strong> 16.5x — consistent with HII's historical average when execution concerns are elevated and in line with where a sub-5% net margin defense contractor should trade</li>
+<li><strong>Downside price:</strong> ~$285, implying ~28% downside from current levels</li>
+</ul>
+
+<p>Triggers: (1) Negative EAC adjustment disclosed at Q1 earnings on May 5; (2) FY2026 budget markup stretches Columbia or Virginia procurement; (3) Workforce constraints persist, capping throughput despite revenue bookings; (4) Mission Technologies margin disappoints or loses a rebid.</p>
+
+<p>A more moderate scenario — EPS comes in 5–8% light with a flat multiple — yields a stock in the $330–$350 range, still representing 12–17% downside.</p>
+
+<h3>Verdict</h3>
+
+<p><strong>Monitor.</strong> The May 5 earnings call is the decisive event — margin commentary, EAC adjustment disclosures, and FY25 guidance will determine whether the "earnings inflection" thesis is real or aspirational, and with only 2.1% upside to the bull's own target versus 15–28% downside in credible adverse scenarios, the risk/reward does not justify adding exposure ahead of that catalyst.</p>
+  </div>
+</div>
+</body>
+</html>
