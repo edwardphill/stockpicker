@@ -263,6 +263,16 @@
   <button class="filter-btn" onclick="setFilter('Buy', this)">Buy</button>
   <span style="margin-left:auto;font-size:10px;color:#3d5166;" id="row-count"></span>
 </div>
+<div class="toolbar" id="sector-row" style="padding-top:6px;padding-bottom:6px;gap:8px;">
+  <span style="font-size:9px;text-transform:uppercase;letter-spacing:1px;color:#3d5166;">Sector</span>
+  <button class="filter-btn active" data-sector="all" onclick="setSector('all', this)">All</button>
+  <button class="filter-btn" data-sector="Quantum / Emerging Tech" onclick="setSector('Quantum / Emerging Tech', this)">Quantum</button>
+  <button class="filter-btn" data-sector="Industrial AI / Robotics" onclick="setSector('Industrial AI / Robotics', this)">AI / Robotics</button>
+  <button class="filter-btn" data-sector="Cybersecurity" onclick="setSector('Cybersecurity', this)">Cybersecurity</button>
+  <button class="filter-btn" data-sector="Biotech / Life Sciences" onclick="setSector('Biotech / Life Sciences', this)">Biotech</button>
+  <button class="filter-btn" data-sector="Nuclear / Next-Gen Energy" onclick="setSector('Nuclear / Next-Gen Energy', this)">Nuclear / Energy</button>
+  <button class="filter-btn" data-sector="Space / Satellite" onclick="setSector('Space / Satellite', this)">Space / Satellite</button>
+</div>
 
 <!-- Table -->
 <div class="table-wrap">
@@ -297,10 +307,11 @@
 <div class="footer">STOCKPICKER &nbsp;·&nbsp; NOT FINANCIAL ADVICE &nbsp;·&nbsp; DATA FROM LAST SCRIPT RUN</div>
 
 <script>
-let allPicks   = [];
-let sortKey    = 'date';
-let sortDir    = -1;
+let allPicks     = [];
+let sortKey      = 'date';
+let sortDir      = -1;
 let activeFilter = 'all';
+let activeSector = 'all';
 
 /* ── Formatting helpers ──────────────────────────────── */
 function fmtPrice(v) {
@@ -439,11 +450,16 @@ function renderTable(picks) {
 function render() {
   let picks = [...allPicks];
 
-  // Filter
+  // Filter by status / conviction
   if (activeFilter === 'Open') {
     picks = picks.filter(p => (p.status || 'Open') === 'Open');
   } else if (activeFilter === 'Strong Buy' || activeFilter === 'Buy') {
     picks = picks.filter(p => p.conviction === activeFilter);
+  }
+
+  // Filter by sector
+  if (activeSector !== 'all') {
+    picks = picks.filter(p => p.theme === activeSector);
   }
 
   // Sort
@@ -480,10 +496,19 @@ function sortBy(key) {
   render();
 }
 
-/* ── Filter ──────────────────────────────────────────── */
+/* ── Filter (status / conviction) ───────────────────── */
 function setFilter(f, btn) {
   activeFilter = f;
-  document.querySelectorAll('.filter-btn').forEach(b => b.classList.remove('active'));
+  // Only deactivate buttons in the first toolbar row
+  btn.closest('.toolbar').querySelectorAll('.filter-btn').forEach(b => b.classList.remove('active'));
+  btn.classList.add('active');
+  render();
+}
+
+/* ── Filter (sector) ─────────────────────────────────── */
+function setSector(s, btn) {
+  activeSector = s;
+  btn.closest('.toolbar').querySelectorAll('.filter-btn').forEach(b => b.classList.remove('active'));
   btn.classList.add('active');
   render();
 }
@@ -493,6 +518,16 @@ async function loadPicks() {
     const res = await fetch('data/picks.json?t=' + Date.now());
     if (!res.ok) throw new Error('not found');
     allPicks = await res.json();
+
+    // Apply ?sector= URL param if present (e.g. from email links)
+    const urlSector = new URLSearchParams(window.location.search).get('sector');
+    if (urlSector) {
+      activeSector = urlSector;
+      document.querySelectorAll('#sector-row .filter-btn').forEach(b => {
+        b.classList.toggle('active', b.dataset.sector === urlSector);
+      });
+    }
+
     render();
   } catch (e) {
     document.getElementById('loading').textContent =
