@@ -229,8 +229,13 @@
     <div class="stat-value" id="s-wr">—</div>
   </div>
   <div class="stat">
-    <div class="stat-label">Avg Return</div>
+    <div class="stat-label">Avg Return (True)</div>
     <div class="stat-value" id="s-avg">—</div>
+  </div>
+  <div class="stat">
+    <div class="stat-label" title="Losses capped at -10% (stop-loss rule)">Managed Avg</div>
+    <div class="stat-value" id="s-mgd">—</div>
+    <div style="font-size:9px;color:#3d5166;margin-top:1px;">stop &gt;10% loss</div>
   </div>
   <div class="stat">
     <div class="stat-label">Best Pick</div>
@@ -333,6 +338,10 @@ function renderStats(picks) {
   const avgD  = picks.reduce((a, p) => a + daysSince(p.date), 0) / n;
   const open  = picks.filter(p => (p.status || 'Open') === 'Open').length;
 
+  // Managed avg: losses capped at -10% (stop-loss rule — positions down >10% would be sold)
+  const managedRets = rets.map(r => Math.max(r, -10));
+  const managedAvg  = managedRets.reduce((a, b) => a + b, 0) / n;
+
   const bestTicker  = picks[rets.indexOf(best)]?.ticker  || '';
   const worstTicker = picks[rets.indexOf(worst)]?.ticker || '';
 
@@ -343,6 +352,10 @@ function renderStats(picks) {
   const avgEl = document.getElementById('s-avg');
   avgEl.textContent = (avg >= 0 ? '+' : '') + avg.toFixed(1) + '%';
   avgEl.className   = 'stat-value ' + (avg >= 0 ? 'green' : 'red');
+
+  const mgdEl = document.getElementById('s-mgd');
+  mgdEl.textContent = (managedAvg >= 0 ? '+' : '') + managedAvg.toFixed(1) + '%';
+  mgdEl.className   = 'stat-value ' + (managedAvg >= 0 ? 'green' : 'red');
 
   document.getElementById('s-best').textContent  = bestTicker + ' +' + best.toFixed(1) + '%';
   document.getElementById('s-worst').textContent = worstTicker + ' ' + worst.toFixed(1) + '%';
