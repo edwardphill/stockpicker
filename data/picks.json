@@ -242,5 +242,46 @@
     "pct_chg": 2.34,
     "last_price_update": "2026-04-15 20:12 UTC",
     "report_url": "https://edwardphill.github.io/stockpicker/reports/QLYS-2026-04-15.html"
+  },
+  {
+    "date": "2026-04-15",
+    "entry_timestamp": "2026-04-15 15:17 UTC",
+    "ticker": "IBM",
+    "theme": "Quantum / Emerging Tech",
+    "conviction": "Strong Buy",
+    "entry_price": 240.27,
+    "analyst_target": 307.48,
+    "implied_upside_at_entry": 28.0,
+    "mktcap": 225471561728.0,
+    "vix_at_entry": 18.36,
+    "yield_10y_at_entry": 4.3,
+    "risk_on_at_entry": true,
+    "signals": [
+      "analyst_target",
+      "analyst_upside",
+      "insider_buys",
+      "days_to_catalyst",
+      "rev_accel",
+      "eps_growth",
+      "fcf_yield",
+      "pct_above_52w_low",
+      "pct_below_52w_high"
+    ],
+    "signal_values": {
+      "analyst_target": 307.48,
+      "analyst_upside": 28.0,
+      "insider_buys": 5,
+      "days_to_catalyst": 7,
+      "rev_accel": 0.136,
+      "eps_growth": 20.3,
+      "fcf_yield": 5.8,
+      "pct_above_52w_low": 8.9,
+      "pct_below_52w_high": 26.0
+    },
+    "status": "Open",
+    "cur_price": 240.27,
+    "pct_chg": 0.0,
+    "last_price_update": "2026-04-15 15:17 UTC",
+    "report_url": "https://edwardphill.github.io/stockpicker/reports/IBM-2026-04-15.html"
   }
 ]
