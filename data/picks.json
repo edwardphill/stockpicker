@@ -408,5 +408,48 @@
     "pct_chg": -0.2,
     "last_price_update": "2026-04-17 21:31 UTC",
     "report_url": "https://edwardphill.github.io/stockpicker/reports/HII-2026-04-17.html"
+  },
+  {
+    "date": "2026-04-18",
+    "entry_timestamp": "2026-04-18 00:03 UTC",
+    "ticker": "QLYS",
+    "theme": "Cybersecurity",
+    "conviction": "Strong Buy",
+    "entry_price": 83.17,
+    "analyst_target": 130.44,
+    "implied_upside_at_entry": 56.8,
+    "mktcap": 2982335488.0,
+    "vix_at_entry": 17.94,
+    "yield_10y_at_entry": 4.32,
+    "risk_on_at_entry": true,
+    "signals": [
+      "analyst_target",
+      "analyst_upside",
+      "insider_buys",
+      "days_to_catalyst",
+      "rev_accel",
+      "eps_growth",
+      "fcf_yield",
+      "squeeze_setup",
+      "pct_above_52w_low",
+      "pct_below_52w_high"
+    ],
+    "signal_values": {
+      "analyst_target": 130.44,
+      "analyst_upside": 56.8,
+      "insider_buys": 1,
+      "days_to_catalyst": 17,
+      "rev_accel": 0.087,
+      "eps_growth": 46.7,
+      "fcf_yield": 8.7,
+      "squeeze_setup": 15.7,
+      "pct_above_52w_low": 11.6,
+      "pct_below_52w_high": 46.5
+    },
+    "status": "Open",
+    "cur_price": 83.17,
+    "pct_chg": 0.0,
+    "last_price_update": "2026-04-18 00:03 UTC",
+    "report_url": "https://edwardphill.github.io/stockpicker/reports/QLYS-2026-04-18.html"
   }
 ]
