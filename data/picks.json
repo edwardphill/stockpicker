@@ -451,5 +451,42 @@
     "pct_chg": 0.0,
     "last_price_update": "2026-04-18 00:03 UTC",
     "report_url": "https://edwardphill.github.io/stockpicker/reports/QLYS-2026-04-18.html"
+  },
+  {
+    "date": "2026-04-20",
+    "entry_timestamp": "2026-04-20 08:41 UTC",
+    "ticker": "UUUU",
+    "theme": "Nuclear / Next-Gen Energy",
+    "conviction": "Strong Buy",
+    "entry_price": 20.76,
+    "analyst_target": 26.55,
+    "implied_upside_at_entry": 27.9,
+    "mktcap": 5016199680.0,
+    "vix_at_entry": null,
+    "yield_10y_at_entry": null,
+    "risk_on_at_entry": false,
+    "signals": [
+      "analyst_target",
+      "analyst_upside",
+      "insider_buys",
+      "days_to_catalyst",
+      "squeeze_setup",
+      "pct_above_52w_low",
+      "pct_below_52w_high"
+    ],
+    "signal_values": {
+      "analyst_target": 26.55,
+      "analyst_upside": 27.9,
+      "insider_buys": 21,
+      "days_to_catalyst": 16,
+      "squeeze_setup": 15.9,
+      "pct_above_52w_low": 394.3,
+      "pct_below_52w_high": 25.6
+    },
+    "status": "Open",
+    "cur_price": 20.76,
+    "pct_chg": 0.0,
+    "last_price_update": "2026-04-20 08:41 UTC",
+    "report_url": "https://edwardphill.github.io/stockpicker/reports/UUUU-2026-04-20.html"
   }
 ]
