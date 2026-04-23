@@ -572,5 +572,48 @@
     "pct_chg": 2.17,
     "last_price_update": "2026-04-22 21:40 UTC",
     "report_url": "https://edwardphill.github.io/stockpicker/reports/TMDX-2026-04-22.html"
+  },
+  {
+    "date": "2026-04-23",
+    "entry_timestamp": "2026-04-23 09:26 UTC",
+    "ticker": "HII",
+    "theme": "Space / Satellite",
+    "conviction": "Buy",
+    "entry_price": 368.91,
+    "analyst_target": 407.09,
+    "implied_upside_at_entry": 10.3,
+    "mktcap": 14526632960.0,
+    "vix_at_entry": 18.92,
+    "yield_10y_at_entry": 4.3,
+    "risk_on_at_entry": true,
+    "signals": [
+      "analyst_target",
+      "analyst_upside",
+      "insider_buys",
+      "days_to_catalyst",
+      "rev_accel",
+      "eps_growth",
+      "fcf_yield",
+      "pct_above_52w_low",
+      "pct_below_52w_high",
+      "rel_strength"
+    ],
+    "signal_values": {
+      "analyst_target": 407.09,
+      "analyst_upside": 10.3,
+      "insider_buys": 1,
+      "days_to_catalyst": 12,
+      "rev_accel": 0.057,
+      "eps_growth": 32.4,
+      "fcf_yield": 4.7,
+      "pct_above_52w_low": 71.5,
+      "pct_below_52w_high": 19.8,
+      "rel_strength": 21.8
+    },
+    "status": "Open",
+    "cur_price": 368.91,
+    "pct_chg": 0.0,
+    "last_price_update": "2026-04-23 09:26 UTC",
+    "report_url": "https://edwardphill.github.io/stockpicker/reports/HII-2026-04-23.html"
   }
 ]
