@@ -695,5 +695,48 @@
     "pct_chg": 0.0,
     "last_price_update": "2026-04-25 00:04 UTC",
     "report_url": "https://edwardphill.github.io/stockpicker/reports/QLYS-2026-04-25.html"
+  },
+  {
+    "date": "2026-04-26",
+    "entry_timestamp": "2026-04-26 00:03 UTC",
+    "ticker": "HII",
+    "theme": "Space / Satellite",
+    "conviction": "Buy",
+    "entry_price": 359.29,
+    "analyst_target": 407.09,
+    "implied_upside_at_entry": 13.3,
+    "mktcap": 14147824640.0,
+    "vix_at_entry": 19.31,
+    "yield_10y_at_entry": 4.34,
+    "risk_on_at_entry": true,
+    "signals": [
+      "analyst_target",
+      "analyst_upside",
+      "insider_buys",
+      "days_to_catalyst",
+      "rev_accel",
+      "eps_growth",
+      "fcf_yield",
+      "pct_above_52w_low",
+      "pct_below_52w_high",
+      "rel_strength"
+    ],
+    "signal_values": {
+      "analyst_target": 407.09,
+      "analyst_upside": 13.3,
+      "insider_buys": 1,
+      "days_to_catalyst": 9,
+      "rev_accel": 0.057,
+      "eps_growth": 32.3,
+      "fcf_yield": 4.8,
+      "pct_above_52w_low": 67.1,
+      "pct_below_52w_high": 21.9,
+      "rel_strength": 15.2
+    },
+    "status": "Open",
+    "cur_price": 359.29,
+    "pct_chg": 0.0,
+    "last_price_update": "2026-04-26 00:03 UTC",
+    "report_url": "https://edwardphill.github.io/stockpicker/reports/HII-2026-04-26.html"
   }
 ]
