@@ -738,5 +738,46 @@
     "pct_chg": 0.0,
     "last_price_update": "2026-04-26 00:03 UTC",
     "report_url": "https://edwardphill.github.io/stockpicker/reports/HII-2026-04-26.html"
+  },
+  {
+    "date": "2026-04-27",
+    "entry_timestamp": "2026-04-27 00:03 UTC",
+    "ticker": "TMDX",
+    "theme": "Biotech / Life Sciences",
+    "conviction": "Strong Buy",
+    "entry_price": 110.93,
+    "analyst_target": 155.0,
+    "implied_upside_at_entry": 39.7,
+    "mktcap": 3831983616.0,
+    "vix_at_entry": 19.31,
+    "yield_10y_at_entry": 4.34,
+    "risk_on_at_entry": true,
+    "signals": [
+      "analyst_target",
+      "analyst_upside",
+      "insider_buys",
+      "days_to_catalyst",
+      "rev_accel",
+      "fcf_yield",
+      "squeeze_setup",
+      "pct_above_52w_low",
+      "pct_below_52w_high"
+    ],
+    "signal_values": {
+      "analyst_target": 155.0,
+      "analyst_upside": 39.7,
+      "insider_buys": 2,
+      "days_to_catalyst": 8,
+      "rev_accel": 0.162,
+      "fcf_yield": 2.5,
+      "squeeze_setup": 34.4,
+      "pct_above_52w_low": 25.3,
+      "pct_below_52w_high": 28.9
+    },
+    "status": "Open",
+    "cur_price": 110.93,
+    "pct_chg": 0.0,
+    "last_price_update": "2026-04-27 00:03 UTC",
+    "report_url": "https://edwardphill.github.io/stockpicker/reports/TMDX-2026-04-27.html"
   }
 ]
