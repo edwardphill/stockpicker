@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width,initial-scale=1.0">
+<title>StockPicker — QLYS 2026-04-28</title>
+<style>
+  *{box-sizing:border-box;margin:0;padding:0}
+  body{background:#060b14;color:#c9d1d9;font-family:Arial,sans-serif;font-size:14px;min-height:100vh}
+  .hdr{background:#0d1117;border-bottom:1px solid #1e2d3d;padding:16px 24px;display:flex;align-items:center;justify-content:space-between}
+  .logo{font-size:16px;font-weight:bold;color:#f0f6ff;letter-spacing:2px;text-transform:uppercase}
+  .logo span{color:#00d4aa}
+  .badge{display:inline-block;padding:3px 12px;border-radius:12px;font-size:12px;font-weight:bold;text-transform:uppercase;background:#065f46;color:#00d4aa;border:1px solid #00d4aa;margin-right:8px}
+  .risk{display:inline-block;padding:3px 10px;border-radius:12px;font-size:11px;font-weight:bold;color:#00d4aa;border:1px solid #00d4aa}
+  .meta{font-size:11px;color:#3d5166;margin-top:6px}
+  .cols{display:grid;grid-template-columns:1fr 1fr;gap:0;min-height:calc(100vh - 80px)}
+  .col{padding:24px;border-right:1px solid #0f1923}
+  .col:last-child{border-right:none}
+  .col-hdr{font-size:11px;text-transform:uppercase;letter-spacing:1.5px;font-weight:bold;padding:6px 0 14px;border-bottom:1px solid #1e2d3d;margin-bottom:18px}
+  .bull-hdr{color:#00d4aa}
+  .bear-hdr{color:#f87171}
+  .col h3{font-size:13px;color:#e2e8f0;margin:18px 0 6px;padding-bottom:4px;border-bottom:1px solid #0f1923}
+  .col h3:first-child{margin-top:0}
+  .col p,.col li{line-height:1.65;color:#c9d1d9;font-size:13px;margin-bottom:6px}
+  .col ul,.col ol{padding-left:18px;margin-bottom:8px}
+  .col a{color:#60a5fa}
+  .col strong{color:#e2e8f0}
+  .print-btn{background:#0d1424;border:1px solid #1e2d3d;color:#64748b;padding:5px 14px;border-radius:4px;font-size:11px;cursor:pointer;font-family:inherit;text-transform:uppercase;letter-spacing:0.5px}
+  .print-btn:hover{border-color:#00d4aa;color:#00d4aa}
+  .back{color:#3d5166;font-size:11px;text-decoration:none}
+  .back:hover{color:#60a5fa}
+  @media(max-width:768px){.cols{grid-template-columns:1fr}.col{border-right:none;border-bottom:1px solid #0f1923}}
+  @media print{.hdr button,.print-btn{display:none}.cols{grid-template-columns:1fr 1fr}.col{border:1px solid #ccc;margin:4px}body{background:white;color:black}.col h3{color:black}.col p,.col li{color:#111}}
+</style>
+</head>
+<body>
+<div class="hdr">
+  <div>
+    <div class="logo">STOCK<span>PICKER</span> &nbsp;·&nbsp; <span style="color:#e2e8f0;font-size:15px;letter-spacing:1px">QLYS</span></div>
+    <div class="meta">2026-04-28 &nbsp;·&nbsp; <span class="badge">Strong Buy</span><span class="risk">RISK ON</span></div>
+    <div class="meta" style="margin-top:6px">
+      Entry $85.2 &nbsp;·&nbsp; Target $124.12 &nbsp;·&nbsp;
+      Analyst upside +45.7% &nbsp;·&nbsp;
+      Mkt Cap $3.01B &nbsp;·&nbsp;
+      VIX 18.02 &nbsp;·&nbsp; 10Y 4.31%
+    </div>
+  </div>
+  <div style="display:flex;gap:10px;align-items:center">
+    <a href="../index.html" class="back">← Dashboard</a>
+    <button class="print-btn" onclick="window.print()">⎙ Save PDF</button>
+  </div>
+</div>
+<div class="cols">
+  <div class="col">
+    <div class="col-hdr bull-hdr">▲ Bull Case</div>
+    
+
+<h3>Rating &amp; Price Target</h3>
+
+<p><strong>Rating: Strong Buy</strong> | <strong>12-Month Price Target: $124.12</strong> | <strong>Current Price: $85.20</strong> | <strong>Implied Upside: +45.7%</strong></p>
+
+<p>We believe the market is materially undervaluing Qualys's durable high-margin recurring revenue model, improving earnings trajectory, and underappreciated positioning in the expanding attack surface management market at a time when the stock trades at a significant discount to cybersecurity peers on both forward earnings and free cash flow yield.</p>
+
+<h3>Investment Thesis</h3>
+
+<p>Qualys is a cloud-native cybersecurity platform with a ~$670M TTM revenue base growing at ~10% year-over-year, generating 83% gross margins and nearly 30% net margins — a profitability profile that is exceptional within its peer group and more characteristic of a mature software franchise than a mid-cap security vendor. The stock currently trades at 10.7x forward earnings, roughly a 40–50% discount to the median forward P/E of the broader cybersecurity software universe. Our analysis suggests this discount is unwarranted given the company's margin durability, negligible leverage (0.09x debt/equity), and the structural tailwind from <a href="https://finnhub.io/api/news?id=442987498f790408ff979a94e2f6c60f02db4987ed656b0ca54f8048f89e87ec">generative AI agent proliferation driving rising demand</a> for vulnerability management and asset inventory across hybrid environments.</p>
+
+<p>The forward EPS estimate exceeds trailing EPS by approximately 47%, signaling a meaningful earnings inflection that the market has not yet priced in. Revenue growth has also shown sequential acceleration, with QoQ improvement of +8.7% in the most recent period — a data point that counters the narrative of Qualys as a decelerating legacy scanner. We note that recent quarterly revenue acceleration aligns with management's push into Enterprise TruRisk and its AI-driven Agent Val platform, which <a href="https://finnhub.io/api/news?id=0d87b108838b1c992042a265f05958bcbab18aeade59aa44d1fb8ae1505ff942">has put Qualys's cybersecurity platform back in focus</a> among enterprise buyers evaluating consolidated security posture management.</p>
+
+<p>At 8.6% FCF yield, Qualys is generating real, distributable cash flow at levels that are typically associated with value-oriented industrials, not growth-stage security software companies. This cash generation supports continued share repurchases and provides downside cushion. We also observe that the company's balance sheet profile — characterized by <a href="https://finnhub.io/api/news?id=07855839566ac497c8463eedf18d6ccf4af8ae3334980ee99be5eec83e4a529c">effectively zero net debt</a> — positions it favorably in a 4.3% 10-year yield environment where leveraged peers face higher cost-of-capital headwinds.</p>
+
+<h3>Valuation</h3>
+
+<p>Our $124.12 price target is derived from a blended valuation approach. On a forward P/E basis, we apply ~15.5x to our FY+1 EPS estimate, which represents a modest re-rating from the current 10.7x toward — but still well below — the cybersecurity peer median of ~25–30x forward earnings. We believe a discount to hyper-growth peers (CrowdStrike, Palo Alto Networks) is appropriate given Qualys's lower top-line growth, but the current ~60% discount to the group median is excessive for a business with superior profitability and capital efficiency. On EV/EBITDA, Qualys trades at approximately 12.5x TTM EBITDA ($240M), compared to a peer median of ~20–25x. Our price target implies ~18x EV/EBITDA, which we view as reasonable for a high-margin, cash-generative compounder. On EV/Sales, the stock trades at roughly 4.5x TTM revenue versus a peer median of ~8–12x. We do not require the stock to close the full gap to peers — even partial multiple normalization supports material upside from current levels.</p>
+
+<h3>Catalysts</h3>
+
+<p><strong>Q1 FY2026 Earnings (May 5, 2026):</strong> With the earnings report approximately 7 days away, we expect results to confirm the recent revenue acceleration trajectory. A beat-and-raise quarter — particularly if QoQ net new ARR inflects higher — could drive a short-covering dynamic given the elevated 18.7% short interest. We estimate that even a modest upside surprise could trigger outsized price movement given positioning.</p>
+
+<p><strong>Agent Val / AI Platform Traction (H1 2026):</strong> Incremental disclosure on AI-driven module attach rates and enterprise deal sizes would validate the thesis that Qualys is evolving beyond legacy vulnerability scanning. Positive commentary on pipeline and win rates relative to CrowdStrike Falcon Exposure Management and Tenable would be particularly constructive.</p>
+
+<p><strong>Capital Return / Buyback Acceleration (Ongoing):</strong> Given the FCF profile and clean balance sheet, any announcement of an accelerated repurchase program would be a direct signal of management confidence and would mechanically support the stock at current depressed levels.</p>
+
+<p><strong>Insider Buying Signal (Recent):</strong> We note one open-market insider purchase in the last 30 days — a datapoint that, while singular, is directionally informative and consistent with internal confidence ahead of the earnings print.</p>
+
+<h3>Financial Summary</h3>
+
+<p>Qualys generated $670M in trailing twelve-month revenue, representing 10.1% year-over-year growth. Gross margin of 82.8% reflects the asset-light, cloud-delivered nature of the platform and has remained stable over multiple periods. Net profit margin of 29.6% translates to strong bottom-line conversion, and TTM EBITDA of $240M implies an EBITDA margin of approximately 36%. The balance sheet is effectively unlevered at 0.09x debt-to-equity, with the company generating an 8.6% free cash flow yield on its current $3.0B market capitalization — implying roughly $260M in annual FCF. The most notable inflection point in the data is the 46.7% spread between forward and trailing EPS, suggesting consensus models embed a material step-up in earnings power over the next twelve months, likely driven by operating leverage on accelerating revenue and disciplined cost management. The sequential QoQ revenue growth acceleration of +8.7% warrants monitoring — if sustained, it would undermine the bear case that Qualys is a mature, ex-growth franchise.</p>
+
+<h3>Key Risks to Our View</h3>
+
+<p><strong>1. Competitive displacement in core vulnerability management (Moderate likelihood):</strong> CrowdStrike, Palo Alto Networks, and Wiz are each investing aggressively in exposure management and CNAPP capabilities that overlap with Qualys's core market. If enterprise buyers consolidate toward these broader platforms, Qualys could face net revenue retention pressure and slower new logo acquisition. A decline in net retention below 100% would prompt us to revisit our rating.</p>
+
+<p><strong>2. Revenue growth deceleration resumes (Moderate likelihood):</strong> The recent<p style='color:#94a3b8;font-size:12px;'>No notable institutional activity in last 90 days.</p><p style='color:#94a3b8;font-size:12px;'>No relevant Polymarket markets found.</p><h3 style='font-size:13px;'>References</h3><ul style='font-size:12px;'><li><a href="https://finnhub.io/api/news?id=822ee1f22f87e6f03b9301fb89eec4e970f8c956bb23a26fca52a55066a1ef84" style="color:#1d4ed8;" target="_blank">[Yahoo] Stellar Cyber Appoints Mayuresh Ektare, Former Qualys Product Executive, to Accelerate SOC Transformation</a></li><li><a href="https://finnhub.io/api/news?id=07855839566ac497c8463eedf18d6ccf4af8ae3334980ee99be5eec83e4a529c" style="color:#1d4ed8;" target="_blank">[ChartMill] Qualys Inc (NASDAQ:QLYS) Fits Peter Lynch's GARP Framework as a Steady Compounder with Zero Debt</a></li><li><a href="https://finnhub.io/api/news?id=442987498f790408ff979a94e2f6c60f02db4987ed656b0ca54f8048f89e87ec" style="color:#1d4ed8;" target="_blank">[SeekingAlpha] Qualys: Generative AI Agent Proliferation Drives Rising Demand</a></li><li><a href="https://finnhub.io/api/news?id=ea006d90a880173a684d6dfc00364e0e819c6772d57d4b3cfbbb762712cd4549" style="color:#1d4ed8;" target="_blank">[Yahoo] Boston Trust Walden Lets Go of 93,000 Qualys (QLYS) Shares</a></li><li><a href="https://finnhub.io/api/news?id=0d87b108838b1c992042a265f05958bcbab18aeade59aa44d1fb8ae1505ff942" style="color:#1d4ed8;" target="_blank">[Yahoo] A Look At Qualys (QLYS) Valuation As Agent Val Puts Its Cybersecurity Platform Back In Focus</a></li><li><a href="https://finance.yahoo.com/quote/QLYS" style="color:#1d4ed8;" target="_blank">Yahoo Finance: QLYS</a></li><li><a href="https://finviz.com/quote.ashx?t=QLYS" style="color:#1d4ed8;" target="_blank">Finviz: QLYS</a></li></ul>
+  </div>
+  <div class="col">
+    <div class="col-hdr bear-hdr">▼ Bear Case</div>
+    
+
+<h3>Bear Case Thesis</h3>
+<p>The market is not mispricing Qualys out of ignorance — it is applying a structurally lower multiple to a business whose core vulnerability management franchise faces platform consolidation risk from better-capitalized competitors (CrowdStrike, Palo Alto, Wiz), and whose ~10% top-line growth rate is insufficient to justify re-rating toward peer multiples that are anchored by 20–30%+ revenue growth. The 18.7% short interest is not a "squeeze setup" — it is informed positioning by sophisticated participants who see a business at risk of becoming a feature inside a larger platform, not a platform itself. The bull note frames the valuation gap to peers as an inefficiency to be closed; the bear case is that the gap is structural and, if anything, could widen as competitive displacement accelerates. Boston Trust Walden's recent disposal of 93,000 shares is a more telling institutional signal than a single insider buy of unspecified size.</p>
+
+<h3>Challenging the Bull's Assumptions</h3>
+
+<p><strong>1. "40–50% discount to cybersecurity peer P/E is unwarranted."</strong><br>
+The peer set the bull references (CrowdStrike, Palo Alto) is growing revenue at 25–35% YoY with expanding TAM narratives and platform attach dynamics. Qualys is growing at 10%. The base rate for multiple convergence between a 10% grower and a 30% grower in enterprise software is essentially zero — these are categorically different businesses. A 10–12x forward P/E for a high-single-digit grower with competitive headwinds is not a discount; it is a fair reflection of growth-adjusted value. Tenable (TENB), the closest true peer, has historically traded at a similar or lower premium to Qualys, reinforcing that the VM-specific market commands lower multiples for a reason.</p>
+
+<p><strong>2. "QoQ revenue acceleration of +8.7% signals a growth inflection."</strong><br>
+One quarter of sequential acceleration does not establish a trend. Qualys has shown intermittent QoQ spikes before (Q4 seasonality, catch-up billings) that did not sustain. The bull's own risk section acknowledges this. More importantly, management has not raised long-term revenue growth guidance above the low-teens range. Until net new ARR durably inflects — not just one quarter of QoQ revenue improvement — this is noise, not signal. The 47% forward EPS step-up the bull cites is largely margin-driven, not revenue-driven, which means it is fragile if top-line disappoints even modestly.</p>
+
+<p><strong>3. "Agent Val and AI platform evolution repositions Qualys beyond legacy scanning."</strong><br>
+Every cybersecurity vendor is appending "AI" to their product suite. The relevant question is whether Qualys can win incremental enterprise budget against CrowdStrike Falcon Exposure Management (which bundles VM into an endpoint-native platform with 80,000+ customers) and Wiz (which has achieved >$500M ARR in cloud security with aggressive displacement tactics). Qualys's installed base is a legacy asset that aids retention but does not guarantee expansion, particularly as procurement consolidation trends favor fewer, broader vendors. The departure of a senior product executive (Mayuresh Ektare) to a competitor (Stellar Cyber) is a soft but directionally negative talent signal.</p>
+
+<p><strong>4. "8.6% FCF yield provides downside cushion."</strong><br>
+FCF yield is real but it is not a floor. If revenue growth decelerates to mid-single-digits — a plausible scenario in a competitive displacement — the market will re-rate FCF multiples downward as it reprices terminal value. High FCF yield on a shrinking or stagnating franchise is a value trap signal, not a margin of safety. The buyback narrative is also double-edged: management repurchasing shares at elevated prices (relative to a bear scenario) destroys value rather than creating it.</p>
+
+<p><strong>5. "Clean balance sheet is an advantage in a high-rate environment."</strong><br>
+Correct but immaterial. Zero debt is a feature, not a catalyst. The competitors most threatening to Qualys (CrowdStrike, Palo Alto) also have strong balance sheets and vastly more firepower for M&A and R&D. Qualys's $3B market cap limits its ability to acquire its way into adjacencies, while its competitors can — and do — buy innovation that directly competes with Qualys's roadmap.</p>
+
+<h3>Downside Scenario & Valuation</h3>
+<p>In a bear case where: (a) revenue growth decelerates back to 6–8% as competitive displacement pressures net retention, (b) Agent Val fails to materially move module attach rates by mid-2026, and (c) the broader cybersecurity sector de-rates modestly from current elevated multiples — we would apply 8.5–9.5x forward earnings to a more conservative EPS estimate.</p>
+
+<p>If FY+1 EPS comes in at $7.00 (vs. the bull's implied ~$8.00, reflecting margin pressure from increased competitive investment) and the market assigns 9x forward P/E, that yields a price of <strong>$63</strong>, representing ~26% downside from current levels. On EV/Sales, this would imply ~3.0x forward revenue — in line with where low-growth, contested-market SaaS businesses trade. This scenario becomes more probable if the May 5 earnings print shows flat-to-declining net new ARR sequentially, or if management commentary signals elongating sales cycles or pricing pressure in competitive displacements.</p>
+
+<p>A more severe scenario — revenue growth stalling below 5% with a market-wide risk-off event — could see the stock test $55, or roughly 7.5x depressed earnings, though we assign this lower probability (~15–20%).</p>
+
+<h3>Verdict</h3>
+<p><strong>Monitor.</strong> The May 5 earnings print is the decisive data point: if net new ARR inflects positively with credible evidence of Agent Val-driven expansion (not just renewals), the bull case gains traction and the risk/reward shifts favorably; if not, the elevated short interest and competitive headwinds suggest the market's skepticism is well-founded, and the stock likely drifts toward $65–70 before finding a floor.</p>
+  </div>
+</div>
+</body>
+</html>
