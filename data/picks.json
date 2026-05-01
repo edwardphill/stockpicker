@@ -906,5 +906,44 @@
     "pct_chg": 3.72,
     "last_price_update": "2026-04-30 21:44 UTC",
     "report_url": "https://edwardphill.github.io/stockpicker/reports/CGNX-2026-04-30.html"
+  },
+  {
+    "date": "2026-05-01",
+    "entry_timestamp": "2026-05-01 00:02 UTC",
+    "ticker": "UUUU",
+    "theme": "Nuclear / Next-Gen Energy",
+    "conviction": "Strong Buy",
+    "entry_price": 21.64,
+    "analyst_target": 26.55,
+    "implied_upside_at_entry": 22.7,
+    "mktcap": 5371767808.0,
+    "vix_at_entry": null,
+    "yield_10y_at_entry": null,
+    "risk_on_at_entry": false,
+    "signals": [
+      "analyst_target",
+      "analyst_upside",
+      "insider_buys",
+      "days_to_catalyst",
+      "squeeze_setup",
+      "pct_above_52w_low",
+      "pct_below_52w_high",
+      "rel_strength"
+    ],
+    "signal_values": {
+      "analyst_target": 26.55,
+      "analyst_upside": 22.7,
+      "insider_buys": 21,
+      "days_to_catalyst": 5,
+      "squeeze_setup": 15.0,
+      "pct_above_52w_low": 415.2,
+      "pct_below_52w_high": 22.4,
+      "rel_strength": 15.8
+    },
+    "status": "Open",
+    "cur_price": 21.64,
+    "pct_chg": 0.0,
+    "last_price_update": "2026-05-01 00:02 UTC",
+    "report_url": "https://edwardphill.github.io/stockpicker/reports/UUUU-2026-05-01.html"
   }
 ]
