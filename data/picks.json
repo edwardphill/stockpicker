@@ -984,5 +984,46 @@
     "pct_chg": -2.68,
     "last_price_update": "2026-05-05 21:50 UTC",
     "report_url": "https://edwardphill.github.io/stockpicker/reports/UUUU-2026-05-05.html"
+  },
+  {
+    "date": "2026-05-06",
+    "entry_timestamp": "2026-05-06 00:03 UTC",
+    "ticker": "HII",
+    "theme": "Space / Satellite",
+    "conviction": "Strong Buy",
+    "entry_price": 326.13,
+    "analyst_target": 407.09,
+    "implied_upside_at_entry": 24.8,
+    "mktcap": 12842077184.0,
+    "vix_at_entry": 18.29,
+    "yield_10y_at_entry": 4.45,
+    "risk_on_at_entry": true,
+    "signals": [
+      "analyst_target",
+      "analyst_upside",
+      "insider_buys",
+      "vol_ratio",
+      "rev_accel",
+      "eps_growth",
+      "fcf_yield",
+      "pct_above_52w_low",
+      "pct_below_52w_high"
+    ],
+    "signal_values": {
+      "analyst_target": 407.09,
+      "analyst_upside": 24.8,
+      "insider_buys": 1,
+      "vol_ratio": 3.3,
+      "rev_accel": 0.057,
+      "eps_growth": 32.2,
+      "fcf_yield": 5.3,
+      "pct_above_52w_low": 51.7,
+      "pct_below_52w_high": 29.1
+    },
+    "status": "Open",
+    "cur_price": 326.13,
+    "pct_chg": 0.0,
+    "last_price_update": "2026-05-06 00:03 UTC",
+    "report_url": "https://edwardphill.github.io/stockpicker/reports/HII-2026-05-06.html"
   }
 ]
