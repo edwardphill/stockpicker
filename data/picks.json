@@ -1025,5 +1025,44 @@
     "pct_chg": -2.66,
     "last_price_update": "2026-05-07 15:23 UTC",
     "report_url": "https://edwardphill.github.io/stockpicker/reports/HII-2026-05-06.html"
+  },
+  {
+    "date": "2026-05-07",
+    "entry_timestamp": "2026-05-07 11:27 UTC",
+    "ticker": "EXAS",
+    "theme": "Biotech / Life Sciences",
+    "conviction": "Buy",
+    "entry_price": 104.91,
+    "analyst_target": 106.3,
+    "implied_upside_at_entry": 1.3,
+    "mktcap": 20026083328.0,
+    "vix_at_entry": 17.39,
+    "yield_10y_at_entry": 4.43,
+    "risk_on_at_entry": true,
+    "signals": [
+      "analyst_target",
+      "analyst_upside",
+      "insider_buys",
+      "days_to_catalyst",
+      "vol_ratio",
+      "pct_above_52w_low",
+      "pct_below_52w_high",
+      "rel_strength"
+    ],
+    "signal_values": {
+      "analyst_target": 106.3,
+      "analyst_upside": 1.3,
+      "insider_buys": 1,
+      "days_to_catalyst": 0,
+      "vol_ratio": 8.7,
+      "pct_above_52w_low": 170.3,
+      "pct_below_52w_high": 0.1,
+      "rel_strength": 48.7
+    },
+    "status": "Open",
+    "cur_price": 104.91,
+    "pct_chg": 0.0,
+    "last_price_update": "2026-05-07 11:27 UTC",
+    "report_url": "https://edwardphill.github.io/stockpicker/reports/EXAS-2026-05-07.html"
   }
 ]
