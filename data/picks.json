@@ -1103,5 +1103,44 @@
     "pct_chg": 2.12,
     "last_price_update": "2026-05-08 21:46 UTC",
     "report_url": "https://edwardphill.github.io/stockpicker/reports/IMVT-2026-05-08.html"
+  },
+  {
+    "date": "2026-05-11",
+    "entry_timestamp": "2026-05-11 09:59 UTC",
+    "ticker": "IMVT",
+    "theme": "Biotech / Life Sciences",
+    "conviction": "Strong Buy",
+    "entry_price": 29.73,
+    "analyst_target": 40.29,
+    "implied_upside_at_entry": 35.5,
+    "mktcap": 6051011584.0,
+    "vix_at_entry": 17.19,
+    "yield_10y_at_entry": 4.41,
+    "risk_on_at_entry": true,
+    "signals": [
+      "analyst_target",
+      "analyst_upside",
+      "insider_buys",
+      "days_to_catalyst",
+      "squeeze_setup",
+      "pct_above_52w_low",
+      "pct_below_52w_high",
+      "rel_strength"
+    ],
+    "signal_values": {
+      "analyst_target": 40.29,
+      "analyst_upside": 35.5,
+      "insider_buys": 2,
+      "days_to_catalyst": 17,
+      "squeeze_setup": 21.9,
+      "pct_above_52w_low": 119.9,
+      "pct_below_52w_high": 1.4,
+      "rel_strength": 21.0
+    },
+    "status": "Open",
+    "cur_price": 29.73,
+    "pct_chg": 0.0,
+    "last_price_update": "2026-05-11 09:59 UTC",
+    "report_url": "https://edwardphill.github.io/stockpicker/reports/IMVT-2026-05-11.html"
   }
 ]
