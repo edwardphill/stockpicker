@@ -1257,5 +1257,44 @@
     "pct_chg": 1.19,
     "last_price_update": "2026-05-14 21:58 UTC",
     "report_url": "https://edwardphill.github.io/stockpicker/reports/IMVT-2026-05-14.html"
+  },
+  {
+    "date": "2026-05-15",
+    "entry_timestamp": "2026-05-15 00:03 UTC",
+    "ticker": "UEC",
+    "theme": "Nuclear / Next-Gen Energy",
+    "conviction": "Strong Buy",
+    "entry_price": 14.81,
+    "analyst_target": 19.17,
+    "implied_upside_at_entry": 29.4,
+    "mktcap": 7260169728.0,
+    "vix_at_entry": 17.87,
+    "yield_10y_at_entry": 4.46,
+    "risk_on_at_entry": true,
+    "signals": [
+      "analyst_target",
+      "analyst_upside",
+      "insider_buys",
+      "days_to_catalyst",
+      "short_pct",
+      "pct_above_52w_low",
+      "pct_below_52w_high",
+      "rel_strength"
+    ],
+    "signal_values": {
+      "analyst_target": 19.17,
+      "analyst_upside": 29.4,
+      "insider_buys": 2,
+      "days_to_catalyst": 13,
+      "short_pct": 13.8,
+      "pct_above_52w_low": 194.4,
+      "pct_below_52w_high": 27.2,
+      "rel_strength": 19.0
+    },
+    "status": "Open",
+    "cur_price": 14.81,
+    "pct_chg": 0.0,
+    "last_price_update": "2026-05-15 00:03 UTC",
+    "report_url": "https://edwardphill.github.io/stockpicker/reports/UEC-2026-05-15.html"
   }
 ]
