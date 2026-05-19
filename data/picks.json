@@ -1335,5 +1335,42 @@
     "pct_chg": -1.56,
     "last_price_update": "2026-05-18 21:42 UTC",
     "report_url": "https://edwardphill.github.io/stockpicker/reports/IMVT-2026-05-18.html"
+  },
+  {
+    "date": "2026-05-19",
+    "entry_timestamp": "2026-05-19 00:03 UTC",
+    "ticker": "CGNX",
+    "theme": "Industrial AI / Robotics",
+    "conviction": "Strong Buy",
+    "entry_price": 61.91,
+    "analyst_target": 75.4,
+    "implied_upside_at_entry": 21.8,
+    "mktcap": 10302195712.0,
+    "vix_at_entry": 18.43,
+    "yield_10y_at_entry": 4.59,
+    "risk_on_at_entry": true,
+    "signals": [
+      "analyst_target",
+      "analyst_upside",
+      "insider_buys",
+      "eps_growth",
+      "pct_above_52w_low",
+      "pct_below_52w_high",
+      "rel_strength"
+    ],
+    "signal_values": {
+      "analyst_target": 75.4,
+      "analyst_upside": 21.8,
+      "insider_buys": 2,
+      "eps_growth": 105.0,
+      "pct_above_52w_low": 113.5,
+      "pct_below_52w_high": 13.9,
+      "rel_strength": 59.6
+    },
+    "status": "Open",
+    "cur_price": 61.91,
+    "pct_chg": 0.0,
+    "last_price_update": "2026-05-19 00:03 UTC",
+    "report_url": "https://edwardphill.github.io/stockpicker/reports/CGNX-2026-05-19.html"
   }
 ]
