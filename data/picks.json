@@ -1372,5 +1372,44 @@
     "pct_chg": -2.04,
     "last_price_update": "2026-05-19 21:51 UTC",
     "report_url": "https://edwardphill.github.io/stockpicker/reports/CGNX-2026-05-19.html"
+  },
+  {
+    "date": "2026-05-20",
+    "entry_timestamp": "2026-05-20 10:07 UTC",
+    "ticker": "LDOS",
+    "theme": "Industrial AI / Robotics",
+    "conviction": "Strong Buy",
+    "entry_price": 124.78,
+    "analyst_target": 187.79,
+    "implied_upside_at_entry": 50.5,
+    "mktcap": 15695510528.0,
+    "vix_at_entry": 18.06,
+    "yield_10y_at_entry": 4.61,
+    "risk_on_at_entry": true,
+    "signals": [
+      "analyst_target",
+      "analyst_upside",
+      "insider_buys",
+      "rev_accel",
+      "eps_growth",
+      "fcf_yield",
+      "pct_above_52w_low",
+      "pct_below_52w_high"
+    ],
+    "signal_values": {
+      "analyst_target": 187.79,
+      "analyst_upside": 50.5,
+      "insider_buys": 2,
+      "rev_accel": 0.099,
+      "eps_growth": 20.5,
+      "fcf_yield": 7.6,
+      "pct_above_52w_low": 2.7,
+      "pct_below_52w_high": 39.4
+    },
+    "status": "Open",
+    "cur_price": 124.78,
+    "pct_chg": 0.0,
+    "last_price_update": "2026-05-20 10:07 UTC",
+    "report_url": "https://edwardphill.github.io/stockpicker/reports/LDOS-2026-05-20.html"
   }
 ]
