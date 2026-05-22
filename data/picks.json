@@ -1411,5 +1411,46 @@
     "pct_chg": -0.08,
     "last_price_update": "2026-05-22 15:43 UTC",
     "report_url": "https://edwardphill.github.io/stockpicker/reports/LDOS-2026-05-20.html"
+  },
+  {
+    "date": "2026-05-22",
+    "entry_timestamp": "2026-05-22 11:20 UTC",
+    "ticker": "QBTS",
+    "theme": "Quantum / Emerging Tech",
+    "conviction": "Buy",
+    "entry_price": 31.11,
+    "analyst_target": 35.17,
+    "implied_upside_at_entry": 13.1,
+    "mktcap": 11525068800.0,
+    "vix_at_entry": 16.76,
+    "yield_10y_at_entry": 4.57,
+    "risk_on_at_entry": true,
+    "signals": [
+      "analyst_target",
+      "analyst_upside",
+      "insider_buys",
+      "vol_ratio",
+      "rev_accel",
+      "short_pct",
+      "pct_above_52w_low",
+      "pct_below_52w_high",
+      "rel_strength"
+    ],
+    "signal_values": {
+      "analyst_target": 35.17,
+      "analyst_upside": 13.1,
+      "insider_buys": 1,
+      "vol_ratio": 2.8,
+      "rev_accel": 0.17,
+      "short_pct": 16.1,
+      "pct_above_52w_low": 144.0,
+      "pct_below_52w_high": 33.5,
+      "rel_strength": 22.3
+    },
+    "status": "Open",
+    "cur_price": 31.11,
+    "pct_chg": 0.0,
+    "last_price_update": "2026-05-22 11:20 UTC",
+    "report_url": "https://edwardphill.github.io/stockpicker/reports/QBTS-2026-05-22.html"
   }
 ]
