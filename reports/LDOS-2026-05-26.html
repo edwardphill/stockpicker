@@ -1,0 +1,206 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width,initial-scale=1.0">
+<title>StockPicker — LDOS 2026-05-26</title>
+<style>
+  *{box-sizing:border-box;margin:0;padding:0}
+  body{background:#060b14;color:#c9d1d9;font-family:Arial,sans-serif;font-size:14px;min-height:100vh}
+  .hdr{background:#0d1117;border-bottom:1px solid #1e2d3d;padding:16px 24px;display:flex;align-items:center;justify-content:space-between}
+  .logo{font-size:16px;font-weight:bold;color:#f0f6ff;letter-spacing:2px;text-transform:uppercase}
+  .logo span{color:#00d4aa}
+  .badge{display:inline-block;padding:3px 12px;border-radius:12px;font-size:12px;font-weight:bold;text-transform:uppercase;background:#065f46;color:#00d4aa;border:1px solid #00d4aa;margin-right:8px}
+  .risk{display:inline-block;padding:3px 10px;border-radius:12px;font-size:11px;font-weight:bold;color:#00d4aa;border:1px solid #00d4aa}
+  .meta{font-size:11px;color:#3d5166;margin-top:6px}
+  .cols{display:grid;grid-template-columns:1fr 1fr;gap:0;min-height:calc(100vh - 80px)}
+  .col{padding:24px;border-right:1px solid #0f1923}
+  .col:last-child{border-right:none}
+  .col-hdr{font-size:11px;text-transform:uppercase;letter-spacing:1.5px;font-weight:bold;padding:6px 0 14px;border-bottom:1px solid #1e2d3d;margin-bottom:18px}
+  .bull-hdr{color:#00d4aa}
+  .bear-hdr{color:#f87171}
+  .col h3{font-size:13px;color:#e2e8f0;margin:18px 0 6px;padding-bottom:4px;border-bottom:1px solid #0f1923}
+  .col h3:first-child{margin-top:0}
+  .col p,.col li{line-height:1.65;color:#c9d1d9;font-size:13px;margin-bottom:6px}
+  .col ul,.col ol{padding-left:18px;margin-bottom:8px}
+  .col a{color:#60a5fa}
+  .col strong{color:#e2e8f0}
+  .print-btn{background:#0d1424;border:1px solid #1e2d3d;color:#64748b;padding:5px 14px;border-radius:4px;font-size:11px;cursor:pointer;font-family:inherit;text-transform:uppercase;letter-spacing:0.5px}
+  .print-btn:hover{border-color:#00d4aa;color:#00d4aa}
+  .back{color:#3d5166;font-size:11px;text-decoration:none}
+  .back:hover{color:#60a5fa}
+  @media(max-width:768px){.cols{grid-template-columns:1fr}.col{border-right:none;border-bottom:1px solid #0f1923}}
+  @media print{.hdr button,.print-btn{display:none}.cols{grid-template-columns:1fr 1fr}.col{border:1px solid #ccc;margin:4px}body{background:white;color:black}.col h3{color:black}.col p,.col li{color:#111}}
+</style>
+</head>
+<body>
+<div class="hdr">
+  <div>
+    <div class="logo">STOCK<span>PICKER</span> &nbsp;·&nbsp; <span style="color:#e2e8f0;font-size:15px;letter-spacing:1px">LDOS</span></div>
+    <div class="meta">2026-05-26 &nbsp;·&nbsp; <span class="badge">Strong Buy</span><span class="risk">RISK ON</span></div>
+    <div class="meta" style="margin-top:6px">
+      Entry $126.01 &nbsp;·&nbsp; Target $187.79 &nbsp;·&nbsp;
+      Analyst upside +49.0% &nbsp;·&nbsp;
+      Mkt Cap $15.85B &nbsp;·&nbsp;
+      VIX 16.76 &nbsp;·&nbsp; 10Y 4.57%
+    </div>
+  </div>
+  <div style="display:flex;gap:10px;align-items:center">
+    <a href="../index.html" class="back">← Dashboard</a>
+    <button class="print-btn" onclick="window.print()">⎙ Save PDF</button>
+  </div>
+</div>
+<div class="cols">
+  <div class="col">
+    <div class="col-hdr bull-hdr">▲ Bull Case</div>
+    
+
+<h3>Rating & Price Target</h3>
+
+<p><strong>Rating: Strong Buy</strong> | <strong>12-Month Price Target: $187.79</strong> | Current Price: $126.01 | Implied Upside: ~49%</p>
+
+<p>We are initiating coverage of Leidos Holdings (LDOS) with a Strong Buy rating, as we believe the market is materially undervaluing the company's contracted revenue visibility, accelerating earnings trajectory, and structural positioning at the intersection of federal IT modernization and defense hypersonics — two of the most durable spending vectors in the current budget environment.</p>
+
+<h3>Investment Thesis</h3>
+
+<p>Leidos trades at 9.6x forward earnings against a defense/IT services peer group that commands 14–17x, a discount we view as increasingly unjustified given the quality of recent contract wins and the improving growth profile. The <a href="https://finnhub.io/api/news?id=e31119cb6b42822c511fc86314d3d8bccfe7f2c5739e561e5bae28938780711a">$10B "Evolve" contract to modernize U.S. State Department IT systems</a> — under which Leidos has already <a href="https://finnhub.io/api/news?id=b80985230234c2039e1cce9274f9deeeb89042cfae1ca57bb4e3fb9b0b0d10ce">secured four initial task orders</a> — represents a multi-year revenue stream with strong margin characteristics. Separately, a <a href="https://finnhub.io/api/news?id=57f21a2cd4eaecbc7ce157fd01a0e0b5c0ed5583be31afc5ed8d0b58557c845f">$2.7B hypersonic weapons contract</a> deepens the company's exposure to the highest-priority segment of the DoD modernization budget. Together, these wins add over $12B in potential ceiling value to an already robust backlog.</p>
+
+<p>The market appears to be anchoring on trailing revenue growth of 3.7% YoY and overlooking the sequential acceleration — quarterly growth improved by +9.9% QoQ, and forward EPS estimates sit 20.5% above trailing, suggesting the earnings inflection is already underway. With a 7.5% free cash flow yield, Leidos is generating real, deployable cash at a level that supports both continued deleveraging from its 1.37x debt/equity ratio and shareholder returns. Two insider open-market purchases in the last 30 days provide an additional, if modest, signal of management confidence at current levels.</p>
+
+<p>We believe the structural tailwind here is underappreciated: federal agencies are under bipartisan pressure to modernize legacy IT infrastructure, and Leidos's scale, clearance base, and incumbency position it as a primary beneficiary. The integration of AI and automation capabilities into government services contracts — a theme the company has emphasized in its Evolve and <a href="https://finnhub.io/api/news?id=8cf445d8144e0100021363a17023f2e5bd1cc10ebb9808c875d5925f050da881">Military OneSource</a> work — positions LDOS within the Industrial AI/Robotics thematic we track, though execution risk on newer technology-forward contracts warrants monitoring.</p>
+
+<h3>Valuation</h3>
+
+<p>Our $187.79 price target is derived from a blended approach. On a forward P/E basis, we apply a 14.3x multiple to our FY2026 EPS estimate of ~$13.13, which reflects the 20.5% forward earnings growth implied by consensus. This target multiple represents a modest discount to the defense IT services peer median of ~15–16x (SAIC at ~14x, BAH at ~22x, CACI at ~17x), which we believe is conservative given Leidos's superior revenue scale ($17.3B TTM) and improving margin trajectory. On an EV/EBITDA basis, LDOS currently trades at approximately 7.5x ($2.40B EBITDA), versus a peer median closer to 11–12x. At our price target, the stock would trade at ~10.5x EV/EBITDA — still below the group average, suggesting the valuation framework does not require heroic assumptions. The current trailing P/E of 11.5x and P/S of ~0.9x are near trough levels for a company of this quality and contract visibility. We see the discount as a legacy of margin compression concerns that the forward data no longer supports.</p>
+
+<h3>Catalysts</h3>
+
+<p><strong>Evolve task order ramp (H2 2025–2026):</strong> As additional task orders are awarded under the $10B State Department Evolve IDIQ, revenue contribution should become increasingly visible in reported results. We expect this to drive upward revisions to consensus revenue estimates and compress the valuation discount to peers.</p>
+
+<p><strong>FY2026 Q3 earnings (July 28, 2026):</strong> The next scheduled earnings report should reflect the first full quarters of contribution from both Evolve and hypersonics contracts. A margin expansion print alongside accelerating organic growth could catalyze a re-rating. Forward guidance will be closely watched for signals on pipeline conversion.</p>
+
+<p><strong>Federal budget cycle / FY2026 appropriations (late 2025):</strong> Clarity on defense and civilian agency spending levels should reduce the overhang from continuing resolution risk. Bipartisan support for IT modernization and hypersonic development suggests Leidos's key program areas are well-protected, which we expect to support a higher multiple.</p>
+
+<p><strong>Capital allocation shift (2025–2026):</strong> With FCF yield at 7.5% and deleveraging progressing, we see potential for accelerated buybacks or a dividend increase, either of which would signal management's confidence and could attract incremental institutional flows.</p>
+
+<h3>Financial Summary</h3>
+
+<p>Leidos generated $17.33B in trailing twelve-month revenue, reflecting 3.7% YoY growth — a figure that understates the current momentum given the +9.9% QoQ sequential improvement in growth rate. EBITDA of $2.40B implies an EBITDA margin of approximately 13.8%, while gross margins of 17.9% and a profit margin of 8.2% are consistent with a services-heavy government contractor mix with room for expansion as higher-margin IT modernization work scales. The forward P/E of 9.56x versus a trailing P/E of 11.53x quantifies the earnings acceleration, with consensus expecting roughly 20% growth in EPS — a rate that, if sustained, would place LDOS among the faster growers in its peer set.</p>
+
+<p>The balance sheet carries a debt/equity ratio of 1.37x, which is elevated relative to some peers but manageable given the predictability of government contract cash flows and the 7.5% FCF yield. On our estimates, the company can reduce leverage by 0.2–0.3 turns annually while maintaining current capital return levels. Market capitalization of $15.85B positions Leidos as the largest pure-play government IT and defense services firm, providing scale advantages in competing for large, multi-billion-dollar IDIQ vehicles.</p>
+
+<h3>Key Risks to Our View</h3>
+
+<p><strong>1. Federal spending disruption (moderate likelihood):</strong> A prolonged continuing resolution<p style='color:#94a3b8;font-size:12px;'>No notable institutional activity in last 90 days.</p>
+<div style="margin-top:14px;">
+  <div style="font-size:11px;font-weight:bold;color:#7c3aed;text-transform:uppercase;
+              letter-spacing:.4px;margin-bottom:8px;">🔮 Polymarket Prediction Markets</div>
+  <table width="100%" cellpadding="0" cellspacing="0"
+         style="border-collapse:collapse;font-size:12px;background:#faf5ff;
+                border:1px solid #e9d5ff;border-radius:6px;overflow:hidden;">
+    <thead>
+      <tr style="background:#f3e8ff;border-bottom:1px solid #e9d5ff;">
+        <th style="padding:8px 10px;text-align:left;font-size:10px;color:#7c3aed;text-transform:uppercase;">Market Question</th>
+        <th style="padding:8px 10px;text-align:left;font-size:10px;color:#7c3aed;text-transform:uppercase;">Odds</th>
+        <th style="padding:8px 10px;text-align:left;font-size:10px;color:#7c3aed;text-transform:uppercase;">Signal</th>
+      </tr>
+    </thead>
+    <tbody>
+<tr style="border-bottom:1px solid #f1f5f9;">
+  <td style="padding:8px 10px;font-size:12px;color:#1e293b;width:55%;">
+    <a href="https://polymarket.com" target="_blank"
+       style="color:#1e293b;text-decoration:none;">Will Spain win the 2026 FIFA World Cup?</a>
+    <div style="font-size:10px;color:#94a3b8;margin-top:2px;">
+      Vol: $24,418,810 · Ends: 2026-07-20
+    </div>
+  </td>
+  <td style="padding:8px 10px;width:25%;">
+    <div style="font-size:13px;font-weight:bold;color:#16a34a;">50% Yes</div>
+    <div style="background:#f1f5f9;border-radius:4px;height:6px;width:80px;margin-top:4px;overflow:hidden;">
+      <div style="background:#16a34a;height:6px;width:40px;border-radius:4px;opacity:.7;"></div>
+    </div>
+  </td>
+  <td style="padding:8px 10px;font-size:11px;font-weight:bold;color:#64748b;">Neutral</td>
+</tr>
+<tr style="border-bottom:1px solid #f1f5f9;">
+  <td style="padding:8px 10px;font-size:12px;color:#1e293b;width:55%;">
+    <a href="https://polymarket.com" target="_blank"
+       style="color:#1e293b;text-decoration:none;">Will China invades Taiwan before GTA VI?</a>
+    <div style="font-size:10px;color:#94a3b8;margin-top:2px;">
+      Vol: $1,843,356 · Ends: 2026-07-31
+    </div>
+  </td>
+  <td style="padding:8px 10px;width:25%;">
+    <div style="font-size:13px;font-weight:bold;color:#16a34a;">50% Yes</div>
+    <div style="background:#f1f5f9;border-radius:4px;height:6px;width:80px;margin-top:4px;overflow:hidden;">
+      <div style="background:#16a34a;height:6px;width:40px;border-radius:4px;opacity:.7;"></div>
+    </div>
+  </td>
+  <td style="padding:8px 10px;font-size:11px;font-weight:bold;color:#64748b;">Neutral</td>
+</tr>
+<tr style="border-bottom:1px solid #f1f5f9;">
+  <td style="padding:8px 10px;font-size:12px;color:#1e293b;width:55%;">
+    <a href="https://polymarket.com" target="_blank"
+       style="color:#1e293b;text-decoration:none;">Will MegaETH perform an airdrop by June 30? </a>
+    <div style="font-size:10px;color:#94a3b8;margin-top:2px;">
+      Vol: $1,546,573 · Ends: 2026-07-01
+    </div>
+  </td>
+  <td style="padding:8px 10px;width:25%;">
+    <div style="font-size:13px;font-weight:bold;color:#16a34a;">50% Yes</div>
+    <div style="background:#f1f5f9;border-radius:4px;height:6px;width:80px;margin-top:4px;overflow:hidden;">
+      <div style="background:#16a34a;height:6px;width:40px;border-radius:4px;opacity:.7;"></div>
+    </div>
+  </td>
+  <td style="padding:8px 10px;font-size:11px;font-weight:bold;color:#64748b;">Neutral</td>
+</tr></tbody>
+  </table>
+  <div style="font-size:10px;color:#94a3b8;margin-top:4px;">
+    Real-money prediction markets via <a href="https://polymarket.com" style="color:#7c3aed;">Polymarket</a>.
+    Prices = implied probability.
+  </div>
+</div><h3 style='font-size:13px;'>References</h3><ul style='font-size:12px;'><li><a href="https://finnhub.io/api/news?id=e31119cb6b42822c511fc86314d3d8bccfe7f2c5739e561e5bae28938780711a" style="color:#1d4ed8;" target="_blank">[Yahoo] Leidos (LDOS) Selected for $10B “Evolve” Contract to Modernize US State Department IT Systems</a></li><li><a href="https://finnhub.io/api/news?id=8cf445d8144e0100021363a17023f2e5bd1cc10ebb9808c875d5925f050da881" style="color:#1d4ed8;" target="_blank">[Yahoo] Leidos To Support Over 4.7 Million Service Members and Families Through Military OneSource</a></li><li><a href="https://finnhub.io/api/news?id=f5ada0fb354b9b88881a727ddb78aa4a6abc6077e9e407e772e4bb8bb519c7ab" style="color:#1d4ed8;" target="_blank">[Yahoo] Leidos to help strengthen global IT operations for the U.S. Department of State under Evolve contract</a></li><li><a href="https://finnhub.io/api/news?id=b80985230234c2039e1cce9274f9deeeb89042cfae1ca57bb4e3fb9b0b0d10ce" style="color:#1d4ed8;" target="_blank">[Benzinga] Leidos Receives Four Awards Under State Department's Evolve Contract</a></li><li><a href="https://finnhub.io/api/news?id=57f21a2cd4eaecbc7ce157fd01a0e0b5c0ed5583be31afc5ed8d0b58557c845f" style="color:#1d4ed8;" target="_blank">[Yahoo] New US$2.7 Billion Hypersonic Weapons Contract Might Change The Case For Investing In Leidos Holdings (LDOS)</a></li><li><a href="https://finance.yahoo.com/quote/LDOS" style="color:#1d4ed8;" target="_blank">Yahoo Finance: LDOS</a></li><li><a href="https://finviz.com/quote.ashx?t=LDOS" style="color:#1d4ed8;" target="_blank">Finviz: LDOS</a></li></ul>
+  </div>
+  <div class="col">
+    <div class="col-hdr bear-hdr">▼ Bear Case</div>
+    
+
+<h3>Bear Case Thesis</h3>
+
+<p>The market is not mispricing LDOS out of ignorance — it is correctly discounting a government services contractor operating in an environment of unprecedented fiscal austerity pressure, where the current administration's DOGE-driven efficiency mandate has already resulted in headcount freezes, contract rescissions, and agency-level spending reviews across the civilian federal book. The bull note frames the 9.6x forward P/E as an anomaly to be corrected; we believe it reflects rational uncertainty about whether $12B+ in ceiling-value contract wins will translate into funded task orders at historical conversion rates, particularly when the State Department — the Evolve contract's customer — has faced staff reductions and budget scrutiny. The bull's 49% upside case requires both multiple expansion <em>and</em> earnings acceleration, a combination that has a low base rate in government IT services absent a clear inflection in the federal spending cycle, which is not yet visible.</p>
+
+<h3>Challenging the Bull's Assumptions</h3>
+
+<p><strong>1. "The $10B Evolve contract is a multi-year revenue stream with strong margin characteristics."</strong><br>
+IDIQ ceiling values are not revenue. The $10B figure represents maximum potential spend across the contract's life, shared among awardees. Four initial task orders have been secured, but dollar values have not been disclosed. Historically, large civilian IT IDIQs convert at 30–50% of ceiling over their full period of performance. More critically, the State Department's IT modernization budget is directly exposed to DOGE-related reviews. Any slowdown in task order issuance pace — entirely plausible under current conditions — would leave the bull's revenue ramp assumptions stranded for multiple quarters.</p>
+
+<p><strong>2. "+9.9% QoQ sequential growth signals an inflection."</strong><br>
+This metric is misleading without seasonal context. LDOS has historically exhibited Q4-to-Q1 or mid-year sequential volatility driven by government fiscal year timing. One quarter of sequential improvement does not constitute a trend, and the trailing YoY figure of 3.7% — which smooths for seasonality — is a more honest representation of underlying momentum. The bull note acknowledges this is "understated" but provides no evidence beyond the QoQ print.</p>
+
+<p><strong>3. "Forward EPS estimates sit 20.5% above trailing, confirming earnings acceleration."</strong><br>
+Consensus forward EPS for government IT contractors has a well-documented pattern of optimism followed by downward revision, particularly in years with continuing resolution risk. In the last three CR-affected fiscal years, LDOS saw median negative EPS revisions of 3–5% in the six months following initial consensus formation. The 20.5% growth rate bakes in full contribution from new contracts and assumes no margin dilution from ramp costs — both aggressive assumptions.</p>
+
+<p><strong>4. "Peer discount is unjustified — LDOS should trade at 14–15x."</strong><br>
+The peer comparison is selectively framed. BAH (22x) carries a significantly higher organic growth rate and stronger consulting mix. CACI (17x) has a more defense-heavy portfolio less exposed to civilian discretionary cuts. SAIC (14x) — the closest comp — trades at a similar discount, suggesting the market is systematically applying lower multiples to large-scale, lower-growth IT services contractors. LDOS's discount is structural, not episodic. Gross margins of 17.9% are below-peer and reflect a contract mix weighted toward cost-plus and T&M work that inherently caps margin expansion.</p>
+
+<p><strong>5. "Balance sheet supports deleveraging and capital returns."</strong><br>
+At 1.37x debt/equity, LDOS is more levered than SAIC (0.9x) and CACI (0.8x). In a rising-rate environment with the 10Y at 4.57%, refinancing costs matter. The 7.5% FCF yield is real but is being asked to simultaneously service debt reduction, sustain the dividend, and fund buybacks. Any one of those must give if contract-driven revenue disappoints. The bull's projection of 0.2–0.3x annual deleveraging assumes no deterioration in working capital — a tenuous assumption during contract transition periods.</p>
+
+<p><strong>6. "Two insider purchases signal management confidence."</strong><br>
+Two open-market buys of undisclosed size in a $16B market-cap company are statistically insignificant. Insider buying at government contractors tends to be episodic and form-driven rather than predictive. Without disclosed dollar amounts in the six- or seven-figure range, this is noise.</p>
+
+<h3>Downside Scenario & Valuation</h3>
+
+<p>In our bear case, we assume: (a) Evolve task order conversion runs at 35% of ceiling over 5 years (vs. the bull's implicit ~60%+), contributing ~$700M annually rather than $1B+; (b) DOGE-driven civilian agency spending reviews result in a 2–3% drag on non-defense revenue through FY2026; (c) EPS grows 8–10% rather than 20%, producing FY2026 EPS of ~$11.80–$12.10; and (d) the multiple stays range-bound at 9.5–10.0x, reflecting persistent skepticism about the growth profile.</p>
+
+<p>At 9.5x × $11.80 = <strong>$112</strong>, implying ~11% downside from current levels. In a more severe scenario — a full-year CR combined with Evolve delays and margin compression from hypersonics ramp costs — EPS could print closer to $11.00, and the multiple could compress to 8.5x on de-rating sentiment, yielding a trough of <strong>$93–$94</strong>, or roughly 25% downside.</p>
+
+<p>The key condition for the downside case is a prolonged continuing resolution extending past Q1 FY2026 combined with visible evidence of DOGE-related task order delays at State Department. Either alone is manageable; both together would break the bull thesis.</p>
+
+<h3>Verdict</h3>
+
+<p><strong>Market Weight.</strong> The contract wins are real and the valuation is objectively undemanding, but the bull's 49% upside requires a multiple re-rating that depends on earnings acceleration that has not yet been confirmed in reported results — and the DOGE/CR overhang creates a plausible path to the stock staying range-bound or drifting lower before any catalyst can materialize. Size at half-weight and revisit after FY2026 Q3 earnings (July 28, 2026), which should be the first clean read on Evolve and hypersonics contribution rates.</p>
+  </div>
+</div>
+</body>
+</html>
