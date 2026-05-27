@@ -1491,5 +1491,42 @@
     "pct_chg": 1.67,
     "last_price_update": "2026-05-26 22:44 UTC",
     "report_url": "https://edwardphill.github.io/stockpicker/reports/LDOS-2026-05-26.html"
+  },
+  {
+    "date": "2026-05-27",
+    "entry_timestamp": "2026-05-27 10:41 UTC",
+    "ticker": "PANW",
+    "theme": "Cybersecurity",
+    "conviction": "Buy",
+    "entry_price": 248.17,
+    "analyst_target": 227.14,
+    "implied_upside_at_entry": -8.5,
+    "mktcap": 201265954816.0,
+    "vix_at_entry": 17.01,
+    "yield_10y_at_entry": 4.56,
+    "risk_on_at_entry": true,
+    "signals": [
+      "insider_buys",
+      "days_to_catalyst",
+      "rev_accel",
+      "eps_growth",
+      "pct_above_52w_low",
+      "pct_below_52w_high",
+      "rel_strength"
+    ],
+    "signal_values": {
+      "insider_buys": 1,
+      "days_to_catalyst": 6,
+      "rev_accel": 0.134,
+      "eps_growth": 121.1,
+      "pct_above_52w_low": 77.8,
+      "pct_below_52w_high": 5.1,
+      "rel_strength": 20.4
+    },
+    "status": "Open",
+    "cur_price": 248.17,
+    "pct_chg": 0.0,
+    "last_price_update": "2026-05-27 10:41 UTC",
+    "report_url": "https://edwardphill.github.io/stockpicker/reports/PANW-2026-05-27.html"
   }
 ]
