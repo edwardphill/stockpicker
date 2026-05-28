@@ -1528,5 +1528,44 @@
     "pct_chg": 0.12,
     "last_price_update": "2026-05-27 22:53 UTC",
     "report_url": "https://edwardphill.github.io/stockpicker/reports/PANW-2026-05-27.html"
+  },
+  {
+    "date": "2026-05-28",
+    "entry_timestamp": "2026-05-28 10:47 UTC",
+    "ticker": "QBTS",
+    "theme": "Quantum / Emerging Tech",
+    "conviction": "Buy",
+    "entry_price": 29.89,
+    "analyst_target": 35.17,
+    "implied_upside_at_entry": 17.7,
+    "mktcap": 11072569344.0,
+    "vix_at_entry": 16.29,
+    "yield_10y_at_entry": 4.5,
+    "risk_on_at_entry": true,
+    "signals": [
+      "analyst_target",
+      "analyst_upside",
+      "insider_buys",
+      "rev_accel",
+      "short_pct",
+      "pct_above_52w_low",
+      "pct_below_52w_high",
+      "rel_strength"
+    ],
+    "signal_values": {
+      "analyst_target": 35.17,
+      "analyst_upside": 17.7,
+      "insider_buys": 1,
+      "rev_accel": 0.17,
+      "short_pct": 15.5,
+      "pct_above_52w_low": 134.4,
+      "pct_below_52w_high": 36.1,
+      "rel_strength": 21.3
+    },
+    "status": "Open",
+    "cur_price": 29.89,
+    "pct_chg": 0.0,
+    "last_price_update": "2026-05-28 10:47 UTC",
+    "report_url": "https://edwardphill.github.io/stockpicker/reports/QBTS-2026-05-28.html"
   }
 ]
