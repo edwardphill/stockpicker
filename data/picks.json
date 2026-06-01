@@ -1606,5 +1606,42 @@
     "pct_chg": -1.63,
     "last_price_update": "2026-05-29 22:50 UTC",
     "report_url": "https://edwardphill.github.io/stockpicker/reports/KTOS-2026-05-29.html"
+  },
+  {
+    "date": "2026-06-01",
+    "entry_timestamp": "2026-06-01 10:40 UTC",
+    "ticker": "UUUU",
+    "theme": "Nuclear / Next-Gen Energy",
+    "conviction": "Strong Buy",
+    "entry_price": 18.56,
+    "analyst_target": 27.2,
+    "implied_upside_at_entry": 46.5,
+    "mktcap": 4638231040.0,
+    "vix_at_entry": 15.32,
+    "yield_10y_at_entry": 4.45,
+    "risk_on_at_entry": true,
+    "signals": [
+      "analyst_target",
+      "analyst_upside",
+      "insider_buys",
+      "short_pct",
+      "pct_above_52w_low",
+      "pct_below_52w_high",
+      "rel_strength"
+    ],
+    "signal_values": {
+      "analyst_target": 27.2,
+      "analyst_upside": 46.5,
+      "insider_buys": 4,
+      "short_pct": 15.8,
+      "pct_above_52w_low": 285.1,
+      "pct_below_52w_high": 33.5,
+      "rel_strength": 20.0
+    },
+    "status": "Open",
+    "cur_price": 18.56,
+    "pct_chg": 0.0,
+    "last_price_update": "2026-06-01 10:40 UTC",
+    "report_url": "https://edwardphill.github.io/stockpicker/reports/UUUU-2026-06-01.html"
   }
 ]
