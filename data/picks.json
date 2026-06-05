@@ -1723,5 +1723,46 @@
     "pct_chg": 3.33,
     "last_price_update": "2026-06-04 22:15 UTC",
     "report_url": "https://edwardphill.github.io/stockpicker/reports/PANW-2026-06-04.html"
+  },
+  {
+    "date": "2026-06-05",
+    "entry_timestamp": "2026-06-05 00:03 UTC",
+    "ticker": "LDOS",
+    "theme": "Industrial AI / Robotics",
+    "conviction": "Strong Buy",
+    "entry_price": 124.57,
+    "analyst_target": 183.27,
+    "implied_upside_at_entry": 47.1,
+    "mktcap": 15669095424.0,
+    "vix_at_entry": 16.06,
+    "yield_10y_at_entry": 4.49,
+    "risk_on_at_entry": true,
+    "signals": [
+      "analyst_target",
+      "analyst_upside",
+      "insider_buys",
+      "days_to_catalyst",
+      "rev_accel",
+      "eps_growth",
+      "fcf_yield",
+      "pct_above_52w_low",
+      "pct_below_52w_high"
+    ],
+    "signal_values": {
+      "analyst_target": 183.27,
+      "analyst_upside": 47.1,
+      "insider_buys": 2,
+      "days_to_catalyst": 53,
+      "rev_accel": 0.099,
+      "eps_growth": 20.4,
+      "fcf_yield": 7.6,
+      "pct_above_52w_low": 2.8,
+      "pct_below_52w_high": 39.5
+    },
+    "status": "Open",
+    "cur_price": 124.57,
+    "pct_chg": 0.0,
+    "last_price_update": "2026-06-05 00:03 UTC",
+    "report_url": "https://edwardphill.github.io/stockpicker/reports/LDOS-2026-06-05.html"
   }
 ]
