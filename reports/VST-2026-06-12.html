@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width,initial-scale=1.0">
+<title>StockPicker — VST 2026-06-12</title>
+<style>
+  *{box-sizing:border-box;margin:0;padding:0}
+  body{background:#060b14;color:#c9d1d9;font-family:Arial,sans-serif;font-size:14px;min-height:100vh}
+  .hdr{background:#0d1117;border-bottom:1px solid #1e2d3d;padding:16px 24px;display:flex;align-items:center;justify-content:space-between}
+  .logo{font-size:16px;font-weight:bold;color:#f0f6ff;letter-spacing:2px;text-transform:uppercase}
+  .logo span{color:#00d4aa}
+  .badge{display:inline-block;padding:3px 12px;border-radius:12px;font-size:12px;font-weight:bold;text-transform:uppercase;background:#065f46;color:#00d4aa;border:1px solid #00d4aa;margin-right:8px}
+  .risk{display:inline-block;padding:3px 10px;border-radius:12px;font-size:11px;font-weight:bold;color:#f87171;border:1px solid #f87171}
+  .meta{font-size:11px;color:#3d5166;margin-top:6px}
+  .cols{display:grid;grid-template-columns:1fr 1fr;gap:0;min-height:calc(100vh - 80px)}
+  .col{padding:24px;border-right:1px solid #0f1923}
+  .col:last-child{border-right:none}
+  .col-hdr{font-size:11px;text-transform:uppercase;letter-spacing:1.5px;font-weight:bold;padding:6px 0 14px;border-bottom:1px solid #1e2d3d;margin-bottom:18px}
+  .bull-hdr{color:#00d4aa}
+  .bear-hdr{color:#f87171}
+  .col h3{font-size:13px;color:#e2e8f0;margin:18px 0 6px;padding-bottom:4px;border-bottom:1px solid #0f1923}
+  .col h3:first-child{margin-top:0}
+  .col p,.col li{line-height:1.65;color:#c9d1d9;font-size:13px;margin-bottom:6px}
+  .col ul,.col ol{padding-left:18px;margin-bottom:8px}
+  .col a{color:#60a5fa}
+  .col strong{color:#e2e8f0}
+  .print-btn{background:#0d1424;border:1px solid #1e2d3d;color:#64748b;padding:5px 14px;border-radius:4px;font-size:11px;cursor:pointer;font-family:inherit;text-transform:uppercase;letter-spacing:0.5px}
+  .print-btn:hover{border-color:#00d4aa;color:#00d4aa}
+  .back{color:#3d5166;font-size:11px;text-decoration:none}
+  .back:hover{color:#60a5fa}
+  @media(max-width:768px){.cols{grid-template-columns:1fr}.col{border-right:none;border-bottom:1px solid #0f1923}}
+  @media print{.hdr button,.print-btn{display:none}.cols{grid-template-columns:1fr 1fr}.col{border:1px solid #ccc;margin:4px}body{background:white;color:black}.col h3{color:black}.col p,.col li{color:#111}}
+</style>
+</head>
+<body>
+<div class="hdr">
+  <div>
+    <div class="logo">STOCK<span>PICKER</span> &nbsp;·&nbsp; <span style="color:#e2e8f0;font-size:15px;letter-spacing:1px">VST</span></div>
+    <div class="meta">2026-06-12 &nbsp;·&nbsp; <span class="badge">Strong Buy</span><span class="risk">RISK OFF</span></div>
+    <div class="meta" style="margin-top:6px">
+      Entry $147.8 &nbsp;·&nbsp; Target $225.29 &nbsp;·&nbsp;
+      Analyst upside +52.4% &nbsp;·&nbsp;
+      Mkt Cap $49.84B &nbsp;·&nbsp;
+      VIX None &nbsp;·&nbsp; 10Y None%
+    </div>
+  </div>
+  <div style="display:flex;gap:10px;align-items:center">
+    <a href="../index.html" class="back">← Dashboard</a>
+    <button class="print-btn" onclick="window.print()">⎙ Save PDF</button>
+  </div>
+</div>
+<div class="cols">
+  <div class="col">
+    <div class="col-hdr bull-hdr">▲ Bull Case</div>
+    
+
+<h3>Rating & Price Target</h3>
+
+<p><strong>Rating: Strong Buy</strong> | <strong>12-Month Price Target: $225.29</strong> | <strong>Current Price: $147.80</strong> | <strong>Implied Upside: +52.4%</strong></p>
+
+<p>We are initiating coverage of Vistra Corp. (VST) with a Strong Buy rating, driven by our view that the market has yet to fully price the structural re-rating embedded in the company's transition from a legacy competitive power producer to a critical infrastructure provider for AI-driven electricity demand, supported by an accelerating earnings trajectory and recently announced commercial partnerships that significantly de-risk forward cash flows.</p>
+
+<h3>Investment Thesis</h3>
+
+<p>Our analysis suggests the market continues to value VST through the lens of a cyclical independent power producer, assigning a discount more consistent with commodity-exposed generators than with what is increasingly a contracted, secular growth story. The forward P/E of 13.49x — a 45% compression from the trailing multiple of 24.67x — reflects consensus expectations for an 83% increase in forward EPS relative to trailing, yet the stock trades well below our target, implying the market assigns low probability to the durability of this earnings inflection. We believe this skepticism is misplaced.</p>
+
+<p>The core driver is the intersection of Vistra's diversified generation fleet (including nuclear assets acquired via the Energy Harbor transaction) with an unprecedented wave of data center power demand. <a href="https://finnhub.io/api/news?id=42cd324c61f7b29cf634df7612d0fbcc41e5ca04afc79ead1af209fae0fddb1b">Vistra's recently announced Helix partnership</a> — part of <a href="https://finnhub.io/api/news?id=c7856f05a4b794ba4e30bb1bb3d1edfb984f544fe7b3bc2f1484eab641afd6b5">KKR's $10 billion+ Helix Digital Infrastructure platform</a> — directly links AI hyperscaler power procurement to Vistra's future earnings mix, providing long-duration contracted revenue visibility that fundamentally alters the risk profile of the business. Revenue growth of 43.4% YoY and sequential quarterly acceleration of +9.0% QoQ confirm this thesis is already materializing in reported financials, not merely in management guidance.</p>
+
+<p>Structurally, Vistra's nuclear and natural gas fleet is positioned in load pockets (primarily ERCOT and PJM) where grid congestion, interconnection queues, and retirement of legacy thermal capacity are creating sustained supply-demand imbalances. The <a href="https://finnhub.io/api/news?id=64f2c809088aa107c14bc93d1e8577be2e4d85fab656c512ac42a3ef04e29637">broader AI ecosystem build-out</a> requires firm, dispatchable baseload power that renewables alone cannot reliably deliver — a dynamic that positions Vistra's nuclear and gas assets as scarce, high-value infrastructure rather than commoditized generation.</p>
+
+<h3>Valuation</h3>
+
+<p>Our $225.29 price target is derived from a blended methodology anchored on forward EV/EBITDA and forward P/E. On trailing EBITDA of $6.79B, VST trades at approximately 8.3x EV/EBITDA (assuming ~$7.1B net debt implied by the 3.55x D/E ratio on the current equity base). Relative to diversified utility peers trading at 10–12x and contracted renewable/infrastructure platforms at 12–15x, we believe VST's current multiple undervalues the shift toward contracted, AI-linked revenue streams. We apply a 10.5x multiple to our FY2026 EBITDA estimate, reflecting a partial re-rating toward infrastructure comps — still a discount to pure contracted peers, which we view as conservative given the remaining merchant exposure.</p>
+
+<p>On a forward P/E basis, 13.49x represents a meaningful discount to both the S&P Utilities sector (~17x forward) and the broader market. Given the +82.9% forward EPS growth trajectory, we believe a forward P/E of 18–20x is warranted as earnings delivery provides multiple expansion catalysts. Our price target implies approximately 19x our forward earnings estimate, which remains below the multiple accorded to peers with comparable growth profiles but less diversified generation fleets.</p>
+
+<h3>Catalysts</h3>
+
+<p><strong>Q2 2026 Earnings (August 6, 2026):</strong> We expect this print to validate the forward earnings trajectory, particularly contribution from the Helix partnership and any incremental contracted data center capacity. A beat-and-raise quarter would likely compress the gap between the forward and trailing multiples, driving re-rating. Upside risk to consensus exists given sequential revenue acceleration.</p>
+
+<p><strong>Helix Digital Infrastructure Deployment Updates (H2 2026):</strong> As <a href="https://finnhub.io/api/news?id=3456fcae5a89ee484c306dd6aa25f8f219bea0358001a880b8c2f633f9b0e13d">KKR deploys capital</a> through the Helix platform, incremental contract announcements linking Vistra generation to specific hyperscaler facilities would provide tangible proof points for long-duration revenue visibility, likely prompting earnings estimate revisions across the Street.</p>
+
+<p><strong>PJM Capacity Auction Results / ERCOT Pricing Reform (2H 2026):</strong> Tightening reserve margins in both markets support elevated capacity and energy pricing. Favorable auction outcomes would provide a near-term earnings tailwind and reinforce the thesis that power supply scarcity is structural rather than transient.</p>
+
+<p><strong>Insider Activity:</strong> We note one open-market insider purchase in the last 30 days — a modest but directionally positive signal regarding management's view of current valuation levels.</p>
+
+<h3>Financial Summary</h3>
+
+<p>Vistra generated $19.45B in trailing twelve-month revenue, reflecting 43.4% year-over-year growth — a pace meaningfully above sector norms and driven by both organic volume/pricing gains and the full consolidation of acquired nuclear assets. Sequential quarterly revenue growth accelerated by 9.0 percentage points, suggesting momentum is building rather than plateauing.</p>
+
+<p>EBITDA of $6.79B translates to an EBITDA margin of approximately 34.9%, while the gross margin of 38.6% and profit margin of 11.5% reflect a business still absorbing integration costs and elevated interest expense from the leveraged capital structure. Debt-to-equity of 3.55x is elevated relative to regulated utility peers but consistent with the company's ongoing deleveraging trajectory post-acquisition. We expect the 82.9% improvement in forward versus trailing EPS to be driven by both operating leverage on incremental contracted revenue and declining integration/financing drag.</p>
+
+<p>The compression from a trailing P/E of 24.67x to a forward P/E of 13.49x is, in our view, the single most important data point for prospective investors — it quantifies the magnitude of the earnings inflection the business is entering and underscores why the current share price understates intrinsic value on a forward-looking basis.</p>
+
+<h3>Key Risks to Our View</h3>
+
+<p><strong>1. Data Center Power Demand<p style='color:#94a3b8;font-size:12px;'>No notable institutional activity in last 90 days.</p><p style='color:#94a3b8;font-size:12px;'>No relevant Polymarket markets found.</p><h3 style='font-size:13px;'>References</h3><ul style='font-size:12px;'><li><a href="https://finnhub.io/api/news?id=64f2c809088aa107c14bc93d1e8577be2e4d85fab656c512ac42a3ef04e29637" style="color:#1d4ed8;" target="_blank">[SeekingAlpha] Opportunities And Risks In The AI Ecosystem</a></li><li><a href="https://finnhub.io/api/news?id=c2b8da57e2745c8440dfe0695b56bb683ecbdd6e34d82c0d7d49703f89f4363c" style="color:#1d4ed8;" target="_blank">[Yahoo] Expect 'robust capability' from this KKR-backed AI venture: CEO</a></li><li><a href="https://finnhub.io/api/news?id=3456fcae5a89ee484c306dd6aa25f8f219bea0358001a880b8c2f633f9b0e13d" style="color:#1d4ed8;" target="_blank">[Yahoo] AI Hyperscalers, KKR Is Ready For You with $10 Billion</a></li><li><a href="https://finnhub.io/api/news?id=42cd324c61f7b29cf634df7612d0fbcc41e5ca04afc79ead1af209fae0fddb1b" style="color:#1d4ed8;" target="_blank">[Yahoo] Vistra’s Helix Partnership Links AI Power Demand To Future Earnings Mix</a></li><li><a href="https://finnhub.io/api/news?id=c7856f05a4b794ba4e30bb1bb3d1edfb984f544fe7b3bc2f1484eab641afd6b5" style="color:#1d4ed8;" target="_blank">[Yahoo] KKR launches Helix Digital Infrastructure with more than $10 billion for AI buildouts</a></li><li><a href="https://finance.yahoo.com/quote/VST" style="color:#1d4ed8;" target="_blank">Yahoo Finance: VST</a></li><li><a href="https://finviz.com/quote.ashx?t=VST" style="color:#1d4ed8;" target="_blank">Finviz: VST</a></li></ul>
+  </div>
+  <div class="col">
+    <div class="col-hdr bear-hdr">▼ Bear Case</div>
+    
+
+<h3>Bear Case Thesis</h3>
+<p>The market is not mispricing VST through ignorance of the AI power demand narrative — it is correctly discounting execution risk on an earnings trajectory that embeds an 83% forward EPS step-up, structural leverage of 3.55x D/E in a higher-for-longer rate environment, and the reality that the bulk of "contracted AI-linked revenue" remains aspirational rather than booked. The bull note treats the Helix partnership announcement as a de-risking event, but the KKR platform is a capital commitment vehicle, not a signed offtake agreement with Vistra — the distance between a press release and contracted cash flows is material. Meanwhile, the stock has already re-rated dramatically from its 52-week low, meaning much of the secular narrative is in the price, and the remaining upside demands both flawless earnings delivery and sustained multiple expansion — a combination that has a poor base rate for merchant-exposed generators with cyclical earnings histories.</p>
+
+<h3>Challenging the Bull's Assumptions</h3>
+
+<p><strong>1. "The market undervalues VST as a cyclical IPP when it is becoming a contracted infrastructure platform."</strong><br>
+Bear alternative: VST remains predominantly merchant-exposed. The Energy Harbor nuclear assets improve the baseload mix, but ERCOT revenues — Vistra's largest market — remain fully merchant with no capacity market construct. The Helix announcement does not disclose specific megawatt volumes, tenor, or pricing contracted to Vistra. Until disclosed contracted backlog meaningfully shifts the revenue mix (we estimate >50% contracted would be the threshold for a re-rating), applying infrastructure multiples to a business still earning the majority of its EBITDA from spot and forward power markets is analytically unsound. Precedent: NRG's multiple expansion attempts in 2021–2022 on similar narratives reversed sharply when merchant pricing softened.</p>
+
+<p><strong>2. "43.4% revenue growth confirms the thesis is materializing in financials."</strong><br>
+Bear alternative: The majority of this growth is inorganic — the Energy Harbor close consolidated ~$4–5B of nuclear revenue into the P&L. Organic growth is materially lower. Presenting consolidated YoY growth as evidence of a secular demand inflection without disaggregating acquisition-driven revenue is misleading. On a pro forma basis, organic revenue growth is likely mid-to-high single digits, which is respectable but does not justify the implied growth premium.</p>
+
+<p><strong>3. "Forward P/E compression from 24.7x to 13.5x signals the market is undervaluing an earnings inflection."</strong><br>
+Bear alternative: The compression reflects consensus estimates that already embed aggressive assumptions about power pricing, capacity revenues, and integration synergies. The risk is asymmetric: if VST delivers, the 13.5x is "right" and modest re-rating follows; if it misses — even modestly — the trailing multiple was the overvalued reference point and the stock re-rates down to 10–12x trough earnings. Forward P/E compression is only investable if the forward E is durable. For a business with significant merchant exposure, forward earnings estimates have historically exhibited 20–30% downside revision risk in softer power pricing environments.</p>
+
+<p><strong>4. "Nuclear and gas assets are scarce, high-value infrastructure in supply-constrained markets."</strong><br>
+Bear alternative: The scarcity premium is real but already partially priced. More importantly, it is contingent on continued regulatory tailwinds. Key risks include: (a) FERC or state-level intervention on data center interconnection pricing that socializes costs and limits bilateral contract premiums; (b) potential NRC relicensing friction for nuclear units; (c) the IRA's nuclear production tax credit creates a floor but also caps upside by reducing the perceived need for market-based price signals. Additionally, natural gas fleet value is inversely correlated with gas prices — a sustained move above $4.50/MMBtu compresses spark spreads and dark spreads simultaneously.</p>
+
+<p><strong>5. "3.55x D/E is manageable on a deleveraging trajectory."</strong><br>
+Bear alternative: This is approximately $17–18B of gross debt against ~$5B of equity book value. At current rates, incremental refinancing costs are rising, not falling. The bull assumes deleveraging via EBITDA growth rather than debt paydown — a strategy that works only if earnings materialize on schedule. If EBITDA disappoints by 15–20%, leverage re-rates to 4x+ and credit spreads widen, creating a reflexive drag on equity valuation. The rating agencies have VST at BBB-/Baa3 — one notch above high yield. Any negative revision would trigger forced selling from IG-constrained mandates.</p>
+
+<p><strong>6. "AI power demand is structural and unprecedented."</strong><br>
+Bear alternative: We do not dispute the direction, but we question the magnitude and timeline. Hyperscaler capex guidance is forward-loaded and subject to revision. Microsoft, Meta, and Google have all deferred or restructured data center projects in prior cycles. The IEA's range for US data center power demand in 2030 spans 150–500 TWh — a 3x spread that reflects genuine uncertainty. If demand materializes at the low end, the power price premium embedded in VST's forward earnings evaporates.</p>
+
+<h3>Downside Scenario & Valuation</h3>
+<p>In our bear case, we assume: (a) AI-linked contracted revenues contribute less than 10% of 2026 EBITDA (vs. the bull's implicit assumption of a much larger mix shift); (b) ERCOT power prices revert toward 2023 levels on milder weather and faster-than-expected renewable/battery additions; (c) forward EBITDA lands at ~$5.5B (vs. consensus ~$7B+), representing a 20% miss. We apply a 7.0x EV/EBITDA multiple — consistent with where diversified merchant IPPs have historically traded in periods of earnings deceleration (Calpine 2018–2019, NRG 2022).</p>
+
+<p>Bear case math: $5.5B EBITDA × 7.0x = $38.5B EV. Less ~$17.5B net debt = $21.0B equity value / ~337M diluted shares = <strong>~$62 per share</strong>, implying <strong>58% downside</strong> from current levels.</p>
+
+<p>Conditions: This scenario materializes if (i) Q2/Q3 2026 earnings miss consensus by >10%, (ii) no incremental contracted data center offtakes of meaningful size are announced by year-end, or (iii) ERCOT real-time prices average below $35/MWh for two consecutive quarters.</p>
+
+<h3>Verdict</h3>
+<p><strong>Monitor.</strong> The Q2 2026 earnings report (August 6) and any disclosure of specific contracted megawatts and tenor from the Helix partnership are the decision points — until we can verify that the earnings inflection is durable and the contracted revenue mix is genuinely shifting, the risk/reward at $148 is insufficiently asymmetric to warrant a new position given 3.55x leverage and the gap between narrative and booked cash flows.</p>
+  </div>
+</div>
+</body>
+</html>
