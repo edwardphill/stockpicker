@@ -1844,5 +1844,44 @@
     "pct_chg": 1.8,
     "last_price_update": "2026-06-11 21:33 UTC",
     "report_url": "https://edwardphill.github.io/stockpicker/reports/IMVT-2026-06-11.html"
+  },
+  {
+    "date": "2026-06-12",
+    "entry_timestamp": "2026-06-12 08:57 UTC",
+    "ticker": "VST",
+    "theme": "Nuclear / Next-Gen Energy",
+    "conviction": "Strong Buy",
+    "entry_price": 147.8,
+    "analyst_target": 225.29,
+    "implied_upside_at_entry": 52.4,
+    "mktcap": 49835569152.0,
+    "vix_at_entry": null,
+    "yield_10y_at_entry": null,
+    "risk_on_at_entry": false,
+    "signals": [
+      "analyst_target",
+      "analyst_upside",
+      "insider_buys",
+      "days_to_catalyst",
+      "rev_accel",
+      "eps_growth",
+      "pct_above_52w_low",
+      "pct_below_52w_high"
+    ],
+    "signal_values": {
+      "analyst_target": 225.29,
+      "analyst_upside": 52.4,
+      "insider_buys": 1,
+      "days_to_catalyst": 55,
+      "rev_accel": 0.09,
+      "eps_growth": 82.9,
+      "pct_above_52w_low": 11.4,
+      "pct_below_52w_high": 32.8
+    },
+    "status": "Open",
+    "cur_price": 147.8,
+    "pct_chg": 0.0,
+    "last_price_update": "2026-06-12 08:57 UTC",
+    "report_url": "https://edwardphill.github.io/stockpicker/reports/VST-2026-06-12.html"
   }
 ]
