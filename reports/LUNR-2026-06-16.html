@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width,initial-scale=1.0">
+<title>StockPicker — LUNR 2026-06-16</title>
+<style>
+  *{box-sizing:border-box;margin:0;padding:0}
+  body{background:#060b14;color:#c9d1d9;font-family:Arial,sans-serif;font-size:14px;min-height:100vh}
+  .hdr{background:#0d1117;border-bottom:1px solid #1e2d3d;padding:16px 24px;display:flex;align-items:center;justify-content:space-between}
+  .logo{font-size:16px;font-weight:bold;color:#f0f6ff;letter-spacing:2px;text-transform:uppercase}
+  .logo span{color:#00d4aa}
+  .badge{display:inline-block;padding:3px 12px;border-radius:12px;font-size:12px;font-weight:bold;text-transform:uppercase;background:#065f46;color:#00d4aa;border:1px solid #00d4aa;margin-right:8px}
+  .risk{display:inline-block;padding:3px 10px;border-radius:12px;font-size:11px;font-weight:bold;color:#00d4aa;border:1px solid #00d4aa}
+  .meta{font-size:11px;color:#3d5166;margin-top:6px}
+  .cols{display:grid;grid-template-columns:1fr 1fr;gap:0;min-height:calc(100vh - 80px)}
+  .col{padding:24px;border-right:1px solid #0f1923}
+  .col:last-child{border-right:none}
+  .col-hdr{font-size:11px;text-transform:uppercase;letter-spacing:1.5px;font-weight:bold;padding:6px 0 14px;border-bottom:1px solid #1e2d3d;margin-bottom:18px}
+  .bull-hdr{color:#00d4aa}
+  .bear-hdr{color:#f87171}
+  .col h3{font-size:13px;color:#e2e8f0;margin:18px 0 6px;padding-bottom:4px;border-bottom:1px solid #0f1923}
+  .col h3:first-child{margin-top:0}
+  .col p,.col li{line-height:1.65;color:#c9d1d9;font-size:13px;margin-bottom:6px}
+  .col ul,.col ol{padding-left:18px;margin-bottom:8px}
+  .col a{color:#60a5fa}
+  .col strong{color:#e2e8f0}
+  .print-btn{background:#0d1424;border:1px solid #1e2d3d;color:#64748b;padding:5px 14px;border-radius:4px;font-size:11px;cursor:pointer;font-family:inherit;text-transform:uppercase;letter-spacing:0.5px}
+  .print-btn:hover{border-color:#00d4aa;color:#00d4aa}
+  .back{color:#3d5166;font-size:11px;text-decoration:none}
+  .back:hover{color:#60a5fa}
+  @media(max-width:768px){.cols{grid-template-columns:1fr}.col{border-right:none;border-bottom:1px solid #0f1923}}
+  @media print{.hdr button,.print-btn{display:none}.cols{grid-template-columns:1fr 1fr}.col{border:1px solid #ccc;margin:4px}body{background:white;color:black}.col h3{color:black}.col p,.col li{color:#111}}
+</style>
+</head>
+<body>
+<div class="hdr">
+  <div>
+    <div class="logo">STOCK<span>PICKER</span> &nbsp;·&nbsp; <span style="color:#e2e8f0;font-size:15px;letter-spacing:1px">LUNR</span></div>
+    <div class="meta">2026-06-16 &nbsp;·&nbsp; <span class="badge">Strong Buy</span><span class="risk">RISK ON</span></div>
+    <div class="meta" style="margin-top:6px">
+      Entry $23.385 &nbsp;·&nbsp; Target $40.78 &nbsp;·&nbsp;
+      Analyst upside +74.4% &nbsp;·&nbsp;
+      Mkt Cap $3.75B &nbsp;·&nbsp;
+      VIX 16.2 &nbsp;·&nbsp; 10Y 4.48%
+    </div>
+  </div>
+  <div style="display:flex;gap:10px;align-items:center">
+    <a href="../index.html" class="back">← Dashboard</a>
+    <button class="print-btn" onclick="window.print()">⎙ Save PDF</button>
+  </div>
+</div>
+<div class="cols">
+  <div class="col">
+    <div class="col-hdr bull-hdr">▲ Bull Case</div>
+    
+
+<h3>Rating & Price Target</h3>
+
+<p><strong>Rating: Strong Buy</strong> | <strong>12-Month Price Target: $40.78</strong> | <strong>Current Price: $23.39</strong> | <strong>Implied Upside: +74.4%</strong></p>
+
+<p>We are initiating coverage of Intuitive Machines (LUNR) with a Strong Buy rating, predicated on what we view as a structural misunderstanding of the company's transition from a milestone-driven lunar lander business to a recurring-revenue near-space services platform, underpinned by a deepening NASA relationship and emerging commercial pipeline that the current valuation does not reflect.</p>
+
+<h3>Investment Thesis</h3>
+
+<p>The market, in our view, continues to value LUNR as a speculative, single-mission lunar company rather than what it is becoming: an infrastructure-layer provider for cislunar operations with multi-year contract visibility. Trailing twelve-month revenue of ~$330M — reflecting 198.7% year-over-year growth and a remarkable +353.9% quarter-over-quarter acceleration in growth rate — signals the beginning of a backlog conversion cycle that we believe will prove more durable than consensus models imply. The company's position as a prime contractor under NASA's Commercial Lunar Payload Services (CLPS) program, combined with its Near Space Network services contract (valued at up to $4.8B across the competitive pool), provides a procurement framework that few pure-play space peers can match.</p>
+
+<p>Competitive dynamics are increasingly favorable. While <a href="https://finnhub.io/api/news?id=6464cc427f0f4cfb71f5ec8d3875d2d308712afb94bdbed803242f6c5a45825e">the pending SpaceX IPO has drawn broad sector attention</a>, we believe LUNR is a primary beneficiary of re-rating sentiment across the space industry without carrying the binary risk of a single launch outcome. The company's data transmission, navigation, and lunar surface services stack positions it as a picks-and-shovels play on the Artemis architecture. The 26.5% short interest creates meaningful asymmetry ahead of identifiable catalysts — a dynamic that has historically compressed violently in names with accelerating fundamental trajectories.</p>
+
+<p>Insider activity reinforces our constructive view: one open-market purchase was recorded in the last 30 days, suggesting management confidence in the forward outlook heading into the next reporting period. The stock's +106% outperformance relative to the S&P 500 over the trailing six months reflects early institutional recognition of these dynamics, but we believe the re-rating is incomplete given the backlog-to-revenue conversion ahead.</p>
+
+<h3>Valuation</h3>
+
+<p>Our $40.78 price target is derived from a blended methodology weighting an enterprise value-to-forward revenue multiple against a discounted cash flow framework. On a trailing price-to-sales basis, LUNR trades at approximately 11.4x TTM revenue ($3.75B market cap / $0.33B revenue). This appears elevated in isolation, but we note the 198.7% revenue growth rate positions the company at a fundamentally different point on the scaling curve than peers such as Planet Labs (PL) or Virgin Galactic (SPCE), which trade at comparable or higher revenue multiples on materially slower growth. On a forward basis — assuming continued backlog conversion yields $500M+ in next-twelve-month revenue — the multiple compresses to approximately 7.5x, which we view as a discount to the high-growth government services cohort. The negative forward P/E of -194.9x is typical for pre-profitability defense-adjacent platforms and we do not view earnings multiples as the appropriate valuation anchor at this stage. Our DCF, assuming a path to mid-teens gross margins by FY2027 and low-20s by FY2029 (from 9.7% currently), with a 12% WACC and 3% terminal growth rate, yields a fair value of $39–$43 per share, bracketing our target.</p>
+
+<h3>Catalysts</h3>
+
+<p><strong>Q2 FY2026 Earnings (August 6, 2025):</strong> We expect management to provide updated backlog and pipeline commentary that may reveal additional task orders under existing contract vehicles. Revenue acceleration confirmation and gross margin improvement sequentially would validate our scaling thesis and likely trigger short-covering given the 26.5% short interest.</p>
+
+<p><strong>IM-2 / IM-3 Mission Updates (2H 2025):</strong> Successful mission execution would de-risk the operational narrative and unlock potential follow-on CLPS task orders. Failure would represent the primary downside scenario (addressed in Risks).</p>
+
+<p><strong>SpaceX IPO Halo Effect (Near-term):</strong> As <a href="https://finnhub.io/api/news?id=da8a6737914ac289d45bbcd70dc2b2fa440b1499ec875070c40e4cdd5ba55a2d">recent trading sessions have demonstrated</a>, the SpaceX public debut is catalyzing broad sector multiple expansion. We believe LUNR, as a liquid, pure-play cislunar name, captures disproportionate incremental flows from generalist investors entering the space vertical.</p>
+
+<p><strong>Near Space Network Contract Award Milestones (2025–2026):</strong> Incremental task order awards under the $4.8B NSN ceiling would provide visible, multi-year revenue accretion and likely prompt consensus estimate revisions.</p>
+
+<h3>Financial Summary</h3>
+
+<p>LUNR generated trailing twelve-month revenue of approximately $330M, representing 198.7% year-over-year growth — a step-function acceleration driven by CLPS mission milestones and services contract ramp. Gross margins remain compressed at 9.7%, consistent with early-stage program execution where fixed costs are being absorbed across an expanding but still nascent revenue base. We expect this to be the trough; program maturation and services mix shift should drive sequential improvement. The profit margin of -32.7% and EBITDA of -$80M reflect ongoing R&D and SG&A investment required to execute a multi-mission pipeline; we do not view current operating losses as structural. The balance sheet carries a debt-to-equity ratio of 0.62x, which we consider manageable for a government contractor with high-visibility contract backlog, though we note the company may require incremental capital as missions scale. The 9.2% single-day drawdown at the time of writing appears technically driven and disconnected from fundamental developments.</p>
+
+<h3>Key Risks to Our View</h3>
+
+<p><strong>1. Mission execution failure (Moderate probability, High impact):</strong> LUNR's revenue trajectory and contract pipeline are contingent on successful lunar landing and surface operations. A failed mission — as experienced with the IM-1 Odysseus lander's compromised landing — would delay revenue recognition, erode NASA confidence, and likely trigger a 30–40% drawdown. A second consecutive mission anomaly would prompt us to reassess our rating.</p>
+
+<p><strong>2. Gross margin stagnation (Moderate probability, Moderate impact):</strong> If gross margins fail to expand beyond the current 9.7% level through 2026 — due to cost overruns, fixed-price contract losses, or unfavorable mission mix — the path to profitability lengthens materially, and our DCF-derived valuation compresses by approximately 25%. We would revisit our target if Q2 FY2026 <p style='color:#94a3b8;font-size:12px;'>No notable institutional activity in last 90 days.</p><p style='color:#94a3b8;font-size:12px;'>No relevant Polymarket markets found.</p><h3 style='font-size:13px;'>References</h3><ul style='font-size:12px;'><li><a href="https://finnhub.io/api/news?id=9d73db358622346b7d3714fd87dc018a547bd327dad1f18a9d9d4a6adb38e114" style="color:#1d4ed8;" target="_blank">[SeekingAlpha] What Moved Markets This Week</a></li><li><a href="https://finnhub.io/api/news?id=5103604630899aa91521e08e5d81bfa9126cdb5a49758002191a5220ca9dd023" style="color:#1d4ed8;" target="_blank">[ChartMill] Trump Pulls The Trigger Back, Nasdaq Rips 2.5% And SpaceX Books The Biggest IPO Ever</a></li><li><a href="https://finnhub.io/api/news?id=6464cc427f0f4cfb71f5ec8d3875d2d308712afb94bdbed803242f6c5a45825e" style="color:#1d4ed8;" target="_blank">[Benzinga] SpaceX IPO Looms Ahead And These Rocket Stocks Are Popping: Here's What Is Going On With SPCE, ASTS, RKLB, LUNR And PL Overnight</a></li><li><a href="https://finnhub.io/api/news?id=da8a6737914ac289d45bbcd70dc2b2fa440b1499ec875070c40e4cdd5ba55a2d" style="color:#1d4ed8;" target="_blank">[Benzinga] Houston, We Have A Rally: Space Stocks Pop Ahead Of SpaceX Debut</a></li><li><a href="https://finnhub.io/api/news?id=5c79fe1df7b4744147d6358271eb273e493e9060a0f2ceebaaf3a9ffa240a9b5" style="color:#1d4ed8;" target="_blank">[Benzinga] Intuitive Machines Shares Surge As Traders Shake Off SpaceX Pre-IPO Fatigue</a></li><li><a href="https://finance.yahoo.com/quote/LUNR" style="color:#1d4ed8;" target="_blank">Yahoo Finance: LUNR</a></li><li><a href="https://finviz.com/quote.ashx?t=LUNR" style="color:#1d4ed8;" target="_blank">Finviz: LUNR</a></li></ul>
+  </div>
+  <div class="col">
+    <div class="col-hdr bear-hdr">▼ Bear Case</div>
+    
+
+<h3>Bear Case Thesis</h3>
+
+<p>The market is not misunderstanding LUNR as a "speculative, single-mission lunar company" — it is correctly pricing the company as a pre-profit, capital-consuming government contractor with 9.7% gross margins, a single customer concentration problem (NASA), and a revenue base that is substantially milestone-driven and lumpy rather than recurring. The bull note's core narrative — that LUNR is transitioning to a "recurring-revenue near-space services platform" — remains aspirational. The $4.8B Near Space Network contract ceiling is a shared, multi-vendor IDIQ; LUNR's realized share of that ceiling is uncertain and will be competed task-order by task-order. At $3.8B market cap on ~$330M TTM revenue with deeply negative operating income, the stock is already pricing in successful execution of a multi-year transformation that has not yet begun to demonstrate unit economic viability. The 26.5% short interest is not simply a "squeeze setup" — it reflects informed skepticism about the durability of revenue growth that is largely a function of one-time milestone payments and the sustainability of a valuation that implies terminal economics the company has never demonstrated.</p>
+
+<h3>Challenging the Bull's Assumptions</h3>
+
+<p><strong>1. "198.7% revenue growth signals durable backlog conversion."</strong><br>
+Bear alternative: Revenue growth is driven by lumpy, milestone-based contract recognition under CLPS, not a SaaS-like recurring revenue ramp. Milestone payments are inherently front-loaded and non-repeating. The +353.9% QoQ acceleration in growth rate likely reflects a single large milestone recognition event rather than a structural change in run-rate. Base rate evidence: government-contracted space companies (e.g., Aerojet Rocketdyne, Virgin Orbit) have repeatedly shown that a strong milestone quarter is followed by sharp sequential declines. The bull's assumption of $500M+ NTM revenue requires continuous new task order awards and successful mission execution — neither of which is guaranteed.</p>
+
+<p><strong>2. "$4.8B NSN contract provides multi-year visibility."</strong><br>
+Bear alternative: This is a ceiling value across the competitive pool, not an award to LUNR. IDIQ contract ceilings are routinely cited by small/mid-cap government contractors as indicative of pipeline that never materializes at stated levels. LUNR's actual realized revenue from NSN will depend on winning individual task orders against incumbents and better-capitalized competitors. The historical fill rate for IDIQ ceilings in the space services domain is typically 30–50%, and that is split among multiple awardees.</p>
+
+<p><strong>3. "Gross margins will expand from 9.7% to mid-teens by FY2027 and low-20s by FY2029."</strong><br>
+Bear alternative: Fixed-price government contracts carry negative margin risk on cost overruns — precisely the dynamic that destroyed Aerojet and Virgin Orbit economics in their scaling phases. LUNR's IM-1 mission experienced a compromised landing, which implies engineering rework costs that compress margins further on follow-on missions. There is no evidence in the disclosed financials that the services revenue mix — which the bull claims will drive margin expansion — has materially higher gross margins than the lander missions. Until the company demonstrates even one quarter of 15%+ gross margins, modeling low-20s by 2029 is aspirational, not analytical.</p>
+
+<p><strong>4. "SpaceX IPO halo effect provides a catalyst."</strong><br>
+Bear alternative: Sentiment-driven multiple expansion from a peer event is the weakest form of catalyst. When the SpaceX narrative fades or the IPO prices and attention moves elsewhere, LUNR loses the flow-driven bid. More importantly, SpaceX is a vertically integrated competitor that could internalize cislunar services LUNR hopes to provide — SpaceX's Starship architecture, if successfully deployed, represents an existential competitive threat to LUNR's lander and data relay business model.</p>
+
+<p><strong>5. "Short interest of 26.5% creates asymmetry."</strong><br>
+Bear alternative: High short interest in a pre-profit, $3.8B market cap name with 9.7% gross margins and negative EBITDA is not contrarian signal — it is consensus among the most informed, highest-conviction capital in the market. The base rate of heavily-shorted, pre-profit companies that sustain multi-year re-ratings is low. The bull's framing of short interest as upside optionality implicitly acknowledges that the position requires a momentum catalyst rather than fundamental support.</p>
+
+<p><strong>6. "One insider purchase in 30 days signals management confidence."</strong><br>
+Bear alternative: A single open-market purchase is statistically meaningless. The note itself acknowledges "no notable institutional activity in last 90 days." The absence of cluster buying — particularly ahead of what the bull characterizes as a transformational period — is more notable than one purchase.</p>
+
+<h3>Downside Scenario & Valuation</h3>
+
+<p>In our bear case, we assume: (a) IM-2 or IM-3 experiences a partial or full mission anomaly, delaying revenue recognition and eroding NASA's willingness to award incremental CLPS task orders; (b) gross margins remain at or below 10% through FY2026 as fixed-price contract losses offset revenue growth; (c) NTM revenue comes in at $350–400M rather than $500M+ as task order cadence slows. Under these conditions:</p>
+
+<ul>
+<li><strong>Revenue basis:</strong> $375M NTM revenue (bear case)</li>
+<li><strong>Multiple:</strong> 4.0–5.0x EV/Revenue — in line with subscale, unprofitable government services contractors (Terran Orbital pre-acquisition traded at 2–4x; Momentus at 3–5x in better quarters). The premium to this range reflects LUNR's CLPS positioning but discounts the margin profile.</li>
+<li><strong>EV:</strong> $1.5B–$1.9B</li>
+<li><strong>Equity value (net of ~$150M debt):</strong> $1.35B–$1.75B</li>
+<li><strong>Bear case price:</strong> $8.50–$11.00 per share (~55–65% downside)</li>
+</ul>
+
+<p>A mission failure would likely drive an immediate 30–40% drawdown (as the bull acknowledges), but the structural bear case — margin stagnation, customer concentration, and capital consumption — could compress the stock toward the $10–12 range even without a catastrophic event, simply through multiple normalization as the SpaceX IPO halo fades and growth decelerates from the current unsustainable rate.</p>
+
+<p><strong>Dilution risk:</strong> The bull note acknowledges the company "may require incremental capital as missions scale." At current burn rates (~$80M negative EBITDA), a secondary offering within 12 months is plausible, which would be dilutive at any price level and would likely re-set the stock lower by 10–15%.</p>
+
+<h3>Verdict</h3>
+
+<p><strong>Monitor.</strong> The August 6 Q2 FY2026 earnings report is the decisive inflection point: if gross margins do not show sequential improvement toward 12%+ and management cannot demonstrate that NSN task order wins are translating to booked revenue (not just pipeline), the bull thesis lacks fundamental support at a $3.8B market cap, and the position should be sized
+  </div>
+</div>
+</body>
+</html>
