@@ -1883,5 +1883,46 @@
     "pct_chg": 3.87,
     "last_price_update": "2026-06-15 22:52 UTC",
     "report_url": "https://edwardphill.github.io/stockpicker/reports/VST-2026-06-12.html"
+  },
+  {
+    "date": "2026-06-16",
+    "entry_timestamp": "2026-06-16 10:29 UTC",
+    "ticker": "LUNR",
+    "theme": "Space / Satellite",
+    "conviction": "Strong Buy",
+    "entry_price": 23.39,
+    "analyst_target": 40.78,
+    "implied_upside_at_entry": 74.4,
+    "mktcap": 3752177152.0,
+    "vix_at_entry": 16.2,
+    "yield_10y_at_entry": 4.48,
+    "risk_on_at_entry": true,
+    "signals": [
+      "analyst_target",
+      "analyst_upside",
+      "insider_buys",
+      "days_to_catalyst",
+      "rev_accel",
+      "squeeze_setup",
+      "pct_above_52w_low",
+      "pct_below_52w_high",
+      "rel_strength"
+    ],
+    "signal_values": {
+      "analyst_target": 40.78,
+      "analyst_upside": 74.4,
+      "insider_buys": 1,
+      "days_to_catalyst": 51,
+      "rev_accel": 3.539,
+      "squeeze_setup": 26.5,
+      "pct_above_52w_low": 200.6,
+      "pct_below_52w_high": 50.0,
+      "rel_strength": 106.0
+    },
+    "status": "Open",
+    "cur_price": 23.39,
+    "pct_chg": 0.0,
+    "last_price_update": "2026-06-16 10:29 UTC",
+    "report_url": "https://edwardphill.github.io/stockpicker/reports/LUNR-2026-06-16.html"
   }
 ]
