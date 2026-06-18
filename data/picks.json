@@ -1963,5 +1963,44 @@
     "pct_chg": -0.98,
     "last_price_update": "2026-06-17 22:55 UTC",
     "report_url": "https://edwardphill.github.io/stockpicker/reports/CGNX-2026-06-17.html"
+  },
+  {
+    "date": "2026-06-18",
+    "entry_timestamp": "2026-06-18 00:03 UTC",
+    "ticker": "IMVT",
+    "theme": "Biotech / Life Sciences",
+    "conviction": "Strong Buy",
+    "entry_price": 34.71,
+    "analyst_target": 45.76,
+    "implied_upside_at_entry": 31.8,
+    "mktcap": 7126272000.0,
+    "vix_at_entry": 16.41,
+    "yield_10y_at_entry": 4.43,
+    "risk_on_at_entry": true,
+    "signals": [
+      "analyst_target",
+      "analyst_upside",
+      "insider_buys",
+      "days_to_catalyst",
+      "squeeze_setup",
+      "pct_above_52w_low",
+      "pct_below_52w_high",
+      "rel_strength"
+    ],
+    "signal_values": {
+      "analyst_target": 45.76,
+      "analyst_upside": 31.8,
+      "insider_buys": 2,
+      "days_to_catalyst": 53,
+      "squeeze_setup": 21.2,
+      "pct_above_52w_low": 142.4,
+      "pct_below_52w_high": 4.3,
+      "rel_strength": 22.4
+    },
+    "status": "Open",
+    "cur_price": 34.71,
+    "pct_chg": 0.0,
+    "last_price_update": "2026-06-18 00:03 UTC",
+    "report_url": "https://edwardphill.github.io/stockpicker/reports/IMVT-2026-06-18.html"
   }
 ]
