@@ -32,7 +32,7 @@
     "status": "Open",
     "cur_price": 0.43,
     "pct_chg": -88.7,
-    "last_price_update": "2026-08-21 14:59 UTC",
+    "last_price_update": "2026-08-21 15:30 UTC",
     "report_url": "https://edwardphill.github.io/stockpicker/reports/VNRX-2026-03-26.html",
     "entry_timestamp": "2026-03-26 (time unknown)"
   },
@@ -69,9 +69,9 @@
       "pct_below_52w_high": 71.5
     },
     "status": "Open",
-    "cur_price": 5.36,
-    "pct_chg": -13.55,
-    "last_price_update": "2026-08-21 14:59 UTC",
+    "cur_price": 5.38,
+    "pct_chg": -13.31,
+    "last_price_update": "2026-08-21 15:30 UTC",
     "report_url": "https://edwardphill.github.io/stockpicker/reports/WVE-2026-03-27.html",
     "entry_timestamp": "2026-03-27 (time unknown)"
   },
@@ -107,9 +107,9 @@
       "pct_below_52w_high": 31.9
     },
     "status": "Open",
-    "cur_price": 485.06,
-    "pct_chg": 28.18,
-    "last_price_update": "2026-08-21 14:59 UTC",
+    "cur_price": 483.88,
+    "pct_chg": 27.87,
+    "last_price_update": "2026-08-21 15:30 UTC",
     "report_url": "https://edwardphill.github.io/stockpicker/reports/MSFT-2026-04-13.html"
   },
   {
@@ -150,9 +150,9 @@
       "rel_strength": 35.3
     },
     "status": "Open",
-    "cur_price": 214.84,
-    "pct_chg": 74.87,
-    "last_price_update": "2026-08-21 14:59 UTC",
+    "cur_price": 216.46,
+    "pct_chg": 76.18,
+    "last_price_update": "2026-08-21 15:30 UTC",
     "report_url": "https://edwardphill.github.io/stockpicker/reports/ILMN-2026-04-13.html"
   },
   {
@@ -193,9 +193,9 @@
       "rel_strength": 32.1
     },
     "status": "Open",
-    "cur_price": 301.19,
-    "pct_chg": -24.17,
-    "last_price_update": "2026-08-21 14:59 UTC",
+    "cur_price": 299.2,
+    "pct_chg": -24.67,
+    "last_price_update": "2026-08-21 15:30 UTC",
     "report_url": "https://edwardphill.github.io/stockpicker/reports/HII-2026-04-14.html"
   },
   {
@@ -238,9 +238,9 @@
       "pct_below_52w_high": 46.5
     },
     "status": "Open",
-    "cur_price": 180.8,
-    "pct_chg": 117.26,
-    "last_price_update": "2026-08-21 14:59 UTC",
+    "cur_price": 181.75,
+    "pct_chg": 118.4,
+    "last_price_update": "2026-08-21 15:30 UTC",
     "report_url": "https://edwardphill.github.io/stockpicker/reports/QLYS-2026-04-15.html"
   },
   {
@@ -279,9 +279,9 @@
       "pct_below_52w_high": 26.0
     },
     "status": "Open",
-    "cur_price": 236.67,
-    "pct_chg": -1.5,
-    "last_price_update": "2026-08-21 14:59 UTC",
+    "cur_price": 237.63,
+    "pct_chg": -1.1,
+    "last_price_update": "2026-08-21 15:30 UTC",
     "report_url": "https://edwardphill.github.io/stockpicker/reports/IBM-2026-04-15.html"
   },
   {
@@ -320,9 +320,9 @@
       "rel_strength": 16.8
     },
     "status": "Open",
-    "cur_price": 59.49,
-    "pct_chg": 7.04,
-    "last_price_update": "2026-08-21 14:59 UTC",
+    "cur_price": 59.5,
+    "pct_chg": 7.05,
+    "last_price_update": "2026-08-21 15:30 UTC",
     "report_url": "https://edwardphill.github.io/stockpicker/reports/CGNX-2026-04-15.html"
   },
   {
@@ -361,9 +361,9 @@
       "pct_below_52w_high": 28.9
     },
     "status": "Open",
-    "cur_price": 94.18,
-    "pct_chg": -15.14,
-    "last_price_update": "2026-08-21 14:59 UTC",
+    "cur_price": 93.66,
+    "pct_chg": -15.61,
+    "last_price_update": "2026-08-21 15:30 UTC",
     "report_url": "https://edwardphill.github.io/stockpicker/reports/TMDX-2026-04-16.html"
   },
   {
@@ -404,9 +404,9 @@
       "rel_strength": 34.7
     },
     "status": "Open",
-    "cur_price": 301.19,
-    "pct_chg": -23.87,
-    "last_price_update": "2026-08-21 14:59 UTC",
+    "cur_price": 299.2,
+    "pct_chg": -24.37,
+    "last_price_update": "2026-08-21 15:30 UTC",
     "report_url": "https://edwardphill.github.io/stockpicker/reports/HII-2026-04-17.html"
   },
   {
@@ -447,9 +447,9 @@
       "pct_below_52w_high": 46.5
     },
     "status": "Open",
-    "cur_price": 180.8,
-    "pct_chg": 117.39,
-    "last_price_update": "2026-08-21 14:59 UTC",
+    "cur_price": 181.75,
+    "pct_chg": 118.53,
+    "last_price_update": "2026-08-21 15:30 UTC",
     "report_url": "https://edwardphill.github.io/stockpicker/reports/QLYS-2026-04-18.html"
   },
   {
@@ -484,9 +484,9 @@
       "pct_below_52w_high": 25.6
     },
     "status": "Open",
-    "cur_price": 14.77,
-    "pct_chg": -28.83,
-    "last_price_update": "2026-08-21 14:59 UTC",
+    "cur_price": 15.03,
+    "pct_chg": -27.6,
+    "last_price_update": "2026-08-21 15:30 UTC",
     "report_url": "https://edwardphill.github.io/stockpicker/reports/UUUU-2026-04-20.html"
   },
   {
@@ -527,9 +527,9 @@
       "pct_below_52w_high": 47.3
     },
     "status": "Open",
-    "cur_price": 180.8,
-    "pct_chg": 120.49,
-    "last_price_update": "2026-08-21 14:59 UTC",
+    "cur_price": 181.75,
+    "pct_chg": 121.65,
+    "last_price_update": "2026-08-21 15:30 UTC",
     "report_url": "https://edwardphill.github.io/stockpicker/reports/QLYS-2026-04-21.html"
   },
   {
@@ -568,9 +568,9 @@
       "pct_below_52w_high": 28.1
     },
     "status": "Open",
-    "cur_price": 94.18,
-    "pct_chg": -16.08,
-    "last_price_update": "2026-08-21 14:59 UTC",
+    "cur_price": 93.66,
+    "pct_chg": -16.54,
+    "last_price_update": "2026-08-21 15:30 UTC",
     "report_url": "https://edwardphill.github.io/stockpicker/reports/TMDX-2026-04-22.html"
   },
   {
@@ -611,9 +611,9 @@
       "rel_strength": 21.8
     },
     "status": "Open",
-    "cur_price": 301.19,
-    "pct_chg": -18.36,
-    "last_price_update": "2026-08-21 14:59 UTC",
+    "cur_price": 299.2,
+    "pct_chg": -18.9,
+    "last_price_update": "2026-08-21 15:30 UTC",
     "report_url": "https://edwardphill.github.io/stockpicker/reports/HII-2026-04-23.html"
   },
   {
@@ -648,9 +648,9 @@
       "pct_below_52w_high": 25.6
     },
     "status": "Open",
-    "cur_price": 14.77,
-    "pct_chg": -28.8,
-    "last_price_update": "2026-08-21 14:59 UTC",
+    "cur_price": 15.03,
+    "pct_chg": -27.57,
+    "last_price_update": "2026-08-21 15:30 UTC",
     "report_url": "https://edwardphill.github.io/stockpicker/reports/UUUU-2026-04-24.html"
   },
   {
@@ -691,9 +691,9 @@
       "pct_below_52w_high": 45.8
     },
     "status": "Open",
-    "cur_price": 180.8,
-    "pct_chg": 114.37,
-    "last_price_update": "2026-08-21 14:59 UTC",
+    "cur_price": 181.75,
+    "pct_chg": 115.5,
+    "last_price_update": "2026-08-21 15:30 UTC",
     "report_url": "https://edwardphill.github.io/stockpicker/reports/QLYS-2026-04-25.html"
   },
   {
@@ -734,9 +734,9 @@
       "rel_strength": 15.2
     },
     "status": "Open",
-    "cur_price": 301.19,
-    "pct_chg": -16.17,
-    "last_price_update": "2026-08-21 14:59 UTC",
+    "cur_price": 299.2,
+    "pct_chg": -16.73,
+    "last_price_update": "2026-08-21 15:30 UTC",
     "report_url": "https://edwardphill.github.io/stockpicker/reports/HII-2026-04-26.html"
   },
   {
@@ -775,9 +775,9 @@
       "pct_below_52w_high": 28.9
     },
     "status": "Open",
-    "cur_price": 94.18,
-    "pct_chg": -15.1,
-    "last_price_update": "2026-08-21 14:59 UTC",
+    "cur_price": 93.66,
+    "pct_chg": -15.57,
+    "last_price_update": "2026-08-21 15:30 UTC",
     "report_url": "https://edwardphill.github.io/stockpicker/reports/TMDX-2026-04-27.html"
   },
   {
@@ -818,9 +818,9 @@
       "pct_below_52w_high": 45.2
     },
     "status": "Open",
-    "cur_price": 180.8,
-    "pct_chg": 112.21,
-    "last_price_update": "2026-08-21 14:59 UTC",
+    "cur_price": 181.75,
+    "pct_chg": 113.32,
+    "last_price_update": "2026-08-21 15:30 UTC",
     "report_url": "https://edwardphill.github.io/stockpicker/reports/QLYS-2026-04-28.html"
   },
   {
@@ -861,9 +861,9 @@
       "rel_strength": 20.5
     },
     "status": "Open",
-    "cur_price": 301.19,
-    "pct_chg": -18.27,
-    "last_price_update": "2026-08-21 14:59 UTC",
+    "cur_price": 299.2,
+    "pct_chg": -18.81,
+    "last_price_update": "2026-08-21 15:30 UTC",
     "report_url": "https://edwardphill.github.io/stockpicker/reports/HII-2026-04-29.html"
   },
   {
@@ -902,9 +902,9 @@
       "rel_strength": 24.8
     },
     "status": "Open",
-    "cur_price": 59.49,
-    "pct_chg": 11.16,
-    "last_price_update": "2026-08-21 14:59 UTC",
+    "cur_price": 59.5,
+    "pct_chg": 11.17,
+    "last_price_update": "2026-08-21 15:30 UTC",
     "report_url": "https://edwardphill.github.io/stockpicker/reports/CGNX-2026-04-30.html"
   },
   {
@@ -941,9 +941,9 @@
       "rel_strength": 15.8
     },
     "status": "Open",
-    "cur_price": 14.77,
-    "pct_chg": -31.72,
-    "last_price_update": "2026-08-21 14:59 UTC",
+    "cur_price": 15.03,
+    "pct_chg": -30.55,
+    "last_price_update": "2026-08-21 15:30 UTC",
     "report_url": "https://edwardphill.github.io/stockpicker/reports/UUUU-2026-05-01.html"
   },
   {
@@ -980,9 +980,9 @@
       "rel_strength": 26.8
     },
     "status": "Open",
-    "cur_price": 14.77,
-    "pct_chg": -31.66,
-    "last_price_update": "2026-08-21 14:59 UTC",
+    "cur_price": 15.03,
+    "pct_chg": -30.48,
+    "last_price_update": "2026-08-21 15:30 UTC",
     "report_url": "https://edwardphill.github.io/stockpicker/reports/UUUU-2026-05-05.html"
   },
   {
@@ -1021,9 +1021,9 @@
       "pct_below_52w_high": 29.1
     },
     "status": "Open",
-    "cur_price": 301.19,
-    "pct_chg": -7.65,
-    "last_price_update": "2026-08-21 14:59 UTC",
+    "cur_price": 299.2,
+    "pct_chg": -8.26,
+    "last_price_update": "2026-08-21 15:30 UTC",
     "report_url": "https://edwardphill.github.io/stockpicker/reports/HII-2026-05-06.html"
   },
   {
@@ -1099,9 +1099,9 @@
       "rel_strength": 12.4
     },
     "status": "Open",
-    "cur_price": 44.67,
-    "pct_chg": 57.64,
-    "last_price_update": "2026-08-21 14:59 UTC",
+    "cur_price": 44.6,
+    "pct_chg": 57.39,
+    "last_price_update": "2026-08-21 15:30 UTC",
     "report_url": "https://edwardphill.github.io/stockpicker/reports/IMVT-2026-05-08.html"
   },
   {
@@ -1138,9 +1138,9 @@
       "rel_strength": 21.0
     },
     "status": "Open",
-    "cur_price": 44.67,
-    "pct_chg": 50.27,
-    "last_price_update": "2026-08-21 14:59 UTC",
+    "cur_price": 44.6,
+    "pct_chg": 50.03,
+    "last_price_update": "2026-08-21 15:30 UTC",
     "report_url": "https://edwardphill.github.io/stockpicker/reports/IMVT-2026-05-11.html"
   },
   {
@@ -1177,9 +1177,9 @@
       "rel_strength": 14.7
     },
     "status": "Open",
-    "cur_price": 12.05,
-    "pct_chg": -20.2,
-    "last_price_update": "2026-08-21 14:59 UTC",
+    "cur_price": 12.25,
+    "pct_chg": -18.87,
+    "last_price_update": "2026-08-21 15:30 UTC",
     "report_url": "https://edwardphill.github.io/stockpicker/reports/UEC-2026-05-12.html"
   },
   {
@@ -1214,9 +1214,9 @@
       "rel_strength": 24.9
     },
     "status": "Open",
-    "cur_price": 14.77,
-    "pct_chg": -29.47,
-    "last_price_update": "2026-08-21 14:59 UTC",
+    "cur_price": 15.03,
+    "pct_chg": -28.26,
+    "last_price_update": "2026-08-21 15:30 UTC",
     "report_url": "https://edwardphill.github.io/stockpicker/reports/UUUU-2026-05-13.html"
   },
   {
@@ -1253,9 +1253,9 @@
       "rel_strength": 9.0
     },
     "status": "Open",
-    "cur_price": 44.67,
-    "pct_chg": 56.1,
-    "last_price_update": "2026-08-21 14:59 UTC",
+    "cur_price": 44.6,
+    "pct_chg": 55.85,
+    "last_price_update": "2026-08-21 15:30 UTC",
     "report_url": "https://edwardphill.github.io/stockpicker/reports/IMVT-2026-05-14.html"
   },
   {
@@ -1292,9 +1292,9 @@
       "rel_strength": 19.0
     },
     "status": "Open",
-    "cur_price": 12.05,
-    "pct_chg": -18.64,
-    "last_price_update": "2026-08-21 14:59 UTC",
+    "cur_price": 12.25,
+    "pct_chg": -17.29,
+    "last_price_update": "2026-08-21 15:30 UTC",
     "report_url": "https://edwardphill.github.io/stockpicker/reports/UEC-2026-05-15.html"
   },
   {
@@ -1331,9 +1331,9 @@
       "rel_strength": 1.4
     },
     "status": "Open",
-    "cur_price": 44.67,
-    "pct_chg": 65.77,
-    "last_price_update": "2026-08-21 14:59 UTC",
+    "cur_price": 44.6,
+    "pct_chg": 65.51,
+    "last_price_update": "2026-08-21 15:30 UTC",
     "report_url": "https://edwardphill.github.io/stockpicker/reports/IMVT-2026-05-18.html"
   },
   {
@@ -1368,9 +1368,9 @@
       "rel_strength": 59.6
     },
     "status": "Open",
-    "cur_price": 59.49,
-    "pct_chg": -3.9,
-    "last_price_update": "2026-08-21 14:59 UTC",
+    "cur_price": 59.5,
+    "pct_chg": -3.89,
+    "last_price_update": "2026-08-21 15:30 UTC",
     "report_url": "https://edwardphill.github.io/stockpicker/reports/CGNX-2026-05-19.html"
   },
   {
@@ -1407,9 +1407,9 @@
       "pct_below_52w_high": 39.4
     },
     "status": "Open",
-    "cur_price": 142.98,
-    "pct_chg": 14.58,
-    "last_price_update": "2026-08-21 14:59 UTC",
+    "cur_price": 142.63,
+    "pct_chg": 14.31,
+    "last_price_update": "2026-08-21 15:30 UTC",
     "report_url": "https://edwardphill.github.io/stockpicker/reports/LDOS-2026-05-20.html"
   },
   {
@@ -1448,9 +1448,9 @@
       "rel_strength": 22.3
     },
     "status": "Open",
-    "cur_price": 19.77,
-    "pct_chg": -36.46,
-    "last_price_update": "2026-08-21 14:59 UTC",
+    "cur_price": 19.95,
+    "pct_chg": -35.86,
+    "last_price_update": "2026-08-21 15:30 UTC",
     "report_url": "https://edwardphill.github.io/stockpicker/reports/QBTS-2026-05-22.html"
   },
   {
@@ -1487,9 +1487,9 @@
       "pct_below_52w_high": 38.8
     },
     "status": "Open",
-    "cur_price": 142.98,
-    "pct_chg": 13.46,
-    "last_price_update": "2026-08-21 14:59 UTC",
+    "cur_price": 142.63,
+    "pct_chg": 13.19,
+    "last_price_update": "2026-08-21 15:30 UTC",
     "report_url": "https://edwardphill.github.io/stockpicker/reports/LDOS-2026-05-26.html"
   },
   {
@@ -1524,9 +1524,9 @@
       "rel_strength": 20.4
     },
     "status": "Open",
-    "cur_price": 351.04,
-    "pct_chg": 41.45,
-    "last_price_update": "2026-08-21 14:59 UTC",
+    "cur_price": 352.62,
+    "pct_chg": 42.09,
+    "last_price_update": "2026-08-21 15:30 UTC",
     "report_url": "https://edwardphill.github.io/stockpicker/reports/PANW-2026-05-27.html"
   },
   {
@@ -1563,9 +1563,9 @@
       "rel_strength": 21.3
     },
     "status": "Open",
-    "cur_price": 19.77,
-    "pct_chg": -33.87,
-    "last_price_update": "2026-08-21 14:59 UTC",
+    "cur_price": 19.95,
+    "pct_chg": -33.24,
+    "last_price_update": "2026-08-21 15:30 UTC",
     "report_url": "https://edwardphill.github.io/stockpicker/reports/QBTS-2026-05-28.html"
   },
   {
@@ -1602,9 +1602,9 @@
       "pct_below_52w_high": 51.4
     },
     "status": "Open",
-    "cur_price": 57.85,
-    "pct_chg": -11.25,
-    "last_price_update": "2026-08-21 14:59 UTC",
+    "cur_price": 57.35,
+    "pct_chg": -12.03,
+    "last_price_update": "2026-08-21 15:30 UTC",
     "report_url": "https://edwardphill.github.io/stockpicker/reports/KTOS-2026-05-29.html"
   },
   {
@@ -1639,9 +1639,9 @@
       "rel_strength": 20.0
     },
     "status": "Open",
-    "cur_price": 14.77,
-    "pct_chg": -20.39,
-    "last_price_update": "2026-08-21 14:59 UTC",
+    "cur_price": 15.03,
+    "pct_chg": -19.02,
+    "last_price_update": "2026-08-21 15:30 UTC",
     "report_url": "https://edwardphill.github.io/stockpicker/reports/UUUU-2026-06-01.html"
   },
   {
@@ -1680,9 +1680,9 @@
       "pct_below_52w_high": 39.9
     },
     "status": "Open",
-    "cur_price": 142.98,
-    "pct_chg": 15.55,
-    "last_price_update": "2026-08-21 14:59 UTC",
+    "cur_price": 142.63,
+    "pct_chg": 15.28,
+    "last_price_update": "2026-08-21 15:30 UTC",
     "report_url": "https://edwardphill.github.io/stockpicker/reports/LDOS-2026-06-02.html"
   },
   {
@@ -1719,9 +1719,9 @@
       "rel_strength": 27.1
     },
     "status": "Open",
-    "cur_price": 351.04,
-    "pct_chg": 29.89,
-    "last_price_update": "2026-08-21 14:59 UTC",
+    "cur_price": 352.62,
+    "pct_chg": 30.47,
+    "last_price_update": "2026-08-21 15:30 UTC",
     "report_url": "https://edwardphill.github.io/stockpicker/reports/PANW-2026-06-04.html"
   },
   {
@@ -1760,9 +1760,9 @@
       "pct_below_52w_high": 39.5
     },
     "status": "Open",
-    "cur_price": 142.98,
-    "pct_chg": 14.77,
-    "last_price_update": "2026-08-21 14:59 UTC",
+    "cur_price": 142.63,
+    "pct_chg": 14.5,
+    "last_price_update": "2026-08-21 15:30 UTC",
     "report_url": "https://edwardphill.github.io/stockpicker/reports/LDOS-2026-06-05.html"
   },
   {
@@ -1801,9 +1801,9 @@
       "rel_strength": 123.9
     },
     "status": "Open",
-    "cur_price": 18.32,
-    "pct_chg": -32.82,
-    "last_price_update": "2026-08-21 14:59 UTC",
+    "cur_price": 18.42,
+    "pct_chg": -32.45,
+    "last_price_update": "2026-08-21 15:30 UTC",
     "report_url": "https://edwardphill.github.io/stockpicker/reports/LUNR-2026-06-10.html"
   },
   {
@@ -1840,9 +1840,9 @@
       "rel_strength": 24.0
     },
     "status": "Open",
-    "cur_price": 44.67,
-    "pct_chg": 38.31,
-    "last_price_update": "2026-08-21 14:59 UTC",
+    "cur_price": 44.6,
+    "pct_chg": 38.1,
+    "last_price_update": "2026-08-21 15:30 UTC",
     "report_url": "https://edwardphill.github.io/stockpicker/reports/IMVT-2026-06-11.html"
   },
   {
@@ -1879,9 +1879,9 @@
       "pct_below_52w_high": 32.8
     },
     "status": "Open",
-    "cur_price": 136.9,
-    "pct_chg": -7.37,
-    "last_price_update": "2026-08-21 14:59 UTC",
+    "cur_price": 137.09,
+    "pct_chg": -7.25,
+    "last_price_update": "2026-08-21 15:30 UTC",
     "report_url": "https://edwardphill.github.io/stockpicker/reports/VST-2026-06-12.html"
   },
   {
@@ -1920,9 +1920,9 @@
       "rel_strength": 106.0
     },
     "status": "Open",
-    "cur_price": 18.32,
-    "pct_chg": -21.68,
-    "last_price_update": "2026-08-21 14:59 UTC",
+    "cur_price": 18.42,
+    "pct_chg": -21.25,
+    "last_price_update": "2026-08-21 15:30 UTC",
     "report_url": "https://edwardphill.github.io/stockpicker/reports/LUNR-2026-06-16.html"
   },
   {
@@ -1959,9 +1959,9 @@
       "rel_strength": 71.0
     },
     "status": "Open",
-    "cur_price": 59.49,
+    "cur_price": 59.5,
     "pct_chg": -9.04,
-    "last_price_update": "2026-08-21 14:59 UTC",
+    "last_price_update": "2026-08-21 15:30 UTC",
     "report_url": "https://edwardphill.github.io/stockpicker/reports/CGNX-2026-06-17.html"
   },
   {
@@ -1998,9 +1998,9 @@
       "rel_strength": 22.4
     },
     "status": "Open",
-    "cur_price": 44.67,
-    "pct_chg": 28.71,
-    "last_price_update": "2026-08-21 14:59 UTC",
+    "cur_price": 44.6,
+    "pct_chg": 28.51,
+    "last_price_update": "2026-08-21 15:30 UTC",
     "report_url": "https://edwardphill.github.io/stockpicker/reports/IMVT-2026-06-18.html"
   },
   {
@@ -2039,9 +2039,9 @@
       "rel_strength": 20.3
     },
     "status": "Open",
-    "cur_price": 18.32,
-    "pct_chg": -15.5,
-    "last_price_update": "2026-08-21 14:59 UTC",
+    "cur_price": 18.42,
+    "pct_chg": -15.04,
+    "last_price_update": "2026-08-21 15:30 UTC",
     "report_url": "https://edwardphill.github.io/stockpicker/reports/LUNR-2026-06-22.html"
   }
 ]
