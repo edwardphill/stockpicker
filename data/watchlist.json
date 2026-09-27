@@ -1,0 +1,6 @@
+{
+  "_note": "Extra tickers scanned for analyst mismatch, on top of every ticker in picks.json. Edit freely.",
+  "AI Infrastructure / Fiber": ["GLW", "COHR", "LITE", "AAOI", "FN", "CIEN", "CRDO", "ALAB", "ANET", "MU", "META"],
+  "AI Leaders": ["NVDA", "AMD", "AVGO", "TSM", "MSFT", "GOOGL", "AMZN", "ORCL"],
+  "Contrarian examples": ["MRNA", "INTC", "PFE"]
+}

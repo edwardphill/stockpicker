@@ -1,0 +1,179 @@
+/* Shared terminal theme for index.html and analysts.html.
+   Black screen, amber labels, white data, green/red moves: in the spirit of a
+   Bloomberg terminal. IBM Plex Mono stands in for Bloomberg's proprietary font. */
+:root {
+  --bg:      #000000;
+  --panel:   #0a0a0a;
+  --row-hl:  #161616;
+  --line:    #262626;
+  --amber:   #ffa028;
+  --yellow:  #ffd84d;
+  --text:    #e6e6e6;
+  --white:   #ffffff;
+  --dim:     #8c8c8c;
+  --faint:   #5a5a5a;
+  --up:      #3ddc84;
+  --down:    #ff5a5a;
+  --link:    #5ec8ff;
+  --font:    'IBM Plex Mono', 'Consolas', 'Menlo', monospace;
+}
+
+* { box-sizing: border-box; margin: 0; padding: 0; }
+
+body {
+  background: var(--bg);
+  color: var(--text);
+  font-family: var(--font);
+  font-size: 13px;
+  min-height: 100vh;
+}
+
+/* ── Header: amber command strip + function-key tabs ─────── */
+.header {
+  background: var(--amber);
+  color: #000;
+  padding: 6px 16px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 16px;
+  flex-wrap: wrap;
+}
+.logo { font-size: 15px; font-weight: 700; letter-spacing: 1px; text-transform: uppercase; }
+.logo span { font-weight: 400; }
+.logo .go { background: #000; color: var(--amber); padding: 0 6px; margin-left: 8px; font-size: 11px; }
+.header-meta { font-size: 11px; color: #000; opacity: 0.75; }
+.header-right { text-align: right; }
+
+.tabs {
+  display: flex;
+  gap: 2px;
+  background: var(--bg);
+  border-bottom: 1px solid var(--line);
+  padding: 6px 16px 0;
+}
+.tab {
+  color: var(--amber);
+  text-decoration: none;
+  font-size: 12px;
+  font-weight: 600;
+  text-transform: uppercase;
+  padding: 5px 12px;
+  border: 1px solid var(--line);
+  border-bottom: none;
+}
+.tab .fk { color: var(--dim); margin-right: 6px; }
+.tab.active { background: var(--yellow); color: #000; border-color: var(--yellow); }
+.tab.active .fk { color: #000; }
+.tab:hover:not(.active) { background: var(--row-hl); }
+
+/* ── Stats bar ──────────────────────────────────────── */
+.stats-bar {
+  background: var(--panel);
+  border-bottom: 1px solid var(--line);
+  padding: 10px 16px;
+  display: flex;
+  gap: 32px;
+  flex-wrap: wrap;
+  align-items: flex-start;
+}
+.stat { display: flex; flex-direction: column; gap: 2px; }
+.stat-label { font-size: 10px; text-transform: uppercase; letter-spacing: 0.8px; color: var(--amber); }
+.stat-note  { font-size: 10px; color: var(--dim); }
+.stat-value { font-size: 20px; font-weight: 600; color: var(--white); }
+.stat-value.green { color: var(--up); }
+.stat-value.red   { color: var(--down); }
+.stat-value.dim   { color: var(--white); }
+
+/* ── Toolbar / filters ───────────────────────────────── */
+.toolbar {
+  padding: 8px 16px;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  flex-wrap: wrap;
+  border-bottom: 1px solid var(--line);
+}
+.toolbar-label { font-size: 10px; text-transform: uppercase; letter-spacing: 0.8px; color: var(--amber); margin-right: 4px; }
+.row-count { margin-left: auto; font-size: 11px; color: var(--dim); }
+.filter-btn {
+  background: var(--bg);
+  border: 1px solid var(--line);
+  color: var(--text);
+  padding: 3px 10px;
+  font-size: 11px;
+  font-family: inherit;
+  text-transform: uppercase;
+  cursor: pointer;
+}
+.filter-btn:hover { border-color: var(--amber); color: var(--amber); }
+.filter-btn.active { background: var(--amber); border-color: var(--amber); color: #000; font-weight: 600; }
+
+/* ── Tables ──────────────────────────────────────────── */
+.table-wrap { padding: 12px 16px; overflow-x: auto; }
+table { width: 100%; border-collapse: collapse; }
+thead th {
+  color: var(--amber);
+  font-size: 10px;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.6px;
+  padding: 7px 10px;
+  text-align: left;
+  border-bottom: 1px solid var(--amber);
+  white-space: nowrap;
+  cursor: pointer;
+  user-select: none;
+}
+thead th:hover { color: var(--yellow); }
+thead th.sort-asc::after  { content: ' \2191'; color: var(--yellow); }
+thead th.sort-desc::after { content: ' \2193'; color: var(--yellow); }
+tbody tr { border-bottom: 1px solid var(--line); }
+tbody tr:nth-child(even) { background: var(--panel); }
+tbody tr:hover { background: var(--row-hl); }
+td { padding: 8px 10px; vertical-align: middle; }
+
+.ticker-link { font-size: 14px; font-weight: 700; color: var(--link); text-decoration: none; }
+.ticker-link:hover { text-decoration: underline; }
+.chart-link { font-size: 10px; color: var(--amber); text-decoration: none; margin-left: 6px; }
+.chart-link:hover { color: var(--yellow); }
+.theme-label { font-size: 10px; color: var(--dim); margin-top: 2px; }
+
+.badge { display: inline-block; white-space: nowrap; padding: 1px 6px; font-size: 10px; font-weight: 700; text-transform: uppercase; }
+.badge-sb  { background: var(--up);   color: #000; }
+.badge-buy { border: 1px solid var(--up); color: var(--up); }
+.badge-w   { border: 1px solid var(--faint); color: var(--dim); }
+
+.price     { color: var(--white); white-space: nowrap; }
+.price-sub { font-size: 10px; color: var(--faint); margin-top: 2px; }
+.pos, .ret-pos { color: var(--up); }
+.neg, .ret-neg { color: var(--down); }
+.ret-pos, .ret-neg, .ret-zero { font-size: 14px; font-weight: 700; white-space: nowrap; }
+.ret-zero { color: var(--dim); }
+.tgt-pos { color: var(--up); }
+.tgt-neg { color: var(--down); }
+.tgt-dim, .dim12 { color: var(--dim); white-space: nowrap; }
+
+.sig-wrap { display: flex; flex-wrap: wrap; gap: 3px; max-width: 220px; }
+.sig { border: 1px solid var(--line); padding: 0 5px; font-size: 10px; color: var(--text); white-space: nowrap; }
+
+.macro-cell { font-size: 11px; white-space: nowrap; }
+.risk-on  { color: var(--up); }
+.risk-off { color: var(--down); }
+.vix-low  { color: var(--up); }
+.vix-mid  { color: var(--yellow); }
+.vix-high { color: var(--down); }
+.dot-open   { color: var(--up); }
+.dot-closed { color: var(--faint); }
+
+.empty { text-align: center; padding: 60px 16px; color: var(--dim); }
+.empty-title { font-size: 15px; color: var(--amber); margin-bottom: 8px; }
+
+.footer {
+  border-top: 1px solid var(--line);
+  padding: 10px 16px;
+  font-size: 10px;
+  color: var(--faint);
+  text-align: center;
+  letter-spacing: 0.5px;
+}
