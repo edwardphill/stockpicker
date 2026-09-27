@@ -54,6 +54,7 @@ Every ticker is scored on a path-to-50%-return framework. Each signal asks: does
 | Space / Satellite | Launch, LEO comms, Earth observation |
 | Biotech / Life Sciences | Clinical-stage, FDA catalysts, genomics |
 | Quantum / Emerging Tech | Quantum hardware, photonics, AI chips |
+| AI Infrastructure / Fiber | Second-order AI buildout: optical interconnect, fiber and cabling, memory, networking (seeds: GLW, COHR, LITE, CIEN, AAOI, FN, CRDO, ALAB, ANET, MU, META) |
 
 ---
 

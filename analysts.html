@@ -1,0 +1,214 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>StockPicker — Analyst Mismatch</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="assets/terminal.css">
+  <style>
+    table { min-width: 1150px; }
+    .intro { padding: 10px 16px; color: var(--dim); font-size: 12px; line-height: 1.5; border-bottom: 1px solid var(--line); }
+    .intro b { color: var(--amber); font-weight: 600; }
+
+    .score { font-size: 16px; font-weight: 700; color: var(--yellow); }
+
+    /* Street split: one segment per rating bucket, width = share of analysts */
+    .split { display: flex; width: 150px; height: 10px; border: 1px solid var(--line); }
+    .split span { display: block; height: 100%; }
+    .seg-sb { background: #1f9d5a; } .seg-b { background: var(--up); }
+    .seg-h  { background: var(--faint); }
+    .seg-s  { background: var(--down); } .seg-ss { background: #a82828; }
+    .split-nums { font-size: 10px; color: var(--dim); margin-top: 3px; white-space: nowrap; }
+
+    .flag { display: inline-block; font-size: 10px; font-weight: 700; padding: 0 5px; margin: 0 3px 3px 0; text-transform: uppercase; }
+    .flag-lone_bull { background: var(--up); color: #000; }
+    .flag-lone_bear { background: var(--down); color: #000; }
+    .flag-breakaway { background: var(--yellow); color: #000; }
+
+    .cons-bull { color: var(--up); } .cons-hold { color: var(--dim); } .cons-bear { color: var(--down); }
+
+    .calls { display: flex; flex-direction: column; gap: 4px; min-width: 300px; }
+    .call { font-size: 11px; line-height: 1.35; }
+    .call .firm { color: var(--white); font-weight: 600; }
+    .call .when { color: var(--faint); }
+    .call .why  { color: var(--amber); }
+  </style>
+</head>
+<body>
+
+<div class="header">
+  <div>
+    <div class="logo">STOCK<span>PICKER</span><span class="go">GO</span></div>
+    <div class="header-meta" id="generated">Loading...</div>
+  </div>
+  <div class="header-right">
+    <div class="header-meta" id="scanned">—</div>
+    <div class="header-meta">ratings via Yahoo Finance</div>
+  </div>
+</div>
+<nav class="tabs">
+  <a class="tab" href="index.html"><span class="fk">1</span>Picks</a>
+  <a class="tab active" href="analysts.html"><span class="fk">2</span>Analyst Mismatch</a>
+</nav>
+
+<div class="intro">
+  Where one analyst breaks from the Street. <b>Lone Bull</b>: consensus is Hold or Sell, but only 1–2 analysts say Buy.
+  <b>Lone Bear</b>: the reverse. <b>Breakaway</b>: a firm's rating or price target in the last 120 days sits against
+  consensus or 25%+ away from the mean target. Score rewards lonelier, more recent, further-out calls.
+  Scans every tracked pick plus <code>data/watchlist.json</code>.
+</div>
+
+<div class="stats-bar">
+  <div class="stat"><div class="stat-label">Mismatches</div><div class="stat-value" id="s-total">—</div></div>
+  <div class="stat"><div class="stat-label">Lone Bulls</div><div class="stat-value green" id="s-bull">—</div></div>
+  <div class="stat"><div class="stat-label">Lone Bears</div><div class="stat-value red" id="s-bear">—</div></div>
+  <div class="stat"><div class="stat-label">Breakaway Calls</div><div class="stat-value" id="s-break">—</div></div>
+</div>
+
+<div class="toolbar" id="flag-row">
+  <span class="toolbar-label">Show</span>
+  <button class="filter-btn active" data-flag="all">All</button>
+  <button class="filter-btn" data-flag="lone_bull">Lone Bull</button>
+  <button class="filter-btn" data-flag="lone_bear">Lone Bear</button>
+  <button class="filter-btn" data-flag="breakaway">Breakaway</button>
+  <span class="row-count" id="row-count"></span>
+</div>
+<div class="toolbar" id="group-row">
+  <span class="toolbar-label">Group</span>
+</div>
+
+<div class="table-wrap">
+  <div id="loading" class="empty">Loading analyst data...</div>
+  <table id="tbl" style="display:none;">
+    <thead>
+      <tr>
+        <th data-key="score">Score</th>
+        <th data-key="ticker">Ticker</th>
+        <th>Flags</th>
+        <th data-key="price">Price</th>
+        <th data-key="n">Street Split</th>
+        <th data-key="consensus">Consensus</th>
+        <th data-key="upside_mean">Mean Tgt</th>
+        <th data-key="upside_high">Street High</th>
+        <th data-key="downside_low">Street Low</th>
+        <th>Dissenting Calls</th>
+      </tr>
+    </thead>
+    <tbody id="body"></tbody>
+  </table>
+  <div id="empty-state" class="empty" style="display:none;">
+    <div class="empty-title">No mismatch data yet</div>
+    <div>Run the "Analyst Mismatch Scan" workflow in GitHub Actions to populate it.</div>
+  </div>
+</div>
+
+<div class="footer">STOCKPICKER &nbsp;·&nbsp; NOT FINANCIAL ADVICE &nbsp;·&nbsp; A LONE CALL IS A LEAD, NOT A SIGNAL</div>
+
+<script>
+// Keep in sync with CHART_URL in index.html.
+const CHART_URL = 'https://www.tradingview.com/chart/?symbol={t}';
+function chartUrl(t) { return CHART_URL.replace('{t}', encodeURIComponent(t)); }
+
+let rows = [], flag = 'all', group = 'all', sortKey = 'score', sortDir = -1;
+
+const esc = s => String(s ?? '').replace(/[&<>"]/g, c => ({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;'}[c]));
+const money = v => v ? '$' + v.toFixed(2) : '—';
+function pct(v) {
+  if (v == null) return '<span class="tgt-dim">—</span>';
+  return `<span class="${v >= 0 ? 'pos' : 'neg'}">${v >= 0 ? '+' : ''}${v.toFixed(1)}%</span>`;
+}
+const FLAG_LABEL = { lone_bull: 'Lone Bull', lone_bear: 'Lone Bear', breakaway: 'Breakaway' };
+
+function splitHtml(c, n) {
+  const seg = (k, cls) => c[k] ? `<span class="${cls}" style="width:${c[k] / n * 100}%" title="${c[k]} ${k.replace('_', ' ')}"></span>` : '';
+  return `<div class="split">${seg('strong_buy','seg-sb')}${seg('buy','seg-b')}${seg('hold','seg-h')}${seg('sell','seg-s')}${seg('strong_sell','seg-ss')}</div>
+    <div class="split-nums">${c.strong_buy + c.buy} buy · ${c.hold} hold · ${c.sell + c.strong_sell} sell</div>`;
+}
+
+function callsHtml(breaks) {
+  if (!breaks.length) return '<span class="tgt-dim">—</span>';
+  return '<div class="calls">' + breaks.map(b => {
+    const grade = b.from && b.from !== b.to ? `${esc(b.from)} → ${esc(b.to)}` : esc(b.to);
+    const tgt = b.target ? ` · PT ${money(b.target)}${b.prior_target && b.prior_target !== b.target ? ' (was ' + money(b.prior_target) + ')' : ''}` : '';
+    return `<div class="call"><span class="firm">${esc(b.firm)}</span> <span class="when">${b.date}</span><br>
+      ${grade}${tgt} · <span class="why">${esc(b.why)}</span></div>`;
+  }).join('') + '</div>';
+}
+
+function render() {
+  let list = rows.filter(r => (flag === 'all' || r.flags.includes(flag)) && (group === 'all' || r.group === group));
+  list.sort((a, b) => {
+    const av = a[sortKey], bv = b[sortKey];
+    if (typeof av === 'string') return sortDir * av.localeCompare(bv || '');
+    return sortDir * ((av ?? -1e9) - (bv ?? -1e9));
+  });
+  document.getElementById('body').innerHTML = list.map(r => `
+    <tr>
+      <td><span class="score">${r.score.toFixed(1)}</span></td>
+      <td>
+        <a class="ticker-link" href="${chartUrl(r.ticker)}" target="_blank">${esc(r.ticker)}</a>
+        <a class="chart-link" href="${chartUrl(r.ticker)}" target="_blank">chart&nbsp;&#8599;</a>
+        <div class="theme-label">${esc(r.name)} · ${esc(r.group)}</div>
+      </td>
+      <td>${r.flags.map(f => `<span class="flag flag-${f}">${FLAG_LABEL[f]}</span>`).join('')}</td>
+      <td class="price">${money(r.price)}</td>
+      <td>${splitHtml(r.counts, r.n)}</td>
+      <td class="cons-${r.consensus}">${r.consensus.toUpperCase()}</td>
+      <td><span class="price">${money(r.target_mean)}</span><div>${pct(r.upside_mean)}</div></td>
+      <td><span class="price">${money(r.target_high)}</span><div>${pct(r.upside_high)}</div></td>
+      <td><span class="price">${money(r.target_low)}</span><div>${pct(r.downside_low)}</div></td>
+      <td>${callsHtml(r.breaks)}</td>
+    </tr>`).join('');
+  document.getElementById('row-count').textContent = list.length + ' rows';
+  document.getElementById('loading').style.display = 'none';
+  document.getElementById('tbl').style.display = list.length ? 'table' : 'none';
+  document.getElementById('empty-state').style.display = list.length ? 'none' : 'block';
+  document.querySelectorAll('thead th').forEach(th => {
+    th.classList.remove('sort-asc', 'sort-desc');
+    if (th.dataset.key === sortKey) th.classList.add(sortDir === 1 ? 'sort-asc' : 'sort-desc');
+  });
+}
+
+function wireButtons(rowId, attr, set) {
+  document.getElementById(rowId).addEventListener('click', e => {
+    const btn = e.target.closest('.filter-btn');
+    if (!btn) return;
+    set(btn.dataset[attr]);
+    btn.parentElement.querySelectorAll('.filter-btn').forEach(b => b.classList.toggle('active', b === btn));
+    render();
+  });
+}
+
+document.querySelectorAll('thead th[data-key]').forEach(th => th.addEventListener('click', () => {
+  const k = th.dataset.key;
+  if (sortKey === k) sortDir *= -1; else { sortKey = k; sortDir = -1; }
+  render();
+}));
+wireButtons('flag-row', 'flag', v => flag = v);
+wireButtons('group-row', 'group', v => group = v);
+
+async function load() {
+  try {
+    const res = await fetch('data/analyst_mismatch.json?t=' + Date.now());
+    if (!res.ok) throw new Error('not found');
+    const data = await res.json();
+    rows = data.rows || [];
+    document.getElementById('generated').textContent = 'Last scan: ' + data.generated;
+    document.getElementById('scanned').textContent = data.scanned + ' tickers scanned';
+    document.getElementById('s-total').textContent = rows.length;
+    document.getElementById('s-bull').textContent  = rows.filter(r => r.flags.includes('lone_bull')).length;
+    document.getElementById('s-bear').textContent  = rows.filter(r => r.flags.includes('lone_bear')).length;
+    document.getElementById('s-break').textContent = rows.reduce((a, r) => a + r.breaks.length, 0);
+    const groups = [...new Set(rows.map(r => r.group))].sort();
+    document.getElementById('group-row').insertAdjacentHTML('beforeend',
+      ['all', ...groups].map(g => `<button class="filter-btn${g === 'all' ? ' active' : ''}" data-group="${esc(g)}">${g === 'all' ? 'All' : esc(g)}</button>`).join(''));
+  } catch (e) { /* no data yet: empty state below */ }
+  render();
+}
+load();
+</script>
+</body>
+</html>

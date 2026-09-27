@@ -5,203 +5,12 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>StockPicker — Daily Picks Tracker</title>
 
-  <!-- Google Analytics — replace G-XXXXXXXXXX with your Measurement ID -->
-  <script async src="https://www.googletagmanager.com/gtag/js?id=G-XXXXXXXXXX"></script>
-  <script>
-    window.dataLayer = window.dataLayer || [];
-    function gtag(){dataLayer.push(arguments);}
-    gtag('js', new Date());
-    gtag('config', 'G-XXXXXXXXXX');
-  </script>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="assets/terminal.css">
   <style>
-    * { box-sizing: border-box; margin: 0; padding: 0; }
-
-    body {
-      background: #060b14;
-      color: #c9d1d9;
-      font-family: 'SF Mono', 'Fira Code', 'Consolas', 'Menlo', monospace;
-      font-size: 13px;
-      min-height: 100vh;
-    }
-
-    /* ── Header ─────────────────────────────────────────── */
-    .header {
-      background: #0d1117;
-      border-bottom: 1px solid #1e2d3d;
-      padding: 14px 24px;
-      display: flex;
-      align-items: center;
-      justify-content: space-between;
-    }
-    .logo {
-      font-size: 16px;
-      font-weight: bold;
-      color: #f0f6ff;
-      letter-spacing: 2px;
-      text-transform: uppercase;
-    }
-    .logo span { color: #00d4aa; }
-    .header-right { text-align: right; }
-    .header-meta { font-size: 10px; color: #3d5166; margin-top: 2px; }
-
-    /* ── Stats bar ──────────────────────────────────────── */
-    .stats-bar {
-      background: #0a0f1e;
-      border-bottom: 1px solid #111c2e;
-      padding: 10px 24px;
-      display: flex;
-      gap: 36px;
-      flex-wrap: wrap;
-      align-items: center;
-    }
-    .stat { display: flex; flex-direction: column; gap: 1px; }
-    .stat-label {
-      font-size: 9px;
-      text-transform: uppercase;
-      letter-spacing: 1.2px;
-      color: #3d5166;
-    }
-    .stat-value { font-size: 20px; font-weight: bold; color: #e2e8f0; }
-    .stat-value.green { color: #00d4aa; }
-    .stat-value.red   { color: #f87171; }
-    .stat-value.dim   { color: #64748b; }
-
-    /* ── Toolbar ─────────────────────────────────────────── */
-    .toolbar {
-      background: #060b14;
-      padding: 10px 24px;
-      display: flex;
-      align-items: center;
-      gap: 16px;
-      border-bottom: 1px solid #0f1923;
-    }
-    .filter-btn {
-      background: #0d1424;
-      border: 1px solid #1e2d3d;
-      color: #64748b;
-      padding: 4px 12px;
-      border-radius: 4px;
-      font-size: 10px;
-      font-family: inherit;
-      text-transform: uppercase;
-      letter-spacing: 0.5px;
-      cursor: pointer;
-    }
-    .filter-btn.active, .filter-btn:hover {
-      border-color: #00d4aa;
-      color: #00d4aa;
-      background: #042b24;
-    }
-
-    /* ── Table ───────────────────────────────────────────── */
-    .table-wrap {
-      padding: 16px 24px;
-      overflow-x: auto;
-    }
-
-    table { width: 100%; border-collapse: collapse; min-width: 1100px; }
-
-    thead th {
-      background: #0d1117;
-      color: #3d5166;
-      font-size: 9px;
-      text-transform: uppercase;
-      letter-spacing: 1px;
-      padding: 9px 12px;
-      text-align: left;
-      border-bottom: 1px solid #1e2d3d;
-      white-space: nowrap;
-      cursor: pointer;
-      user-select: none;
-    }
-    thead th:hover { color: #60a5fa; }
-    thead th.sort-asc::after  { content: ' \2191'; color: #00d4aa; }
-    thead th.sort-desc::after { content: ' \2193'; color: #00d4aa; }
-
-    tbody tr { border-bottom: 1px solid #0d1424; transition: background 0.08s; }
-    tbody tr:hover { background: #0a1020; }
-    td { padding: 11px 12px; vertical-align: middle; }
-
-    /* Ticker */
-    .ticker-link {
-      font-size: 15px;
-      font-weight: bold;
-      color: #60a5fa;
-      text-decoration: none;
-      letter-spacing: 0.5px;
-    }
-    .ticker-link:hover { color: #93c5fd; }
-    .theme-label { font-size: 9px; color: #3d5166; margin-top: 3px; letter-spacing: 0.3px; }
-
-    /* Conviction badge */
-    .badge {
-      display: inline-block;
-      padding: 2px 8px;
-      border-radius: 10px;
-      font-size: 9px;
-      font-weight: bold;
-      text-transform: uppercase;
-      letter-spacing: 0.8px;
-    }
-    .badge-sb  { background: #042b24; color: #00d4aa; border: 1px solid #065f46; }
-    .badge-buy { background: #0c1f3f; color: #60a5fa; border: 1px solid #1e3a6e; }
-    .badge-w   { background: #111827; color: #64748b; border: 1px solid #1e2d3d; }
-
-    /* Prices */
-    .price { color: #e2e8f0; font-size: 13px; white-space: nowrap; }
-    .price-sub { font-size: 10px; color: #3d5166; margin-top: 2px; }
-
-    /* Return */
-    .ret-pos  { color: #00d4aa; font-size: 15px; font-weight: bold; }
-    .ret-neg  { color: #f87171; font-size: 15px; font-weight: bold; }
-    .ret-zero { color: #64748b; font-size: 15px; font-weight: bold; }
-
-    /* Target upside */
-    .tgt-pos { color: #34d399; font-size: 12px; }
-    .tgt-neg { color: #f87171; font-size: 12px; }
-    .tgt-dim { color: #3d5166; font-size: 12px; }
-
-    /* Signals */
-    .sig-wrap { display: flex; flex-wrap: wrap; gap: 3px; max-width: 200px; }
-    .sig {
-      background: #0d1424;
-      border: 1px solid #1a2744;
-      border-radius: 3px;
-      padding: 1px 5px;
-      font-size: 9px;
-      color: #60a5fa;
-      white-space: nowrap;
-    }
-
-    /* Macro */
-    .macro-cell { font-size: 11px; white-space: nowrap; }
-    .risk-on  { color: #00d4aa; }
-    .risk-off { color: #f87171; }
-
-    /* Status dot */
-    .dot-open   { color: #00d4aa; }
-    .dot-closed { color: #3d5166; }
-
-    /* Mktcap / days */
-    .dim12 { color: #3d5166; font-size: 12px; }
-
-    /* Empty / loading */
-    #loading, #empty-state {
-      text-align: center;
-      padding: 60px 24px;
-      color: #3d5166;
-    }
-    #empty-state .empty-title { font-size: 16px; color: #60a5fa; margin-bottom: 8px; }
-
-    /* Footer */
-    .footer {
-      border-top: 1px solid #0f1923;
-      padding: 10px 24px;
-      font-size: 10px;
-      color: #1e2d3d;
-      text-align: center;
-      letter-spacing: 0.5px;
-    }
+    table { min-width: 1100px; }
   </style>
 </head>
 <body>
@@ -209,14 +18,18 @@
 <!-- Header -->
 <div class="header">
   <div>
-    <div class="logo">STOCK<span>PICKER</span></div>
+    <div class="logo">STOCK<span>PICKER</span><span class="go">GO</span></div>
     <div class="header-meta" id="last-updated">Loading...</div>
   </div>
   <div class="header-right">
-    <div style="font-size:11px;color:#60a5fa;" id="pick-count">—</div>
+    <div class="header-meta" id="pick-count">—</div>
     <div class="header-meta">prices from last script run</div>
   </div>
 </div>
+<nav class="tabs">
+  <a class="tab active" href="index.html"><span class="fk">1</span>Picks</a>
+  <a class="tab" href="analysts.html"><span class="fk">2</span>Analyst Mismatch</a>
+</nav>
 
 <!-- Stats bar -->
 <div class="stats-bar">
@@ -235,7 +48,7 @@
   <div class="stat">
     <div class="stat-label" title="Losses capped at -10% (stop-loss rule)">Managed Avg</div>
     <div class="stat-value" id="s-mgd">—</div>
-    <div style="font-size:9px;color:#3d5166;margin-top:1px;">stop &gt;10% loss</div>
+    <div class="stat-note">stop &gt;10% loss</div>
   </div>
   <div class="stat">
     <div class="stat-label">Best Pick</div>
@@ -261,10 +74,10 @@
   <button class="filter-btn" onclick="setFilter('Open', this)">Open</button>
   <button class="filter-btn" onclick="setFilter('Strong Buy', this)">Strong Buy</button>
   <button class="filter-btn" onclick="setFilter('Buy', this)">Buy</button>
-  <span style="margin-left:auto;font-size:10px;color:#3d5166;" id="row-count"></span>
+  <span class="row-count" id="row-count"></span>
 </div>
-<div class="toolbar" id="sector-row" style="padding-top:6px;padding-bottom:6px;gap:8px;">
-  <span style="font-size:9px;text-transform:uppercase;letter-spacing:1px;color:#3d5166;">Sector</span>
+<div class="toolbar" id="sector-row">
+  <span class="toolbar-label">Sector</span>
   <button class="filter-btn active" data-sector="all" onclick="setSector('all', this)">All</button>
   <button class="filter-btn" data-sector="Quantum / Emerging Tech" onclick="setSector('Quantum / Emerging Tech', this)">Quantum</button>
   <button class="filter-btn" data-sector="Industrial AI / Robotics" onclick="setSector('Industrial AI / Robotics', this)">AI / Robotics</button>
@@ -272,11 +85,13 @@
   <button class="filter-btn" data-sector="Biotech / Life Sciences" onclick="setSector('Biotech / Life Sciences', this)">Biotech</button>
   <button class="filter-btn" data-sector="Nuclear / Next-Gen Energy" onclick="setSector('Nuclear / Next-Gen Energy', this)">Nuclear / Energy</button>
   <button class="filter-btn" data-sector="Space / Satellite" onclick="setSector('Space / Satellite', this)">Space / Satellite</button>
+  <button class="filter-btn" data-sector="Defense Tech / Dual-Use" onclick="setSector('Defense Tech / Dual-Use', this)">Defense</button>
+  <button class="filter-btn" data-sector="AI Infrastructure / Fiber" onclick="setSector('AI Infrastructure / Fiber', this)">AI Infra / Fiber</button>
 </div>
 
 <!-- Table -->
 <div class="table-wrap">
-  <div id="loading">Loading picks...</div>
+  <div id="loading" class="empty">Loading picks...</div>
   <table id="picks-table" style="display:none;">
     <thead>
       <tr>
@@ -298,7 +113,7 @@
     </thead>
     <tbody id="picks-body"></tbody>
   </table>
-  <div id="empty-state" style="display:none;">
+  <div id="empty-state" class="empty" style="display:none;">
     <div class="empty-title">No picks yet</div>
     <div>Run stock_alert.py to log the first pick</div>
   </div>
@@ -312,6 +127,12 @@ let sortKey      = 'date';
 let sortDir      = -1;
 let activeFilter = 'all';
 let activeSector = 'all';
+
+// Chart site for the "chart" link next to each ticker. {t} is replaced with the ticker.
+// Free alternatives: 'https://stockanalysis.com/stocks/{t}/chart/'
+//                    'https://www.google.com/finance/quote/{t}'
+const CHART_URL = 'https://www.tradingview.com/chart/?symbol={t}';
+function chartUrl(t) { return CHART_URL.replace('{t}', encodeURIComponent(t)); }
 
 /* ── Formatting helpers ──────────────────────────────── */
 function fmtPrice(v) {
@@ -390,8 +211,11 @@ function renderTable(picks) {
     const cur  = p.cur_price    || 0;
     const tgt  = p.analyst_target || 0;
     const tgtU = (tgt > 0 && cur > 0) ? (tgt - cur) / cur * 100 : null;
-    const tgtHtml = tgtU !== null
-      ? `<span class="${tgtU >= 0 ? 'tgt-pos' : 'tgt-neg'}">${tgtU >= 0 ? '+' : ''}${tgtU.toFixed(1)}%</span><div class="tgt-dim">${fmtPrice(tgt)}</div>`
+    const tgtPriceHtml = tgt > 0
+      ? `<span class="price">${fmtPrice(tgt)}</span>`
+      : '<span class="tgt-dim">—</span>';
+    const tgtUpHtml = tgtU !== null
+      ? `<span class="${tgtU >= 0 ? 'tgt-pos' : 'tgt-neg'}">${tgtU >= 0 ? '+' : ''}${tgtU.toFixed(1)}%</span>`
       : '<span class="tgt-dim">—</span>';
 
     const entryU = p.implied_upside_at_entry;
@@ -404,7 +228,7 @@ function renderTable(picks) {
     ).join('');
 
     const vix      = p.vix_at_entry;
-    const vixColor = vix > 30 ? '#f87171' : (vix > 20 ? '#fbbf24' : '#00d4aa');
+    const vixCls   = vix > 30 ? 'vix-high' : (vix > 20 ? 'vix-mid' : 'vix-low');
     const riskHtml = p.risk_on_at_entry
       ? '<span class="risk-on">RISK ON</span>'
       : '<span class="risk-off">RISK OFF</span>';
@@ -416,7 +240,8 @@ function renderTable(picks) {
     tr.innerHTML = `
       <td><span class="dim12">${p.date}</span></td>
       <td>
-        <a class="ticker-link" href="${p.report_url || 'https://finviz.com/quote.ashx?t=' + p.ticker}" target="_blank">${p.ticker}</a>
+        <a class="ticker-link" href="${p.report_url || chartUrl(p.ticker)}" target="_blank">${p.ticker}</a>
+        <a class="chart-link" href="${chartUrl(p.ticker)}" target="_blank" title="Open chart">chart&nbsp;&#8599;</a>
         <div class="theme-label">${(p.theme || '').replace(' / ', ' / ')}</div>
       </td>
       <td>${convBadge(p.conviction)}</td>
@@ -429,13 +254,13 @@ function renderTable(picks) {
         <div class="price-sub">${p.last_price_update ? p.last_price_update : '—'}</div>
       </td>
       <td><span class="${pctCls}">${pctStr}</span></td>
-      <td>${tgtHtml}</td>
-      <td>${tgtHtml !== '<span class="tgt-dim">—</span>' ? tgtHtml : '<span class="tgt-dim">—</span>'}</td>
+      <td>${tgtPriceHtml}</td>
+      <td>${tgtUpHtml}</td>
       <td>${entryUHtml}</td>
       <td class="dim12">${daysSince(p.date)}d</td>
       <td class="dim12">${fmtMktCap(p.mktcap)}</td>
       <td class="macro-cell">
-        <span style="color:${vixColor}">VIX ${vix != null ? vix : '—'}</span>
+        <span class="${vixCls}">VIX ${vix != null ? vix : '—'}</span>
         &nbsp;${riskHtml}
         <div class="dim12">10Y ${p.yield_10y_at_entry != null ? p.yield_10y_at_entry + '%' : '—'}</div>
       </td>
