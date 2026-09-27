@@ -8,18 +8,25 @@ Three kinds of mismatch are flagged:
   breakaway   a firm's rating or price target in the last 120 days breaks from
               consensus (Buy vs non-Buy consensus, or target >=25% above/below the mean)
 
-Runs in GitHub Actions (writes through the contents API when GITHUB_TOKEN is set),
-or locally (writes the file directly).
+Two more fields feed the weekly brief:
+  path_50     at least one analyst target implies >=50% upside from today's price
+              (the Street high, or a dissenting firm's target): the "50% possible" gate
+  novel       never picked, or last picked more than NOVEL_DAYS ago
+
+Runs weekly in GitHub Actions (writes through the contents API when GITHUB_TOKEN
+is set), or locally (writes the file directly).
 """
-import json, base64, os, math, urllib.request
+import json, math
 from datetime import datetime, timedelta, timezone
 import yfinance as yf
+from ghpub import put_file
 
-OWNER, REPO = "edwardphill", "stockpicker"
 OUT_PATH    = "data/analyst_mismatch.json"
 LOOKBACK    = timedelta(days=120)
 TARGET_GAP  = 0.25          # firm target this far from the mean counts as a break
 MIN_COVER   = 5             # need at least this many analysts for "lone" calls
+PATH_MIN    = 50.0          # minimum upside (%) some analyst must see for a "50% path"
+NOVEL_DAYS  = 180           # a ticker picked within this window is not novel
 
 BULL = {"buy", "strong buy", "outperform", "overweight", "positive", "accumulate",
         "market outperform", "sector outperform", "top pick", "add", "conviction buy",
@@ -41,17 +48,23 @@ def num(v):
         return None
 
 def load_universe():
-    tickers = {}
+    """Returns ({ticker: group}, {ticker: pick history summary})."""
+    tickers, history = {}, {}
     picks = json.load(open("data/picks.json"))
-    for p in picks:
-        tickers.setdefault(p["ticker"], p.get("theme", ""))
+    for p in sorted(picks, key=lambda x: x["date"]):
+        t = p["ticker"]
+        tickers.setdefault(t, p.get("theme", ""))
+        h = history.setdefault(t, {"times_picked": 0, "last_picked": None, "last_pick_return": None})
+        h["times_picked"] += 1
+        h["last_picked"] = p["date"]
+        h["last_pick_return"] = p.get("pct_chg")
     wl = json.load(open("data/watchlist.json"))
     for group, ts in wl.items():
         if group.startswith("_"): continue
         for t in ts: tickers.setdefault(t, group)
-    return tickers
+    return tickers, history
 
-def scan(ticker, group):
+def scan(ticker, group, hist=None):
     t = yf.Ticker(ticker)
     rec = t.recommendations
     if rec is None or rec.empty: return None
@@ -104,6 +117,22 @@ def scan(ticker, group):
     if breaks: flags.append("breakaway")
     if not flags: return None
 
+    # 50% path: does anyone on the Street see 50%+ from here? (Street high, or a dissenter.)
+    path_50, path_why = False, None
+    up_high = (thigh / price - 1) * 100 if (thigh and price) else None
+    if up_high is not None and up_high >= PATH_MIN:
+        path_50, path_why = True, f"Street high target {money(thigh)} is {up_high:+.0f}%"
+    else:
+        best = max((b for b in breaks if b["upside"] is not None), key=lambda b: b["upside"], default=None)
+        if best and best["upside"] >= PATH_MIN:
+            path_50, path_why = True, f"{best['firm']} target {money(best['target'])} is {best['upside']:+.0f}%"
+
+    hist = hist or {"times_picked": 0, "last_picked": None, "last_pick_return": None}
+    novel = True
+    if hist["last_picked"]:
+        age = (datetime.now(timezone.utc).date() - datetime.strptime(hist["last_picked"], "%Y-%m-%d").date()).days
+        novel = age > NOVEL_DAYS
+
     # Conviction score: rewards a lonely, recent, far-from-consensus call.
     score = 0.0
     if "lone_bull" in flags or "lone_bear" in flags: score += 3 + (2 if min(bulls, bears) == 1 else 0)
@@ -121,43 +150,29 @@ def scan(ticker, group):
         "upside_high": round((thigh / price - 1) * 100, 1) if (thigh and price) else None,
         "downside_low": round((tlow / price - 1) * 100, 1) if (tlow and price) else None,
         "flags": flags, "breaks": breaks[:5], "score": round(score, 1),
+        "path_50": path_50, "path_50_why": path_why,
+        "novel": novel, **hist,
     }
 
-def publish(payload):
-    body_bytes = json.dumps(payload, indent=2).encode()
-    token = os.environ.get("GITHUB_TOKEN")
-    if not token:
-        open(OUT_PATH, "wb").write(body_bytes)
-        return
-    api = f"https://api.github.com/repos/{OWNER}/{REPO}/contents/{OUT_PATH}"
-    h = {"Authorization": f"token {token}", "Accept": "application/vnd.github.v3+json",
-         "Content-Type": "application/json", "User-Agent": "AnalystMismatch/1.0"}
-    sha = None
-    try:
-        with urllib.request.urlopen(urllib.request.Request(api, headers=h), timeout=15) as r:
-            sha = json.loads(r.read())["sha"]
-    except urllib.error.HTTPError as e:
-        if e.code != 404: raise
-    body = {"message": f"Analyst mismatch scan {payload['generated']}",
-            "content": base64.b64encode(body_bytes).decode()}
-    if sha: body["sha"] = sha
-    req = urllib.request.Request(api, data=json.dumps(body).encode(), headers=h, method="PUT")
-    urllib.request.urlopen(req, timeout=15).read()
+def money(v):
+    return f"${v:,.2f}" if v else "—"
 
 if __name__ == "__main__":
-    universe = load_universe()
+    universe, history = load_universe()
     rows, errors = [], []
     for tk, group in sorted(universe.items()):
         try:
-            r = scan(tk, group)
+            r = scan(tk, group, history.get(tk))
             if r:
                 rows.append(r)
-                print(f"  {tk}: {','.join(r['flags'])} score {r['score']}")
+                print(f"  {tk}: {','.join(r['flags'])} score {r['score']}"
+                      f"{' 50%path' if r['path_50'] else ''}{' new' if r['novel'] else ''}")
         except Exception as e:
             errors.append(tk)
             print(f"  {tk} error: {e}")
     rows.sort(key=lambda r: r["score"], reverse=True)
     payload = {"generated": datetime.now(timezone.utc).strftime("%Y-%m-%d %H:%M UTC"),
                "scanned": len(universe), "errors": errors, "rows": rows}
-    publish(payload)
-    print(f"Done: {len(rows)} mismatches from {len(universe)} tickers")
+    put_file(OUT_PATH, json.dumps(payload, indent=2).encode(), f"Analyst mismatch scan {payload['generated']}")
+    cands = [r["ticker"] for r in rows if r["path_50"] and r["novel"]]
+    print(f"Done: {len(rows)} mismatches from {len(universe)} tickers; candidates: {', '.join(cands) or 'none'}")

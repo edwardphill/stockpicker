@@ -2,8 +2,8 @@ name: Analyst Mismatch Scan
 
 on:
   schedule:
-    # Once each weekday before the US open (12:15 UTC)
-    - cron: '15 12 * * 1-5'
+    # Mondays before the US open (12:15 UTC). The weekly brief goes out Tuesday.
+    - cron: '15 12 * * 1'
   workflow_dispatch:   # manual trigger from GitHub UI
 
 jobs:

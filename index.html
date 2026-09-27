@@ -3,19 +3,18 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>StockPicker — Daily Picks Tracker</title>
-
+  <title>StockPicker — Picks</title>
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;600;700&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="assets/terminal.css">
+  <script src="assets/theme.js"></script>
   <style>
-    table { min-width: 1100px; }
+    table.main { min-width: 900px; }
   </style>
 </head>
 <body>
 
-<!-- Header -->
 <div class="header">
   <div>
     <div class="logo">STOCK<span>PICKER</span><span class="go">GO</span></div>
@@ -23,123 +22,93 @@
   </div>
   <div class="header-right">
     <div class="header-meta" id="pick-count">—</div>
-    <div class="header-meta">prices from last script run</div>
+    <button class="theme-btn" id="theme-btn" onclick="toggleTheme()">Light</button>
   </div>
 </div>
 <nav class="tabs">
   <a class="tab active" href="index.html"><span class="fk">1</span>Picks</a>
   <a class="tab" href="analysts.html"><span class="fk">2</span>Analyst Mismatch</a>
+  <a class="tab" href="reports/weekly/latest.html"><span class="fk">3</span>Weekly Brief</a>
 </nav>
 
-<!-- Stats bar -->
 <div class="stats-bar">
   <div class="stat">
-    <div class="stat-label">Total Picks</div>
-    <div class="stat-value dim" id="s-total">—</div>
+    <div class="stat-label" id="l-total">Stocks</div>
+    <div class="stat-value" id="s-total">—</div>
   </div>
   <div class="stat">
     <div class="stat-label">Win Rate</div>
     <div class="stat-value" id="s-wr">—</div>
   </div>
   <div class="stat">
-    <div class="stat-label">Avg Return (True)</div>
+    <div class="stat-label">Avg Return</div>
     <div class="stat-value" id="s-avg">—</div>
+    <div class="stat-note" id="s-mgd">—</div>
   </div>
   <div class="stat">
-    <div class="stat-label" title="Losses capped at -10% (stop-loss rule)">Managed Avg</div>
-    <div class="stat-value" id="s-mgd">—</div>
-    <div class="stat-note">stop &gt;10% loss</div>
-  </div>
-  <div class="stat">
-    <div class="stat-label">Best Pick</div>
+    <div class="stat-label">Best</div>
     <div class="stat-value green" id="s-best">—</div>
   </div>
   <div class="stat">
-    <div class="stat-label">Worst Pick</div>
+    <div class="stat-label">Worst</div>
     <div class="stat-value red" id="s-worst">—</div>
   </div>
-  <div class="stat">
-    <div class="stat-label">Avg Days Held</div>
-    <div class="stat-value dim" id="s-days">—</div>
-  </div>
-  <div class="stat">
-    <div class="stat-label">Open Positions</div>
-    <div class="stat-value dim" id="s-open">—</div>
-  </div>
 </div>
 
-<!-- Toolbar -->
 <div class="toolbar">
-  <button class="filter-btn active" onclick="setFilter('all', this)">All</button>
-  <button class="filter-btn" onclick="setFilter('Open', this)">Open</button>
-  <button class="filter-btn" onclick="setFilter('Strong Buy', this)">Strong Buy</button>
-  <button class="filter-btn" onclick="setFilter('Buy', this)">Buy</button>
+  <span class="seg" id="view-seg">
+    <button class="filter-btn active" data-view="stock">By stock</button>
+    <button class="filter-btn" data-view="pick">Every pick</button>
+  </span>
+  <select class="select" id="sector-select"><option value="all">All sectors</option></select>
+  <select class="select" id="conv-select">
+    <option value="all">All convictions</option>
+    <option value="Strong Buy">Strong Buy</option>
+    <option value="Buy">Buy</option>
+    <option value="Watch">Watch</option>
+  </select>
   <span class="row-count" id="row-count"></span>
 </div>
-<div class="toolbar" id="sector-row">
-  <span class="toolbar-label">Sector</span>
-  <button class="filter-btn active" data-sector="all" onclick="setSector('all', this)">All</button>
-  <button class="filter-btn" data-sector="Quantum / Emerging Tech" onclick="setSector('Quantum / Emerging Tech', this)">Quantum</button>
-  <button class="filter-btn" data-sector="Industrial AI / Robotics" onclick="setSector('Industrial AI / Robotics', this)">AI / Robotics</button>
-  <button class="filter-btn" data-sector="Cybersecurity" onclick="setSector('Cybersecurity', this)">Cybersecurity</button>
-  <button class="filter-btn" data-sector="Biotech / Life Sciences" onclick="setSector('Biotech / Life Sciences', this)">Biotech</button>
-  <button class="filter-btn" data-sector="Nuclear / Next-Gen Energy" onclick="setSector('Nuclear / Next-Gen Energy', this)">Nuclear / Energy</button>
-  <button class="filter-btn" data-sector="Space / Satellite" onclick="setSector('Space / Satellite', this)">Space / Satellite</button>
-  <button class="filter-btn" data-sector="Defense Tech / Dual-Use" onclick="setSector('Defense Tech / Dual-Use', this)">Defense</button>
-  <button class="filter-btn" data-sector="AI Infrastructure / Fiber" onclick="setSector('AI Infrastructure / Fiber', this)">AI Infra / Fiber</button>
-</div>
 
-<!-- Table -->
 <div class="table-wrap">
   <div id="loading" class="empty">Loading picks...</div>
-  <table id="picks-table" style="display:none;">
-    <thead>
-      <tr>
-        <th onclick="sortBy('date')">Date</th>
-        <th onclick="sortBy('ticker')">Ticker</th>
-        <th>Conviction</th>
-        <th onclick="sortBy('entry_price')">Entry @ Pick</th>
-        <th onclick="sortBy('cur_price')">Current</th>
-        <th onclick="sortBy('pct_chg')">Return</th>
-        <th onclick="sortBy('analyst_target')">Target</th>
-        <th onclick="sortBy('tgt_upside_rem')">Tgt Upside</th>
-        <th onclick="sortBy('implied_upside_at_entry')">Upside @ Entry</th>
-        <th onclick="sortBy('days_held')">Days</th>
-        <th onclick="sortBy('mktcap')">Mkt Cap</th>
-        <th>VIX / Macro</th>
-        <th>Signals</th>
-        <th>Status</th>
-      </tr>
-    </thead>
+  <table class="main" id="picks-table" style="display:none;">
+    <thead><tr id="head-row"></tr></thead>
     <tbody id="picks-body"></tbody>
   </table>
   <div id="empty-state" class="empty" style="display:none;">
-    <div class="empty-title">No picks yet</div>
-    <div>Run stock_alert.py to log the first pick</div>
+    <div class="empty-title">No picks match</div>
+    <div>Try another sector or conviction.</div>
   </div>
 </div>
 
-<div class="footer">STOCKPICKER &nbsp;·&nbsp; NOT FINANCIAL ADVICE &nbsp;·&nbsp; DATA FROM LAST SCRIPT RUN</div>
+<div class="footer">STOCKPICKER &nbsp;·&nbsp; NOT FINANCIAL ADVICE &nbsp;·&nbsp; PRICES FROM THE LAST REFRESH</div>
 
 <script>
-let allPicks     = [];
-let sortKey      = 'date';
-let sortDir      = -1;
-let activeFilter = 'all';
-let activeSector = 'all';
-
 // Chart site for the "chart" link next to each ticker. {t} is replaced with the ticker.
 // Free alternatives: 'https://stockanalysis.com/stocks/{t}/chart/'
 //                    'https://www.google.com/finance/quote/{t}'
 const CHART_URL = 'https://www.tradingview.com/chart/?symbol={t}';
 function chartUrl(t) { return CHART_URL.replace('{t}', encodeURIComponent(t)); }
 
-/* ── Formatting helpers ──────────────────────────────── */
-function fmtPrice(v) {
-  return (v && v > 0) ? '$' + parseFloat(v).toFixed(2) : '—';
+let allPicks = [];
+let view     = 'stock';     // 'stock' = one row per ticker, 'pick' = every pick
+let sector   = 'all';
+let conv     = 'all';
+let sortKey  = null;        // null = default order for the view
+let sortDir  = -1;
+const openRows = new Set();
+
+/* ── Helpers ─────────────────────────────────────────── */
+const esc = s => String(s ?? '').replace(/[&<>"]/g, c => ({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;'}[c]));
+const money = v => (v && v > 0) ? '$' + Number(v).toFixed(2) : '—';
+function pct(v, cls) {
+  if (v == null || isNaN(v)) return '<span class="flat">—</span>';
+  const c = v > 0 ? 'pos' : (v < 0 ? 'neg' : 'flat');
+  return `<span class="${c} ${cls || ''}">${v > 0 ? '+' : ''}${v.toFixed(1)}%</span>`;
 }
-function fmtMktCap(v) {
-  if (!v || v === 0) return '—';
+function mktcap(v) {
+  if (!v) return '—';
   if (v >= 1e12) return '$' + (v / 1e12).toFixed(2) + 'T';
   if (v >= 1e9)  return '$' + (v / 1e9).toFixed(1)  + 'B';
   if (v >= 1e6)  return '$' + (v / 1e6).toFixed(0)  + 'M';
@@ -149,194 +118,217 @@ function daysSince(d) {
   return Math.max(0, Math.floor((Date.now() - new Date(d + 'T00:00:00').getTime()) / 86400000));
 }
 function convBadge(c) {
-  if (c === 'Strong Buy') return `<span class="badge badge-sb">Strong Buy</span>`;
-  if (c === 'Buy')        return `<span class="badge badge-buy">Buy</span>`;
-  return                         `<span class="badge badge-w">Watch</span>`;
+  if (c === 'Strong Buy') return '<span class="badge badge-sb">Strong Buy</span>';
+  if (c === 'Buy')        return '<span class="badge badge-buy">Buy</span>';
+  return                         '<span class="badge badge-w">Watch</span>';
+}
+const CONV_RANK = { 'Strong Buy': 2, 'Buy': 1 };
+function upsideTo(target, price) {
+  return (target > 0 && price > 0) ? (target - price) / price * 100 : null;
+}
+
+/* ── Group picks by ticker ───────────────────────────── */
+function groupByTicker(picks) {
+  const map = new Map();
+  for (const p of picks) {
+    if (!map.has(p.ticker)) map.set(p.ticker, []);
+    map.get(p.ticker).push(p);
+  }
+  return [...map.values()].map(list => {
+    list.sort((a, b) => a.date.localeCompare(b.date));
+    const first  = list[0];
+    const latest = list[list.length - 1];
+    const priced = [...list].reverse().find(p => p.cur_price > 0) || latest;
+    const cur    = priced.cur_price || 0;
+    const ret    = (cur > 0 && first.entry_price > 0) ? (cur - first.entry_price) / first.entry_price * 100 : (first.pct_chg ?? 0);
+    const best   = list.reduce((a, p) => CONV_RANK[p.conviction] > CONV_RANK[a.conviction] ? p : a, list[0]);
+    return {
+      ticker: first.ticker, theme: latest.theme || first.theme || '',
+      conviction: best.conviction, date: first.date, entry_price: first.entry_price,
+      cur_price: cur, pct_chg: ret, analyst_target: latest.analyst_target,
+      report_url: latest.report_url || first.report_url,
+      status: list.some(p => (p.status || 'Open') === 'Open') ? 'Open' : 'Closed',
+      count: list.length, picks: list,
+      last_price_update: priced.last_price_update,
+    };
+  });
+}
+
+/* ── Columns per view ────────────────────────────────── */
+const COLS = {
+  stock: [
+    { key: null,   label: '' },
+    { key: 'ticker', label: 'Stock', sort: r => r.ticker },
+    { key: 'conv', label: 'Conviction', sort: r => CONV_RANK[r.conviction] || 0 },
+    { key: 'date', label: 'First Picked', sort: r => r.date },
+    { key: 'entry', label: 'Entry', sort: r => r.entry_price },
+    { key: 'cur', label: 'Now', sort: r => r.cur_price },
+    { key: 'ret', label: 'Since 1st Pick', sort: r => r.pct_chg },
+    { key: 'tgt', label: 'Target Upside', sort: r => upsideTo(r.analyst_target, r.cur_price) ?? -999 },
+    { key: 'count', label: 'Picked', sort: r => r.count },
+  ],
+  pick: [
+    { key: null,   label: '' },
+    { key: 'date', label: 'Date', sort: r => r.date },
+    { key: 'ticker', label: 'Stock', sort: r => r.ticker },
+    { key: 'conv', label: 'Conviction', sort: r => CONV_RANK[r.conviction] || 0 },
+    { key: 'entry', label: 'Entry', sort: r => r.entry_price },
+    { key: 'cur', label: 'Now', sort: r => r.cur_price },
+    { key: 'ret', label: 'Return', sort: r => r.pct_chg ?? 0 },
+    { key: 'tgt', label: 'Target Upside', sort: r => upsideTo(r.analyst_target, r.cur_price) ?? -999 },
+    { key: 'entryu', label: 'Upside @ Pick', sort: r => r.implied_upside_at_entry ?? -999 },
+  ],
+};
+
+function renderHead() {
+  document.getElementById('head-row').innerHTML = COLS[view].map(c => {
+    if (!c.key) return '<th></th>';
+    const cls = ['sortable', sortKey === c.key ? (sortDir === 1 ? 'sort-asc' : 'sort-desc') : ''].join(' ');
+    return `<th class="${cls}" data-key="${c.key}">${c.label}</th>`;
+  }).join('');
+}
+
+/* ── Row cells ───────────────────────────────────────── */
+function stockCell(r) {
+  const dot = (r.status || 'Open') === 'Open' ? 'dot-open' : 'dot-closed';
+  return `<a class="ticker-link" href="${esc(r.report_url || chartUrl(r.ticker))}" target="_blank">${esc(r.ticker)}</a>
+    <a class="chart-link" href="${chartUrl(r.ticker)}" target="_blank" title="Open chart">chart&nbsp;&#8599;</a>
+    <div class="sub"><span class="${dot}">&#9679;</span> ${esc(r.theme)}</div>`;
+}
+function targetCell(r) {
+  const u = upsideTo(r.analyst_target, r.cur_price);
+  if (u == null) return '<span class="flat">—</span>';
+  return `${pct(u)}<div class="sub">${money(r.analyst_target)}</div>`;
+}
+function rowCells(r) {
+  if (view === 'stock') return `
+    <td><span class="caret">&#9656;</span></td>
+    <td>${stockCell(r)}</td>
+    <td>${convBadge(r.conviction)}</td>
+    <td class="num">${r.date}<div class="sub">${daysSince(r.date)}d ago</div></td>
+    <td class="num price">${money(r.entry_price)}</td>
+    <td class="num price">${money(r.cur_price)}</td>
+    <td class="num">${pct(r.pct_chg, 'big')}</td>
+    <td class="num">${targetCell(r)}</td>
+    <td class="num">${r.count}&times;${r.count > 1 ? `<div class="sub">last ${r.picks[r.picks.length - 1].date}</div>` : ''}</td>`;
+  return `
+    <td><span class="caret">&#9656;</span></td>
+    <td class="num">${r.date}<div class="sub">${daysSince(r.date)}d ago</div></td>
+    <td>${stockCell(r)}</td>
+    <td>${convBadge(r.conviction)}</td>
+    <td class="num price">${money(r.entry_price)}</td>
+    <td class="num price">${money(r.cur_price)}</td>
+    <td class="num">${pct(r.pct_chg ?? 0, 'big')}</td>
+    <td class="num">${targetCell(r)}</td>
+    <td class="num">${pct(r.implied_upside_at_entry)}</td>`;
+}
+
+/* ── Detail row: every pick of the stock with its inputs ── */
+function detailHtml(r) {
+  const picks = r.picks || [r];
+  const cur = r.cur_price || 0;
+  const rows = picks.map(p => {
+    const ret = (cur > 0 && p.entry_price > 0) ? (cur - p.entry_price) / p.entry_price * 100 : p.pct_chg;
+    const regime = p.risk_on_at_entry == null ? '' : (p.risk_on_at_entry ? '<span class="risk-on">risk on</span>' : '<span class="risk-off">risk off</span>');
+    const sigs = (p.signals || []).map(s => `<span class="sig">${esc(s.replace(/_/g, ' '))}</span>`).join('');
+    return `<tr>
+      <td class="num">${p.date}</td>
+      <td>${convBadge(p.conviction)}</td>
+      <td class="num price">${money(p.entry_price)}</td>
+      <td class="num">${pct(ret)}</td>
+      <td class="num">${money(p.analyst_target)} <span class="muted">(${pct(p.implied_upside_at_entry)})</span></td>
+      <td class="num">${mktcap(p.mktcap)}</td>
+      <td class="num">VIX ${p.vix_at_entry ?? '—'} ${regime}<div class="sub2">10Y ${p.yield_10y_at_entry != null ? p.yield_10y_at_entry + '%' : '—'}</div></td>
+      <td>${sigs || '<span class="muted">—</span>'}</td>
+      <td>${p.report_url ? `<a href="${esc(p.report_url)}" target="_blank">report</a>` : ''}</td>
+    </tr>`;
+  }).join('');
+  return `<table class="subtable"><thead><tr>
+      <th>Picked</th><th>Conviction</th><th>Entry</th><th>Return</th><th>Target @ pick</th><th>Mkt cap</th><th>Macro @ pick</th><th>Signals</th><th></th>
+    </tr></thead><tbody>${rows}</tbody></table>`;
 }
 
 /* ── Stats ───────────────────────────────────────────── */
-function renderStats(picks) {
-  const n = picks.length;
+function renderStats(rows) {
+  const n = rows.length;
+  document.getElementById('l-total').textContent = view === 'stock' ? 'Stocks' : 'Picks';
   document.getElementById('s-total').textContent = n;
-  document.getElementById('pick-count').textContent = n + ' picks tracked';
-
-  if (n === 0) return;
-
-  const rets  = picks.map(p => p.pct_chg || 0);
+  if (!n) return;
+  const rets  = rows.map(r => r.pct_chg || 0);
   const wins  = rets.filter(r => r > 0).length;
   const avg   = rets.reduce((a, b) => a + b, 0) / n;
-  const best  = Math.max(...rets);
-  const worst = Math.min(...rets);
-  const avgD  = picks.reduce((a, p) => a + daysSince(p.date), 0) / n;
-  const open  = picks.filter(p => (p.status || 'Open') === 'Open').length;
+  const mgd   = rets.map(r => Math.max(r, -10)).reduce((a, b) => a + b, 0) / n;   // losses stopped at -10%
+  const bi = rets.indexOf(Math.max(...rets)), wi = rets.indexOf(Math.min(...rets));
 
-  // Managed avg: losses capped at -10% (stop-loss rule — positions down >10% would be sold)
-  const managedRets = rets.map(r => Math.max(r, -10));
-  const managedAvg  = managedRets.reduce((a, b) => a + b, 0) / n;
-
-  const bestTicker  = picks[rets.indexOf(best)]?.ticker  || '';
-  const worstTicker = picks[rets.indexOf(worst)]?.ticker || '';
-
-  const wrEl  = document.getElementById('s-wr');
-  wrEl.textContent = (wins / n * 100).toFixed(0) + '%';
-  wrEl.className   = 'stat-value ' + (wins / n >= 0.5 ? 'green' : 'red');
-
-  const avgEl = document.getElementById('s-avg');
-  avgEl.textContent = (avg >= 0 ? '+' : '') + avg.toFixed(1) + '%';
-  avgEl.className   = 'stat-value ' + (avg >= 0 ? 'green' : 'red');
-
-  const mgdEl = document.getElementById('s-mgd');
-  mgdEl.textContent = (managedAvg >= 0 ? '+' : '') + managedAvg.toFixed(1) + '%';
-  mgdEl.className   = 'stat-value ' + (managedAvg >= 0 ? 'green' : 'red');
-
-  document.getElementById('s-best').textContent  = bestTicker + ' +' + best.toFixed(1) + '%';
-  document.getElementById('s-worst').textContent = worstTicker + ' ' + worst.toFixed(1) + '%';
-  document.getElementById('s-days').textContent  = avgD.toFixed(0) + 'd';
-  document.getElementById('s-open').textContent  = open;
-
-  const dates = picks.map(p => p.last_price_update || p.date).sort().reverse();
-  document.getElementById('last-updated').textContent = 'Last updated: ' + (dates[0] || '—');
+  const wr = document.getElementById('s-wr');
+  wr.textContent = (wins / n * 100).toFixed(0) + '%';
+  wr.className = 'stat-value ' + (wins / n >= 0.5 ? 'green' : 'red');
+  const av = document.getElementById('s-avg');
+  av.textContent = (avg >= 0 ? '+' : '') + avg.toFixed(1) + '%';
+  av.className = 'stat-value ' + (avg >= 0 ? 'green' : 'red');
+  document.getElementById('s-mgd').textContent = (mgd >= 0 ? '+' : '') + mgd.toFixed(1) + '% with a 10% stop';
+  document.getElementById('s-best').textContent  = rows[bi].ticker + ' ' + (rets[bi] >= 0 ? '+' : '') + rets[bi].toFixed(1) + '%';
+  document.getElementById('s-worst').textContent = rows[wi].ticker + ' ' + (rets[wi] >= 0 ? '+' : '') + rets[wi].toFixed(1) + '%';
 }
 
-/* ── Table rows ──────────────────────────────────────── */
-function renderTable(picks) {
-  const tbody = document.getElementById('picks-body');
-  tbody.innerHTML = '';
-
-  picks.forEach(p => {
-    const pct     = p.pct_chg || 0;
-    const pctCls  = pct > 0 ? 'ret-pos' : (pct < 0 ? 'ret-neg' : 'ret-zero');
-    const pctStr  = (pct >= 0 ? '▲ +' : '▼ ') + pct.toFixed(1) + '%';
-
-    const cur  = p.cur_price    || 0;
-    const tgt  = p.analyst_target || 0;
-    const tgtU = (tgt > 0 && cur > 0) ? (tgt - cur) / cur * 100 : null;
-    const tgtPriceHtml = tgt > 0
-      ? `<span class="price">${fmtPrice(tgt)}</span>`
-      : '<span class="tgt-dim">—</span>';
-    const tgtUpHtml = tgtU !== null
-      ? `<span class="${tgtU >= 0 ? 'tgt-pos' : 'tgt-neg'}">${tgtU >= 0 ? '+' : ''}${tgtU.toFixed(1)}%</span>`
-      : '<span class="tgt-dim">—</span>';
-
-    const entryU = p.implied_upside_at_entry;
-    const entryUHtml = entryU != null
-      ? `<span class="${entryU >= 25 ? 'tgt-pos' : 'tgt-dim'}">${entryU >= 0 ? '+' : ''}${entryU.toFixed(1)}%</span>`
-      : '<span class="tgt-dim">—</span>';
-
-    const signals = (p.signals || []).slice(0, 6).map(s =>
-      `<span class="sig">${s.replace(/_/g, ' ')}</span>`
-    ).join('');
-
-    const vix      = p.vix_at_entry;
-    const vixCls   = vix > 30 ? 'vix-high' : (vix > 20 ? 'vix-mid' : 'vix-low');
-    const riskHtml = p.risk_on_at_entry
-      ? '<span class="risk-on">RISK ON</span>'
-      : '<span class="risk-off">RISK OFF</span>';
-
-    const status   = p.status || 'Open';
-    const dotClass = status === 'Open' ? 'dot-open' : 'dot-closed';
-
-    const tr = document.createElement('tr');
-    tr.innerHTML = `
-      <td><span class="dim12">${p.date}</span></td>
-      <td>
-        <a class="ticker-link" href="${p.report_url || chartUrl(p.ticker)}" target="_blank">${p.ticker}</a>
-        <a class="chart-link" href="${chartUrl(p.ticker)}" target="_blank" title="Open chart">chart&nbsp;&#8599;</a>
-        <div class="theme-label">${(p.theme || '').replace(' / ', ' / ')}</div>
-      </td>
-      <td>${convBadge(p.conviction)}</td>
-      <td class="price">
-        ${fmtPrice(p.entry_price)}
-        <div class="price-sub">${p.entry_timestamp || p.date}</div>
-      </td>
-      <td class="price">
-        ${fmtPrice(p.cur_price)}
-        <div class="price-sub">${p.last_price_update ? p.last_price_update : '—'}</div>
-      </td>
-      <td><span class="${pctCls}">${pctStr}</span></td>
-      <td>${tgtPriceHtml}</td>
-      <td>${tgtUpHtml}</td>
-      <td>${entryUHtml}</td>
-      <td class="dim12">${daysSince(p.date)}d</td>
-      <td class="dim12">${fmtMktCap(p.mktcap)}</td>
-      <td class="macro-cell">
-        <span class="${vixCls}">VIX ${vix != null ? vix : '—'}</span>
-        &nbsp;${riskHtml}
-        <div class="dim12">10Y ${p.yield_10y_at_entry != null ? p.yield_10y_at_entry + '%' : '—'}</div>
-      </td>
-      <td><div class="sig-wrap">${signals}</div></td>
-      <td><span class="${dotClass}">&#9679; ${status}</span></td>
-    `;
-    tbody.appendChild(tr);
-  });
-}
-
-/* ── Full render ─────────────────────────────────────── */
+/* ── Render ──────────────────────────────────────────── */
 function render() {
-  let picks = [...allPicks];
+  let rows = view === 'stock' ? groupByTicker(allPicks) : allPicks.map(p => ({ ...p, picks: [p] }));
+  if (sector !== 'all') rows = rows.filter(r => r.theme === sector);
+  if (conv !== 'all')   rows = rows.filter(r => (r.conviction === conv) || (conv === 'Watch' && !CONV_RANK[r.conviction]));
 
-  // Filter by status / conviction
-  if (activeFilter === 'Open') {
-    picks = picks.filter(p => (p.status || 'Open') === 'Open');
-  } else if (activeFilter === 'Strong Buy' || activeFilter === 'Buy') {
-    picks = picks.filter(p => p.conviction === activeFilter);
+  const col = sortKey ? COLS[view].find(c => c.key === sortKey) : null;
+  if (col) {
+    rows.sort((a, b) => {
+      const av = col.sort(a), bv = col.sort(b);
+      if (typeof av === 'string') return sortDir * av.localeCompare(bv || '');
+      return sortDir * ((av ?? 0) - (bv ?? 0));
+    });
+  } else if (view === 'stock') {
+    rows.sort((a, b) => b.date.localeCompare(a.date));     // newest first pick first
+  } else {
+    rows.sort((a, b) => b.date.localeCompare(a.date));
   }
 
-  // Filter by sector
-  if (activeSector !== 'all') {
-    picks = picks.filter(p => p.theme === activeSector);
-  }
+  renderHead();
+  renderStats(rows);
+  const body = document.getElementById('picks-body');
+  body.innerHTML = rows.map(r => {
+    const id = view + ':' + r.ticker + ':' + r.date;
+    const open = openRows.has(id) ? ' open' : '';
+    return `<tr class="row${open}" data-id="${esc(id)}">${rowCells(r)}</tr>
+            <tr class="detail${open}"><td colspan="${COLS[view].length}">${detailHtml(r)}</td></tr>`;
+  }).join('');
 
-  // Sort
-  picks.sort((a, b) => {
-    let av = a[sortKey], bv = b[sortKey];
-    if (sortKey === 'days_held') { av = daysSince(a.date); bv = daysSince(b.date); }
-    if (sortKey === 'tgt_upside_rem') {
-      const ac = a.cur_price, at = a.analyst_target;
-      const bc = b.cur_price, bt = b.analyst_target;
-      av = (ac && at) ? (at - ac) / ac : -999;
-      bv = (bc && bt) ? (bt - bc) / bc : -999;
-    }
-    if (typeof av === 'string') return sortDir * av.localeCompare(bv || '');
-    return sortDir * ((av || 0) - (bv || 0));
-  });
-
-  renderStats(allPicks);
-  renderTable(picks);
-
-  document.getElementById('row-count').textContent = picks.length + ' rows';
-  document.getElementById('loading').style.display       = 'none';
-  document.getElementById('empty-state').style.display   = picks.length === 0 ? 'block' : 'none';
-  document.getElementById('picks-table').style.display   = picks.length > 0   ? 'table' : 'none';
+  document.getElementById('row-count').textContent = rows.length + (view === 'stock' ? ' stocks' : ' picks');
+  document.getElementById('loading').style.display     = 'none';
+  document.getElementById('empty-state').style.display = rows.length ? 'none' : 'block';
+  document.getElementById('picks-table').style.display = rows.length ? 'table' : 'none';
 }
 
-/* ── Sort ────────────────────────────────────────────── */
-function sortBy(key) {
-  if (sortKey === key) sortDir *= -1;
-  else { sortKey = key; sortDir = -1; }
-  document.querySelectorAll('thead th').forEach(th => th.classList.remove('sort-asc', 'sort-desc'));
-  const keys = ['date','ticker',null,'entry_price','cur_price','pct_chg','analyst_target','tgt_upside_rem','implied_upside_at_entry','days_held','mktcap',null,null,null];
-  const idx = keys.indexOf(key);
-  if (idx >= 0) document.querySelectorAll('thead th')[idx].classList.add(sortDir === 1 ? 'sort-asc' : 'sort-desc');
+/* ── Events ──────────────────────────────────────────── */
+document.getElementById('view-seg').addEventListener('click', e => {
+  const btn = e.target.closest('.filter-btn'); if (!btn) return;
+  view = btn.dataset.view; sortKey = null;
+  btn.parentElement.querySelectorAll('.filter-btn').forEach(b => b.classList.toggle('active', b === btn));
   render();
-}
-
-/* ── Filter (status / conviction) ───────────────────── */
-function setFilter(f, btn) {
-  activeFilter = f;
-  // Only deactivate buttons in the first toolbar row
-  btn.closest('.toolbar').querySelectorAll('.filter-btn').forEach(b => b.classList.remove('active'));
-  btn.classList.add('active');
+});
+document.getElementById('sector-select').addEventListener('change', e => { sector = e.target.value; render(); });
+document.getElementById('conv-select').addEventListener('change', e => { conv = e.target.value; render(); });
+document.getElementById('head-row').addEventListener('click', e => {
+  const th = e.target.closest('th[data-key]'); if (!th) return;
+  const k = th.dataset.key;
+  if (sortKey === k) sortDir *= -1; else { sortKey = k; sortDir = -1; }
   render();
-}
-
-/* ── Filter (sector) ─────────────────────────────────── */
-function setSector(s, btn) {
-  activeSector = s;
-  btn.closest('.toolbar').querySelectorAll('.filter-btn').forEach(b => b.classList.remove('active'));
-  btn.classList.add('active');
-  render();
-}
+});
+document.getElementById('picks-body').addEventListener('click', e => {
+  if (e.target.closest('a')) return;
+  const tr = e.target.closest('tr.row'); if (!tr) return;
+  const id = tr.dataset.id;
+  openRows.has(id) ? openRows.delete(id) : openRows.add(id);
+  tr.classList.toggle('open');
+  tr.nextElementSibling.classList.toggle('open');
+});
 
 async function loadPicks() {
   try {
@@ -344,22 +336,23 @@ async function loadPicks() {
     if (!res.ok) throw new Error('not found');
     allPicks = await res.json();
 
-    // Apply ?sector= URL param if present (e.g. from email links)
-    const urlSector = new URLSearchParams(window.location.search).get('sector');
-    if (urlSector) {
-      activeSector = urlSector;
-      document.querySelectorAll('#sector-row .filter-btn').forEach(b => {
-        b.classList.toggle('active', b.dataset.sector === urlSector);
-      });
-    }
+    const sectors = [...new Set(allPicks.map(p => p.theme).filter(Boolean))].sort();
+    const sel = document.getElementById('sector-select');
+    sel.insertAdjacentHTML('beforeend', sectors.map(s => `<option value="${esc(s)}">${esc(s)}</option>`).join(''));
 
+    // ?sector= from email links
+    const urlSector = new URLSearchParams(window.location.search).get('sector');
+    if (urlSector && sectors.includes(urlSector)) { sector = urlSector; sel.value = urlSector; }
+
+    const updates = allPicks.map(p => p.last_price_update || p.date).sort().reverse();
+    document.getElementById('last-updated').textContent = 'Prices as of ' + (updates[0] || '—');
+    document.getElementById('pick-count').textContent =
+      new Set(allPicks.map(p => p.ticker)).size + ' stocks · ' + allPicks.length + ' picks';
     render();
   } catch (e) {
-    document.getElementById('loading').textContent =
-      'No picks data yet — run the script to populate.';
+    document.getElementById('loading').textContent = 'No picks data yet.';
   }
 }
-
 loadPicks();
 </script>
 </body>

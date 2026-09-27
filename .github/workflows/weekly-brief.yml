@@ -1,0 +1,27 @@
+name: Weekly Brief
+
+on:
+  schedule:
+    # Tuesdays before the US open (12:30 UTC), the morning after Monday's scan.
+    - cron: '30 12 * * 2'
+  workflow_dispatch:   # manual trigger from GitHub UI
+
+jobs:
+  brief:
+    runs-on: ubuntu-latest
+    permissions:
+      contents: write
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+      - name: Build and send the weekly brief
+        run: python scripts/weekly_brief.py
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          # Email goes out only when these three repository secrets exist.
+          # Gmail: MAIL_USERNAME is the address, MAIL_PASSWORD an app password.
+          MAIL_USERNAME: ${{ secrets.MAIL_USERNAME }}
+          MAIL_PASSWORD: ${{ secrets.MAIL_PASSWORD }}
+          MAIL_TO: ${{ secrets.MAIL_TO }}
