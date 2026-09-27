@@ -5,14 +5,6 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>StockPicker — Daily Picks Tracker</title>
 
-  <!-- Google Analytics — replace G-XXXXXXXXXX with your Measurement ID -->
-  <script async src="https://www.googletagmanager.com/gtag/js?id=G-XXXXXXXXXX"></script>
-  <script>
-    window.dataLayer = window.dataLayer || [];
-    function gtag(){dataLayer.push(arguments);}
-    gtag('js', new Date());
-    gtag('config', 'G-XXXXXXXXXX');
-  </script>
   <style>
     * { box-sizing: border-box; margin: 0; padding: 0; }
 
@@ -131,6 +123,8 @@
       letter-spacing: 0.5px;
     }
     .ticker-link:hover { color: #93c5fd; }
+    .chart-link { font-size: 9px; color: #3d5166; text-decoration: none; margin-left: 6px; }
+    .chart-link:hover { color: #00d4aa; }
     .theme-label { font-size: 9px; color: #3d5166; margin-top: 3px; letter-spacing: 0.3px; }
 
     /* Conviction badge */
@@ -272,6 +266,8 @@
   <button class="filter-btn" data-sector="Biotech / Life Sciences" onclick="setSector('Biotech / Life Sciences', this)">Biotech</button>
   <button class="filter-btn" data-sector="Nuclear / Next-Gen Energy" onclick="setSector('Nuclear / Next-Gen Energy', this)">Nuclear / Energy</button>
   <button class="filter-btn" data-sector="Space / Satellite" onclick="setSector('Space / Satellite', this)">Space / Satellite</button>
+  <button class="filter-btn" data-sector="Defense Tech / Dual-Use" onclick="setSector('Defense Tech / Dual-Use', this)">Defense</button>
+  <button class="filter-btn" data-sector="AI Infrastructure / Fiber" onclick="setSector('AI Infrastructure / Fiber', this)">AI Infra / Fiber</button>
 </div>
 
 <!-- Table -->
@@ -312,6 +308,12 @@ let sortKey      = 'date';
 let sortDir      = -1;
 let activeFilter = 'all';
 let activeSector = 'all';
+
+// Chart site for the "chart" link next to each ticker. {t} is replaced with the ticker.
+// Free alternatives: 'https://stockanalysis.com/stocks/{t}/chart/'
+//                    'https://www.google.com/finance/quote/{t}'
+const CHART_URL = 'https://www.tradingview.com/chart/?symbol={t}';
+function chartUrl(t) { return CHART_URL.replace('{t}', encodeURIComponent(t)); }
 
 /* ── Formatting helpers ──────────────────────────────── */
 function fmtPrice(v) {
@@ -390,8 +392,11 @@ function renderTable(picks) {
     const cur  = p.cur_price    || 0;
     const tgt  = p.analyst_target || 0;
     const tgtU = (tgt > 0 && cur > 0) ? (tgt - cur) / cur * 100 : null;
-    const tgtHtml = tgtU !== null
-      ? `<span class="${tgtU >= 0 ? 'tgt-pos' : 'tgt-neg'}">${tgtU >= 0 ? '+' : ''}${tgtU.toFixed(1)}%</span><div class="tgt-dim">${fmtPrice(tgt)}</div>`
+    const tgtPriceHtml = tgt > 0
+      ? `<span class="price">${fmtPrice(tgt)}</span>`
+      : '<span class="tgt-dim">—</span>';
+    const tgtUpHtml = tgtU !== null
+      ? `<span class="${tgtU >= 0 ? 'tgt-pos' : 'tgt-neg'}">${tgtU >= 0 ? '+' : ''}${tgtU.toFixed(1)}%</span>`
       : '<span class="tgt-dim">—</span>';
 
     const entryU = p.implied_upside_at_entry;
@@ -416,7 +421,8 @@ function renderTable(picks) {
     tr.innerHTML = `
       <td><span class="dim12">${p.date}</span></td>
       <td>
-        <a class="ticker-link" href="${p.report_url || 'https://finviz.com/quote.ashx?t=' + p.ticker}" target="_blank">${p.ticker}</a>
+        <a class="ticker-link" href="${p.report_url || chartUrl(p.ticker)}" target="_blank">${p.ticker}</a>
+        <a class="chart-link" href="${chartUrl(p.ticker)}" target="_blank" title="Open chart">chart&nbsp;&#8599;</a>
         <div class="theme-label">${(p.theme || '').replace(' / ', ' / ')}</div>
       </td>
       <td>${convBadge(p.conviction)}</td>
@@ -429,8 +435,8 @@ function renderTable(picks) {
         <div class="price-sub">${p.last_price_update ? p.last_price_update : '—'}</div>
       </td>
       <td><span class="${pctCls}">${pctStr}</span></td>
-      <td>${tgtHtml}</td>
-      <td>${tgtHtml !== '<span class="tgt-dim">—</span>' ? tgtHtml : '<span class="tgt-dim">—</span>'}</td>
+      <td>${tgtPriceHtml}</td>
+      <td>${tgtUpHtml}</td>
       <td>${entryUHtml}</td>
       <td class="dim12">${daysSince(p.date)}d</td>
       <td class="dim12">${fmtMktCap(p.mktcap)}</td>
