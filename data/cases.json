@@ -1,6 +1,6 @@
 {
   "schema": "https://edwardphill.github.io/stockpicker/data/schema/cases.schema.json",
-  "generated": "2026-09-28 02:26 UTC",
+  "generated": "2026-09-28 02:34 UTC",
   "cases": [
     {
       "ticker": "ILMN",
@@ -48,9 +48,25 @@
       "thesis": "Our analysis suggests the market is underappreciating three dynamics at Illumina. First, the revenue growth inflection: while the trailing YoY growth rate of 5.0% appears modest, sequential quarterly improvement of +17.5% QoQ in the growth rate signals that instrument placement cycles and consumables pull-through are re-accelerating.",
       "catalysts": "Q1 FY26 Earnings (April 30, 2026): We expect management to report continued sequential revenue acceleration and potentially raise full-year guidance. A beat-and-raise scenario would validate the growth inflection thesis and could drive a re-rating toward our target.",
       "bear_verdict": "The market is not underpricing Illumina's margin recovery \u2014 it is correctly discounting the durability of that recovery against a competitive landscape that is structurally different from the one in which ILMN built its moat. The bull note treats the GRAIL divestiture as a cleansing event and assumes the remaining business simply re-rates to historical life sciences tools multiples.",
-      "path": null,
+      "path": {
+        "max_drawdown_pct": -2.03,
+        "max_runup_pct": 122.94,
+        "stop_5": {
+          "exit_date": "2026-09-25",
+          "exit_price": 270.0,
+          "return_pct": 119.76,
+          "reason": "open"
+        },
+        "stop_10": {
+          "exit_date": "2026-09-25",
+          "exit_price": 270.0,
+          "return_pct": 119.76,
+          "reason": "open"
+        }
+      },
       "lessons": [
-        "Consensus analyst upside at the pick was +10.8%, under 50%, so a gate on the consensus target would have skipped it; the gate has to accept a single analyst's 50% path."
+        "Consensus analyst upside at the pick was +10.8%, under 50%, so a gate on the consensus target would have skipped it; the gate has to accept a single analyst's 50% path.",
+        "Never closed more than -2.0% below entry, so neither stop would have triggered."
       ]
     },
     {
@@ -101,8 +117,24 @@
       "thesis": "Our analysis suggests the market is mispricing QLYS on two fronts. First, recent share price weakness \u2014 driven by fears of AI-enabled cybersecurity disruption \u2014 has compressed the forward P/E to 10.4x, a level that, in our view, embeds an implausibly bearish scenario for a company growing revenue at 10% with 83% gross margins and nearly 30% net margins.",
       "catalysts": "Q1 FY26 Earnings (May 5, 2026): With revenue acceleration already visible in recent quarters (+8.7% QoQ improvement in growth rate), a beat-and-raise print could serve as the near-term catalyst for multiple re-rating. We will be focused on net new ARR, dollar-based net retention, and management commentary on AI-related product extensions.",
       "bear_verdict": "Monitor. The May 5 earnings print \u2014 specifically net new ARR trajectory, DBNER disclosure, and FY26 revenue guide \u2014 will resolve the central debate between sentiment-driven dislocation (bull) and structural competitive erosion (bear); until then, the asymmetry is not clearly favorable enough to size with conviction given the plausible $55-$73 downside range against a $133 bull target that requires multiple expansion\u2026",
-      "path": null,
+      "path": {
+        "max_drawdown_pct": -1.47,
+        "max_runup_pct": 135.38,
+        "stop_5": {
+          "exit_date": "2026-09-25",
+          "exit_price": 172.43,
+          "return_pct": 107.2,
+          "reason": "open"
+        },
+        "stop_10": {
+          "exit_date": "2026-09-25",
+          "exit_price": 172.43,
+          "return_pct": 107.2,
+          "reason": "open"
+        }
+      },
       "lessons": [
+        "Never closed more than -1.5% below entry, so neither stop would have triggered.",
         "Picked 5 times; the repeats added exposure to the same name rather than a new idea."
       ]
     },
@@ -146,9 +178,25 @@
       "thesis": "We believe the market is underappreciating the durability and pace of Palo Alto Networks' platformization strategy, which is structurally shifting the company from a point-product vendor to the consolidation platform of choice in enterprise security. The company's push to bundle next-gen firewall, SASE, cloud security, and SOC capabilities into unified consumption models \u2014 anchored by its Cortex XSIAM platform \u2014 is\u2026",
       "catalysts": "FQ4/FY25 Earnings (June 2, 2025): The most immediate catalyst. We expect management to report continued acceleration in Annual Recurring Revenue (ARR) and Next-Gen Security ARR specifically.",
       "bear_verdict": "Monitor. The June 2 earnings report \u2014 specifically FY26 billings guidance and NGS ARR trajectory \u2014 is the resolution event; the stock is priced for a beat-and-raise, and the asymmetry at 62x forward earnings skews risk to the downside if platformization conversion data disappoints even modestly.",
-      "path": null,
+      "path": {
+        "max_drawdown_pct": 0.12,
+        "max_runup_pct": 59.57,
+        "stop_5": {
+          "exit_date": "2026-09-25",
+          "exit_price": 374.74,
+          "return_pct": 51.0,
+          "reason": "open"
+        },
+        "stop_10": {
+          "exit_date": "2026-09-25",
+          "exit_price": 374.74,
+          "return_pct": 51.0,
+          "reason": "open"
+        }
+      },
       "lessons": [
         "Consensus analyst upside at the pick was -8.5%, under 50%, so a gate on the consensus target would have skipped it; the gate has to accept a single analyst's 50% path.",
+        "Never closed more than +0.1% below entry, so neither stop would have triggered.",
         "Picked 2 times; the repeats added exposure to the same name rather than a new idea."
       ]
     },
@@ -192,8 +240,25 @@
       "thesis": "At $378, MSFT trades at ~20x forward earnings \u2014 cheap for a business growing revenue 16.7% with 39% profit margins. The 50% path to ~$568+ requires: Azure AI monetization inflection: Azure is already accelerating (QoQ revenue up 7.9%).",
       "catalysts": "Apr 29, 2025 Q3 FY25 Earnings \u2014 binary catalyst in 16 days . Azure growth guidance is the key number.",
       "bear_verdict": "The bull's mechanism is: P/E expansion from ~20x to ~28-30x + earnings beats to $20+ EPS . Let's stress-test each component.",
-      "path": null,
-      "lessons": []
+      "path": {
+        "max_drawdown_pct": -6.76,
+        "max_runup_pct": 36.4,
+        "stop_5": {
+          "exit_date": "2026-06-25",
+          "exit_price": 352.83,
+          "return_pct": -6.76,
+          "reason": "stop"
+        },
+        "stop_10": {
+          "exit_date": "2026-09-25",
+          "exit_price": 516.17,
+          "return_pct": 36.4,
+          "reason": "open"
+        }
+      },
+      "lessons": [
+        "A -5% stop would have sold it on 2026-06-25 at -6.8%; the worst close on the way was -6.8%."
+      ]
     }
   ]
 }

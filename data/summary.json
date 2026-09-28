@@ -1,6 +1,6 @@
 {
   "schema": "https://edwardphill.github.io/stockpicker/data/schema/summary.schema.json",
-  "generated": "2026-09-28 02:26 UTC",
+  "generated": "2026-09-28 02:34 UTC",
   "site": "https://edwardphill.github.io/stockpicker",
   "prices_as_of": "2026-09-25 23:39 UTC",
   "counts": {
@@ -226,7 +226,83 @@
       }
     ]
   },
-  "portfolio": null,
+  "portfolio": {
+    "generated": "2026-09-28 02:34 UTC",
+    "rules": {
+      "hold": {
+        "label": "Hold",
+        "description": "never sell",
+        "key": "hold",
+        "positions": 51,
+        "ending_value": 49934.0,
+        "total_return_pct": -2.09,
+        "avg_return_pct": -2.09,
+        "win_rate_pct": 31.4,
+        "stopped_out": 0,
+        "stopped_out_winners": 0,
+        "exits": {
+          "open": 51,
+          "stop": 0,
+          "target": 0,
+          "time": 0
+        }
+      },
+      "stop_5": {
+        "label": "Stop -5%",
+        "description": "sell at the first close 5% or more below entry",
+        "key": "stop_5",
+        "positions": 51,
+        "ending_value": 55969.2,
+        "total_return_pct": 9.74,
+        "avg_return_pct": 9.74,
+        "win_rate_pct": 23.5,
+        "stopped_out": 37,
+        "stopped_out_winners": 4,
+        "exits": {
+          "open": 14,
+          "stop": 37,
+          "target": 0,
+          "time": 0
+        }
+      },
+      "stop_10": {
+        "label": "Stop -10%",
+        "description": "sell at the first close 10% or more below entry (current managed rule)",
+        "key": "stop_10",
+        "positions": 51,
+        "ending_value": 55305.9,
+        "total_return_pct": 8.44,
+        "avg_return_pct": 8.44,
+        "win_rate_pct": 29.4,
+        "stopped_out": 32,
+        "stopped_out_winners": 1,
+        "exits": {
+          "open": 19,
+          "stop": 32,
+          "target": 0,
+          "time": 0
+        }
+      },
+      "v2": {
+        "label": "v2 exits",
+        "description": "sell at -20%, at +50%, or after 6 months, whichever comes first",
+        "key": "v2",
+        "positions": 51,
+        "ending_value": 51244.6,
+        "total_return_pct": 0.48,
+        "avg_return_pct": 0.48,
+        "win_rate_pct": 31.4,
+        "stopped_out": 25,
+        "stopped_out_winners": 0,
+        "exits": {
+          "open": 15,
+          "stop": 25,
+          "target": 11,
+          "time": 0
+        }
+      }
+    }
+  },
   "case_studies": [
     "ILMN",
     "QLYS",
