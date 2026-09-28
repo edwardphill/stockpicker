@@ -13,13 +13,11 @@ Two more fields feed the weekly brief:
               (the Street high, or a dissenting firm's target): the "50% possible" gate
   novel       never picked, or last picked more than NOVEL_DAYS ago
 
-Runs weekly in GitHub Actions (writes through the contents API when GITHUB_TOKEN
-is set), or locally (writes the file directly).
+Runs Mondays in GitHub Actions (the workflow commits the result), or locally.
 """
 import json, math
 from datetime import datetime, timedelta, timezone
 import yfinance as yf
-from ghpub import put_file
 
 OUT_PATH    = "data/analyst_mismatch.json"
 LOOKBACK    = timedelta(days=120)
@@ -173,6 +171,7 @@ if __name__ == "__main__":
     rows.sort(key=lambda r: r["score"], reverse=True)
     payload = {"generated": datetime.now(timezone.utc).strftime("%Y-%m-%d %H:%M UTC"),
                "scanned": len(universe), "errors": errors, "rows": rows}
-    put_file(OUT_PATH, json.dumps(payload, indent=2).encode(), f"Analyst mismatch scan {payload['generated']}")
+    with open(OUT_PATH, "w") as f:
+        json.dump(payload, f, indent=2)
     cands = [r["ticker"] for r in rows if r["path_50"] and r["novel"]]
     print(f"Done: {len(rows)} mismatches from {len(universe)} tickers; candidates: {', '.join(cands) or 'none'}")

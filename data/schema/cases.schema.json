@@ -1,0 +1,126 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://edwardphill.github.io/stockpicker/data/schema/cases.schema.json",
+  "title": "Case studies",
+  "description": "data/cases.json: the best picks, thesis at the time vs outcome.",
+  "type": "object",
+  "properties": {
+    "generated": {
+      "type": "string",
+      "description": ""
+    },
+    "cases": {
+      "type": "array",
+      "description": "Best first.",
+      "items": {
+        "type": "object",
+        "properties": {
+          "ticker": {
+            "type": "string",
+            "description": ""
+          },
+          "theme": {
+            "type": "string",
+            "description": ""
+          },
+          "first_picked": {
+            "type": "string",
+            "description": "",
+            "format": "date"
+          },
+          "times_picked": {
+            "type": "integer",
+            "description": ""
+          },
+          "conviction": {
+            "type": "string",
+            "description": ""
+          },
+          "entry_price": {
+            "type": "number",
+            "description": "USD at the first pick."
+          },
+          "current_price": {
+            "type": "number",
+            "description": "USD."
+          },
+          "return_pct": {
+            "type": "number",
+            "description": "Since the first pick. Percent as a plain number: 12.5 means +12.5%."
+          },
+          "days_held": {
+            "type": "integer",
+            "description": ""
+          },
+          "analyst_target_at_pick": {
+            "type": [
+              "number",
+              "null"
+            ],
+            "description": "USD."
+          },
+          "analyst_upside_at_pick_pct": {
+            "type": [
+              "number",
+              "null"
+            ],
+            "description": "Percent as a plain number: 12.5 means +12.5%."
+          },
+          "signals": {
+            "type": "array",
+            "description": "",
+            "items": {
+              "type": "string"
+            }
+          },
+          "signal_values": {
+            "type": "object",
+            "description": ""
+          },
+          "macro_at_pick": {
+            "type": "object",
+            "description": "vix, yield_10y, risk_on."
+          },
+          "mktcap_at_pick": {
+            "type": [
+              "number",
+              "null"
+            ],
+            "description": "USD."
+          },
+          "report_url": {
+            "type": "string",
+            "description": "",
+            "format": "uri"
+          },
+          "thesis": {
+            "type": "string",
+            "description": "First sentences of the bull report's Investment Thesis."
+          },
+          "catalysts": {
+            "type": "string",
+            "description": "First sentences of the bull report's Catalysts."
+          },
+          "bear_verdict": {
+            "type": "string",
+            "description": "First sentences of the bear report's Verdict."
+          },
+          "path": {
+            "type": [
+              "object",
+              "null"
+            ],
+            "description": "From portfolio.json: max_drawdown_pct, max_runup_pct, stop_5, stop_10."
+          },
+          "lessons": {
+            "type": "array",
+            "description": "Data-derived takeaways.",
+            "items": {
+              "type": "string"
+            }
+          }
+        }
+      }
+    }
+  }
+}

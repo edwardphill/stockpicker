@@ -9,13 +9,12 @@ Builds the weekly brief from Monday's analyst mismatch scan and sends it out.
      (Gmail app password by default; SMTP_HOST / SMTP_PORT override). Without
      them it only publishes the page.
 
-Runs Tuesdays in GitHub Actions, or locally (python scripts/weekly_brief.py).
+Runs Tuesdays in GitHub Actions (the workflow commits the pages), or locally.
 """
 import html, json, os, smtplib, sys
 from datetime import datetime, timezone
 from email.message import EmailMessage
 from email.utils import formataddr
-from ghpub import put_file
 
 SITE       = "https://edwardphill.github.io/stockpicker"
 DATA_PATH  = "data/analyst_mismatch.json"
@@ -146,8 +145,10 @@ if __name__ == "__main__":
     when  = datetime.now(timezone.utc).strftime("%Y-%m-%d")
     cands = rank(data["rows"])
     page  = build_html(data, cands, when).encode()
-    put_file(f"{OUT_DIR}/{when}.html", page, f"Weekly brief {when}")
-    put_file(f"{OUT_DIR}/latest.html", page, f"Weekly brief {when} (latest)")
+    os.makedirs(OUT_DIR, exist_ok=True)
+    for name in (f"{when}.html", "latest.html"):
+        with open(f"{OUT_DIR}/{name}", "wb") as f:
+            f.write(page)
     print(f"Published {OUT_DIR}/{when}.html; candidates: {', '.join(r['ticker'] for r in cands) or 'none'}")
     subject = f"StockPicker weekly: {', '.join(r['ticker'] for r in cands[:TOP_N]) or 'no new candidates'} ({when})"
     send_email(subject, build_html(data, cands, when))

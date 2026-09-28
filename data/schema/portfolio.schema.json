@@ -1,0 +1,173 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://edwardphill.github.io/stockpicker/data/schema/portfolio.schema.json",
+  "title": "Stop-rule simulation",
+  "description": "data/portfolio.json: exit rules replayed on daily closes from each pick date.",
+  "type": "object",
+  "properties": {
+    "generated": {
+      "type": "string",
+      "description": ""
+    },
+    "stake": {
+      "type": "number",
+      "description": "Dollars per pick."
+    },
+    "basis": {
+      "type": "string",
+      "description": "How exits are evaluated."
+    },
+    "rules": {
+      "type": "object",
+      "description": "Totals per rule key.",
+      "additionalProperties": {
+        "type": "object",
+        "properties": {
+          "key": {
+            "type": "string",
+            "description": ""
+          },
+          "label": {
+            "type": "string",
+            "description": ""
+          },
+          "description": {
+            "type": "string",
+            "description": ""
+          },
+          "positions": {
+            "type": "integer",
+            "description": ""
+          },
+          "ending_value": {
+            "type": "number",
+            "description": "Value of the book, USD (stake \u00d7 positions at the start)."
+          },
+          "total_return_pct": {
+            "type": "number",
+            "description": "Equal-weight return of the book. Percent as a plain number: 12.5 means +12.5%."
+          },
+          "avg_return_pct": {
+            "type": "number",
+            "description": "Percent as a plain number: 12.5 means +12.5%."
+          },
+          "win_rate_pct": {
+            "type": "number",
+            "description": "Share of positions above entry at exit or today."
+          },
+          "stopped_out": {
+            "type": "integer",
+            "description": "Positions the rule sold at a stop."
+          },
+          "stopped_out_winners": {
+            "type": "integer",
+            "description": "Of those, how many are above entry today under hold."
+          },
+          "exits": {
+            "type": "object",
+            "description": "Count of positions by exit reason."
+          }
+        }
+      }
+    },
+    "picks": {
+      "type": "array",
+      "description": "Per-pick results.",
+      "items": {
+        "type": "object",
+        "properties": {
+          "date": {
+            "type": "string",
+            "description": "Pick date.",
+            "format": "date"
+          },
+          "ticker": {
+            "type": "string",
+            "description": ""
+          },
+          "theme": {
+            "type": "string",
+            "description": ""
+          },
+          "entry_price": {
+            "type": "number",
+            "description": "USD."
+          },
+          "last_price": {
+            "type": "number",
+            "description": "Last close, USD."
+          },
+          "last_date": {
+            "type": "string",
+            "description": "",
+            "format": "date"
+          },
+          "days": {
+            "type": "integer",
+            "description": "Days since the pick."
+          },
+          "hold_return_pct": {
+            "type": "number",
+            "description": "Percent as a plain number: 12.5 means +12.5%."
+          },
+          "max_drawdown_pct": {
+            "type": "number",
+            "description": "Worst close vs entry. Percent as a plain number: 12.5 means +12.5%."
+          },
+          "max_runup_pct": {
+            "type": "number",
+            "description": "Best close vs entry. Percent as a plain number: 12.5 means +12.5%."
+          },
+          "closes": {
+            "type": "integer",
+            "description": "Trading days in the path."
+          },
+          "rules": {
+            "type": "object",
+            "description": "Exit per rule key (hold, stop_5, stop_10, v2).",
+            "additionalProperties": {
+              "type": "object",
+              "properties": {
+                "exit_date": {
+                  "type": "string",
+                  "description": "",
+                  "format": "date"
+                },
+                "exit_price": {
+                  "type": "number",
+                  "description": "USD."
+                },
+                "return_pct": {
+                  "type": "number",
+                  "description": "Percent as a plain number: 12.5 means +12.5%."
+                },
+                "reason": {
+                  "type": "string",
+                  "description": "open (still held), stop, target or time.",
+                  "enum": [
+                    "open",
+                    "stop",
+                    "target",
+                    "time"
+                  ]
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "errors": {
+      "type": "array",
+      "description": "",
+      "items": {
+        "type": "string"
+      }
+    }
+  },
+  "required": [
+    "generated",
+    "rules",
+    "picks"
+  ]
+}

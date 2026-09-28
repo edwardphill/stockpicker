@@ -4,6 +4,10 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>StockPicker — Picks</title>
+  <meta name="description" content="Daily stock picks tracker: every pick with entry price, current price, return, analyst target and the signals that fired. Data: data/picks.json, summary in data/summary.json.">
+  <link rel="alternate" type="application/json" href="data/picks.json" title="Data (JSON)">
+  <link rel="alternate" type="text/markdown" href="data/picks.md" title="Data (Markdown)">
+  <link rel="alternate" type="text/plain" href="llms.txt" title="llms.txt">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;600;700&display=swap" rel="stylesheet">
@@ -29,7 +33,11 @@
   <a class="tab active" href="index.html"><span class="fk">1</span>Picks</a>
   <a class="tab" href="analysts.html"><span class="fk">2</span>Analyst Mismatch</a>
   <a class="tab" href="reports/weekly/latest.html"><span class="fk">3</span>Weekly Brief</a>
+  <a class="tab" href="portfolio.html"><span class="fk">4</span>Stop Rules</a>
+  <a class="tab" href="cases.html"><span class="fk">5</span>Case Studies</a>
 </nav>
+
+<noscript><div class="intro">This page renders <a href="data/picks.json">data/picks.json</a>. Plain-text versions: <a href="data/picks.md">data/picks.md</a>, <a href="data/summary.json">data/summary.json</a>, <a href="llms.txt">llms.txt</a>.</div></noscript>
 
 <div class="stats-bar">
   <div class="stat">
@@ -82,7 +90,7 @@
   </div>
 </div>
 
-<div class="footer">STOCKPICKER &nbsp;·&nbsp; NOT FINANCIAL ADVICE &nbsp;·&nbsp; PRICES FROM THE LAST REFRESH</div>
+<div class="footer">STOCKPICKER &nbsp;·&nbsp; NOT FINANCIAL ADVICE &nbsp;·&nbsp; PRICES FROM THE LAST REFRESH &nbsp;·&nbsp; <a href="llms.txt">FOR AGENTS: LLMS.TXT</a></div>
 
 <script>
 // Chart site for the "chart" link next to each ticker. {t} is replaced with the ticker.

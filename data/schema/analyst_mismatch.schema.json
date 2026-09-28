@@ -1,0 +1,258 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://edwardphill.github.io/stockpicker/data/schema/analyst_mismatch.schema.json",
+  "title": "Analyst mismatch scan",
+  "description": "data/analyst_mismatch.json: the latest Monday scan.",
+  "type": "object",
+  "properties": {
+    "generated": {
+      "type": "string",
+      "description": "'YYYY-MM-DD HH:MM UTC'."
+    },
+    "scanned": {
+      "type": "integer",
+      "description": "Tickers scanned (all picks plus data/watchlist.json)."
+    },
+    "errors": {
+      "type": "array",
+      "description": "Tickers Yahoo returned nothing for.",
+      "items": {
+        "type": "string"
+      }
+    },
+    "rows": {
+      "type": "array",
+      "description": "Mismatches, highest score first.",
+      "items": {
+        "type": "object",
+        "properties": {
+          "ticker": {
+            "type": "string",
+            "description": "Ticker."
+          },
+          "name": {
+            "type": "string",
+            "description": "Company name."
+          },
+          "group": {
+            "type": "string",
+            "description": "Theme (from picks) or watchlist group."
+          },
+          "price": {
+            "type": [
+              "number",
+              "null"
+            ],
+            "description": "Current price, USD."
+          },
+          "mktcap": {
+            "type": [
+              "number",
+              "null"
+            ],
+            "description": "Market cap, USD."
+          },
+          "counts": {
+            "type": "object",
+            "description": "Current-month rating counts.",
+            "properties": {
+              "strong_buy": {
+                "type": "integer"
+              },
+              "buy": {
+                "type": "integer"
+              },
+              "hold": {
+                "type": "integer"
+              },
+              "sell": {
+                "type": "integer"
+              },
+              "strong_sell": {
+                "type": "integer"
+              }
+            }
+          },
+          "n": {
+            "type": "integer",
+            "description": "Analysts covering."
+          },
+          "consensus": {
+            "type": "string",
+            "description": "bull, hold or bear: the largest bucket.",
+            "enum": [
+              "bull",
+              "hold",
+              "bear"
+            ]
+          },
+          "target_mean": {
+            "type": [
+              "number",
+              "null"
+            ],
+            "description": "Mean target, USD."
+          },
+          "target_high": {
+            "type": [
+              "number",
+              "null"
+            ],
+            "description": "Highest target, USD."
+          },
+          "target_low": {
+            "type": [
+              "number",
+              "null"
+            ],
+            "description": "Lowest target, USD."
+          },
+          "upside_mean": {
+            "type": [
+              "number",
+              "null"
+            ],
+            "description": "Mean target vs price. Percent as a plain number: 12.5 means +12.5%."
+          },
+          "upside_high": {
+            "type": [
+              "number",
+              "null"
+            ],
+            "description": "High target vs price. Percent as a plain number: 12.5 means +12.5%."
+          },
+          "downside_low": {
+            "type": [
+              "number",
+              "null"
+            ],
+            "description": "Low target vs price. Percent as a plain number: 12.5 means +12.5%."
+          },
+          "flags": {
+            "type": "array",
+            "description": "lone_bull, lone_bear and/or breakaway.",
+            "items": {
+              "type": "string",
+              "enum": [
+                "lone_bull",
+                "lone_bear",
+                "breakaway"
+              ]
+            }
+          },
+          "breaks": {
+            "type": "array",
+            "description": "Dissenting calls, latest per firm, last 120 days, at most 5.",
+            "items": {
+              "type": "object",
+              "description": "One dissenting analyst call.",
+              "properties": {
+                "date": {
+                  "type": "string",
+                  "description": "Date of the call.",
+                  "format": "date"
+                },
+                "firm": {
+                  "type": "string",
+                  "description": "Broker."
+                },
+                "from": {
+                  "type": "string",
+                  "description": "Previous rating, may be empty."
+                },
+                "to": {
+                  "type": "string",
+                  "description": "New rating."
+                },
+                "action": {
+                  "type": "string",
+                  "description": "Yahoo action code: up, down, main, init, reit."
+                },
+                "side": {
+                  "type": [
+                    "string",
+                    "null"
+                  ],
+                  "description": "bull, bear or hold, derived from the rating."
+                },
+                "target": {
+                  "type": [
+                    "number",
+                    "null"
+                  ],
+                  "description": "Firm's price target, USD."
+                },
+                "prior_target": {
+                  "type": [
+                    "number",
+                    "null"
+                  ],
+                  "description": "Firm's previous target, USD."
+                },
+                "target_vs_mean": {
+                  "type": [
+                    "number",
+                    "null"
+                  ],
+                  "description": "Firm target vs the mean target. Percent as a plain number: 12.5 means +12.5%."
+                },
+                "upside": {
+                  "type": [
+                    "number",
+                    "null"
+                  ],
+                  "description": "Firm target vs current price. Percent as a plain number: 12.5 means +12.5%."
+                },
+                "why": {
+                  "type": "string",
+                  "description": "Why it counts as a break, e.g. 'bullish vs consensus, target +51% vs mean'."
+                }
+              }
+            }
+          },
+          "score": {
+            "type": "number",
+            "description": "Mismatch conviction score; higher is lonelier, more recent, further from consensus."
+          },
+          "path_50": {
+            "type": "boolean",
+            "description": "Some analyst target is 50%+ above price."
+          },
+          "path_50_why": {
+            "type": [
+              "string",
+              "null"
+            ],
+            "description": "Which target."
+          },
+          "novel": {
+            "type": "boolean",
+            "description": "Not picked in the last 180 days."
+          },
+          "times_picked": {
+            "type": "integer",
+            "description": "Times the tracker has picked it."
+          },
+          "last_picked": {
+            "type": [
+              "string",
+              "null"
+            ],
+            "description": "Last pick date."
+          },
+          "last_pick_return": {
+            "type": [
+              "number",
+              "null"
+            ],
+            "description": "Return of the last pick so far. Percent as a plain number: 12.5 means +12.5%."
+          }
+        }
+      }
+    }
+  },
+  "required": [
+    "generated",
+    "rows"
+  ]
+}

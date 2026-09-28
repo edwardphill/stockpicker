@@ -227,6 +227,8 @@ tr.row.open .caret { color: var(--amber); }
 .empty { text-align: center; padding: 60px 16px; color: var(--dim); }
 .empty-title { font-size: 16px; color: var(--amber); margin-bottom: 8px; }
 
+.footer a { color: var(--faint); }
+.footer a:hover { color: var(--amber); }
 .footer {
   border-top: 1px solid var(--line);
   padding: 12px 16px;

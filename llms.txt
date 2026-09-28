@@ -1,0 +1,51 @@
+# StockPicker
+
+> A personal stock-picking tracker. An automated pipeline scores a universe of high-growth tickers across thematic sectors (AI/robotics, defense, nuclear, cybersecurity, space, biotech, quantum, AI infrastructure/fiber), picks names with a credible path to a 50% gain, writes an AI bull/bear report for each, and tracks the result. Every number on the site comes from small JSON files listed below; the HTML pages render those files with JavaScript, so fetch the JSON or the markdown mirrors instead of the pages. Not financial advice.
+
+Key facts as of 2026-09-25 23:39 UTC: 19 stocks picked in 51 picks between 2026-03-26 and 2026-06-22; by stock the win rate is 31.6% and the average return since first pick is -3.4% (best ILMN +119.8%, worst VNRX -93.2%).
+Latest analyst-mismatch scan 2026-09-27 20:39 UTC: 25 mismatches; this week's candidates (new names with a 50% path): ORCL, MU, NVDA, GLW, INTC, AAOI, AVGO, WVE, CIEN.
+
+## Data (fetch these)
+
+- [data/summary.json](https://edwardphill.github.io/stockpicker/data/summary.json): Computed stats: counts, win rates, average returns, top and bottom stocks, this week's analyst-mismatch candidates, stop-rule results. Read this first. Schema: https://edwardphill.github.io/stockpicker/data/schema/summary.schema.json
+- [data/picks.json](https://edwardphill.github.io/stockpicker/data/picks.json): Every pick: date, ticker, theme, conviction, entry and current price, return, analyst target, signals, macro at entry, report URL. Schema: https://edwardphill.github.io/stockpicker/data/schema/picks.schema.json
+- [data/picks.md](https://edwardphill.github.io/stockpicker/data/picks.md): picks.json as two markdown tables (by stock, every pick).
+- [data/analyst_mismatch.json](https://edwardphill.github.io/stockpicker/data/analyst_mismatch.json): Latest Monday scan: stocks where one analyst breaks from consensus, with rating counts, targets, dissenting calls, 50% path and novelty flags. Schema: https://edwardphill.github.io/stockpicker/data/schema/analyst_mismatch.schema.json
+- [data/analysts.md](https://edwardphill.github.io/stockpicker/data/analysts.md): analyst_mismatch.json as a markdown table plus the dissenting calls.
+- [data/cases.json](https://edwardphill.github.io/stockpicker/data/cases.json): Case studies of the best picks: the setup, the bull and bear arguments at the time, the path since, takeaways. Schema: https://edwardphill.github.io/stockpicker/data/schema/cases.schema.json
+- [data/cases.md](https://edwardphill.github.io/stockpicker/data/cases.md): cases.json as prose.
+- [data/watchlist.json](https://edwardphill.github.io/stockpicker/data/watchlist.json): Extra tickers scanned for analyst mismatch, grouped by theme.
+- [reports/weekly/latest.html](https://edwardphill.github.io/stockpicker/reports/weekly/latest.html): The latest Tuesday weekly brief (static HTML, no JavaScript needed).
+- [docs/selection-rules.md](https://edwardphill.github.io/stockpicker/docs/selection-rules.md): The v2 selection rules: one pick a week, a 50%-in-6-months gate with no upside cap, novelty, exits.
+
+- [data/index.json](https://edwardphill.github.io/stockpicker/data/index.json): manifest of the files above with freshness timestamps.
+
+## Pages (JavaScript-rendered, for people)
+
+- [Picks tracker](https://edwardphill.github.io/stockpicker/index.html)
+- [Analyst mismatch](https://edwardphill.github.io/stockpicker/analysts.html)
+- [Stop-rule comparison](https://edwardphill.github.io/stockpicker/portfolio.html)
+- [Case studies](https://edwardphill.github.io/stockpicker/cases.html)
+- [Weekly brief](https://edwardphill.github.io/stockpicker/reports/weekly/latest.html)
+
+## Method
+
+- [docs/selection-rules.md](https://edwardphill.github.io/stockpicker/docs/selection-rules.md): how picks are (and will be) selected: one pick a week, a hard 50%-in-6-months gate with no cap on upside, novelty, exits.
+- [README.md](https://edwardphill.github.io/stockpicker/README.md): the scoring signals, themes, data sources and the bull/bear report format.
+- Analyst mismatch: lone bull = consensus Hold/Sell with 1–2 analysts at Buy; lone bear = the reverse; breakaway = a firm's rating or target in the last 120 days against consensus or 25%+ from the mean target. Ratings via Yahoo Finance, which can lag a day or two.
+
+## Freshness
+
+- prices: every 30 minutes, US market hours (refresh-prices.yml)
+- analyst mismatch: Mondays 12:15 UTC (analyst-mismatch.yml)
+- weekly brief: Tuesdays 12:30 UTC (weekly-brief.yml)
+- portfolio: weekdays 21:45 UTC after the close (portfolio-sim.yml)
+
+## Conventions
+
+- Dates are ISO (YYYY-MM-DD); timestamps are UTC. Prices are USD. Percentages are plain numbers (12.5 means +12.5%).
+- `return_pct` on a pick is (current − entry) / entry; by stock it is measured from the first pick of that stock.
+- `status` is Open for every pick until the pipeline records exits; the -10% stop in `avg_return_with_10pct_stop` is a cap on losses, not a traded rule. `data/portfolio.json` is the path-based simulation.
+- Repository: https://github.com/edwardphill/stockpicker (AGENTS.md describes the layout for coding agents).
+
+Generated 2026-09-28 02:26 UTC by scripts/build_agent_views.py.

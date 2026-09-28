@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+Sitemap: https://edwardphill.github.io/stockpicker/sitemap.xml
+# Machine-readable entry point: https://edwardphill.github.io/stockpicker/llms.txt

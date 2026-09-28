@@ -1,0 +1,121 @@
+{
+  "schema": "stockpicker.index/1",
+  "site": "https://edwardphill.github.io/stockpicker",
+  "generated": "2026-09-28 02:26 UTC",
+  "pages": [
+    {
+      "path": "index.html",
+      "url": "https://edwardphill.github.io/stockpicker/index.html",
+      "title": "Picks tracker"
+    },
+    {
+      "path": "analysts.html",
+      "url": "https://edwardphill.github.io/stockpicker/analysts.html",
+      "title": "Analyst mismatch"
+    },
+    {
+      "path": "portfolio.html",
+      "url": "https://edwardphill.github.io/stockpicker/portfolio.html",
+      "title": "Stop-rule comparison"
+    },
+    {
+      "path": "cases.html",
+      "url": "https://edwardphill.github.io/stockpicker/cases.html",
+      "title": "Case studies"
+    },
+    {
+      "path": "reports/weekly/latest.html",
+      "url": "https://edwardphill.github.io/stockpicker/reports/weekly/latest.html",
+      "title": "Weekly brief"
+    }
+  ],
+  "files": [
+    {
+      "path": "data/summary.json",
+      "url": "https://edwardphill.github.io/stockpicker/data/summary.json",
+      "content_type": "application/json",
+      "description": "Computed stats: counts, win rates, average returns, top and bottom stocks, this week's analyst-mismatch candidates, stop-rule results. Read this first.",
+      "updated": "2026-09-28 02:26 UTC",
+      "schema": "https://edwardphill.github.io/stockpicker/data/schema/summary.schema.json"
+    },
+    {
+      "path": "data/picks.json",
+      "url": "https://edwardphill.github.io/stockpicker/data/picks.json",
+      "content_type": "application/json",
+      "description": "Every pick: date, ticker, theme, conviction, entry and current price, return, analyst target, signals, macro at entry, report URL.",
+      "updated": "2026-09-25 23:39 UTC",
+      "schema": "https://edwardphill.github.io/stockpicker/data/schema/picks.schema.json"
+    },
+    {
+      "path": "data/picks.md",
+      "url": "https://edwardphill.github.io/stockpicker/data/picks.md",
+      "content_type": "text/markdown",
+      "description": "picks.json as two markdown tables (by stock, every pick).",
+      "updated": "2026-09-25 23:39 UTC",
+      "schema": null
+    },
+    {
+      "path": "data/analyst_mismatch.json",
+      "url": "https://edwardphill.github.io/stockpicker/data/analyst_mismatch.json",
+      "content_type": "application/json",
+      "description": "Latest Monday scan: stocks where one analyst breaks from consensus, with rating counts, targets, dissenting calls, 50% path and novelty flags.",
+      "updated": "2026-09-27 20:39 UTC",
+      "schema": "https://edwardphill.github.io/stockpicker/data/schema/analyst_mismatch.schema.json"
+    },
+    {
+      "path": "data/analysts.md",
+      "url": "https://edwardphill.github.io/stockpicker/data/analysts.md",
+      "content_type": "text/markdown",
+      "description": "analyst_mismatch.json as a markdown table plus the dissenting calls.",
+      "updated": "2026-09-27 20:39 UTC",
+      "schema": null
+    },
+    {
+      "path": "data/cases.json",
+      "url": "https://edwardphill.github.io/stockpicker/data/cases.json",
+      "content_type": "application/json",
+      "description": "Case studies of the best picks: the setup, the bull and bear arguments at the time, the path since, takeaways.",
+      "updated": "2026-09-28 02:26 UTC",
+      "schema": "https://edwardphill.github.io/stockpicker/data/schema/cases.schema.json"
+    },
+    {
+      "path": "data/cases.md",
+      "url": "https://edwardphill.github.io/stockpicker/data/cases.md",
+      "content_type": "text/markdown",
+      "description": "cases.json as prose.",
+      "updated": "2026-09-28 02:26 UTC",
+      "schema": null
+    },
+    {
+      "path": "data/watchlist.json",
+      "url": "https://edwardphill.github.io/stockpicker/data/watchlist.json",
+      "content_type": "application/json",
+      "description": "Extra tickers scanned for analyst mismatch, grouped by theme.",
+      "updated": "2026-09-28 02:26 UTC",
+      "schema": null
+    },
+    {
+      "path": "reports/weekly/latest.html",
+      "url": "https://edwardphill.github.io/stockpicker/reports/weekly/latest.html",
+      "content_type": "text/html",
+      "description": "The latest Tuesday weekly brief (static HTML, no JavaScript needed).",
+      "updated": "2026-09-28 02:26 UTC",
+      "schema": null
+    },
+    {
+      "path": "docs/selection-rules.md",
+      "url": "https://edwardphill.github.io/stockpicker/docs/selection-rules.md",
+      "content_type": "text/markdown",
+      "description": "The v2 selection rules: one pick a week, a 50%-in-6-months gate with no upside cap, novelty, exits.",
+      "updated": "2026-09-28 02:26 UTC",
+      "schema": null
+    }
+  ],
+  "cadence": {
+    "prices": "every 30 minutes, US market hours (refresh-prices.yml)",
+    "analyst_mismatch": "Mondays 12:15 UTC (analyst-mismatch.yml)",
+    "weekly_brief": "Tuesdays 12:30 UTC (weekly-brief.yml)",
+    "portfolio": "weekdays 21:45 UTC after the close (portfolio-sim.yml)"
+  },
+  "disclaimer": "Personal research tool. Picks are generated algorithmically and reviewed by AI. Not financial advice."
+}

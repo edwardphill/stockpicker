@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>StockPicker — Case Studies</title>
+  <meta name="description" content="Case studies of the tracker's best picks: what the system saw at the time, what the AI bull and bear reports argued, and what happened since. Data: data/cases.json.">
+  <link rel="alternate" type="application/json" href="data/cases.json" title="Case studies (JSON)">
+  <link rel="alternate" type="text/markdown" href="data/cases.md" title="Case studies (Markdown)">
+  <link rel="alternate" type="text/plain" href="llms.txt" title="llms.txt">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="assets/terminal.css">
+  <script src="assets/theme.js"></script>
+  <style>
+    .cases { padding: 16px; display: grid; gap: 16px; max-width: 1100px; }
+    .case { border: 1px solid var(--line); background: var(--panel); }
+    .case-head { display: flex; flex-wrap: wrap; align-items: baseline; gap: 12px 20px; padding: 14px 16px; border-bottom: 1px solid var(--line); }
+    .case-head .ticker-link { font-size: 22px; }
+    .case-head .ret { font-size: 22px; font-weight: 700; }
+    .case-head .meta { color: var(--dim); font-size: 13px; }
+    .case-body { display: grid; grid-template-columns: 1fr 1fr; gap: 0; }
+    .case-col { padding: 14px 16px; }
+    .case-col + .case-col { border-left: 1px solid var(--line); }
+    .case h4 { font-size: 12px; text-transform: uppercase; letter-spacing: 0.6px; color: var(--amber); margin: 12px 0 6px; }
+    .case h4:first-child { margin-top: 0; }
+    .case p { margin: 0 0 6px; font-size: 14px; }
+    .case p.quote { color: var(--text); border-left: 2px solid var(--line); padding-left: 10px; }
+    .kv { display: grid; grid-template-columns: max-content 1fr; gap: 4px 12px; font-size: 13px; }
+    .kv .k { color: var(--dim); }
+    .takeaways { padding: 12px 16px; border-top: 1px solid var(--line); }
+    .takeaways li { margin: 4px 0 4px 18px; font-size: 14px; }
+    .takeaways a { font-size: 13px; }
+    @media (max-width: 800px) { .case-body { grid-template-columns: 1fr; } .case-col + .case-col { border-left: none; border-top: 1px solid var(--line); } }
+  </style>
+</head>
+<body>
+
+<div class="header">
+  <div>
+    <div class="logo">STOCK<span>PICKER</span><span class="go">GO</span></div>
+    <div class="header-meta" id="generated">Loading...</div>
+  </div>
+  <div class="header-right">
+    <div class="header-meta" id="count">—</div>
+    <button class="theme-btn" id="theme-btn" onclick="toggleTheme()">Light</button>
+  </div>
+</div>
+<nav class="tabs">
+  <a class="tab" href="index.html"><span class="fk">1</span>Picks</a>
+  <a class="tab" href="analysts.html"><span class="fk">2</span>Analyst Mismatch</a>
+  <a class="tab" href="reports/weekly/latest.html"><span class="fk">3</span>Weekly Brief</a>
+  <a class="tab" href="portfolio.html"><span class="fk">4</span>Stop Rules</a>
+  <a class="tab active" href="cases.html"><span class="fk">5</span>Case Studies</a>
+</nav>
+
+<div class="intro">
+  The best picks so far: what the system saw on the day, what the bull and bear reports argued, and what happened.
+  Rebuilt from the data on every refresh.
+</div>
+
+<noscript><div class="intro">This page renders <a href="data/cases.json">data/cases.json</a>. A plain-text version is at <a href="data/cases.md">data/cases.md</a>.</div></noscript>
+
+<div class="cases" id="cases"><div class="empty">Loading case studies...</div></div>
+
+<div class="footer">STOCKPICKER &nbsp;·&nbsp; NOT FINANCIAL ADVICE &nbsp;·&nbsp; <a href="llms.txt">FOR AGENTS: LLMS.TXT</a></div>
+
+<script>
+const CHART_URL = 'https://www.tradingview.com/chart/?symbol={t}';
+const chartUrl = t => CHART_URL.replace('{t}', encodeURIComponent(t));
+const esc = s => String(s ?? '').replace(/[&<>"]/g, c => ({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;'}[c]));
+const money = v => v ? '$' + Number(v).toFixed(2) : '—';
+const pct = (v, d = 1) => v == null ? '<span class="flat">—</span>' : `<span class="${v > 0 ? 'pos' : (v < 0 ? 'neg' : 'flat')}">${v > 0 ? '+' : ''}${v.toFixed(d)}%</span>`;
+function mktcap(v) {
+  if (!v) return '—';
+  if (v >= 1e12) return '$' + (v / 1e12).toFixed(2) + 'T';
+  if (v >= 1e9)  return '$' + (v / 1e9).toFixed(1)  + 'B';
+  return '$' + (v / 1e6).toFixed(0) + 'M';
+}
+
+function stopLine(label, r) {
+  if (!r) return '';
+  if (r.reason === 'stop') return `<div><span class="k">${label}</span></div><div><span class="neg">sold ${r.exit_date}</span> at ${pct(r.return_pct)}</div>`;
+  return `<div><span class="k">${label}</span></div><div><span class="pos">never triggered</span></div>`;
+}
+
+function caseHtml(c) {
+  const m = c.macro_at_pick || {};
+  const sigs = (c.signals || []).map(s => `<span class="sig">${esc(s.replace(/_/g, ' '))}</span>`).join('') || '—';
+  const path = c.path ? `
+      <h4>The path since</h4>
+      <div class="kv">
+        <div class="k">Worst close</div><div>${pct(c.path.max_drawdown_pct)} vs entry</div>
+        <div class="k">Best close</div><div>${pct(c.path.max_runup_pct)} vs entry</div>
+        ${stopLine('-5% stop', c.path.stop_5)}
+        ${stopLine('-10% stop', c.path.stop_10)}
+      </div>` : `<h4>The path since</h4><p class="muted">Price path arrives with the first stop-rule simulation run.</p>`;
+  return `
+  <section class="case">
+    <div class="case-head">
+      <a class="ticker-link" href="${chartUrl(c.ticker)}" target="_blank">${esc(c.ticker)}</a>
+      <span class="ret">${pct(c.return_pct)}</span>
+      <span class="meta">${esc(c.theme)} · first picked ${c.first_picked} · ${c.days_held} days · ${money(c.entry_price)} → ${money(c.current_price)}${c.times_picked > 1 ? ' · picked ' + c.times_picked + '×' : ''}</span>
+    </div>
+    <div class="case-body">
+      <div class="case-col">
+        <h4>What the system saw</h4>
+        <div class="kv">
+          <div class="k">Conviction</div><div>${esc(c.conviction)}</div>
+          <div class="k">Analyst target</div><div>${money(c.analyst_target_at_pick)} (${pct(c.analyst_upside_at_pick_pct)} upside)</div>
+          <div class="k">Market cap</div><div>${mktcap(c.mktcap_at_pick)}</div>
+          <div class="k">Macro</div><div>VIX ${m.vix ?? '—'} · 10Y ${m.yield_10y != null ? m.yield_10y + '%' : '—'} · <span class="${m.risk_on ? 'risk-on' : 'risk-off'}">${m.risk_on ? 'risk on' : 'risk off'}</span></div>
+          <div class="k">Signals</div><div>${sigs}</div>
+        </div>
+        ${path}
+      </div>
+      <div class="case-col">
+        <h4>Bull thesis then</h4>
+        <p class="quote">${esc(c.thesis) || '<span class="muted">—</span>'}</p>
+        ${c.catalysts ? `<h4>Catalysts cited</h4><p class="quote">${esc(c.catalysts)}</p>` : ''}
+        <h4>Bear verdict then</h4>
+        <p class="quote">${esc(c.bear_verdict) || '<span class="muted">—</span>'}</p>
+      </div>
+    </div>
+    <div class="takeaways">
+      <h4>Takeaways</h4>
+      <ul>${(c.lessons || []).map(l => `<li>${esc(l)}</li>`).join('') || '<li class="muted">—</li>'}</ul>
+      <a href="${esc(c.report_url)}" target="_blank">Full bull/bear report from ${c.first_picked} &#8599;</a>
+    </div>
+  </section>`;
+}
+
+async function load() {
+  try {
+    const res = await fetch('data/cases.json?t=' + Date.now());
+    if (!res.ok) throw new Error('not found');
+    const data = await res.json();
+    document.getElementById('generated').textContent = 'Built ' + data.generated;
+    document.getElementById('count').textContent = data.cases.length + ' case studies';
+    document.getElementById('cases').innerHTML = data.cases.map(caseHtml).join('');
+  } catch (e) {
+    document.getElementById('cases').innerHTML = '<div class="empty"><div class="empty-title">No case studies yet</div><div>They build from the picks data on the next refresh.</div></div>';
+  }
+}
+load();
+</script>
+</body>
+</html>
