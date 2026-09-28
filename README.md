@@ -120,6 +120,7 @@ Everything on the site is derived from small JSON files, and the pages render th
 - `data/picks.json`, `data/analyst_mismatch.json`, `data/portfolio.json` and `data/cases.json` are the sources; each has a JSON Schema in `data/schema/` and a markdown mirror next to it (`data/picks.md` etc.).
 - `data/index.json` is the manifest; `sitemap.xml` and `robots.txt` point at all of it.
 - [`AGENTS.md`](AGENTS.md) explains the repo layout for coding agents.
+- **Counting agent visits:** GitHub Pages has no logs and agents run no JavaScript, so [`tracker/`](tracker/) holds a Cloudflare Worker that serves the same files through a logged proxy (one command to deploy, free tier). Once the `AGENT_BASE` variable points at it, the agent-facing links above route through it, and `scripts/agent_visits.py` pulls the counts into `data/agent_visits.json`.
 
 Design: one entry point, plain formats (JSON, Markdown, static HTML for the brief), explicit units and conventions, stated freshness, a summary file so nothing has to be recomputed, and stable paths. The derived files are rebuilt by `scripts/build_agent_views.py` at the end of every workflow.
 

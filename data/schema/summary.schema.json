@@ -69,6 +69,56 @@
         "type": "string"
       }
     },
+    "agent_visits": {
+      "type": [
+        "object",
+        "null"
+      ],
+      "description": "Agent visits over the last 30 days from the tracker Worker (tracker/); null until it is deployed and the CF_* secrets exist.",
+      "properties": {
+        "generated": {
+          "type": "string"
+        },
+        "window_days": {
+          "type": "integer"
+        },
+        "total": {
+          "type": "integer"
+        },
+        "agents": {
+          "type": "integer",
+          "description": "Requests classified ai-bot or script"
+        },
+        "by_class": {
+          "type": "array",
+          "items": {
+            "type": "object",
+            "properties": {
+              "key": {
+                "type": "string"
+              },
+              "hits": {
+                "type": "integer"
+              }
+            }
+          }
+        },
+        "top_bots": {
+          "type": "array",
+          "items": {
+            "type": "object",
+            "properties": {
+              "key": {
+                "type": "string"
+              },
+              "hits": {
+                "type": "integer"
+              }
+            }
+          }
+        }
+      }
+    },
     "cadence": {
       "type": "object",
       "description": "When each file updates."

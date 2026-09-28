@@ -29,6 +29,7 @@ The pick pipeline itself (`stock_alert.py`: universe, scoring, the Claude bull/b
 | `data/schema/*.schema.json` | JSON Schema for each data file |
 | `scripts/` | The jobs (see below) |
 | `docs/selection-rules.md` | The v2 selection rules for the pipeline |
+| `tracker/` | Cloudflare Worker that proxies the site and logs every request (agent visit tracking); deployed by hand with wrangler |
 
 ## Jobs
 
@@ -39,6 +40,7 @@ The pick pipeline itself (`stock_alert.py`: universe, scoring, the Claude bull/b
 | `scripts/weekly_brief.py` | `weekly-brief.yml` | Tuesdays 12:30 UTC (emails when `MAIL_USERNAME`, `MAIL_PASSWORD`, `MAIL_TO` secrets exist) |
 | `scripts/portfolio_sim.py` | `portfolio-sim.yml` | weekdays 21:45 UTC |
 | `scripts/build_agent_views.py` | every workflow, last step | after any data change |
+| `scripts/agent_visits.py` | `portfolio-sim.yml` | daily; no-op until `CF_ACCOUNT_ID` and `CF_API_TOKEN` secrets exist |
 
 Every workflow ends with `python scripts/build_agent_views.py` and a commit. Scripts read and write the
 checkout; they take no arguments and expect the repo root as the working directory.

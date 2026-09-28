@@ -30,6 +30,8 @@ jobs:
           MAIL_TO: ${{ secrets.MAIL_TO }}
       - name: Rebuild agent views
         run: python scripts/build_agent_views.py
+        env:
+          AGENT_BASE: ${{ vars.AGENT_BASE }}
       - name: Commit and push
         run: |
           git config user.name "github-actions[bot]"

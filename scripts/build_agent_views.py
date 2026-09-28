@@ -20,6 +20,9 @@ from collections import defaultdict
 from datetime import datetime, timezone
 
 SITE     = "https://edwardphill.github.io/stockpicker"
+# When the agent tracker (tracker/) is deployed and the AGENT_BASE repo variable is set,
+# agent-facing links point at it so visits are logged. Pages themselves stay on SITE.
+AGENT    = (os.environ.get("AGENT_BASE") or SITE).rstrip("/")
 NOW      = datetime.now(timezone.utc)
 NOW_STR  = NOW.strftime("%Y-%m-%d %H:%M UTC")
 TOP_N    = 5
@@ -92,7 +95,7 @@ def stats(rets):
             "median_return_pct": round(s[n // 2] if n % 2 else (s[n // 2 - 1] + s[n // 2]) / 2, 2),
             "avg_return_with_10pct_stop": round(sum(max(r, -10) for r in rets) / n, 2)}
 
-def build_summary(picks, stocks, analysts, portfolio, cases):
+def build_summary(picks, stocks, analysts, portfolio, cases, visits=None):
     price_dates = sorted((p.get("last_price_update") or p["date"]) for p in picks)
     themes = defaultdict(list)
     for r in stocks:
@@ -121,6 +124,8 @@ def build_summary(picks, stocks, analysts, portfolio, cases):
         } if analysts else None),
         "portfolio": ({"generated": portfolio["generated"], "rules": portfolio["rules"]} if portfolio else None),
         "case_studies": [c["ticker"] for c in cases],
+        "agent_visits": ({"generated": visits["generated"], "window_days": visits["window_days"], "total": visits["total"],
+                          "agents": visits["agents"], "by_class": visits["by_class"], "top_bots": visits["by_bot"][:5]} if visits else None),
         "cadence": {
             "prices": "every 30 minutes, US market hours (refresh-prices.yml)",
             "analyst_mismatch": "Mondays 12:15 UTC (analyst-mismatch.yml)",
@@ -294,6 +299,7 @@ FILES = [
     ("data/cases.json", "application/json", "Case studies of the best picks: the setup, the bull and bear arguments at the time, the path since, takeaways.", "cases"),
     ("data/cases.md", "text/markdown", "cases.json as prose.", None),
     ("data/watchlist.json", "application/json", "Extra tickers scanned for analyst mismatch, grouped by theme.", None),
+    ("data/agent_visits.json", "application/json", "Agent visits to this site over the last 30 days, by client class, bot, path and country (from the tracker Worker).", None),
     ("reports/weekly/latest.html", "text/html", "The latest Tuesday weekly brief (static HTML, no JavaScript needed).", None),
     ("docs/selection-rules.md", "text/markdown", "The v2 selection rules: one pick a week, a 50%-in-6-months gate with no upside cap, novelty, exits.", None),
 ]
@@ -310,14 +316,14 @@ def build_index(summary, analysts, portfolio):
     files = []
     for path, ctype, desc, schema in FILES:
         if not os.path.exists(path): continue
-        files.append({"path": path, "url": f"{SITE}/{path}", "content_type": ctype, "description": desc,
+        files.append({"path": path, "url": f"{AGENT}/{path}", "content_type": ctype, "description": desc,
                       "updated": freshness(path, summary, analysts, portfolio),
                       "schema": f"{SITE}/data/schema/{schema}.schema.json" if schema else None})
     return {"schema": "stockpicker.index/1", "site": SITE, "generated": NOW_STR,
             "pages": [{"path": p, "url": f"{SITE}/{p}", "title": t} for p, t in PAGES],
             "files": files, "cadence": summary["cadence"], "disclaimer": summary["disclaimer"]}
 
-def llms_txt(summary, analysts, portfolio, cases):
+def llms_txt(summary, analysts, portfolio, cases, visits=None):
     c, bs = summary["counts"], summary["by_stock"]
     lines = ["# StockPicker", "",
              "> A personal stock-picking tracker. An automated pipeline scores a universe of high-growth tickers across "
@@ -335,11 +341,16 @@ def llms_txt(summary, analysts, portfolio, cases):
     if portfolio:
         r = portfolio["rules"]
         lines.append("Stop-rule simulation (" + portfolio["generated"] + "): " + "; ".join(f"{v['label']} {pct(v['total_return_pct'])}" for v in r.values()) + ".")
+    if visits:
+        lines.append(f"Agent visits in the last {visits['window_days']} days: {visits['agents']} of {visits['total']} requests came from AI bots or scripts"
+                     + (f" (top: {', '.join(b['key'] for b in visits['by_bot'][:3])})" if visits["by_bot"] else "") + ".")
+    if AGENT != SITE:
+        lines.append(f"Canonical agent endpoint: {AGENT}/ (the same files, served through a logged proxy; every fetch there is counted).")
     lines += ["", "## Data (fetch these)", ""]
     for path, ctype, desc, schema in FILES:
         if os.path.exists(path):
-            lines.append(f"- [{path}]({SITE}/{path}): {desc}" + (f" Schema: {SITE}/data/schema/{schema}.schema.json" if schema else ""))
-    lines += ["", f"- [data/index.json]({SITE}/data/index.json): manifest of the files above with freshness timestamps.", "",
+            lines.append(f"- [{path}]({AGENT}/{path}): {desc}" + (f" Schema: {AGENT}/data/schema/{schema}.schema.json" if schema else ""))
+    lines += ["", f"- [data/index.json]({AGENT}/data/index.json): manifest of the files above with freshness timestamps.", "",
               "## Pages (JavaScript-rendered, for people)", ""]
     lines += [f"- [{t}]({SITE}/{p})" for p, t in PAGES]
     lines += ["", "## Method", "",
@@ -365,9 +376,10 @@ if __name__ == "__main__":
     picks     = load("data/picks.json", [])
     analysts  = load("data/analyst_mismatch.json")
     portfolio = load("data/portfolio.json")
+    visits    = load("data/agent_visits.json")
     stocks    = group_by_stock(picks)
     cases     = build_cases(stocks, portfolio)
-    summary   = build_summary(picks, stocks, analysts, portfolio, cases)
+    summary   = build_summary(picks, stocks, analysts, portfolio, cases, visits)
 
     write("data/summary.json", json.dumps(summary, indent=2))
     write("data/picks.md", picks_md(picks, stocks, summary))
@@ -376,7 +388,7 @@ if __name__ == "__main__":
     if analysts:  write("data/analysts.md", analysts_md(analysts))
     if portfolio: write("data/portfolio.md", portfolio_md(portfolio))
     write("data/index.json", json.dumps(build_index(summary, analysts, portfolio), indent=2))
-    write("llms.txt", llms_txt(summary, analysts, portfolio, cases))
+    write("llms.txt", llms_txt(summary, analysts, portfolio, cases, visits))
     write("robots.txt", f"User-agent: *\nAllow: /\nSitemap: {SITE}/sitemap.xml\n# Machine-readable entry point: {SITE}/llms.txt")
     write("sitemap.xml", sitemap(summary))
     print(f"Built agent views: {len(stocks)} stocks, {len(picks)} picks, {len(cases)} cases, "
