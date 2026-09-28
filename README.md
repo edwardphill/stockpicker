@@ -103,10 +103,25 @@ Report sections:
 | Monday 12:15 | `analyst-mismatch.yml` → `scripts/analyst_mismatch.py` | `data/analyst_mismatch.json`, shown on the Analyst Mismatch tab |
 | Tuesday 12:30 | `weekly-brief.yml` → `scripts/weekly_brief.py` | `reports/weekly/<date>.html` (+ `latest.html`), emailed when the `MAIL_USERNAME`, `MAIL_PASSWORD` and `MAIL_TO` secrets are set |
 | Every 30 min, market hours | `refresh-prices.yml` | current prices in `data/picks.json` |
+| Weekdays 21:45 | `portfolio-sim.yml` → `scripts/portfolio_sim.py` | `data/portfolio.json`: hold vs -5% stop vs -10% stop vs v2 exits, replayed on daily closes (the Stop Rules tab) |
 
 The brief's candidates are **new names** (not picked in the last 180 days) where **at least one analyst sees a 50%+ path** from today's price, ranked by how far they break from the Street. There is no cap on upside. Extra tickers to scan live in `data/watchlist.json`.
 
 The full proposed rule set for the pick pipeline (one pick a week, 50%-in-6-months gate, novelty, exits) is in [`docs/selection-rules.md`](docs/selection-rules.md).
+
+---
+
+## For Agents
+
+Everything on the site is derived from small JSON files, and the pages render them with JavaScript, so an agent should read the data, not the pages:
+
+- **Start at [`llms.txt`](https://edwardphill.github.io/stockpicker/llms.txt)**: what the site is, key numbers, every data file with its schema and freshness.
+- [`data/summary.json`](https://edwardphill.github.io/stockpicker/data/summary.json) has the computed stats (win rates, averages, top and bottom stocks, this week's candidates, stop-rule results).
+- `data/picks.json`, `data/analyst_mismatch.json`, `data/portfolio.json` and `data/cases.json` are the sources; each has a JSON Schema in `data/schema/` and a markdown mirror next to it (`data/picks.md` etc.).
+- `data/index.json` is the manifest; `sitemap.xml` and `robots.txt` point at all of it.
+- [`AGENTS.md`](AGENTS.md) explains the repo layout for coding agents.
+
+Design: one entry point, plain formats (JSON, Markdown, static HTML for the brief), explicit units and conventions, stated freshness, a summary file so nothing has to be recomputed, and stable paths. The derived files are rebuilt by `scripts/build_agent_views.py` at the end of every workflow.
 
 ---
 

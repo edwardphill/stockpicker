@@ -1,0 +1,136 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://edwardphill.github.io/stockpicker/data/schema/picks.schema.json",
+  "title": "Picks",
+  "description": "data/picks.json: every pick, oldest first.",
+  "type": "array",
+  "items": {
+    "$schema": "https://json-schema.org/draft/2020-12/schema",
+    "$id": "https://edwardphill.github.io/stockpicker/data/schema/pick.schema.json",
+    "title": "Pick",
+    "description": "One pick logged by the pipeline.",
+    "type": "object",
+    "properties": {
+      "date": {
+        "type": "string",
+        "description": "Pick date, YYYY-MM-DD.",
+        "format": "date"
+      },
+      "entry_timestamp": {
+        "type": "string",
+        "description": "When the entry price was captured (UTC), or '<date> (time unknown)'."
+      },
+      "ticker": {
+        "type": "string",
+        "description": "US ticker symbol."
+      },
+      "theme": {
+        "type": "string",
+        "description": "Theme the pipeline assigned, e.g. 'Cybersecurity'."
+      },
+      "conviction": {
+        "type": "string",
+        "description": "Strong Buy, Buy or Watch.",
+        "enum": [
+          "Strong Buy",
+          "Buy",
+          "Watch"
+        ]
+      },
+      "entry_price": {
+        "type": "number",
+        "description": "Price at the pick, USD."
+      },
+      "analyst_target": {
+        "type": [
+          "number",
+          "null"
+        ],
+        "description": "Consensus 12-month analyst target at the pick, USD."
+      },
+      "implied_upside_at_entry": {
+        "type": [
+          "number",
+          "null"
+        ],
+        "description": "analyst_target vs entry_price. Percent as a plain number: 12.5 means +12.5%."
+      },
+      "mktcap": {
+        "type": [
+          "number",
+          "null"
+        ],
+        "description": "Market cap at the pick, USD."
+      },
+      "vix_at_entry": {
+        "type": [
+          "number",
+          "null"
+        ],
+        "description": "VIX at the pick."
+      },
+      "yield_10y_at_entry": {
+        "type": [
+          "number",
+          "null"
+        ],
+        "description": "10-year Treasury yield at the pick, percent."
+      },
+      "risk_on_at_entry": {
+        "type": [
+          "boolean",
+          "null"
+        ],
+        "description": "Macro regime flag at the pick."
+      },
+      "signals": {
+        "type": "array",
+        "description": "Names of the signal fields that had a value at the pick (v1 records fields, not thresholds passed).",
+        "items": {
+          "type": "string"
+        }
+      },
+      "signal_values": {
+        "type": "object",
+        "description": "Raw value per signal name."
+      },
+      "status": {
+        "type": "string",
+        "description": "Open until the pipeline records exits.",
+        "enum": [
+          "Open",
+          "Closed"
+        ]
+      },
+      "cur_price": {
+        "type": [
+          "number",
+          "null"
+        ],
+        "description": "Latest price from the 30-minute refresh, USD."
+      },
+      "pct_chg": {
+        "type": [
+          "number",
+          "null"
+        ],
+        "description": "cur_price vs entry_price. Percent as a plain number: 12.5 means +12.5%."
+      },
+      "last_price_update": {
+        "type": "string",
+        "description": "When cur_price was refreshed, 'YYYY-MM-DD HH:MM UTC'."
+      },
+      "report_url": {
+        "type": "string",
+        "description": "The AI bull/bear report for this pick.",
+        "format": "uri"
+      }
+    },
+    "required": [
+      "date",
+      "ticker",
+      "conviction",
+      "entry_price"
+    ]
+  }
+}

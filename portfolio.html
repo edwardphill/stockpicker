@@ -1,0 +1,182 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>StockPicker — Stop Rules</title>
+  <meta name="description" content="Stop-rule comparison on real price paths: hold vs a -5% stop vs the current -10% stop vs the proposed v2 exits, per pick and for a $1,000-per-pick book. Data: data/portfolio.json.">
+  <link rel="alternate" type="application/json" href="data/portfolio.json" title="Stop-rule simulation (JSON)">
+  <link rel="alternate" type="text/markdown" href="data/portfolio.md" title="Stop-rule simulation (Markdown)">
+  <link rel="alternate" type="text/plain" href="llms.txt" title="llms.txt">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="assets/terminal.css">
+  <script src="assets/theme.js"></script>
+  <style>
+    table.main { min-width: 1000px; }
+    .rules { padding: 16px; display: grid; grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); gap: 12px; }
+    .rule { border: 1px solid var(--line); background: var(--panel); padding: 12px 14px; }
+    .rule.best { border-color: var(--amber); }
+    .rule h3 { font-size: 13px; text-transform: uppercase; letter-spacing: 0.6px; color: var(--amber); margin: 0 0 2px; }
+    .rule .desc { font-size: 12px; color: var(--dim); min-height: 34px; }
+    .rule .value { font-size: 26px; font-weight: 700; margin: 6px 0 2px; }
+    .rule .kv { display: grid; grid-template-columns: 1fr auto; gap: 2px 10px; font-size: 13px; margin-top: 6px; }
+    .rule .kv .k { color: var(--dim); }
+    .exit { white-space: nowrap; }
+    .exit .sub { margin-top: 2px; }
+  </style>
+</head>
+<body>
+
+<div class="header">
+  <div>
+    <div class="logo">STOCK<span>PICKER</span><span class="go">GO</span></div>
+    <div class="header-meta" id="generated">Loading...</div>
+  </div>
+  <div class="header-right">
+    <div class="header-meta" id="basis">—</div>
+    <button class="theme-btn" id="theme-btn" onclick="toggleTheme()">Light</button>
+  </div>
+</div>
+<nav class="tabs">
+  <a class="tab" href="index.html"><span class="fk">1</span>Picks</a>
+  <a class="tab" href="analysts.html"><span class="fk">2</span>Analyst Mismatch</a>
+  <a class="tab" href="reports/weekly/latest.html"><span class="fk">3</span>Weekly Brief</a>
+  <a class="tab active" href="portfolio.html"><span class="fk">4</span>Stop Rules</a>
+  <a class="tab" href="cases.html"><span class="fk">5</span>Case Studies</a>
+</nav>
+
+<div class="intro">
+  What the same picks would have returned under each exit rule, replayed on daily closes from each pick date with $1,000 per pick.
+  A stop needs a close at or below the level, so a dip on a wick does not count.
+</div>
+
+<noscript><div class="intro">This page renders <a href="data/portfolio.json">data/portfolio.json</a>. A plain-text version is at <a href="data/portfolio.md">data/portfolio.md</a>.</div></noscript>
+
+<div class="rules" id="rules"></div>
+
+<div class="toolbar">
+  <select class="select" id="view-select">
+    <option value="all">All picks</option>
+    <option value="stopped_5">Stopped by -5%</option>
+    <option value="stopped_10">Stopped by -10%</option>
+    <option value="stopped_winners">Stopped-out winners</option>
+  </select>
+  <span class="row-count" id="row-count"></span>
+</div>
+
+<div class="table-wrap">
+  <div id="loading" class="empty">Loading simulation...</div>
+  <table class="main" id="tbl" style="display:none;">
+    <thead>
+      <tr>
+        <th class="sortable" data-key="date">Picked</th>
+        <th class="sortable" data-key="ticker">Stock</th>
+        <th class="sortable" data-key="entry_price">Entry</th>
+        <th class="sortable" data-key="hold_return_pct">Hold</th>
+        <th class="sortable" data-key="max_drawdown_pct">Worst close</th>
+        <th class="sortable" data-key="max_runup_pct">Best close</th>
+        <th class="sortable" data-key="r_stop_5">Stop -5%</th>
+        <th class="sortable" data-key="r_stop_10">Stop -10%</th>
+        <th class="sortable" data-key="r_v2">v2 exits</th>
+      </tr>
+    </thead>
+    <tbody id="body"></tbody>
+  </table>
+  <div id="empty-state" class="empty" style="display:none;">
+    <div class="empty-title">No simulation yet</div>
+    <div>Run the "Portfolio Simulation" workflow in GitHub Actions to populate it.</div>
+  </div>
+</div>
+
+<div class="footer">STOCKPICKER &nbsp;·&nbsp; NOT FINANCIAL ADVICE &nbsp;·&nbsp; <a href="llms.txt">FOR AGENTS: LLMS.TXT</a></div>
+
+<script>
+const CHART_URL = 'https://www.tradingview.com/chart/?symbol={t}';
+const chartUrl = t => CHART_URL.replace('{t}', encodeURIComponent(t));
+const esc = s => String(s ?? '').replace(/[&<>"]/g, c => ({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;'}[c]));
+const money = v => v ? '$' + Number(v).toFixed(2) : '—';
+const pct = (v, d = 1) => v == null ? '<span class="flat">—</span>' : `<span class="${v > 0 ? 'pos' : (v < 0 ? 'neg' : 'flat')}">${v > 0 ? '+' : ''}${v.toFixed(d)}%</span>`;
+
+let data = null, view = 'all', sortKey = 'date', sortDir = -1;
+
+function rulesHtml(rules, stake, n) {
+  const best = Object.values(rules).reduce((a, b) => (b.total_return_pct > a.total_return_pct ? b : a));
+  return Object.values(rules).map(r => `
+    <div class="rule${r === best ? ' best' : ''}">
+      <h3>${esc(r.label)}${r === best ? ' · best' : ''}</h3>
+      <div class="desc">${esc(r.description)}</div>
+      <div class="value">${pct(r.total_return_pct)}</div>
+      <div class="muted">${money(r.ending_value)} from ${money(stake * n)}</div>
+      <div class="kv">
+        <span class="k">Win rate</span><span>${r.win_rate_pct}%</span>
+        <span class="k">Stopped out</span><span>${r.stopped_out}${r.stopped_out ? ` <span class="muted">(${r.stopped_out_winners} would be up today)</span>` : ''}</span>
+        ${r.exits && (r.exits.target || r.exits.time) ? `<span class="k">Took profit / timed out</span><span>${r.exits.target} / ${r.exits.time}</span>` : ''}
+      </div>
+    </div>`).join('');
+}
+
+function exitCell(r) {
+  if (!r) return '<span class="flat">—</span>';
+  const why = r.reason === 'open' ? 'still held' : `${r.reason} ${r.exit_date}`;
+  return `<div class="exit">${pct(r.return_pct)}<div class="sub">${why}</div></div>`;
+}
+
+function render() {
+  if (!data) return;
+  let rows = data.picks.map(p => ({ ...p, r_stop_5: p.rules.stop_5.return_pct, r_stop_10: p.rules.stop_10.return_pct, r_v2: p.rules.v2.return_pct }));
+  if (view === 'stopped_5')  rows = rows.filter(p => p.rules.stop_5.reason === 'stop');
+  if (view === 'stopped_10') rows = rows.filter(p => p.rules.stop_10.reason === 'stop');
+  if (view === 'stopped_winners') rows = rows.filter(p => (p.rules.stop_5.reason === 'stop' || p.rules.stop_10.reason === 'stop') && p.hold_return_pct > 0);
+  rows.sort((a, b) => {
+    const av = a[sortKey], bv = b[sortKey];
+    if (typeof av === 'string') return sortDir * av.localeCompare(bv || '');
+    return sortDir * ((av ?? -1e9) - (bv ?? -1e9));
+  });
+  document.getElementById('body').innerHTML = rows.map(p => `
+    <tr class="row">
+      <td class="num">${p.date}</td>
+      <td><a class="ticker-link" href="${chartUrl(p.ticker)}" target="_blank">${esc(p.ticker)}</a><div class="sub">${esc(p.theme)}</div></td>
+      <td class="num price">${money(p.entry_price)}<div class="sub">now ${money(p.last_price)}</div></td>
+      <td class="num">${pct(p.hold_return_pct)}</td>
+      <td class="num">${pct(p.max_drawdown_pct)}</td>
+      <td class="num">${pct(p.max_runup_pct)}</td>
+      <td>${exitCell(p.rules.stop_5)}</td>
+      <td>${exitCell(p.rules.stop_10)}</td>
+      <td>${exitCell(p.rules.v2)}</td>
+    </tr>`).join('');
+  document.getElementById('row-count').textContent = rows.length + ' picks';
+  document.getElementById('tbl').style.display = rows.length ? 'table' : 'none';
+  document.getElementById('empty-state').style.display = rows.length ? 'none' : 'block';
+  document.querySelectorAll('thead th').forEach(th => {
+    th.classList.remove('sort-asc', 'sort-desc');
+    if (th.dataset.key === sortKey) th.classList.add(sortDir === 1 ? 'sort-asc' : 'sort-desc');
+  });
+}
+
+document.querySelectorAll('thead th[data-key]').forEach(th => th.addEventListener('click', () => {
+  const k = th.dataset.key;
+  if (sortKey === k) sortDir *= -1; else { sortKey = k; sortDir = -1; }
+  render();
+}));
+document.getElementById('view-select').addEventListener('change', e => { view = e.target.value; render(); });
+
+async function load() {
+  document.getElementById('loading').style.display = 'none';
+  try {
+    const res = await fetch('data/portfolio.json?t=' + Date.now());
+    if (!res.ok) throw new Error('not found');
+    data = await res.json();
+    document.getElementById('generated').textContent = 'Simulated ' + data.generated;
+    document.getElementById('basis').textContent = data.picks.length + ' picks · $' + data.stake + ' each';
+    document.getElementById('rules').innerHTML = rulesHtml(data.rules, data.stake, data.picks.length);
+    render();
+  } catch (e) {
+    document.getElementById('empty-state').style.display = 'block';
+  }
+}
+load();
+</script>
+</body>
+</html>

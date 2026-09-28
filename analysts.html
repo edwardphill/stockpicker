@@ -4,6 +4,10 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>StockPicker — Analyst Mismatch</title>
+  <meta name="description" content="Analyst mismatch scan: stocks where one analyst breaks from the Street (lone bulls, lone bears, breakaway calls), with 50%-path and novelty flags. Data: data/analyst_mismatch.json.">
+  <link rel="alternate" type="application/json" href="data/analyst_mismatch.json" title="Data (JSON)">
+  <link rel="alternate" type="text/markdown" href="data/analysts.md" title="Data (Markdown)">
+  <link rel="alternate" type="text/plain" href="llms.txt" title="llms.txt">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;600;700&display=swap" rel="stylesheet">
@@ -49,7 +53,11 @@
   <a class="tab" href="index.html"><span class="fk">1</span>Picks</a>
   <a class="tab active" href="analysts.html"><span class="fk">2</span>Analyst Mismatch</a>
   <a class="tab" href="reports/weekly/latest.html"><span class="fk">3</span>Weekly Brief</a>
+  <a class="tab" href="portfolio.html"><span class="fk">4</span>Stop Rules</a>
+  <a class="tab" href="cases.html"><span class="fk">5</span>Case Studies</a>
 </nav>
+
+<noscript><div class="intro">This page renders <a href="data/analyst_mismatch.json">data/analyst_mismatch.json</a>. Plain-text versions: <a href="data/analysts.md">data/analysts.md</a>, <a href="data/summary.json">data/summary.json</a>, <a href="llms.txt">llms.txt</a>.</div></noscript>
 
 <div class="intro">
   Stocks where one analyst breaks from the Street, scanned every Monday.
@@ -105,7 +113,7 @@
   </div>
 </div>
 
-<div class="footer">STOCKPICKER &nbsp;·&nbsp; NOT FINANCIAL ADVICE &nbsp;·&nbsp; A LONE CALL IS A LEAD, NOT A SIGNAL</div>
+<div class="footer">STOCKPICKER &nbsp;·&nbsp; NOT FINANCIAL ADVICE &nbsp;·&nbsp; A LONE CALL IS A LEAD, NOT A SIGNAL &nbsp;·&nbsp; <a href="llms.txt">FOR AGENTS: LLMS.TXT</a></div>
 
 <script>
 // Keep in sync with CHART_URL in index.html.

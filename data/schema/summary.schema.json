@@ -1,0 +1,86 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://edwardphill.github.io/stockpicker/data/schema/summary.schema.json",
+  "title": "Summary",
+  "description": "data/summary.json: computed stats so an agent does not have to.",
+  "type": "object",
+  "properties": {
+    "generated": {
+      "type": "string",
+      "description": ""
+    },
+    "site": {
+      "type": "string",
+      "description": "",
+      "format": "uri"
+    },
+    "prices_as_of": {
+      "type": "string",
+      "description": "Latest price refresh."
+    },
+    "counts": {
+      "type": "object",
+      "description": "stocks, picks, first_pick, last_pick, open_positions."
+    },
+    "by_stock": {
+      "type": "object",
+      "description": "Return measured from each stock's first pick: count, win_rate_pct, avg_return_pct, median_return_pct, avg_return_with_10pct_stop."
+    },
+    "by_pick": {
+      "type": "object",
+      "description": "Same fields, every pick counted."
+    },
+    "top": {
+      "type": "array",
+      "description": "Best stocks by return since first pick.",
+      "items": {
+        "type": "object"
+      }
+    },
+    "bottom": {
+      "type": "array",
+      "description": "Worst stocks.",
+      "items": {
+        "type": "object"
+      }
+    },
+    "themes": {
+      "type": "object",
+      "description": "Per theme: stocks, picks, avg_return_pct."
+    },
+    "analyst_mismatch": {
+      "type": [
+        "object",
+        "null"
+      ],
+      "description": "scan, scanned, mismatches, candidate_rule, candidates[] (ticker, group, score, upside_high_pct, why)."
+    },
+    "portfolio": {
+      "type": [
+        "object",
+        "null"
+      ],
+      "description": "generated and rules from portfolio.json."
+    },
+    "case_studies": {
+      "type": "array",
+      "description": "Tickers with a case study.",
+      "items": {
+        "type": "string"
+      }
+    },
+    "cadence": {
+      "type": "object",
+      "description": "When each file updates."
+    },
+    "disclaimer": {
+      "type": "string",
+      "description": ""
+    }
+  },
+  "required": [
+    "generated",
+    "counts",
+    "by_stock"
+  ]
+}
