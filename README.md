@@ -96,6 +96,20 @@ Report sections:
 
 ---
 
+## Weekly Cadence (in this repo)
+
+| When (UTC) | Job | Output |
+|------------|-----|--------|
+| Monday 12:15 | `analyst-mismatch.yml` → `scripts/analyst_mismatch.py` | `data/analyst_mismatch.json`, shown on the Analyst Mismatch tab |
+| Tuesday 12:30 | `weekly-brief.yml` → `scripts/weekly_brief.py` | `reports/weekly/<date>.html` (+ `latest.html`), emailed when the `MAIL_USERNAME`, `MAIL_PASSWORD` and `MAIL_TO` secrets are set |
+| Every 30 min, market hours | `refresh-prices.yml` | current prices in `data/picks.json` |
+
+The brief's candidates are **new names** (not picked in the last 180 days) where **at least one analyst sees a 50%+ path** from today's price, ranked by how far they break from the Street. There is no cap on upside. Extra tickers to scan live in `data/watchlist.json`.
+
+The full proposed rule set for the pick pipeline (one pick a week, 50%-in-6-months gate, novelty, exits) is in [`docs/selection-rules.md`](docs/selection-rules.md).
+
+---
+
 ## Performance Tracking
 
 Every pick is logged with:

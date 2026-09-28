@@ -95,7 +95,13 @@
           "why": "target +37% vs mean"
         }
       ],
-      "score": 12.7
+      "score": 12.7,
+      "path_50": true,
+      "path_50_why": "Street high target $400.00 is +192%",
+      "novel": true,
+      "times_picked": 0,
+      "last_picked": null,
+      "last_pick_return": null
     },
     {
       "ticker": "MU",
@@ -189,7 +195,13 @@
           "why": "target +32% vs mean"
         }
       ],
-      "score": 11.3
+      "score": 11.3,
+      "path_50": true,
+      "path_50_why": "Street high target $2,200.00 is +103%",
+      "novel": true,
+      "times_picked": 0,
+      "last_picked": null,
+      "last_pick_return": null
     },
     {
       "ticker": "NVDA",
@@ -244,7 +256,13 @@
           "why": "target +57% vs mean"
         }
       ],
-      "score": 11.3
+      "score": 11.3,
+      "path_50": true,
+      "path_50_why": "Street high target $515.00 is +129%",
+      "novel": true,
+      "times_picked": 0,
+      "last_picked": null,
+      "last_pick_return": null
     },
     {
       "ticker": "IBM",
@@ -312,7 +330,13 @@
           "why": "target +37% vs mean"
         }
       ],
-      "score": 9.8
+      "score": 9.8,
+      "path_50": true,
+      "path_50_why": "Oppenheimer target $350.00 is +55%",
+      "novel": false,
+      "times_picked": 1,
+      "last_picked": "2026-04-15",
+      "last_pick_return": -6.14
     },
     {
       "ticker": "VST",
@@ -354,7 +378,61 @@
           "why": "target +37% vs mean"
         }
       ],
-      "score": 9.5
+      "score": 9.5,
+      "path_50": true,
+      "path_50_why": "Street high target $305.00 is +120%",
+      "novel": false,
+      "times_picked": 1,
+      "last_picked": "2026-06-12",
+      "last_pick_return": -6.32
+    },
+    {
+      "ticker": "PANW",
+      "name": "Palo Alto Networks, Inc.",
+      "group": "Cybersecurity",
+      "price": 374.74,
+      "mktcap": 306537299968.0,
+      "counts": {
+        "strong_buy": 10,
+        "buy": 32,
+        "hold": 11,
+        "sell": 1,
+        "strong_sell": 1
+      },
+      "n": 55,
+      "consensus": "bull",
+      "target_mean": 395.7,
+      "target_high": 475.0,
+      "target_low": 190.0,
+      "upside_mean": 5.6,
+      "upside_high": 26.8,
+      "downside_low": -49.3,
+      "flags": [
+        "lone_bear",
+        "breakaway"
+      ],
+      "breaks": [
+        {
+          "date": "2026-06-03",
+          "firm": "Loop Capital",
+          "from": "Hold",
+          "to": "Hold",
+          "action": "main",
+          "side": "hold",
+          "target": 290.0,
+          "prior_target": 160.0,
+          "target_vs_mean": -26.7,
+          "upside": -22.6,
+          "why": "target -27% vs mean"
+        }
+      ],
+      "score": 7.1,
+      "path_50": false,
+      "path_50_why": null,
+      "novel": false,
+      "times_picked": 2,
+      "last_picked": "2026-06-04",
+      "last_pick_return": 38.66
     },
     {
       "ticker": "MRNA",
@@ -447,49 +525,13 @@
           "why": "target -26% vs mean"
         }
       ],
-      "score": 7.7
-    },
-    {
-      "ticker": "PANW",
-      "name": "Palo Alto Networks, Inc.",
-      "group": "Cybersecurity",
-      "price": 374.74,
-      "mktcap": 306537299968.0,
-      "counts": {
-        "strong_buy": 10,
-        "buy": 32,
-        "hold": 11,
-        "sell": 1,
-        "strong_sell": 1
-      },
-      "n": 55,
-      "consensus": "bull",
-      "target_mean": 395.7,
-      "target_high": 475.0,
-      "target_low": 190.0,
-      "upside_mean": 5.6,
-      "upside_high": 26.8,
-      "downside_low": -49.3,
-      "flags": [
-        "lone_bear",
-        "breakaway"
-      ],
-      "breaks": [
-        {
-          "date": "2026-06-03",
-          "firm": "Loop Capital",
-          "from": "Hold",
-          "to": "Hold",
-          "action": "main",
-          "side": "hold",
-          "target": 290.0,
-          "prior_target": 160.0,
-          "target_vs_mean": -26.7,
-          "upside": -22.6,
-          "why": "target -27% vs mean"
-        }
-      ],
-      "score": 7.1
+      "score": 7.0,
+      "path_50": false,
+      "path_50_why": null,
+      "novel": true,
+      "times_picked": 0,
+      "last_picked": null,
+      "last_pick_return": null
     },
     {
       "ticker": "ILMN",
@@ -556,7 +598,13 @@
           "why": "bearish vs consensus"
         }
       ],
-      "score": 6.8
+      "score": 6.8,
+      "path_50": false,
+      "path_50_why": null,
+      "novel": false,
+      "times_picked": 1,
+      "last_picked": "2026-04-13",
+      "last_pick_return": 119.76
     },
     {
       "ticker": "GLW",
@@ -623,7 +671,146 @@
           "why": "target +28% vs mean"
         }
       ],
-      "score": 6.3
+      "score": 6.3,
+      "path_50": true,
+      "path_50_why": "Street high target $238.00 is +52%",
+      "novel": true,
+      "times_picked": 0,
+      "last_picked": null,
+      "last_pick_return": null
+    },
+    {
+      "ticker": "KTOS",
+      "name": "Kratos Defense & Security Solut",
+      "group": "Defense Tech / Dual-Use",
+      "price": 45.62,
+      "mktcap": 8554661376.0,
+      "counts": {
+        "strong_buy": 4,
+        "buy": 15,
+        "hold": 2,
+        "sell": 0,
+        "strong_sell": 0
+      },
+      "n": 21,
+      "consensus": "bull",
+      "target_mean": 102.7619,
+      "target_high": 150.0,
+      "target_low": 60.0,
+      "upside_mean": 125.3,
+      "upside_high": 228.8,
+      "downside_low": 31.5,
+      "flags": [
+        "breakaway"
+      ],
+      "breaks": [
+        {
+          "date": "2026-09-15",
+          "firm": "Guggenheim",
+          "from": "",
+          "to": "Buy",
+          "action": "init",
+          "side": "bull",
+          "target": 74.0,
+          "prior_target": 0.0,
+          "target_vs_mean": -28.0,
+          "upside": 62.2,
+          "why": "target -28% vs mean"
+        },
+        {
+          "date": "2026-08-06",
+          "firm": "Canaccord Genuity",
+          "from": "Buy",
+          "to": "Buy",
+          "action": "main",
+          "side": "bull",
+          "target": 135.0,
+          "prior_target": 130.0,
+          "target_vs_mean": 31.4,
+          "upside": 195.9,
+          "why": "target +31% vs mean"
+        },
+        {
+          "date": "2026-08-05",
+          "firm": "Piper Sandler",
+          "from": "Neutral",
+          "to": "Overweight",
+          "action": "up",
+          "side": "bull",
+          "target": 75.0,
+          "prior_target": 75.0,
+          "target_vs_mean": -27.0,
+          "upside": 64.4,
+          "why": "target -27% vs mean"
+        }
+      ],
+      "score": 6.3,
+      "path_50": true,
+      "path_50_why": "Street high target $150.00 is +229%",
+      "novel": false,
+      "times_picked": 1,
+      "last_picked": "2026-05-29",
+      "last_pick_return": -30.02
+    },
+    {
+      "ticker": "UEC",
+      "name": "Uranium Energy Corp.",
+      "group": "Nuclear / Next-Gen Energy",
+      "price": 9.41,
+      "mktcap": 4656748544.0,
+      "counts": {
+        "strong_buy": 2,
+        "buy": 6,
+        "hold": 2,
+        "sell": 0,
+        "strong_sell": 0
+      },
+      "n": 10,
+      "consensus": "bull",
+      "target_mean": 17.375,
+      "target_high": 26.75,
+      "target_low": 11.5,
+      "upside_mean": 84.6,
+      "upside_high": 184.3,
+      "downside_low": 22.2,
+      "flags": [
+        "breakaway"
+      ],
+      "breaks": [
+        {
+          "date": "2026-09-03",
+          "firm": "Jefferies",
+          "from": "",
+          "to": "Hold",
+          "action": "init",
+          "side": "hold",
+          "target": 11.5,
+          "prior_target": 0.0,
+          "target_vs_mean": -33.8,
+          "upside": 22.2,
+          "why": "target -34% vs mean"
+        },
+        {
+          "date": "2026-06-10",
+          "firm": "HC Wainwright & Co.",
+          "from": "Buy",
+          "to": "Buy",
+          "action": "reit",
+          "side": "bull",
+          "target": 26.75,
+          "prior_target": 26.75,
+          "target_vs_mean": 54.0,
+          "upside": 184.3,
+          "why": "target +54% vs mean"
+        }
+      ],
+      "score": 6.2,
+      "path_50": true,
+      "path_50_why": "Street high target $26.75 is +184%",
+      "novel": false,
+      "times_picked": 2,
+      "last_picked": "2026-05-15",
+      "last_pick_return": -36.46
     },
     {
       "ticker": "INTC",
@@ -716,74 +903,13 @@
           "why": "bearish vs consensus, target -27% vs mean"
         }
       ],
-      "score": 6.3
-    },
-    {
-      "ticker": "KTOS",
-      "name": "Kratos Defense & Security Solut",
-      "group": "Defense Tech / Dual-Use",
-      "price": 45.62,
-      "mktcap": 8554661376.0,
-      "counts": {
-        "strong_buy": 4,
-        "buy": 15,
-        "hold": 2,
-        "sell": 0,
-        "strong_sell": 0
-      },
-      "n": 21,
-      "consensus": "bull",
-      "target_mean": 102.7619,
-      "target_high": 150.0,
-      "target_low": 60.0,
-      "upside_mean": 125.3,
-      "upside_high": 228.8,
-      "downside_low": 31.5,
-      "flags": [
-        "breakaway"
-      ],
-      "breaks": [
-        {
-          "date": "2026-09-15",
-          "firm": "Guggenheim",
-          "from": "",
-          "to": "Buy",
-          "action": "init",
-          "side": "bull",
-          "target": 74.0,
-          "prior_target": 0.0,
-          "target_vs_mean": -28.0,
-          "upside": 62.2,
-          "why": "target -28% vs mean"
-        },
-        {
-          "date": "2026-08-06",
-          "firm": "Canaccord Genuity",
-          "from": "Buy",
-          "to": "Buy",
-          "action": "main",
-          "side": "bull",
-          "target": 135.0,
-          "prior_target": 130.0,
-          "target_vs_mean": 31.4,
-          "upside": 195.9,
-          "why": "target +31% vs mean"
-        },
-        {
-          "date": "2026-08-05",
-          "firm": "Piper Sandler",
-          "from": "Neutral",
-          "to": "Overweight",
-          "action": "up",
-          "side": "bull",
-          "target": 75.0,
-          "prior_target": 75.0,
-          "target_vs_mean": -27.0,
-          "upside": 64.4,
-          "why": "target -27% vs mean"
-        }
-      ],
-      "score": 6.3
+      "score": 6.1,
+      "path_50": true,
+      "path_50_why": "Street high target $200.00 is +63%",
+      "novel": true,
+      "times_picked": 0,
+      "last_picked": null,
+      "last_pick_return": null
     },
     {
       "ticker": "LDOS",
@@ -876,61 +1002,13 @@
           "why": "bullish vs consensus"
         }
       ],
-      "score": 6.2
-    },
-    {
-      "ticker": "UEC",
-      "name": "Uranium Energy Corp.",
-      "group": "Nuclear / Next-Gen Energy",
-      "price": 9.41,
-      "mktcap": 4656748544.0,
-      "counts": {
-        "strong_buy": 2,
-        "buy": 6,
-        "hold": 2,
-        "sell": 0,
-        "strong_sell": 0
-      },
-      "n": 10,
-      "consensus": "bull",
-      "target_mean": 17.375,
-      "target_high": 26.75,
-      "target_low": 11.5,
-      "upside_mean": 84.6,
-      "upside_high": 184.3,
-      "downside_low": 22.2,
-      "flags": [
-        "breakaway"
-      ],
-      "breaks": [
-        {
-          "date": "2026-09-03",
-          "firm": "Jefferies",
-          "from": "",
-          "to": "Hold",
-          "action": "init",
-          "side": "hold",
-          "target": 11.5,
-          "prior_target": 0.0,
-          "target_vs_mean": -33.8,
-          "upside": 22.2,
-          "why": "target -34% vs mean"
-        },
-        {
-          "date": "2026-06-10",
-          "firm": "HC Wainwright & Co.",
-          "from": "Buy",
-          "to": "Buy",
-          "action": "reit",
-          "side": "bull",
-          "target": 26.75,
-          "prior_target": 26.75,
-          "target_vs_mean": 54.0,
-          "upside": 184.3,
-          "why": "target +54% vs mean"
-        }
-      ],
-      "score": 6.2
+      "score": 5.5,
+      "path_50": true,
+      "path_50_why": "Street high target $225.00 is +82%",
+      "novel": false,
+      "times_picked": 4,
+      "last_picked": "2026-06-05",
+      "last_pick_return": -0.77
     },
     {
       "ticker": "ALAB",
@@ -984,7 +1062,13 @@
           "why": "target -29% vs mean"
         }
       ],
-      "score": 5.2
+      "score": 5.2,
+      "path_50": false,
+      "path_50_why": null,
+      "novel": true,
+      "times_picked": 0,
+      "last_picked": null,
+      "last_pick_return": null
     },
     {
       "ticker": "QLYS",
@@ -1038,7 +1122,13 @@
           "why": "bullish vs consensus"
         }
       ],
-      "score": 5.1
+      "score": 5.1,
+      "path_50": false,
+      "path_50_why": null,
+      "novel": false,
+      "times_picked": 5,
+      "last_picked": "2026-04-28",
+      "last_pick_return": 102.38
     },
     {
       "ticker": "LUNR",
@@ -1065,7 +1155,13 @@
         "lone_bear"
       ],
       "breaks": [],
-      "score": 5.0
+      "score": 5.0,
+      "path_50": true,
+      "path_50_why": "Street high target $43.00 is +175%",
+      "novel": false,
+      "times_picked": 3,
+      "last_picked": "2026-06-22",
+      "last_pick_return": -28.0
     },
     {
       "ticker": "META",
@@ -1092,7 +1188,13 @@
         "lone_bear"
       ],
       "breaks": [],
-      "score": 5.0
+      "score": 5.0,
+      "path_50": false,
+      "path_50_why": null,
+      "novel": true,
+      "times_picked": 0,
+      "last_picked": null,
+      "last_pick_return": null
     },
     {
       "ticker": "AAOI",
@@ -1133,7 +1235,13 @@
           "why": "target +35% vs mean"
         }
       ],
-      "score": 4.4
+      "score": 4.4,
+      "path_50": true,
+      "path_50_why": "Street high target $220.00 is +117%",
+      "novel": true,
+      "times_picked": 0,
+      "last_picked": null,
+      "last_pick_return": null
     },
     {
       "ticker": "AVGO",
@@ -1174,7 +1282,13 @@
           "why": "target -34% vs mean"
         }
       ],
-      "score": 4.4
+      "score": 4.4,
+      "path_50": true,
+      "path_50_why": "Street high target $715.00 is +103%",
+      "novel": true,
+      "times_picked": 0,
+      "last_picked": null,
+      "last_pick_return": null
     },
     {
       "ticker": "WVE",
@@ -1215,7 +1329,13 @@
           "why": "target -35% vs mean"
         }
       ],
-      "score": 4.4
+      "score": 4.4,
+      "path_50": true,
+      "path_50_why": "Street high target $42.00 is +1011%",
+      "novel": true,
+      "times_picked": 1,
+      "last_picked": "2026-03-27",
+      "last_pick_return": -39.03
     },
     {
       "ticker": "CIEN",
@@ -1256,7 +1376,13 @@
           "why": "target -33% vs mean"
         }
       ],
-      "score": 4.3
+      "score": 4.3,
+      "path_50": true,
+      "path_50_why": "Street high target $660.00 is +85%",
+      "novel": true,
+      "times_picked": 0,
+      "last_picked": null,
+      "last_pick_return": null
     },
     {
       "ticker": "PFE",
@@ -1310,7 +1436,13 @@
           "why": "bullish vs consensus"
         }
       ],
-      "score": 4.3
+      "score": 4.3,
+      "path_50": false,
+      "path_50_why": null,
+      "novel": true,
+      "times_picked": 0,
+      "last_picked": null,
+      "last_pick_return": null
     },
     {
       "ticker": "LITE",
@@ -1351,7 +1483,13 @@
           "why": "target -29% vs mean"
         }
       ],
-      "score": 4.1
+      "score": 4.1,
+      "path_50": false,
+      "path_50_why": null,
+      "novel": true,
+      "times_picked": 0,
+      "last_picked": null,
+      "last_pick_return": null
     },
     {
       "ticker": "TMDX",
@@ -1392,7 +1530,13 @@
           "why": "target +27% vs mean"
         }
       ],
-      "score": 4.1
+      "score": 4.1,
+      "path_50": false,
+      "path_50_why": null,
+      "novel": false,
+      "times_picked": 3,
+      "last_picked": "2026-04-27",
+      "last_pick_return": -23.11
     },
     {
       "ticker": "UUUU",
@@ -1433,7 +1577,13 @@
           "why": "target -25% vs mean"
         }
       ],
-      "score": 4.0
+      "score": 4.0,
+      "path_50": true,
+      "path_50_why": "Street high target $32.50 is +186%",
+      "novel": false,
+      "times_picked": 6,
+      "last_picked": "2026-06-01",
+      "last_pick_return": -38.85
     }
   ]
 }
