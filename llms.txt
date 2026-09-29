@@ -2,7 +2,7 @@
 
 > A personal stock-picking tracker. An automated pipeline scores a universe of high-growth tickers across thematic sectors (AI/robotics, defense, nuclear, cybersecurity, space, biotech, quantum, AI infrastructure/fiber), picks names with a credible path to a 50% gain, writes an AI bull/bear report for each, and tracks the result. Every number on the site comes from small JSON files listed below; the HTML pages render those files with JavaScript, so fetch the JSON or the markdown mirrors instead of the pages. Not financial advice.
 
-Key facts as of 2026-09-28 19:52 UTC: 19 stocks picked in 51 picks between 2026-03-26 and 2026-06-22; by stock the win rate is 31.6% and the average return since first pick is -3.9% (best ILMN +120.7%, worst VNRX -93.4%).
+Key facts as of 2026-09-29 00:00 UTC: 19 stocks picked in 51 picks between 2026-03-26 and 2026-06-22; by stock the win rate is 31.6% and the average return since first pick is -3.9% (best ILMN +121.3%, worst VNRX -93.4%).
 Latest analyst-mismatch scan 2026-09-28 19:41 UTC: 25 mismatches; this week's candidates (new names with a 50% path): ORCL, MU, NVDA, GLW, INTC, AAOI, AVGO, WVE, CIEN, LITE.
 Stop-rule simulation (2026-09-28 02:34 UTC): Hold -2.1%; Stop -5% +9.7%; Stop -10% +8.4%; v2 exits +0.5%.
 
@@ -51,4 +51,4 @@ Stop-rule simulation (2026-09-28 02:34 UTC): Hold -2.1%; Stop -5% +9.7%; Stop -1
 - `status` is Open for every pick until the pipeline records exits; the -10% stop in `avg_return_with_10pct_stop` is a cap on losses, not a traded rule. `data/portfolio.json` is the path-based simulation.
 - Repository: https://github.com/edwardphill/stockpicker (AGENTS.md describes the layout for coding agents).
 
-Generated 2026-09-28 19:52 UTC by scripts/build_agent_views.py.
+Generated 2026-09-29 00:00 UTC by scripts/build_agent_views.py.

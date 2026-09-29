@@ -1,6 +1,6 @@
 {
   "schema": "https://edwardphill.github.io/stockpicker/data/schema/cases.schema.json",
-  "generated": "2026-09-28 19:52 UTC",
+  "generated": "2026-09-29 00:00 UTC",
   "cases": [
     {
       "ticker": "ILMN",
@@ -9,9 +9,9 @@
       "times_picked": 1,
       "conviction": "Buy",
       "entry_price": 122.86,
-      "current_price": 271.17,
-      "return_pct": 120.71,
-      "days_held": 168,
+      "current_price": 271.9,
+      "return_pct": 121.31,
+      "days_held": 169,
       "analyst_target_at_pick": 136.11,
       "analyst_upside_at_pick_pct": 10.8,
       "signals": [
@@ -76,9 +76,9 @@
       "times_picked": 5,
       "conviction": "Strong Buy",
       "entry_price": 83.22,
-      "current_price": 173.23,
-      "return_pct": 108.16,
-      "days_held": 166,
+      "current_price": 173.83,
+      "return_pct": 108.88,
+      "days_held": 167,
       "analyst_target_at_pick": 133.33,
       "analyst_upside_at_pick_pct": 60.2,
       "signals": [
@@ -145,9 +145,9 @@
       "times_picked": 2,
       "conviction": "Buy",
       "entry_price": 248.17,
-      "current_price": 392.46,
-      "return_pct": 58.14,
-      "days_held": 124,
+      "current_price": 392.09,
+      "return_pct": 57.99,
+      "days_held": 125,
       "analyst_target_at_pick": 227.14,
       "analyst_upside_at_pick_pct": -8.5,
       "signals": [
@@ -207,9 +207,9 @@
       "times_picked": 1,
       "conviction": "Strong Buy",
       "entry_price": 378.42,
-      "current_price": 509.7,
-      "return_pct": 34.69,
-      "days_held": 168,
+      "current_price": 509.22,
+      "return_pct": 34.56,
+      "days_held": 169,
       "analyst_target_at_pick": 585.41,
       "analyst_upside_at_pick_pct": 54.7,
       "signals": [
