@@ -1,0 +1,14 @@
+name = "stockpicker-agents"
+main = "src/worker.js"
+compatibility_date = "2025-09-01"
+workers_dev = true
+
+[vars]
+ORIGIN = "https://edwardphill.github.io/stockpicker"
+
+# Every request is written here; query it in the Cloudflare dashboard
+# (Workers & Pages -> stockpicker-agents -> Analytics) or with the SQL API
+# (scripts/agent_visits.py in the repo root does this daily).
+[[analytics_engine_datasets]]
+binding = "AGENT_VISITS"
+dataset = "stockpicker_agent_visits"
