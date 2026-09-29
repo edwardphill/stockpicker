@@ -51,4 +51,4 @@ Stop-rule simulation (2026-09-29 01:17 UTC): Hold -2.1%; Stop -5% +9.7%; Stop -1
 - `status` is Open for every pick until the pipeline records exits; the -10% stop in `avg_return_with_10pct_stop` is a cap on losses, not a traded rule. `data/portfolio.json` is the path-based simulation.
 - Repository: https://github.com/edwardphill/stockpicker (AGENTS.md describes the layout for coding agents).
 
-Generated 2026-09-29 01:17 UTC by scripts/build_agent_views.py.
+Generated 2026-09-29 18:10 UTC by scripts/build_agent_views.py.
