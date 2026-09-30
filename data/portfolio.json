@@ -1,6 +1,6 @@
 {
   "schema": "https://edwardphill.github.io/stockpicker/data/schema/portfolio.schema.json",
-  "generated": "2026-09-29 01:17 UTC",
+  "generated": "2026-09-30 00:47 UTC",
   "stake": 1000,
   "basis": "daily closes from the pick date; a stop needs a close at or below the level",
   "rules": {
@@ -9,9 +9,9 @@
       "description": "never sell",
       "key": "hold",
       "positions": 51,
-      "ending_value": 49934.0,
-      "total_return_pct": -2.09,
-      "avg_return_pct": -2.09,
+      "ending_value": 49690.5,
+      "total_return_pct": -2.57,
+      "avg_return_pct": -2.57,
       "win_rate_pct": 31.4,
       "stopped_out": 0,
       "stopped_out_winners": 0,
@@ -27,9 +27,9 @@
       "description": "sell at the first close 5% or more below entry",
       "key": "stop_5",
       "positions": 51,
-      "ending_value": 55969.2,
-      "total_return_pct": 9.74,
-      "avg_return_pct": 9.74,
+      "ending_value": 56224.4,
+      "total_return_pct": 10.24,
+      "avg_return_pct": 10.24,
       "win_rate_pct": 23.5,
       "stopped_out": 37,
       "stopped_out_winners": 4,
@@ -45,9 +45,9 @@
       "description": "sell at the first close 10% or more below entry (current managed rule)",
       "key": "stop_10",
       "positions": 51,
-      "ending_value": 55305.9,
-      "total_return_pct": 8.44,
-      "avg_return_pct": 8.44,
+      "ending_value": 55554.6,
+      "total_return_pct": 8.93,
+      "avg_return_pct": 8.93,
       "win_rate_pct": 29.4,
       "stopped_out": 32,
       "stopped_out_winners": 1,
@@ -63,15 +63,15 @@
       "description": "sell at -20%, at +50%, or after 6 months, whichever comes first",
       "key": "v2",
       "positions": 51,
-      "ending_value": 51244.6,
-      "total_return_pct": 0.48,
-      "avg_return_pct": 0.48,
+      "ending_value": 51232.9,
+      "total_return_pct": 0.46,
+      "avg_return_pct": 0.46,
       "win_rate_pct": 31.4,
-      "stopped_out": 25,
+      "stopped_out": 26,
       "stopped_out_winners": 0,
       "exits": {
-        "open": 15,
-        "stop": 25,
+        "open": 14,
+        "stop": 26,
         "target": 11,
         "time": 0
       }
@@ -83,18 +83,18 @@
       "ticker": "VNRX",
       "theme": "Nuclear / Next-Gen Energy",
       "entry_price": 3.8,
-      "last_price": 0.26,
-      "last_date": "2026-09-25",
-      "days": 187,
-      "hold_return_pct": -93.16,
+      "last_price": 0.25,
+      "last_date": "2026-09-28",
+      "days": 188,
+      "hold_return_pct": -93.42,
       "max_drawdown_pct": -93.42,
       "max_runup_pct": 5.26,
-      "closes": 127,
+      "closes": 128,
       "rules": {
         "hold": {
-          "exit_date": "2026-09-25",
-          "exit_price": 0.26,
-          "return_pct": -93.16,
+          "exit_date": "2026-09-28",
+          "exit_price": 0.25,
+          "return_pct": -93.42,
           "reason": "open"
         },
         "stop_5": {
@@ -122,18 +122,18 @@
       "ticker": "WVE",
       "theme": "Nuclear / Next-Gen Energy",
       "entry_price": 6.2,
-      "last_price": 3.78,
-      "last_date": "2026-09-25",
-      "days": 186,
-      "hold_return_pct": -39.03,
-      "max_drawdown_pct": -39.03,
+      "last_price": 3.67,
+      "last_date": "2026-09-28",
+      "days": 187,
+      "hold_return_pct": -40.81,
+      "max_drawdown_pct": -40.81,
       "max_runup_pct": 22.42,
-      "closes": 126,
+      "closes": 127,
       "rules": {
         "hold": {
-          "exit_date": "2026-09-25",
-          "exit_price": 3.78,
-          "return_pct": -39.03,
+          "exit_date": "2026-09-28",
+          "exit_price": 3.67,
+          "return_pct": -40.81,
           "reason": "open"
         },
         "stop_5": {
@@ -161,30 +161,30 @@
       "ticker": "ILMN",
       "theme": "Biotech / Life Sciences",
       "entry_price": 122.86,
-      "last_price": 270.0,
-      "last_date": "2026-09-25",
-      "days": 169,
-      "hold_return_pct": 119.76,
+      "last_price": 271.9,
+      "last_date": "2026-09-28",
+      "days": 170,
+      "hold_return_pct": 121.31,
       "max_drawdown_pct": -2.03,
       "max_runup_pct": 122.94,
-      "closes": 116,
+      "closes": 117,
       "rules": {
         "hold": {
-          "exit_date": "2026-09-25",
-          "exit_price": 270.0,
-          "return_pct": 119.76,
+          "exit_date": "2026-09-28",
+          "exit_price": 271.9,
+          "return_pct": 121.31,
           "reason": "open"
         },
         "stop_5": {
-          "exit_date": "2026-09-25",
-          "exit_price": 270.0,
-          "return_pct": 119.76,
+          "exit_date": "2026-09-28",
+          "exit_price": 271.9,
+          "return_pct": 121.31,
           "reason": "open"
         },
         "stop_10": {
-          "exit_date": "2026-09-25",
-          "exit_price": 270.0,
-          "return_pct": 119.76,
+          "exit_date": "2026-09-28",
+          "exit_price": 271.9,
+          "return_pct": 121.31,
           "reason": "open"
         },
         "v2": {
@@ -200,18 +200,18 @@
       "ticker": "MSFT",
       "theme": "Quantum / Emerging Tech",
       "entry_price": 378.42,
-      "last_price": 516.17,
-      "last_date": "2026-09-25",
-      "days": 169,
-      "hold_return_pct": 36.4,
+      "last_price": 509.22,
+      "last_date": "2026-09-28",
+      "days": 170,
+      "hold_return_pct": 34.56,
       "max_drawdown_pct": -6.76,
       "max_runup_pct": 36.4,
-      "closes": 116,
+      "closes": 117,
       "rules": {
         "hold": {
-          "exit_date": "2026-09-25",
-          "exit_price": 516.17,
-          "return_pct": 36.4,
+          "exit_date": "2026-09-28",
+          "exit_price": 509.22,
+          "return_pct": 34.56,
           "reason": "open"
         },
         "stop_5": {
@@ -221,15 +221,15 @@
           "reason": "stop"
         },
         "stop_10": {
-          "exit_date": "2026-09-25",
-          "exit_price": 516.17,
-          "return_pct": 36.4,
+          "exit_date": "2026-09-28",
+          "exit_price": 509.22,
+          "return_pct": 34.56,
           "reason": "open"
         },
         "v2": {
-          "exit_date": "2026-09-25",
-          "exit_price": 516.17,
-          "return_pct": 36.4,
+          "exit_date": "2026-09-28",
+          "exit_price": 509.22,
+          "return_pct": 34.56,
           "reason": "open"
         }
       }
@@ -239,18 +239,18 @@
       "ticker": "HII",
       "theme": "Space / Satellite",
       "entry_price": 397.2,
-      "last_price": 264.02,
-      "last_date": "2026-09-25",
-      "days": 168,
-      "hold_return_pct": -33.53,
-      "max_drawdown_pct": -33.53,
+      "last_price": 257.05,
+      "last_date": "2026-09-28",
+      "days": 169,
+      "hold_return_pct": -35.28,
+      "max_drawdown_pct": -35.28,
       "max_runup_pct": 0.23,
-      "closes": 115,
+      "closes": 116,
       "rules": {
         "hold": {
-          "exit_date": "2026-09-25",
-          "exit_price": 264.02,
-          "return_pct": -33.53,
+          "exit_date": "2026-09-28",
+          "exit_price": 257.05,
+          "return_pct": -35.28,
           "reason": "open"
         },
         "stop_5": {
@@ -278,36 +278,36 @@
       "ticker": "CGNX",
       "theme": "Industrial AI / Robotics",
       "entry_price": 55.58,
-      "last_price": 58.66,
-      "last_date": "2026-09-25",
-      "days": 167,
-      "hold_return_pct": 5.54,
+      "last_price": 58.75,
+      "last_date": "2026-09-28",
+      "days": 168,
+      "hold_return_pct": 5.7,
       "max_drawdown_pct": -3.71,
       "max_runup_pct": 30.3,
-      "closes": 114,
+      "closes": 115,
       "rules": {
         "hold": {
-          "exit_date": "2026-09-25",
-          "exit_price": 58.66,
-          "return_pct": 5.54,
+          "exit_date": "2026-09-28",
+          "exit_price": 58.75,
+          "return_pct": 5.7,
           "reason": "open"
         },
         "stop_5": {
-          "exit_date": "2026-09-25",
-          "exit_price": 58.66,
-          "return_pct": 5.54,
+          "exit_date": "2026-09-28",
+          "exit_price": 58.75,
+          "return_pct": 5.7,
           "reason": "open"
         },
         "stop_10": {
-          "exit_date": "2026-09-25",
-          "exit_price": 58.66,
-          "return_pct": 5.54,
+          "exit_date": "2026-09-28",
+          "exit_price": 58.75,
+          "return_pct": 5.7,
           "reason": "open"
         },
         "v2": {
-          "exit_date": "2026-09-25",
-          "exit_price": 58.66,
-          "return_pct": 5.54,
+          "exit_date": "2026-09-28",
+          "exit_price": 58.75,
+          "return_pct": 5.7,
           "reason": "open"
         }
       }
@@ -317,18 +317,18 @@
       "ticker": "IBM",
       "theme": "Quantum / Emerging Tech",
       "entry_price": 240.27,
-      "last_price": 225.51,
-      "last_date": "2026-09-25",
-      "days": 167,
-      "hold_return_pct": -6.14,
+      "last_price": 220.67,
+      "last_date": "2026-09-28",
+      "days": 168,
+      "hold_return_pct": -8.16,
       "max_drawdown_pct": -14.36,
       "max_runup_pct": 37.03,
-      "closes": 114,
+      "closes": 115,
       "rules": {
         "hold": {
-          "exit_date": "2026-09-25",
-          "exit_price": 225.51,
-          "return_pct": -6.14,
+          "exit_date": "2026-09-28",
+          "exit_price": 220.67,
+          "return_pct": -8.16,
           "reason": "open"
         },
         "stop_5": {
@@ -344,9 +344,9 @@
           "reason": "stop"
         },
         "v2": {
-          "exit_date": "2026-09-25",
-          "exit_price": 225.51,
-          "return_pct": -6.14,
+          "exit_date": "2026-09-28",
+          "exit_price": 220.67,
+          "return_pct": -8.16,
           "reason": "open"
         }
       }
@@ -356,30 +356,30 @@
       "ticker": "QLYS",
       "theme": "Cybersecurity",
       "entry_price": 83.22,
-      "last_price": 172.43,
-      "last_date": "2026-09-25",
-      "days": 167,
-      "hold_return_pct": 107.2,
+      "last_price": 173.83,
+      "last_date": "2026-09-28",
+      "days": 168,
+      "hold_return_pct": 108.88,
       "max_drawdown_pct": -1.47,
       "max_runup_pct": 135.38,
-      "closes": 114,
+      "closes": 115,
       "rules": {
         "hold": {
-          "exit_date": "2026-09-25",
-          "exit_price": 172.43,
-          "return_pct": 107.2,
+          "exit_date": "2026-09-28",
+          "exit_price": 173.83,
+          "return_pct": 108.88,
           "reason": "open"
         },
         "stop_5": {
-          "exit_date": "2026-09-25",
-          "exit_price": 172.43,
-          "return_pct": 107.2,
+          "exit_date": "2026-09-28",
+          "exit_price": 173.83,
+          "return_pct": 108.88,
           "reason": "open"
         },
         "stop_10": {
-          "exit_date": "2026-09-25",
-          "exit_price": 172.43,
-          "return_pct": 107.2,
+          "exit_date": "2026-09-28",
+          "exit_price": 173.83,
+          "return_pct": 108.88,
           "reason": "open"
         },
         "v2": {
@@ -395,18 +395,18 @@
       "ticker": "TMDX",
       "theme": "Biotech / Life Sciences",
       "entry_price": 110.98,
-      "last_price": 85.29,
-      "last_date": "2026-09-25",
-      "days": 166,
-      "hold_return_pct": -23.15,
+      "last_price": 82.73,
+      "last_date": "2026-09-28",
+      "days": 167,
+      "hold_return_pct": -25.46,
       "max_drawdown_pct": -44.1,
       "max_runup_pct": 4.41,
-      "closes": 113,
+      "closes": 114,
       "rules": {
         "hold": {
-          "exit_date": "2026-09-25",
-          "exit_price": 85.29,
-          "return_pct": -23.15,
+          "exit_date": "2026-09-28",
+          "exit_price": 82.73,
+          "return_pct": -25.46,
           "reason": "open"
         },
         "stop_5": {
@@ -434,18 +434,18 @@
       "ticker": "HII",
       "theme": "Space / Satellite",
       "entry_price": 395.62,
-      "last_price": 264.02,
-      "last_date": "2026-09-25",
-      "days": 165,
-      "hold_return_pct": -33.26,
-      "max_drawdown_pct": -33.26,
+      "last_price": 257.05,
+      "last_date": "2026-09-28",
+      "days": 166,
+      "hold_return_pct": -35.03,
+      "max_drawdown_pct": -35.03,
       "max_runup_pct": -0.2,
-      "closes": 112,
+      "closes": 113,
       "rules": {
         "hold": {
-          "exit_date": "2026-09-25",
-          "exit_price": 264.02,
-          "return_pct": -33.26,
+          "exit_date": "2026-09-28",
+          "exit_price": 257.05,
+          "return_pct": -35.03,
           "reason": "open"
         },
         "stop_5": {
@@ -473,30 +473,30 @@
       "ticker": "QLYS",
       "theme": "Cybersecurity",
       "entry_price": 83.17,
-      "last_price": 172.43,
-      "last_date": "2026-09-25",
-      "days": 164,
-      "hold_return_pct": 107.32,
+      "last_price": 173.83,
+      "last_date": "2026-09-28",
+      "days": 165,
+      "hold_return_pct": 109.01,
       "max_drawdown_pct": -1.41,
       "max_runup_pct": 135.52,
-      "closes": 111,
+      "closes": 112,
       "rules": {
         "hold": {
-          "exit_date": "2026-09-25",
-          "exit_price": 172.43,
-          "return_pct": 107.32,
+          "exit_date": "2026-09-28",
+          "exit_price": 173.83,
+          "return_pct": 109.01,
           "reason": "open"
         },
         "stop_5": {
-          "exit_date": "2026-09-25",
-          "exit_price": 172.43,
-          "return_pct": 107.32,
+          "exit_date": "2026-09-28",
+          "exit_price": 173.83,
+          "return_pct": 109.01,
           "reason": "open"
         },
         "stop_10": {
-          "exit_date": "2026-09-25",
-          "exit_price": 172.43,
-          "return_pct": 107.32,
+          "exit_date": "2026-09-28",
+          "exit_price": 173.83,
+          "return_pct": 109.01,
           "reason": "open"
         },
         "v2": {
@@ -512,18 +512,18 @@
       "ticker": "UUUU",
       "theme": "Nuclear / Next-Gen Energy",
       "entry_price": 20.76,
-      "last_price": 11.35,
-      "last_date": "2026-09-25",
-      "days": 162,
-      "hold_return_pct": -45.33,
+      "last_price": 11.03,
+      "last_date": "2026-09-28",
+      "days": 163,
+      "hold_return_pct": -46.87,
       "max_drawdown_pct": -48.27,
       "max_runup_pct": 13.29,
-      "closes": 111,
+      "closes": 112,
       "rules": {
         "hold": {
-          "exit_date": "2026-09-25",
-          "exit_price": 11.35,
-          "return_pct": -45.33,
+          "exit_date": "2026-09-28",
+          "exit_price": 11.03,
+          "return_pct": -46.87,
           "reason": "open"
         },
         "stop_5": {
@@ -551,30 +551,30 @@
       "ticker": "QLYS",
       "theme": "Cybersecurity",
       "entry_price": 82.0,
-      "last_price": 172.43,
-      "last_date": "2026-09-25",
-      "days": 161,
-      "hold_return_pct": 110.28,
+      "last_price": 173.83,
+      "last_date": "2026-09-28",
+      "days": 162,
+      "hold_return_pct": 111.99,
       "max_drawdown_pct": 2.49,
       "max_runup_pct": 138.88,
-      "closes": 110,
+      "closes": 111,
       "rules": {
         "hold": {
-          "exit_date": "2026-09-25",
-          "exit_price": 172.43,
-          "return_pct": 110.28,
+          "exit_date": "2026-09-28",
+          "exit_price": 173.83,
+          "return_pct": 111.99,
           "reason": "open"
         },
         "stop_5": {
-          "exit_date": "2026-09-25",
-          "exit_price": 172.43,
-          "return_pct": 110.28,
+          "exit_date": "2026-09-28",
+          "exit_price": 173.83,
+          "return_pct": 111.99,
           "reason": "open"
         },
         "stop_10": {
-          "exit_date": "2026-09-25",
-          "exit_price": 172.43,
-          "return_pct": 110.28,
+          "exit_date": "2026-09-28",
+          "exit_price": 173.83,
+          "return_pct": 111.99,
           "reason": "open"
         },
         "v2": {
@@ -590,18 +590,18 @@
       "ticker": "TMDX",
       "theme": "Biotech / Life Sciences",
       "entry_price": 112.22,
-      "last_price": 85.29,
-      "last_date": "2026-09-25",
-      "days": 160,
-      "hold_return_pct": -24.0,
+      "last_price": 82.73,
+      "last_date": "2026-09-28",
+      "days": 161,
+      "hold_return_pct": -26.28,
       "max_drawdown_pct": -44.72,
       "max_runup_pct": 2.17,
-      "closes": 109,
+      "closes": 110,
       "rules": {
         "hold": {
-          "exit_date": "2026-09-25",
-          "exit_price": 85.29,
-          "return_pct": -24.0,
+          "exit_date": "2026-09-28",
+          "exit_price": 82.73,
+          "return_pct": -26.28,
           "reason": "open"
         },
         "stop_5": {
@@ -629,18 +629,18 @@
       "ticker": "HII",
       "theme": "Space / Satellite",
       "entry_price": 368.91,
-      "last_price": 264.02,
-      "last_date": "2026-09-25",
-      "days": 159,
-      "hold_return_pct": -28.43,
-      "max_drawdown_pct": -28.43,
+      "last_price": 257.05,
+      "last_date": "2026-09-28",
+      "days": 160,
+      "hold_return_pct": -30.32,
+      "max_drawdown_pct": -30.32,
       "max_runup_pct": 0.33,
-      "closes": 108,
+      "closes": 109,
       "rules": {
         "hold": {
-          "exit_date": "2026-09-25",
-          "exit_price": 264.02,
-          "return_pct": -28.43,
+          "exit_date": "2026-09-28",
+          "exit_price": 257.05,
+          "return_pct": -30.32,
           "reason": "open"
         },
         "stop_5": {
@@ -668,18 +668,18 @@
       "ticker": "UUUU",
       "theme": "Nuclear / Next-Gen Energy",
       "entry_price": 20.75,
-      "last_price": 11.35,
-      "last_date": "2026-09-25",
-      "days": 158,
-      "hold_return_pct": -45.3,
+      "last_price": 11.03,
+      "last_date": "2026-09-28",
+      "days": 159,
+      "hold_return_pct": -46.84,
       "max_drawdown_pct": -48.24,
       "max_runup_pct": 13.35,
-      "closes": 107,
+      "closes": 108,
       "rules": {
         "hold": {
-          "exit_date": "2026-09-25",
-          "exit_price": 11.35,
-          "return_pct": -45.3,
+          "exit_date": "2026-09-28",
+          "exit_price": 11.03,
+          "return_pct": -46.84,
           "reason": "open"
         },
         "stop_5": {
@@ -707,30 +707,30 @@
       "ticker": "QLYS",
       "theme": "Cybersecurity",
       "entry_price": 84.34,
-      "last_price": 172.43,
-      "last_date": "2026-09-25",
-      "days": 157,
-      "hold_return_pct": 104.45,
+      "last_price": 173.83,
+      "last_date": "2026-09-28",
+      "days": 158,
+      "hold_return_pct": 106.11,
       "max_drawdown_pct": 0.97,
       "max_runup_pct": 132.25,
-      "closes": 106,
+      "closes": 107,
       "rules": {
         "hold": {
-          "exit_date": "2026-09-25",
-          "exit_price": 172.43,
-          "return_pct": 104.45,
+          "exit_date": "2026-09-28",
+          "exit_price": 173.83,
+          "return_pct": 106.11,
           "reason": "open"
         },
         "stop_5": {
-          "exit_date": "2026-09-25",
-          "exit_price": 172.43,
-          "return_pct": 104.45,
+          "exit_date": "2026-09-28",
+          "exit_price": 173.83,
+          "return_pct": 106.11,
           "reason": "open"
         },
         "stop_10": {
-          "exit_date": "2026-09-25",
-          "exit_price": 172.43,
-          "return_pct": 104.45,
+          "exit_date": "2026-09-28",
+          "exit_price": 173.83,
+          "return_pct": 106.11,
           "reason": "open"
         },
         "v2": {
@@ -746,18 +746,18 @@
       "ticker": "HII",
       "theme": "Space / Satellite",
       "entry_price": 359.29,
-      "last_price": 264.02,
-      "last_date": "2026-09-25",
-      "days": 156,
-      "hold_return_pct": -26.52,
-      "max_drawdown_pct": -26.52,
+      "last_price": 257.05,
+      "last_date": "2026-09-28",
+      "days": 157,
+      "hold_return_pct": -28.46,
+      "max_drawdown_pct": -28.46,
       "max_runup_pct": 1.39,
-      "closes": 106,
+      "closes": 107,
       "rules": {
         "hold": {
-          "exit_date": "2026-09-25",
-          "exit_price": 264.02,
-          "return_pct": -26.52,
+          "exit_date": "2026-09-28",
+          "exit_price": 257.05,
+          "return_pct": -28.46,
           "reason": "open"
         },
         "stop_5": {
@@ -785,18 +785,18 @@
       "ticker": "TMDX",
       "theme": "Biotech / Life Sciences",
       "entry_price": 110.93,
-      "last_price": 85.29,
-      "last_date": "2026-09-25",
-      "days": 155,
-      "hold_return_pct": -23.11,
+      "last_price": 82.73,
+      "last_date": "2026-09-28",
+      "days": 156,
+      "hold_return_pct": -25.42,
       "max_drawdown_pct": -44.07,
       "max_runup_pct": -2.53,
-      "closes": 106,
+      "closes": 107,
       "rules": {
         "hold": {
-          "exit_date": "2026-09-25",
-          "exit_price": 85.29,
-          "return_pct": -23.11,
+          "exit_date": "2026-09-28",
+          "exit_price": 82.73,
+          "return_pct": -25.42,
           "reason": "open"
         },
         "stop_5": {
@@ -824,30 +824,30 @@
       "ticker": "QLYS",
       "theme": "Cybersecurity",
       "entry_price": 85.2,
-      "last_price": 172.43,
-      "last_date": "2026-09-25",
-      "days": 154,
-      "hold_return_pct": 102.38,
+      "last_price": 173.83,
+      "last_date": "2026-09-28",
+      "days": 155,
+      "hold_return_pct": 104.03,
       "max_drawdown_pct": 0.59,
       "max_runup_pct": 129.91,
-      "closes": 105,
+      "closes": 106,
       "rules": {
         "hold": {
-          "exit_date": "2026-09-25",
-          "exit_price": 172.43,
-          "return_pct": 102.38,
+          "exit_date": "2026-09-28",
+          "exit_price": 173.83,
+          "return_pct": 104.03,
           "reason": "open"
         },
         "stop_5": {
-          "exit_date": "2026-09-25",
-          "exit_price": 172.43,
-          "return_pct": 102.38,
+          "exit_date": "2026-09-28",
+          "exit_price": 173.83,
+          "return_pct": 104.03,
           "reason": "open"
         },
         "stop_10": {
-          "exit_date": "2026-09-25",
-          "exit_price": 172.43,
-          "return_pct": 102.38,
+          "exit_date": "2026-09-28",
+          "exit_price": 173.83,
+          "return_pct": 104.03,
           "reason": "open"
         },
         "v2": {
@@ -863,18 +863,18 @@
       "ticker": "HII",
       "theme": "Space / Satellite",
       "entry_price": 368.53,
-      "last_price": 264.02,
-      "last_date": "2026-09-25",
-      "days": 153,
-      "hold_return_pct": -28.36,
-      "max_drawdown_pct": -28.36,
+      "last_price": 257.05,
+      "last_date": "2026-09-28",
+      "days": 154,
+      "hold_return_pct": -30.25,
+      "max_drawdown_pct": -30.25,
       "max_runup_pct": -1.15,
-      "closes": 104,
+      "closes": 105,
       "rules": {
         "hold": {
-          "exit_date": "2026-09-25",
-          "exit_price": 264.02,
-          "return_pct": -28.36,
+          "exit_date": "2026-09-28",
+          "exit_price": 257.05,
+          "return_pct": -30.25,
           "reason": "open"
         },
         "stop_5": {
@@ -902,36 +902,36 @@
       "ticker": "CGNX",
       "theme": "Industrial AI / Robotics",
       "entry_price": 53.52,
-      "last_price": 58.66,
-      "last_date": "2026-09-25",
-      "days": 152,
-      "hold_return_pct": 9.6,
+      "last_price": 58.75,
+      "last_date": "2026-09-28",
+      "days": 153,
+      "hold_return_pct": 9.77,
       "max_drawdown_pct": 3.72,
       "max_runup_pct": 35.31,
-      "closes": 103,
+      "closes": 104,
       "rules": {
         "hold": {
-          "exit_date": "2026-09-25",
-          "exit_price": 58.66,
-          "return_pct": 9.6,
+          "exit_date": "2026-09-28",
+          "exit_price": 58.75,
+          "return_pct": 9.77,
           "reason": "open"
         },
         "stop_5": {
-          "exit_date": "2026-09-25",
-          "exit_price": 58.66,
-          "return_pct": 9.6,
+          "exit_date": "2026-09-28",
+          "exit_price": 58.75,
+          "return_pct": 9.77,
           "reason": "open"
         },
         "stop_10": {
-          "exit_date": "2026-09-25",
-          "exit_price": 58.66,
-          "return_pct": 9.6,
+          "exit_date": "2026-09-28",
+          "exit_price": 58.75,
+          "return_pct": 9.77,
           "reason": "open"
         },
         "v2": {
-          "exit_date": "2026-09-25",
-          "exit_price": 58.66,
-          "return_pct": 9.6,
+          "exit_date": "2026-09-28",
+          "exit_price": 58.75,
+          "return_pct": 9.77,
           "reason": "open"
         }
       }
@@ -941,18 +941,18 @@
       "ticker": "UUUU",
       "theme": "Nuclear / Next-Gen Energy",
       "entry_price": 21.64,
-      "last_price": 11.35,
-      "last_date": "2026-09-25",
-      "days": 151,
-      "hold_return_pct": -47.55,
+      "last_price": 11.03,
+      "last_date": "2026-09-28",
+      "days": 152,
+      "hold_return_pct": -49.03,
       "max_drawdown_pct": -50.37,
       "max_runup_pct": 8.69,
-      "closes": 102,
+      "closes": 103,
       "rules": {
         "hold": {
-          "exit_date": "2026-09-25",
-          "exit_price": 11.35,
-          "return_pct": -47.55,
+          "exit_date": "2026-09-28",
+          "exit_price": 11.03,
+          "return_pct": -49.03,
           "reason": "open"
         },
         "stop_5": {
@@ -980,18 +980,18 @@
       "ticker": "UUUU",
       "theme": "Nuclear / Next-Gen Energy",
       "entry_price": 21.62,
-      "last_price": 11.35,
-      "last_date": "2026-09-25",
-      "days": 147,
-      "hold_return_pct": -47.5,
+      "last_price": 11.03,
+      "last_date": "2026-09-28",
+      "days": 148,
+      "hold_return_pct": -48.98,
       "max_drawdown_pct": -50.32,
       "max_runup_pct": 8.79,
-      "closes": 100,
+      "closes": 101,
       "rules": {
         "hold": {
-          "exit_date": "2026-09-25",
-          "exit_price": 11.35,
-          "return_pct": -47.5,
+          "exit_date": "2026-09-28",
+          "exit_price": 11.03,
+          "return_pct": -48.98,
           "reason": "open"
         },
         "stop_5": {
@@ -1019,18 +1019,18 @@
       "ticker": "HII",
       "theme": "Space / Satellite",
       "entry_price": 326.13,
-      "last_price": 264.02,
-      "last_date": "2026-09-25",
-      "days": 146,
-      "hold_return_pct": -19.04,
-      "max_drawdown_pct": -19.04,
+      "last_price": 257.05,
+      "last_date": "2026-09-28",
+      "days": 147,
+      "hold_return_pct": -21.18,
+      "max_drawdown_pct": -21.18,
       "max_runup_pct": 3.32,
-      "closes": 99,
+      "closes": 100,
       "rules": {
         "hold": {
-          "exit_date": "2026-09-25",
-          "exit_price": 264.02,
-          "return_pct": -19.04,
+          "exit_date": "2026-09-28",
+          "exit_price": 257.05,
+          "return_pct": -21.18,
           "reason": "open"
         },
         "stop_5": {
@@ -1046,10 +1046,10 @@
           "reason": "stop"
         },
         "v2": {
-          "exit_date": "2026-09-25",
-          "exit_price": 264.02,
-          "return_pct": -19.04,
-          "reason": "open"
+          "exit_date": "2026-09-28",
+          "exit_price": 257.05,
+          "return_pct": -21.18,
+          "reason": "stop"
         }
       }
     },
@@ -1060,7 +1060,7 @@
       "entry_price": 104.91,
       "last_price": 104.91,
       "last_date": "2026-05-22",
-      "days": 145,
+      "days": 146,
       "hold_return_pct": 0.0,
       "max_drawdown_pct": 0.0,
       "max_runup_pct": 0.0,
@@ -1097,18 +1097,18 @@
       "ticker": "IMVT",
       "theme": "Biotech / Life Sciences",
       "entry_price": 28.34,
-      "last_price": 33.3,
-      "last_date": "2026-09-25",
-      "days": 144,
-      "hold_return_pct": 17.5,
+      "last_price": 33.49,
+      "last_date": "2026-09-28",
+      "days": 145,
+      "hold_return_pct": 18.17,
       "max_drawdown_pct": -7.23,
       "max_runup_pct": 58.65,
-      "closes": 97,
+      "closes": 98,
       "rules": {
         "hold": {
-          "exit_date": "2026-09-25",
-          "exit_price": 33.3,
-          "return_pct": 17.5,
+          "exit_date": "2026-09-28",
+          "exit_price": 33.49,
+          "return_pct": 18.17,
           "reason": "open"
         },
         "stop_5": {
@@ -1118,9 +1118,9 @@
           "reason": "stop"
         },
         "stop_10": {
-          "exit_date": "2026-09-25",
-          "exit_price": 33.3,
-          "return_pct": 17.5,
+          "exit_date": "2026-09-28",
+          "exit_price": 33.49,
+          "return_pct": 18.17,
           "reason": "open"
         },
         "v2": {
@@ -1136,18 +1136,18 @@
       "ticker": "IMVT",
       "theme": "Biotech / Life Sciences",
       "entry_price": 29.73,
-      "last_price": 33.3,
-      "last_date": "2026-09-25",
-      "days": 141,
-      "hold_return_pct": 12.01,
+      "last_price": 33.49,
+      "last_date": "2026-09-28",
+      "days": 142,
+      "hold_return_pct": 12.65,
       "max_drawdown_pct": -11.57,
       "max_runup_pct": 51.23,
-      "closes": 96,
+      "closes": 97,
       "rules": {
         "hold": {
-          "exit_date": "2026-09-25",
-          "exit_price": 33.3,
-          "return_pct": 12.01,
+          "exit_date": "2026-09-28",
+          "exit_price": 33.49,
+          "return_pct": 12.65,
           "reason": "open"
         },
         "stop_5": {
@@ -1175,18 +1175,18 @@
       "ticker": "UEC",
       "theme": "Nuclear / Next-Gen Energy",
       "entry_price": 15.1,
-      "last_price": 9.41,
-      "last_date": "2026-09-25",
-      "days": 140,
-      "hold_return_pct": -37.68,
+      "last_price": 9.21,
+      "last_date": "2026-09-28",
+      "days": 141,
+      "hold_return_pct": -39.01,
       "max_drawdown_pct": -40.13,
       "max_runup_pct": 2.65,
-      "closes": 95,
+      "closes": 96,
       "rules": {
         "hold": {
-          "exit_date": "2026-09-25",
-          "exit_price": 9.41,
-          "return_pct": -37.68,
+          "exit_date": "2026-09-28",
+          "exit_price": 9.21,
+          "return_pct": -39.01,
           "reason": "open"
         },
         "stop_5": {
@@ -1214,18 +1214,18 @@
       "ticker": "UUUU",
       "theme": "Nuclear / Next-Gen Energy",
       "entry_price": 20.95,
-      "last_price": 11.35,
-      "last_date": "2026-09-25",
-      "days": 139,
-      "hold_return_pct": -45.82,
+      "last_price": 11.03,
+      "last_date": "2026-09-28",
+      "days": 140,
+      "hold_return_pct": -47.35,
       "max_drawdown_pct": -48.74,
       "max_runup_pct": -3.68,
-      "closes": 94,
+      "closes": 95,
       "rules": {
         "hold": {
-          "exit_date": "2026-09-25",
-          "exit_price": 11.35,
-          "return_pct": -45.82,
+          "exit_date": "2026-09-28",
+          "exit_price": 11.03,
+          "return_pct": -47.35,
           "reason": "open"
         },
         "stop_5": {
@@ -1253,18 +1253,18 @@
       "ticker": "IMVT",
       "theme": "Biotech / Life Sciences",
       "entry_price": 28.62,
-      "last_price": 33.3,
-      "last_date": "2026-09-25",
-      "days": 138,
-      "hold_return_pct": 16.35,
+      "last_price": 33.49,
+      "last_date": "2026-09-28",
+      "days": 139,
+      "hold_return_pct": 17.02,
       "max_drawdown_pct": -8.14,
       "max_runup_pct": 57.09,
-      "closes": 93,
+      "closes": 94,
       "rules": {
         "hold": {
-          "exit_date": "2026-09-25",
-          "exit_price": 33.3,
-          "return_pct": 16.35,
+          "exit_date": "2026-09-28",
+          "exit_price": 33.49,
+          "return_pct": 17.02,
           "reason": "open"
         },
         "stop_5": {
@@ -1274,9 +1274,9 @@
           "reason": "stop"
         },
         "stop_10": {
-          "exit_date": "2026-09-25",
-          "exit_price": 33.3,
-          "return_pct": 16.35,
+          "exit_date": "2026-09-28",
+          "exit_price": 33.49,
+          "return_pct": 17.02,
           "reason": "open"
         },
         "v2": {
@@ -1292,18 +1292,18 @@
       "ticker": "UEC",
       "theme": "Nuclear / Next-Gen Energy",
       "entry_price": 14.81,
-      "last_price": 9.41,
-      "last_date": "2026-09-25",
-      "days": 137,
-      "hold_return_pct": -36.46,
+      "last_price": 9.21,
+      "last_date": "2026-09-28",
+      "days": 138,
+      "hold_return_pct": -37.81,
       "max_drawdown_pct": -38.96,
       "max_runup_pct": 4.25,
-      "closes": 92,
+      "closes": 93,
       "rules": {
         "hold": {
-          "exit_date": "2026-09-25",
-          "exit_price": 9.41,
-          "return_pct": -36.46,
+          "exit_date": "2026-09-28",
+          "exit_price": 9.21,
+          "return_pct": -37.81,
           "reason": "open"
         },
         "stop_5": {
@@ -1331,30 +1331,30 @@
       "ticker": "IMVT",
       "theme": "Biotech / Life Sciences",
       "entry_price": 26.95,
-      "last_price": 33.3,
-      "last_date": "2026-09-25",
-      "days": 134,
-      "hold_return_pct": 23.56,
+      "last_price": 33.49,
+      "last_date": "2026-09-28",
+      "days": 135,
+      "hold_return_pct": 24.27,
       "max_drawdown_pct": -2.45,
       "max_runup_pct": 66.83,
-      "closes": 91,
+      "closes": 92,
       "rules": {
         "hold": {
-          "exit_date": "2026-09-25",
-          "exit_price": 33.3,
-          "return_pct": 23.56,
+          "exit_date": "2026-09-28",
+          "exit_price": 33.49,
+          "return_pct": 24.27,
           "reason": "open"
         },
         "stop_5": {
-          "exit_date": "2026-09-25",
-          "exit_price": 33.3,
-          "return_pct": 23.56,
+          "exit_date": "2026-09-28",
+          "exit_price": 33.49,
+          "return_pct": 24.27,
           "reason": "open"
         },
         "stop_10": {
-          "exit_date": "2026-09-25",
-          "exit_price": 33.3,
-          "return_pct": 23.56,
+          "exit_date": "2026-09-28",
+          "exit_price": 33.49,
+          "return_pct": 24.27,
           "reason": "open"
         },
         "v2": {
@@ -1370,18 +1370,18 @@
       "ticker": "CGNX",
       "theme": "Industrial AI / Robotics",
       "entry_price": 61.91,
-      "last_price": 58.66,
-      "last_date": "2026-09-25",
-      "days": 133,
-      "hold_return_pct": -5.25,
+      "last_price": 58.75,
+      "last_date": "2026-09-28",
+      "days": 134,
+      "hold_return_pct": -5.1,
       "max_drawdown_pct": -6.8,
       "max_runup_pct": 16.98,
-      "closes": 90,
+      "closes": 91,
       "rules": {
         "hold": {
-          "exit_date": "2026-09-25",
-          "exit_price": 58.66,
-          "return_pct": -5.25,
+          "exit_date": "2026-09-28",
+          "exit_price": 58.75,
+          "return_pct": -5.1,
           "reason": "open"
         },
         "stop_5": {
@@ -1391,15 +1391,15 @@
           "reason": "stop"
         },
         "stop_10": {
-          "exit_date": "2026-09-25",
-          "exit_price": 58.66,
-          "return_pct": -5.25,
+          "exit_date": "2026-09-28",
+          "exit_price": 58.75,
+          "return_pct": -5.1,
           "reason": "open"
         },
         "v2": {
-          "exit_date": "2026-09-25",
-          "exit_price": 58.66,
-          "return_pct": -5.25,
+          "exit_date": "2026-09-28",
+          "exit_price": 58.75,
+          "return_pct": -5.1,
           "reason": "open"
         }
       }
@@ -1409,18 +1409,18 @@
       "ticker": "LDOS",
       "theme": "Industrial AI / Robotics",
       "entry_price": 124.78,
-      "last_price": 123.61,
-      "last_date": "2026-09-25",
-      "days": 132,
-      "hold_return_pct": -0.94,
+      "last_price": 122.35,
+      "last_date": "2026-09-28",
+      "days": 133,
+      "hold_return_pct": -1.95,
       "max_drawdown_pct": -19.86,
       "max_runup_pct": 17.25,
-      "closes": 89,
+      "closes": 90,
       "rules": {
         "hold": {
-          "exit_date": "2026-09-25",
-          "exit_price": 123.61,
-          "return_pct": -0.94,
+          "exit_date": "2026-09-28",
+          "exit_price": 122.35,
+          "return_pct": -1.95,
           "reason": "open"
         },
         "stop_5": {
@@ -1436,9 +1436,9 @@
           "reason": "stop"
         },
         "v2": {
-          "exit_date": "2026-09-25",
-          "exit_price": 123.61,
-          "return_pct": -0.94,
+          "exit_date": "2026-09-28",
+          "exit_price": 122.35,
+          "return_pct": -1.95,
           "reason": "open"
         }
       }
@@ -1448,18 +1448,18 @@
       "ticker": "QBTS",
       "theme": "Quantum / Emerging Tech",
       "entry_price": 31.11,
-      "last_price": 17.41,
-      "last_date": "2026-09-25",
-      "days": 130,
-      "hold_return_pct": -44.04,
+      "last_price": 16.78,
+      "last_date": "2026-09-28",
+      "days": 131,
+      "hold_return_pct": -46.06,
       "max_drawdown_pct": -47.99,
       "max_runup_pct": -3.12,
-      "closes": 87,
+      "closes": 88,
       "rules": {
         "hold": {
-          "exit_date": "2026-09-25",
-          "exit_price": 17.41,
-          "return_pct": -44.04,
+          "exit_date": "2026-09-28",
+          "exit_price": 16.78,
+          "return_pct": -46.06,
           "reason": "open"
         },
         "stop_5": {
@@ -1487,18 +1487,18 @@
       "ticker": "LDOS",
       "theme": "Industrial AI / Robotics",
       "entry_price": 126.01,
-      "last_price": 123.61,
-      "last_date": "2026-09-25",
-      "days": 126,
-      "hold_return_pct": -1.9,
+      "last_price": 122.35,
+      "last_date": "2026-09-28",
+      "days": 127,
+      "hold_return_pct": -2.9,
       "max_drawdown_pct": -20.64,
       "max_runup_pct": 16.11,
-      "closes": 86,
+      "closes": 87,
       "rules": {
         "hold": {
-          "exit_date": "2026-09-25",
-          "exit_price": 123.61,
-          "return_pct": -1.9,
+          "exit_date": "2026-09-28",
+          "exit_price": 122.35,
+          "return_pct": -2.9,
           "reason": "open"
         },
         "stop_5": {
@@ -1526,30 +1526,30 @@
       "ticker": "PANW",
       "theme": "Cybersecurity",
       "entry_price": 248.17,
-      "last_price": 374.74,
-      "last_date": "2026-09-25",
-      "days": 125,
-      "hold_return_pct": 51.0,
+      "last_price": 392.09,
+      "last_date": "2026-09-28",
+      "days": 126,
+      "hold_return_pct": 57.99,
       "max_drawdown_pct": 0.12,
       "max_runup_pct": 59.57,
-      "closes": 85,
+      "closes": 86,
       "rules": {
         "hold": {
-          "exit_date": "2026-09-25",
-          "exit_price": 374.74,
-          "return_pct": 51.0,
+          "exit_date": "2026-09-28",
+          "exit_price": 392.09,
+          "return_pct": 57.99,
           "reason": "open"
         },
         "stop_5": {
-          "exit_date": "2026-09-25",
-          "exit_price": 374.74,
-          "return_pct": 51.0,
+          "exit_date": "2026-09-28",
+          "exit_price": 392.09,
+          "return_pct": 57.99,
           "reason": "open"
         },
         "stop_10": {
-          "exit_date": "2026-09-25",
-          "exit_price": 374.74,
-          "return_pct": 51.0,
+          "exit_date": "2026-09-28",
+          "exit_price": 392.09,
+          "return_pct": 57.99,
           "reason": "open"
         },
         "v2": {
@@ -1565,18 +1565,18 @@
       "ticker": "QBTS",
       "theme": "Quantum / Emerging Tech",
       "entry_price": 29.89,
-      "last_price": 17.41,
-      "last_date": "2026-09-25",
-      "days": 124,
-      "hold_return_pct": -41.75,
+      "last_price": 16.78,
+      "last_date": "2026-09-28",
+      "days": 125,
+      "hold_return_pct": -43.86,
       "max_drawdown_pct": -45.87,
       "max_runup_pct": 0.84,
-      "closes": 84,
+      "closes": 85,
       "rules": {
         "hold": {
-          "exit_date": "2026-09-25",
-          "exit_price": 17.41,
-          "return_pct": -41.75,
+          "exit_date": "2026-09-28",
+          "exit_price": 16.78,
+          "return_pct": -43.86,
           "reason": "open"
         },
         "stop_5": {
@@ -1604,18 +1604,18 @@
       "ticker": "KTOS",
       "theme": "Defense Tech / Dual-Use",
       "entry_price": 65.19,
-      "last_price": 45.62,
-      "last_date": "2026-09-25",
-      "days": 123,
-      "hold_return_pct": -30.02,
+      "last_price": 44.07,
+      "last_date": "2026-09-28",
+      "days": 124,
+      "hold_return_pct": -32.4,
       "max_drawdown_pct": -32.69,
       "max_runup_pct": -0.94,
-      "closes": 83,
+      "closes": 84,
       "rules": {
         "hold": {
-          "exit_date": "2026-09-25",
-          "exit_price": 45.62,
-          "return_pct": -30.02,
+          "exit_date": "2026-09-28",
+          "exit_price": 44.07,
+          "return_pct": -32.4,
           "reason": "open"
         },
         "stop_5": {
@@ -1643,18 +1643,18 @@
       "ticker": "UUUU",
       "theme": "Nuclear / Next-Gen Energy",
       "entry_price": 18.56,
-      "last_price": 11.35,
-      "last_date": "2026-09-25",
-      "days": 120,
-      "hold_return_pct": -38.85,
+      "last_price": 11.03,
+      "last_date": "2026-09-28",
+      "days": 121,
+      "hold_return_pct": -40.57,
       "max_drawdown_pct": -42.13,
       "max_runup_pct": 5.28,
-      "closes": 82,
+      "closes": 83,
       "rules": {
         "hold": {
-          "exit_date": "2026-09-25",
-          "exit_price": 11.35,
-          "return_pct": -38.85,
+          "exit_date": "2026-09-28",
+          "exit_price": 11.03,
+          "return_pct": -40.57,
           "reason": "open"
         },
         "stop_5": {
@@ -1682,18 +1682,18 @@
       "ticker": "LDOS",
       "theme": "Industrial AI / Robotics",
       "entry_price": 123.73,
-      "last_price": 123.61,
-      "last_date": "2026-09-25",
-      "days": 119,
-      "hold_return_pct": -0.1,
+      "last_price": 122.35,
+      "last_date": "2026-09-28",
+      "days": 120,
+      "hold_return_pct": -1.12,
       "max_drawdown_pct": -19.18,
       "max_runup_pct": 18.25,
-      "closes": 81,
+      "closes": 82,
       "rules": {
         "hold": {
-          "exit_date": "2026-09-25",
-          "exit_price": 123.61,
-          "return_pct": -0.1,
+          "exit_date": "2026-09-28",
+          "exit_price": 122.35,
+          "return_pct": -1.12,
           "reason": "open"
         },
         "stop_5": {
@@ -1709,9 +1709,9 @@
           "reason": "stop"
         },
         "v2": {
-          "exit_date": "2026-09-25",
-          "exit_price": 123.61,
-          "return_pct": -0.1,
+          "exit_date": "2026-09-28",
+          "exit_price": 122.35,
+          "return_pct": -1.12,
           "reason": "open"
         }
       }
@@ -1721,36 +1721,36 @@
       "ticker": "PANW",
       "theme": "Cybersecurity",
       "entry_price": 270.26,
-      "last_price": 374.74,
-      "last_date": "2026-09-25",
-      "days": 117,
-      "hold_return_pct": 38.66,
+      "last_price": 392.09,
+      "last_date": "2026-09-28",
+      "days": 118,
+      "hold_return_pct": 45.08,
       "max_drawdown_pct": -3.6,
       "max_runup_pct": 46.53,
-      "closes": 79,
+      "closes": 80,
       "rules": {
         "hold": {
-          "exit_date": "2026-09-25",
-          "exit_price": 374.74,
-          "return_pct": 38.66,
+          "exit_date": "2026-09-28",
+          "exit_price": 392.09,
+          "return_pct": 45.08,
           "reason": "open"
         },
         "stop_5": {
-          "exit_date": "2026-09-25",
-          "exit_price": 374.74,
-          "return_pct": 38.66,
+          "exit_date": "2026-09-28",
+          "exit_price": 392.09,
+          "return_pct": 45.08,
           "reason": "open"
         },
         "stop_10": {
-          "exit_date": "2026-09-25",
-          "exit_price": 374.74,
-          "return_pct": 38.66,
+          "exit_date": "2026-09-28",
+          "exit_price": 392.09,
+          "return_pct": 45.08,
           "reason": "open"
         },
         "v2": {
-          "exit_date": "2026-09-25",
-          "exit_price": 374.74,
-          "return_pct": 38.66,
+          "exit_date": "2026-09-28",
+          "exit_price": 392.09,
+          "return_pct": 45.08,
           "reason": "open"
         }
       }
@@ -1760,18 +1760,18 @@
       "ticker": "LDOS",
       "theme": "Industrial AI / Robotics",
       "entry_price": 124.57,
-      "last_price": 123.61,
-      "last_date": "2026-09-25",
-      "days": 116,
-      "hold_return_pct": -0.77,
+      "last_price": 122.35,
+      "last_date": "2026-09-28",
+      "days": 117,
+      "hold_return_pct": -1.78,
       "max_drawdown_pct": -19.72,
       "max_runup_pct": 17.45,
-      "closes": 78,
+      "closes": 79,
       "rules": {
         "hold": {
-          "exit_date": "2026-09-25",
-          "exit_price": 123.61,
-          "return_pct": -0.77,
+          "exit_date": "2026-09-28",
+          "exit_price": 122.35,
+          "return_pct": -1.78,
           "reason": "open"
         },
         "stop_5": {
@@ -1787,9 +1787,9 @@
           "reason": "stop"
         },
         "v2": {
-          "exit_date": "2026-09-25",
-          "exit_price": 123.61,
-          "return_pct": -0.77,
+          "exit_date": "2026-09-28",
+          "exit_price": 122.35,
+          "return_pct": -1.78,
           "reason": "open"
         }
       }
@@ -1799,18 +1799,18 @@
       "ticker": "LUNR",
       "theme": "Space / Satellite",
       "entry_price": 27.27,
-      "last_price": 15.61,
-      "last_date": "2026-09-25",
-      "days": 111,
-      "hold_return_pct": -42.76,
+      "last_price": 15.2,
+      "last_date": "2026-09-28",
+      "days": 112,
+      "hold_return_pct": -44.26,
       "max_drawdown_pct": -58.23,
       "max_runup_pct": 12.36,
-      "closes": 75,
+      "closes": 76,
       "rules": {
         "hold": {
-          "exit_date": "2026-09-25",
-          "exit_price": 15.61,
-          "return_pct": -42.76,
+          "exit_date": "2026-09-28",
+          "exit_price": 15.2,
+          "return_pct": -44.26,
           "reason": "open"
         },
         "stop_5": {
@@ -1838,36 +1838,36 @@
       "ticker": "IMVT",
       "theme": "Biotech / Life Sciences",
       "entry_price": 32.3,
-      "last_price": 33.3,
-      "last_date": "2026-09-25",
-      "days": 110,
-      "hold_return_pct": 3.1,
+      "last_price": 33.49,
+      "last_date": "2026-09-28",
+      "days": 111,
+      "hold_return_pct": 3.68,
       "max_drawdown_pct": 1.8,
       "max_runup_pct": 39.2,
-      "closes": 74,
+      "closes": 75,
       "rules": {
         "hold": {
-          "exit_date": "2026-09-25",
-          "exit_price": 33.3,
-          "return_pct": 3.1,
+          "exit_date": "2026-09-28",
+          "exit_price": 33.49,
+          "return_pct": 3.68,
           "reason": "open"
         },
         "stop_5": {
-          "exit_date": "2026-09-25",
-          "exit_price": 33.3,
-          "return_pct": 3.1,
+          "exit_date": "2026-09-28",
+          "exit_price": 33.49,
+          "return_pct": 3.68,
           "reason": "open"
         },
         "stop_10": {
-          "exit_date": "2026-09-25",
-          "exit_price": 33.3,
-          "return_pct": 3.1,
+          "exit_date": "2026-09-28",
+          "exit_price": 33.49,
+          "return_pct": 3.68,
           "reason": "open"
         },
         "v2": {
-          "exit_date": "2026-09-25",
-          "exit_price": 33.3,
-          "return_pct": 3.1,
+          "exit_date": "2026-09-28",
+          "exit_price": 33.49,
+          "return_pct": 3.68,
           "reason": "open"
         }
       }
@@ -1877,18 +1877,18 @@
       "ticker": "VST",
       "theme": "Nuclear / Next-Gen Energy",
       "entry_price": 147.8,
-      "last_price": 138.46,
-      "last_date": "2026-09-25",
-      "days": 109,
-      "hold_return_pct": -6.32,
+      "last_price": 138.02,
+      "last_date": "2026-09-28",
+      "days": 110,
+      "hold_return_pct": -6.62,
       "max_drawdown_pct": -8.21,
       "max_runup_pct": 14.33,
-      "closes": 73,
+      "closes": 74,
       "rules": {
         "hold": {
-          "exit_date": "2026-09-25",
-          "exit_price": 138.46,
-          "return_pct": -6.32,
+          "exit_date": "2026-09-28",
+          "exit_price": 138.02,
+          "return_pct": -6.62,
           "reason": "open"
         },
         "stop_5": {
@@ -1898,15 +1898,15 @@
           "reason": "stop"
         },
         "stop_10": {
-          "exit_date": "2026-09-25",
-          "exit_price": 138.46,
-          "return_pct": -6.32,
+          "exit_date": "2026-09-28",
+          "exit_price": 138.02,
+          "return_pct": -6.62,
           "reason": "open"
         },
         "v2": {
-          "exit_date": "2026-09-25",
-          "exit_price": 138.46,
-          "return_pct": -6.32,
+          "exit_date": "2026-09-28",
+          "exit_price": 138.02,
+          "return_pct": -6.62,
           "reason": "open"
         }
       }
@@ -1916,18 +1916,18 @@
       "ticker": "LUNR",
       "theme": "Space / Satellite",
       "entry_price": 23.39,
-      "last_price": 15.61,
-      "last_date": "2026-09-25",
-      "days": 105,
-      "hold_return_pct": -33.26,
+      "last_price": 15.2,
+      "last_date": "2026-09-28",
+      "days": 106,
+      "hold_return_pct": -35.01,
       "max_drawdown_pct": -51.3,
       "max_runup_pct": -0.13,
-      "closes": 71,
+      "closes": 72,
       "rules": {
         "hold": {
-          "exit_date": "2026-09-25",
-          "exit_price": 15.61,
-          "return_pct": -33.26,
+          "exit_date": "2026-09-28",
+          "exit_price": 15.2,
+          "return_pct": -35.01,
           "reason": "open"
         },
         "stop_5": {
@@ -1955,18 +1955,18 @@
       "ticker": "CGNX",
       "theme": "Industrial AI / Robotics",
       "entry_price": 65.41,
-      "last_price": 58.66,
-      "last_date": "2026-09-25",
-      "days": 104,
-      "hold_return_pct": -10.32,
+      "last_price": 58.75,
+      "last_date": "2026-09-28",
+      "days": 105,
+      "hold_return_pct": -10.18,
       "max_drawdown_pct": -11.79,
       "max_runup_pct": 10.72,
-      "closes": 70,
+      "closes": 71,
       "rules": {
         "hold": {
-          "exit_date": "2026-09-25",
-          "exit_price": 58.66,
-          "return_pct": -10.32,
+          "exit_date": "2026-09-28",
+          "exit_price": 58.75,
+          "return_pct": -10.18,
           "reason": "open"
         },
         "stop_5": {
@@ -1982,9 +1982,9 @@
           "reason": "stop"
         },
         "v2": {
-          "exit_date": "2026-09-25",
-          "exit_price": 58.66,
-          "return_pct": -10.32,
+          "exit_date": "2026-09-28",
+          "exit_price": 58.75,
+          "return_pct": -10.18,
           "reason": "open"
         }
       }
@@ -1994,36 +1994,36 @@
       "ticker": "IMVT",
       "theme": "Biotech / Life Sciences",
       "entry_price": 34.71,
-      "last_price": 33.3,
-      "last_date": "2026-09-25",
-      "days": 103,
-      "hold_return_pct": -4.06,
+      "last_price": 33.49,
+      "last_date": "2026-09-28",
+      "days": 104,
+      "hold_return_pct": -3.51,
       "max_drawdown_pct": -4.06,
       "max_runup_pct": 29.53,
-      "closes": 69,
+      "closes": 70,
       "rules": {
         "hold": {
-          "exit_date": "2026-09-25",
-          "exit_price": 33.3,
-          "return_pct": -4.06,
+          "exit_date": "2026-09-28",
+          "exit_price": 33.49,
+          "return_pct": -3.51,
           "reason": "open"
         },
         "stop_5": {
-          "exit_date": "2026-09-25",
-          "exit_price": 33.3,
-          "return_pct": -4.06,
+          "exit_date": "2026-09-28",
+          "exit_price": 33.49,
+          "return_pct": -3.51,
           "reason": "open"
         },
         "stop_10": {
-          "exit_date": "2026-09-25",
-          "exit_price": 33.3,
-          "return_pct": -4.06,
+          "exit_date": "2026-09-28",
+          "exit_price": 33.49,
+          "return_pct": -3.51,
           "reason": "open"
         },
         "v2": {
-          "exit_date": "2026-09-25",
-          "exit_price": 33.3,
-          "return_pct": -4.06,
+          "exit_date": "2026-09-28",
+          "exit_price": 33.49,
+          "return_pct": -3.51,
           "reason": "open"
         }
       }
@@ -2033,18 +2033,18 @@
       "ticker": "LUNR",
       "theme": "Space / Satellite",
       "entry_price": 21.68,
-      "last_price": 15.61,
-      "last_date": "2026-09-25",
-      "days": 99,
-      "hold_return_pct": -28.0,
+      "last_price": 15.2,
+      "last_date": "2026-09-28",
+      "days": 100,
+      "hold_return_pct": -29.89,
       "max_drawdown_pct": -47.46,
       "max_runup_pct": 1.43,
-      "closes": 68,
+      "closes": 69,
       "rules": {
         "hold": {
-          "exit_date": "2026-09-25",
-          "exit_price": 15.61,
-          "return_pct": -28.0,
+          "exit_date": "2026-09-28",
+          "exit_price": 15.2,
+          "return_pct": -29.89,
           "reason": "open"
         },
         "stop_5": {

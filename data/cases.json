@@ -1,6 +1,6 @@
 {
   "schema": "https://edwardphill.github.io/stockpicker/data/schema/cases.schema.json",
-  "generated": "2026-09-29 22:26 UTC",
+  "generated": "2026-09-30 00:47 UTC",
   "cases": [
     {
       "ticker": "ILMN",
@@ -11,7 +11,7 @@
       "entry_price": 122.86,
       "current_price": 272.0,
       "return_pct": 121.39,
-      "days_held": 169,
+      "days_held": 170,
       "analyst_target_at_pick": 136.11,
       "analyst_upside_at_pick_pct": 10.8,
       "signals": [
@@ -52,15 +52,15 @@
         "max_drawdown_pct": -2.03,
         "max_runup_pct": 122.94,
         "stop_5": {
-          "exit_date": "2026-09-25",
-          "exit_price": 270.0,
-          "return_pct": 119.76,
+          "exit_date": "2026-09-28",
+          "exit_price": 271.9,
+          "return_pct": 121.31,
           "reason": "open"
         },
         "stop_10": {
-          "exit_date": "2026-09-25",
-          "exit_price": 270.0,
-          "return_pct": 119.76,
+          "exit_date": "2026-09-28",
+          "exit_price": 271.9,
+          "return_pct": 121.31,
           "reason": "open"
         }
       },
@@ -78,7 +78,7 @@
       "entry_price": 83.22,
       "current_price": 178.35,
       "return_pct": 114.31,
-      "days_held": 167,
+      "days_held": 168,
       "analyst_target_at_pick": 133.33,
       "analyst_upside_at_pick_pct": 60.2,
       "signals": [
@@ -121,15 +121,15 @@
         "max_drawdown_pct": -1.47,
         "max_runup_pct": 135.38,
         "stop_5": {
-          "exit_date": "2026-09-25",
-          "exit_price": 172.43,
-          "return_pct": 107.2,
+          "exit_date": "2026-09-28",
+          "exit_price": 173.83,
+          "return_pct": 108.88,
           "reason": "open"
         },
         "stop_10": {
-          "exit_date": "2026-09-25",
-          "exit_price": 172.43,
-          "return_pct": 107.2,
+          "exit_date": "2026-09-28",
+          "exit_price": 173.83,
+          "return_pct": 108.88,
           "reason": "open"
         }
       },
@@ -147,7 +147,7 @@
       "entry_price": 248.17,
       "current_price": 388.41,
       "return_pct": 56.51,
-      "days_held": 125,
+      "days_held": 126,
       "analyst_target_at_pick": 227.14,
       "analyst_upside_at_pick_pct": -8.5,
       "signals": [
@@ -182,15 +182,15 @@
         "max_drawdown_pct": 0.12,
         "max_runup_pct": 59.57,
         "stop_5": {
-          "exit_date": "2026-09-25",
-          "exit_price": 374.74,
-          "return_pct": 51.0,
+          "exit_date": "2026-09-28",
+          "exit_price": 392.09,
+          "return_pct": 57.99,
           "reason": "open"
         },
         "stop_10": {
-          "exit_date": "2026-09-25",
-          "exit_price": 374.74,
-          "return_pct": 51.0,
+          "exit_date": "2026-09-28",
+          "exit_price": 392.09,
+          "return_pct": 57.99,
           "reason": "open"
         }
       },
@@ -209,7 +209,7 @@
       "entry_price": 378.42,
       "current_price": 508.96,
       "return_pct": 34.5,
-      "days_held": 169,
+      "days_held": 170,
       "analyst_target_at_pick": 585.41,
       "analyst_upside_at_pick_pct": 54.7,
       "signals": [
@@ -250,9 +250,9 @@
           "reason": "stop"
         },
         "stop_10": {
-          "exit_date": "2026-09-25",
-          "exit_price": 516.17,
-          "return_pct": 36.4,
+          "exit_date": "2026-09-28",
+          "exit_price": 509.22,
+          "return_pct": 34.56,
           "reason": "open"
         }
       },
