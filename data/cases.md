@@ -1,32 +1,11 @@
 # Case studies: the best picks so far
 
-Built 2026-09-30 00:47 UTC from the tracker's top 4 stocks by return since first pick. Each shows what the system saw at the time (signals, analyst target, macro), what the AI bull and bear reports argued, and what happened. Source: [cases.json](https://edwardphill.github.io/stockpicker/data/cases.json).
+Built 2026-09-30 18:10 UTC from the tracker's top 4 stocks by return since first pick. Each shows what the system saw at the time (signals, analyst target, macro), what the AI bull and bear reports argued, and what happened. Source: [cases.json](https://edwardphill.github.io/stockpicker/data/cases.json).
 
-## ILMN · +121.4% since 2026-04-13
-
-- Theme: Biotech / Life Sciences · Conviction: Buy · Picked 1×
-- Entry $122.86 → now $272.00 over 170 days
-- Analyst target at pick: $136.11 (+10.8% upside)
-- Signals: analyst target, analyst upside, insider buys, days to catalyst, rev accel, eps growth, fcf yield, pct above 52w low, pct below 52w high, rel strength
-- Macro: VIX 19.23, 10Y 4.31%, risk on · Market cap $18.8B
-- Path: worst close -2.0%, best close +122.9% vs entry
-
-**Bull thesis then:** Our analysis suggests the market is underappreciating three dynamics at Illumina. First, the revenue growth inflection: while the trailing YoY growth rate of 5.0% appears modest, sequential quarterly improvement of +17.5% QoQ in the growth rate signals that instrument placement cycles and consumables pull-through are re-accelerating.
-
-**Catalysts cited:** Q1 FY26 Earnings (April 30, 2026): We expect management to report continued sequential revenue acceleration and potentially raise full-year guidance. A beat-and-raise scenario would validate the growth inflection thesis and could drive a re-rating toward our target.
-
-**Bear verdict then:** The market is not underpricing Illumina's margin recovery — it is correctly discounting the durability of that recovery against a competitive landscape that is structurally different from the one in which ILMN built its moat. The bull note treats the GRAIL divestiture as a cleansing event and assumes the remaining business simply re-rates to historical life sciences tools multiples.
-
-**Takeaways:**
-- Consensus analyst upside at the pick was +10.8%, under 50%, so a gate on the consensus target would have skipped it; the gate has to accept a single analyst's 50% path.
-- Never closed more than -2.0% below entry, so neither stop would have triggered.
-
-[Full bull/bear report](https://edwardphill.github.io/stockpicker/reports/ILMN-2026-04-13.html)
-
-## QLYS · +114.3% since 2026-04-15
+## QLYS · +126.5% since 2026-04-15
 
 - Theme: Cybersecurity · Conviction: Strong Buy · Picked 5×
-- Entry $83.22 → now $178.35 over 168 days
+- Entry $83.22 → now $188.45 over 168 days
 - Analyst target at pick: $133.33 (+60.2% upside)
 - Signals: analyst target, analyst upside, insider buys, days to catalyst, vol ratio, rev accel, eps growth, fcf yield, short pct, pct above 52w low, pct below 52w high
 - Macro: VIX 19.12, 10Y 4.3%, risk on · Market cap $3.0B
@@ -44,10 +23,31 @@ Built 2026-09-30 00:47 UTC from the tracker's top 4 stocks by return since first
 
 [Full bull/bear report](https://edwardphill.github.io/stockpicker/reports/QLYS-2026-04-15.html)
 
-## PANW · +56.5% since 2026-05-27
+## ILMN · +124.7% since 2026-04-13
+
+- Theme: Biotech / Life Sciences · Conviction: Buy · Picked 1×
+- Entry $122.86 → now $276.07 over 170 days
+- Analyst target at pick: $136.11 (+10.8% upside)
+- Signals: analyst target, analyst upside, insider buys, days to catalyst, rev accel, eps growth, fcf yield, pct above 52w low, pct below 52w high, rel strength
+- Macro: VIX 19.23, 10Y 4.31%, risk on · Market cap $18.8B
+- Path: worst close -2.0%, best close +122.9% vs entry
+
+**Bull thesis then:** Our analysis suggests the market is underappreciating three dynamics at Illumina. First, the revenue growth inflection: while the trailing YoY growth rate of 5.0% appears modest, sequential quarterly improvement of +17.5% QoQ in the growth rate signals that instrument placement cycles and consumables pull-through are re-accelerating.
+
+**Catalysts cited:** Q1 FY26 Earnings (April 30, 2026): We expect management to report continued sequential revenue acceleration and potentially raise full-year guidance. A beat-and-raise scenario would validate the growth inflection thesis and could drive a re-rating toward our target.
+
+**Bear verdict then:** The market is not underpricing Illumina's margin recovery — it is correctly discounting the durability of that recovery against a competitive landscape that is structurally different from the one in which ILMN built its moat. The bull note treats the GRAIL divestiture as a cleansing event and assumes the remaining business simply re-rates to historical life sciences tools multiples.
+
+**Takeaways:**
+- Consensus analyst upside at the pick was +10.8%, under 50%, so a gate on the consensus target would have skipped it; the gate has to accept a single analyst's 50% path.
+- Never closed more than -2.0% below entry, so neither stop would have triggered.
+
+[Full bull/bear report](https://edwardphill.github.io/stockpicker/reports/ILMN-2026-04-13.html)
+
+## PANW · +61.3% since 2026-05-27
 
 - Theme: Cybersecurity · Conviction: Buy · Picked 2×
-- Entry $248.17 → now $388.41 over 126 days
+- Entry $248.17 → now $400.36 over 126 days
 - Analyst target at pick: $227.14 (-8.5% upside)
 - Signals: insider buys, days to catalyst, rev accel, eps growth, pct above 52w low, pct below 52w high, rel strength
 - Macro: VIX 17.01, 10Y 4.56%, risk on · Market cap $201.3B
@@ -66,10 +66,10 @@ Built 2026-09-30 00:47 UTC from the tracker's top 4 stocks by return since first
 
 [Full bull/bear report](https://edwardphill.github.io/stockpicker/reports/PANW-2026-05-27.html)
 
-## MSFT · +34.5% since 2026-04-13
+## MSFT · +36.9% since 2026-04-13
 
 - Theme: Quantum / Emerging Tech · Conviction: Strong Buy · Picked 1×
-- Entry $378.42 → now $508.96 over 170 days
+- Entry $378.42 → now $518.17 over 170 days
 - Analyst target at pick: $585.41 (+54.7% upside)
 - Signals: analyst target, analyst upside, insider buys, days to catalyst, rev accel, pct above 52w low, pct below 52w high
 - Macro: VIX 19.23, 10Y 4.31%, risk on · Market cap $2.81T
