@@ -1,6 +1,6 @@
 {
   "schema": "https://edwardphill.github.io/stockpicker/data/schema/cases.schema.json",
-  "generated": "2026-09-30 22:25 UTC",
+  "generated": "2026-10-01 00:51 UTC",
   "cases": [
     {
       "ticker": "QLYS",
@@ -11,7 +11,7 @@
       "entry_price": 83.22,
       "current_price": 187.2,
       "return_pct": 124.95,
-      "days_held": 168,
+      "days_held": 169,
       "analyst_target_at_pick": 133.33,
       "analyst_upside_at_pick_pct": 60.2,
       "signals": [
@@ -54,15 +54,15 @@
         "max_drawdown_pct": -1.47,
         "max_runup_pct": 135.38,
         "stop_5": {
-          "exit_date": "2026-09-28",
-          "exit_price": 173.83,
-          "return_pct": 108.88,
+          "exit_date": "2026-09-29",
+          "exit_price": 178.35,
+          "return_pct": 114.31,
           "reason": "open"
         },
         "stop_10": {
-          "exit_date": "2026-09-28",
-          "exit_price": 173.83,
-          "return_pct": 108.88,
+          "exit_date": "2026-09-29",
+          "exit_price": 178.35,
+          "return_pct": 114.31,
           "reason": "open"
         }
       },
@@ -80,7 +80,7 @@
       "entry_price": 122.86,
       "current_price": 273.68,
       "return_pct": 122.76,
-      "days_held": 170,
+      "days_held": 171,
       "analyst_target_at_pick": 136.11,
       "analyst_upside_at_pick_pct": 10.8,
       "signals": [
@@ -121,15 +121,15 @@
         "max_drawdown_pct": -2.03,
         "max_runup_pct": 122.94,
         "stop_5": {
-          "exit_date": "2026-09-28",
-          "exit_price": 271.9,
-          "return_pct": 121.31,
+          "exit_date": "2026-09-29",
+          "exit_price": 272.0,
+          "return_pct": 121.39,
           "reason": "open"
         },
         "stop_10": {
-          "exit_date": "2026-09-28",
-          "exit_price": 271.9,
-          "return_pct": 121.31,
+          "exit_date": "2026-09-29",
+          "exit_price": 272.0,
+          "return_pct": 121.39,
           "reason": "open"
         }
       },
@@ -147,7 +147,7 @@
       "entry_price": 248.17,
       "current_price": 397.31,
       "return_pct": 60.1,
-      "days_held": 126,
+      "days_held": 127,
       "analyst_target_at_pick": 227.14,
       "analyst_upside_at_pick_pct": -8.5,
       "signals": [
@@ -182,15 +182,15 @@
         "max_drawdown_pct": 0.12,
         "max_runup_pct": 59.57,
         "stop_5": {
-          "exit_date": "2026-09-28",
-          "exit_price": 392.09,
-          "return_pct": 57.99,
+          "exit_date": "2026-09-29",
+          "exit_price": 388.41,
+          "return_pct": 56.51,
           "reason": "open"
         },
         "stop_10": {
-          "exit_date": "2026-09-28",
-          "exit_price": 392.09,
-          "return_pct": 57.99,
+          "exit_date": "2026-09-29",
+          "exit_price": 388.41,
+          "return_pct": 56.51,
           "reason": "open"
         }
       },
@@ -209,7 +209,7 @@
       "entry_price": 378.42,
       "current_price": 512.9,
       "return_pct": 35.54,
-      "days_held": 170,
+      "days_held": 171,
       "analyst_target_at_pick": 585.41,
       "analyst_upside_at_pick_pct": 54.7,
       "signals": [
@@ -250,9 +250,9 @@
           "reason": "stop"
         },
         "stop_10": {
-          "exit_date": "2026-09-28",
-          "exit_price": 509.22,
-          "return_pct": 34.56,
+          "exit_date": "2026-09-29",
+          "exit_price": 508.96,
+          "return_pct": 34.5,
           "reason": "open"
         }
       },
