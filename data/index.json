@@ -1,7 +1,7 @@
 {
   "schema": "stockpicker.index/1",
   "site": "https://edwardphill.github.io/stockpicker",
-  "generated": "2026-10-01 22:56 UTC",
+  "generated": "2026-10-02 01:05 UTC",
   "pages": [
     {
       "path": "index.html",
@@ -35,7 +35,7 @@
       "url": "https://edwardphill.github.io/stockpicker/data/summary.json",
       "content_type": "application/json",
       "description": "Computed stats: counts, win rates, average returns, top and bottom stocks, this week's analyst-mismatch candidates, stop-rule results. Read this first.",
-      "updated": "2026-10-01 22:56 UTC",
+      "updated": "2026-10-02 01:05 UTC",
       "schema": "https://edwardphill.github.io/stockpicker/data/schema/summary.schema.json"
     },
     {
@@ -75,7 +75,7 @@
       "url": "https://edwardphill.github.io/stockpicker/data/portfolio.json",
       "content_type": "application/json",
       "description": "Stop-rule simulation on daily closes: hold vs -5% stop vs -10% stop vs the v2 exit rule, per pick and in total.",
-      "updated": "2026-10-01 00:51 UTC",
+      "updated": "2026-10-02 01:05 UTC",
       "schema": "https://edwardphill.github.io/stockpicker/data/schema/portfolio.schema.json"
     },
     {
@@ -83,7 +83,7 @@
       "url": "https://edwardphill.github.io/stockpicker/data/portfolio.md",
       "content_type": "text/markdown",
       "description": "portfolio.json as markdown tables.",
-      "updated": "2026-10-01 00:51 UTC",
+      "updated": "2026-10-02 01:05 UTC",
       "schema": null
     },
     {
@@ -91,7 +91,7 @@
       "url": "https://edwardphill.github.io/stockpicker/data/cases.json",
       "content_type": "application/json",
       "description": "Case studies of the best picks: the setup, the bull and bear arguments at the time, the path since, takeaways.",
-      "updated": "2026-10-01 22:56 UTC",
+      "updated": "2026-10-02 01:05 UTC",
       "schema": "https://edwardphill.github.io/stockpicker/data/schema/cases.schema.json"
     },
     {
@@ -99,7 +99,7 @@
       "url": "https://edwardphill.github.io/stockpicker/data/cases.md",
       "content_type": "text/markdown",
       "description": "cases.json as prose.",
-      "updated": "2026-10-01 22:56 UTC",
+      "updated": "2026-10-02 01:05 UTC",
       "schema": null
     },
     {
@@ -107,7 +107,7 @@
       "url": "https://edwardphill.github.io/stockpicker/data/watchlist.json",
       "content_type": "application/json",
       "description": "Extra tickers scanned for analyst mismatch, grouped by theme.",
-      "updated": "2026-10-01 22:56 UTC",
+      "updated": "2026-10-02 01:05 UTC",
       "schema": null
     },
     {
@@ -115,7 +115,7 @@
       "url": "https://edwardphill.github.io/stockpicker/reports/weekly/latest.html",
       "content_type": "text/html",
       "description": "The latest Tuesday weekly brief (static HTML, no JavaScript needed).",
-      "updated": "2026-10-01 22:56 UTC",
+      "updated": "2026-10-02 01:05 UTC",
       "schema": null
     },
     {
@@ -123,7 +123,7 @@
       "url": "https://edwardphill.github.io/stockpicker/docs/selection-rules.md",
       "content_type": "text/markdown",
       "description": "The v2 selection rules: one pick a week, a 50%-in-6-months gate with no upside cap, novelty, exits.",
-      "updated": "2026-10-01 22:56 UTC",
+      "updated": "2026-10-02 01:05 UTC",
       "schema": null
     }
   ],
