@@ -1,6 +1,6 @@
 {
   "schema": "https://edwardphill.github.io/stockpicker/data/schema/summary.schema.json",
-  "generated": "2026-10-03 00:45 UTC",
+  "generated": "2026-10-05 20:45 UTC",
   "site": "https://edwardphill.github.io/stockpicker",
   "prices_as_of": "2026-10-02 22:23 UTC",
   "counts": {
@@ -156,80 +156,80 @@
     }
   },
   "analyst_mismatch": {
-    "scan": "2026-09-28 19:41 UTC",
+    "scan": "2026-10-05 20:45 UTC",
     "scanned": 40,
-    "mismatches": 25,
+    "mismatches": 27,
     "candidate_rule": "new name (not picked in 180 days) and at least one analyst target >= 50% above price; ranked by mismatch score",
     "candidates": [
       {
         "ticker": "ORCL",
         "group": "AI Leaders",
         "score": 12.7,
-        "upside_high_pct": 201.4,
-        "why": "Street high target $400.00 is +201%"
+        "upside_high_pct": 180.7,
+        "why": "Street high target $400.00 is +181%"
       },
       {
         "ticker": "MU",
         "group": "AI Infrastructure / Fiber",
-        "score": 11.3,
-        "upside_high_pct": 108.7,
-        "why": "Street high target $2,200.00 is +109%"
+        "score": 11.5,
+        "upside_high_pct": 106.8,
+        "why": "Street high target $2,200.00 is +107%"
       },
       {
         "ticker": "NVDA",
         "group": "AI Leaders",
         "score": 11.3,
-        "upside_high_pct": 125.3,
-        "why": "Street high target $515.00 is +125%"
+        "upside_high_pct": 115.6,
+        "why": "Street high target $515.00 is +116%"
       },
       {
-        "ticker": "GLW",
-        "group": "AI Infrastructure / Fiber",
-        "score": 6.3,
-        "upside_high_pct": 57.2,
-        "why": "Street high target $238.00 is +57%"
+        "ticker": "WVE",
+        "group": "Nuclear / Next-Gen Energy",
+        "score": 6.8,
+        "upside_high_pct": 1020.0,
+        "why": "Street high target $42.00 is +1020%"
       },
       {
         "ticker": "INTC",
         "group": "Contrarian examples",
         "score": 6.3,
-        "upside_high_pct": 72.8,
-        "why": "Street high target $200.00 is +73%"
+        "upside_high_pct": 72.1,
+        "why": "Street high target $200.00 is +72%"
+      },
+      {
+        "ticker": "GLW",
+        "group": "AI Infrastructure / Fiber",
+        "score": 6.2,
+        "upside_high_pct": 49.3,
+        "why": "B of A Securities target $243.00 is +52%"
       },
       {
         "ticker": "AAOI",
         "group": "AI Infrastructure / Fiber",
         "score": 4.4,
-        "upside_high_pct": 127.4,
-        "why": "Street high target $220.00 is +127%"
+        "upside_high_pct": 81.0,
+        "why": "Street high target $220.00 is +81%"
       },
       {
         "ticker": "AVGO",
         "group": "AI Leaders",
         "score": 4.4,
-        "upside_high_pct": 104.8,
-        "why": "Street high target $715.00 is +105%"
-      },
-      {
-        "ticker": "WVE",
-        "group": "Nuclear / Next-Gen Energy",
-        "score": 4.4,
-        "upside_high_pct": 1042.9,
-        "why": "Street high target $42.00 is +1043%"
+        "upside_high_pct": 97.2,
+        "why": "Street high target $715.00 is +97%"
       },
       {
         "ticker": "CIEN",
         "group": "AI Infrastructure / Fiber",
         "score": 4.3,
-        "upside_high_pct": 92.1,
-        "why": "Street high target $660.00 is +92%"
+        "upside_high_pct": 69.4,
+        "why": "Street high target $660.00 is +69%"
       },
       {
-        "ticker": "LITE",
-        "group": "AI Infrastructure / Fiber",
-        "score": 4.1,
-        "upside_high_pct": 52.3,
-        "why": "Street high target $1,400.00 is +52%"
+        "ticker": "AMD",
+        "group": "AI Leaders",
+        "score": 4.0,
+        "upside_high_pct": 97.9,
+        "why": "Street high target $1,250.00 is +98%"
       }
     ]
   },

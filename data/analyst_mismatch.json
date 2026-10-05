@@ -1,5 +1,5 @@
 {
-  "generated": "2026-09-28 19:41 UTC",
+  "generated": "2026-10-05 20:45 UTC",
   "scanned": 40,
   "errors": [],
   "rows": [
@@ -7,11 +7,11 @@
       "ticker": "ORCL",
       "name": "Oracle Corporation",
       "group": "AI Leaders",
-      "price": 132.7,
-      "mktcap": 401249763328.0,
+      "price": 142.48,
+      "mktcap": 431928246272.0,
       "counts": {
-        "strong_buy": 8,
-        "buy": 27,
+        "strong_buy": 7,
+        "buy": 28,
         "hold": 7,
         "sell": 1,
         "strong_sell": 0
@@ -21,9 +21,9 @@
       "target_mean": 237.97415,
       "target_high": 400.0,
       "target_low": 110.0,
-      "upside_mean": 79.3,
-      "upside_high": 201.4,
-      "downside_low": -17.1,
+      "upside_mean": 67.0,
+      "upside_high": 180.7,
+      "downside_low": -22.8,
       "flags": [
         "lone_bear",
         "breakaway"
@@ -39,7 +39,7 @@
           "target": 165.0,
           "prior_target": 190.0,
           "target_vs_mean": -30.7,
-          "upside": 24.3,
+          "upside": 15.8,
           "why": "target -31% vs mean"
         },
         {
@@ -52,7 +52,7 @@
           "target": 400.0,
           "prior_target": 400.0,
           "target_vs_mean": 68.1,
-          "upside": 201.4,
+          "upside": 180.7,
           "why": "target +68% vs mean"
         },
         {
@@ -65,7 +65,7 @@
           "target": 175.0,
           "prior_target": 175.0,
           "target_vs_mean": -26.5,
-          "upside": 31.9,
+          "upside": 22.8,
           "why": "target -26% vs mean"
         },
         {
@@ -78,7 +78,7 @@
           "target": 145.0,
           "prior_target": 0.0,
           "target_vs_mean": -39.1,
-          "upside": 9.3,
+          "upside": 1.8,
           "why": "target -39% vs mean"
         },
         {
@@ -91,13 +91,13 @@
           "target": 325.0,
           "prior_target": 319.0,
           "target_vs_mean": 36.6,
-          "upside": 144.9,
+          "upside": 128.1,
           "why": "target +37% vs mean"
         }
       ],
       "score": 12.7,
       "path_50": true,
-      "path_50_why": "Street high target $400.00 is +201%",
+      "path_50_why": "Street high target $400.00 is +181%",
       "novel": true,
       "times_picked": 0,
       "last_picked": null,
@@ -107,8 +107,8 @@
       "ticker": "MU",
       "name": "Micron Technology, Inc.",
       "group": "AI Infrastructure / Fiber",
-      "price": 1053.94,
-      "mktcap": 1190301401088.0,
+      "price": 1063.96,
+      "mktcap": 1201629036544.0,
       "counts": {
         "strong_buy": 9,
         "buy": 36,
@@ -118,29 +118,42 @@
       },
       "n": 49,
       "consensus": "bull",
-      "target_mean": 1520.7609,
+      "target_mean": 1521.7609,
       "target_high": 2200.0,
       "target_low": 361.0,
-      "upside_mean": 44.3,
-      "upside_high": 108.7,
-      "downside_low": -65.7,
+      "upside_mean": 43.0,
+      "upside_high": 106.8,
+      "downside_low": -66.1,
       "flags": [
         "lone_bear",
         "breakaway"
       ],
       "breaks": [
         {
-          "date": "2026-06-29",
+          "date": "2026-10-01",
+          "firm": "DA Davidson",
+          "from": "Buy",
+          "to": "Buy",
+          "action": "main",
+          "side": "bull",
+          "target": 2100.0,
+          "prior_target": 2000.0,
+          "target_vs_mean": 38.0,
+          "upside": 97.4,
+          "why": "target +38% vs mean"
+        },
+        {
+          "date": "2026-10-01",
           "firm": "Cantor Fitzgerald",
           "from": "Overweight",
           "to": "Overweight",
-          "action": "main",
+          "action": "reit",
           "side": "bull",
           "target": 2000.0,
-          "prior_target": 1500.0,
-          "target_vs_mean": 31.5,
-          "upside": 89.8,
-          "why": "target +32% vs mean"
+          "prior_target": 2000.0,
+          "target_vs_mean": 31.4,
+          "upside": 88.0,
+          "why": "target +31% vs mean"
         },
         {
           "date": "2026-06-25",
@@ -151,9 +164,9 @@
           "side": "bull",
           "target": 2000.0,
           "prior_target": 1175.0,
-          "target_vs_mean": 31.5,
-          "upside": 89.8,
-          "why": "target +32% vs mean"
+          "target_vs_mean": 31.4,
+          "upside": 88.0,
+          "why": "target +31% vs mean"
         },
         {
           "date": "2026-06-25",
@@ -165,21 +178,8 @@
           "target": 1100.0,
           "prior_target": 900.0,
           "target_vs_mean": -27.7,
-          "upside": 4.4,
+          "upside": 3.4,
           "why": "target -28% vs mean"
-        },
-        {
-          "date": "2026-06-25",
-          "firm": "DA Davidson",
-          "from": "Buy",
-          "to": "Buy",
-          "action": "main",
-          "side": "bull",
-          "target": 2000.0,
-          "prior_target": 1500.0,
-          "target_vs_mean": 31.5,
-          "upside": 89.8,
-          "why": "target +32% vs mean"
         },
         {
           "date": "2026-06-25",
@@ -190,14 +190,14 @@
           "side": "bull",
           "target": 2000.0,
           "prior_target": 1750.0,
-          "target_vs_mean": 31.5,
-          "upside": 89.8,
-          "why": "target +32% vs mean"
+          "target_vs_mean": 31.4,
+          "upside": 88.0,
+          "why": "target +31% vs mean"
         }
       ],
-      "score": 11.3,
+      "score": 11.5,
       "path_50": true,
-      "path_50_why": "Street high target $2,200.00 is +109%",
+      "path_50_why": "Street high target $2,200.00 is +107%",
       "novel": true,
       "times_picked": 0,
       "last_picked": null,
@@ -207,8 +207,8 @@
       "ticker": "NVDA",
       "name": "NVIDIA Corporation",
       "group": "AI Leaders",
-      "price": 228.565,
-      "mktcap": 5519279915008.0,
+      "price": 238.9,
+      "mktcap": 5768717795328.0,
       "counts": {
         "strong_buy": 10,
         "buy": 48,
@@ -218,12 +218,12 @@
       },
       "n": 61,
       "consensus": "bull",
-      "target_mean": 327.7,
+      "target_mean": 328.71695,
       "target_high": 515.0,
       "target_low": 180.0,
-      "upside_mean": 43.4,
-      "upside_high": 125.3,
-      "downside_low": -21.2,
+      "upside_mean": 37.6,
+      "upside_high": 115.6,
+      "downside_low": -24.7,
       "flags": [
         "lone_bear",
         "breakaway"
@@ -238,9 +238,9 @@
           "side": "bull",
           "target": 465.0,
           "prior_target": 413.0,
-          "target_vs_mean": 41.9,
-          "upside": 103.4,
-          "why": "target +42% vs mean"
+          "target_vs_mean": 41.5,
+          "upside": 94.6,
+          "why": "target +41% vs mean"
         },
         {
           "date": "2026-08-27",
@@ -251,14 +251,14 @@
           "side": "bull",
           "target": 515.0,
           "prior_target": 352.0,
-          "target_vs_mean": 57.2,
-          "upside": 125.3,
+          "target_vs_mean": 56.7,
+          "upside": 115.6,
           "why": "target +57% vs mean"
         }
       ],
       "score": 11.3,
       "path_50": true,
-      "path_50_why": "Street high target $515.00 is +125%",
+      "path_50_why": "Street high target $515.00 is +116%",
       "novel": true,
       "times_picked": 0,
       "last_picked": null,
@@ -268,8 +268,8 @@
       "ticker": "IBM",
       "name": "International Business Machines",
       "group": "Quantum / Emerging Tech",
-      "price": 221.24,
-      "mktcap": 208437821440.0,
+      "price": 221.58,
+      "mktcap": 208758145024.0,
       "counts": {
         "strong_buy": 3,
         "buy": 9,
@@ -282,9 +282,9 @@
       "target_mean": 240.59,
       "target_high": 297.0,
       "target_low": 174.0,
-      "upside_mean": 8.7,
-      "upside_high": 34.2,
-      "downside_low": -21.4,
+      "upside_mean": 8.6,
+      "upside_high": 34.0,
+      "downside_low": -21.5,
       "flags": [
         "lone_bear",
         "breakaway"
@@ -300,7 +300,7 @@
           "target": 191.0,
           "prior_target": 231.0,
           "target_vs_mean": -20.6,
-          "upside": -13.7,
+          "upside": -13.8,
           "why": "bearish vs consensus"
         },
         {
@@ -313,7 +313,7 @@
           "target": 350.0,
           "prior_target": 320.0,
           "target_vs_mean": 45.5,
-          "upside": 58.2,
+          "upside": 58.0,
           "why": "target +45% vs mean"
         },
         {
@@ -326,7 +326,7 @@
           "target": 330.0,
           "prior_target": 315.0,
           "target_vs_mean": 37.2,
-          "upside": 49.2,
+          "upside": 48.9,
           "why": "target +37% vs mean"
         }
       ],
@@ -336,29 +336,29 @@
       "novel": false,
       "times_picked": 1,
       "last_picked": "2026-04-15",
-      "last_pick_return": -6.14
+      "last_pick_return": -7.34
     },
     {
       "ticker": "VST",
       "name": "Vistra Corp.",
       "group": "Nuclear / Next-Gen Energy",
-      "price": 137.855,
-      "mktcap": 46268989440.0,
+      "price": 144.89,
+      "mktcap": 48630181888.0,
       "counts": {
         "strong_buy": 4,
-        "buy": 15,
+        "buy": 16,
         "hold": 0,
         "sell": 0,
         "strong_sell": 1
       },
-      "n": 20,
+      "n": 21,
       "consensus": "bull",
-      "target_mean": 217.57895,
+      "target_mean": 212.25,
       "target_high": 305.0,
       "target_low": 106.0,
-      "upside_mean": 57.8,
-      "upside_high": 121.2,
-      "downside_low": -23.1,
+      "upside_mean": 46.5,
+      "upside_high": 110.5,
+      "downside_low": -26.8,
       "flags": [
         "lone_bear",
         "breakaway"
@@ -373,44 +373,57 @@
           "side": "bull",
           "target": 298.0,
           "prior_target": 293.0,
-          "target_vs_mean": 37.0,
-          "upside": 116.2,
-          "why": "target +37% vs mean"
+          "target_vs_mean": 40.4,
+          "upside": 105.7,
+          "why": "target +40% vs mean"
         }
       ],
-      "score": 9.5,
+      "score": 9.6,
       "path_50": true,
-      "path_50_why": "Street high target $305.00 is +121%",
+      "path_50_why": "Street high target $305.00 is +111%",
       "novel": false,
       "times_picked": 1,
       "last_picked": "2026-06-12",
-      "last_pick_return": -6.32
+      "last_pick_return": -5.26
     },
     {
       "ticker": "MRNA",
       "name": "Moderna, Inc.",
       "group": "Contrarian examples",
-      "price": 198.6,
-      "mktcap": 79288254464.0,
+      "price": 203.21,
+      "mktcap": 81128734720.0,
       "counts": {
         "strong_buy": 1,
         "buy": 4,
-        "hold": 16,
-        "sell": 1,
+        "hold": 15,
+        "sell": 2,
         "strong_sell": 1
       },
       "n": 23,
       "consensus": "hold",
-      "target_mean": 119.55556,
+      "target_mean": 120.66667,
       "target_high": 170.0,
       "target_low": 45.0,
-      "upside_mean": -39.8,
-      "upside_high": -14.4,
-      "downside_low": -77.3,
+      "upside_mean": -40.6,
+      "upside_high": -16.3,
+      "downside_low": -77.9,
       "flags": [
         "breakaway"
       ],
       "breaks": [
+        {
+          "date": "2026-09-30",
+          "firm": "Citigroup",
+          "from": "Neutral",
+          "to": "Sell",
+          "action": "down",
+          "side": "bear",
+          "target": 80.0,
+          "prior_target": 60.0,
+          "target_vs_mean": -33.7,
+          "upside": -60.6,
+          "why": "bearish vs consensus, target -34% vs mean"
+        },
         {
           "date": "2026-09-03",
           "firm": "Rothschild & Co",
@@ -420,9 +433,9 @@
           "side": "bear",
           "target": 81.0,
           "prior_target": 40.0,
-          "target_vs_mean": -32.2,
-          "upside": -59.2,
-          "why": "bearish vs consensus, target -32% vs mean"
+          "target_vs_mean": -32.9,
+          "upside": -60.1,
+          "why": "bearish vs consensus, target -33% vs mean"
         },
         {
           "date": "2026-08-28",
@@ -433,9 +446,9 @@
           "side": "bull",
           "target": 180.0,
           "prior_target": 0.0,
-          "target_vs_mean": 50.6,
-          "upside": -9.4,
-          "why": "bullish vs consensus, target +51% vs mean"
+          "target_vs_mean": 49.2,
+          "upside": -11.4,
+          "why": "bullish vs consensus, target +49% vs mean"
         },
         {
           "date": "2026-08-21",
@@ -446,22 +459,9 @@
           "side": "bear",
           "target": 77.0,
           "prior_target": 40.0,
-          "target_vs_mean": -35.6,
-          "upside": -61.2,
+          "target_vs_mean": -36.2,
+          "upside": -62.1,
           "why": "bearish vs consensus, target -36% vs mean"
-        },
-        {
-          "date": "2026-08-20",
-          "firm": "UBS",
-          "from": "Neutral",
-          "to": "Neutral",
-          "action": "main",
-          "side": "hold",
-          "target": 150.0,
-          "prior_target": 50.0,
-          "target_vs_mean": 25.5,
-          "upside": -24.5,
-          "why": "target +25% vs mean"
         },
         {
           "date": "2026-08-20",
@@ -472,8 +472,8 @@
           "side": "hold",
           "target": 89.0,
           "prior_target": 39.0,
-          "target_vs_mean": -25.6,
-          "upside": -55.2,
+          "target_vs_mean": -26.2,
+          "upside": -56.2,
           "why": "target -26% vs mean"
         }
       ],
@@ -486,59 +486,84 @@
       "last_pick_return": null
     },
     {
-      "ticker": "PANW",
-      "name": "Palo Alto Networks, Inc.",
-      "group": "Cybersecurity",
-      "price": 392.68,
-      "mktcap": 321302233088.0,
+      "ticker": "UEC",
+      "name": "Uranium Energy Corp.",
+      "group": "Nuclear / Next-Gen Energy",
+      "price": 9.35,
+      "mktcap": 4633716736.0,
       "counts": {
-        "strong_buy": 10,
-        "buy": 32,
-        "hold": 11,
-        "sell": 1,
-        "strong_sell": 1
+        "strong_buy": 2,
+        "buy": 6,
+        "hold": 3,
+        "sell": 0,
+        "strong_sell": 0
       },
-      "n": 55,
+      "n": 11,
       "consensus": "bull",
-      "target_mean": 395.7,
-      "target_high": 475.0,
-      "target_low": 190.0,
-      "upside_mean": 0.8,
-      "upside_high": 21.0,
-      "downside_low": -51.6,
+      "target_mean": 16.11818,
+      "target_high": 26.75,
+      "target_low": 10.0,
+      "upside_mean": 72.4,
+      "upside_high": 186.1,
+      "downside_low": 7.0,
       "flags": [
-        "lone_bear",
         "breakaway"
       ],
       "breaks": [
         {
-          "date": "2026-06-03",
-          "firm": "Loop Capital",
-          "from": "Hold",
-          "to": "Hold",
-          "action": "main",
+          "date": "2026-10-02",
+          "firm": "RBC Capital",
+          "from": "",
+          "to": "Sector Perform",
+          "action": "init",
           "side": "hold",
-          "target": 290.0,
-          "prior_target": 160.0,
-          "target_vs_mean": -26.7,
-          "upside": -26.1,
-          "why": "target -27% vs mean"
+          "target": 10.0,
+          "prior_target": 0.0,
+          "target_vs_mean": -38.0,
+          "upside": 7.0,
+          "why": "target -38% vs mean"
+        },
+        {
+          "date": "2026-09-30",
+          "firm": "HC Wainwright & Co.",
+          "from": "Buy",
+          "to": "Buy",
+          "action": "reit",
+          "side": "bull",
+          "target": 26.75,
+          "prior_target": 26.75,
+          "target_vs_mean": 66.0,
+          "upside": 186.1,
+          "why": "target +66% vs mean"
+        },
+        {
+          "date": "2026-09-03",
+          "firm": "Jefferies",
+          "from": "",
+          "to": "Hold",
+          "action": "init",
+          "side": "hold",
+          "target": 11.5,
+          "prior_target": 0.0,
+          "target_vs_mean": -28.7,
+          "upside": 23.0,
+          "why": "target -29% vs mean"
         }
       ],
-      "score": 7.1,
-      "path_50": false,
-      "path_50_why": null,
+      "score": 7.6,
+      "path_50": true,
+      "path_50_why": "Street high target $26.75 is +186%",
       "novel": false,
       "times_picked": 2,
-      "last_picked": "2026-06-04",
-      "last_pick_return": 38.66
+      "last_picked": "2026-05-15",
+      "last_pick_return": -37.2
     },
     {
       "ticker": "ILMN",
       "name": "Illumina, Inc.",
       "group": "Biotech / Life Sciences",
-      "price": 270.59,
-      "mktcap": 40859090944.0,
+      "price": 293.69,
+      "mktcap": 44347191296.0,
       "counts": {
         "strong_buy": 4,
         "buy": 7,
@@ -548,16 +573,55 @@
       },
       "n": 21,
       "consensus": "bull",
-      "target_mean": 202.65,
-      "target_high": 260.0,
+      "target_mean": 218.6,
+      "target_high": 310.0,
       "target_low": 113.0,
-      "upside_mean": -25.1,
-      "upside_high": -3.9,
-      "downside_low": -58.2,
+      "upside_mean": -25.6,
+      "upside_high": 5.6,
+      "downside_low": -61.5,
       "flags": [
         "breakaway"
       ],
       "breaks": [
+        {
+          "date": "2026-10-05",
+          "firm": "RBC Capital",
+          "from": "Outperform",
+          "to": "Outperform",
+          "action": "main",
+          "side": "bull",
+          "target": 310.0,
+          "prior_target": 230.0,
+          "target_vs_mean": 41.8,
+          "upside": 5.6,
+          "why": "target +42% vs mean"
+        },
+        {
+          "date": "2026-10-01",
+          "firm": "Guggenheim",
+          "from": "Buy",
+          "to": "Buy",
+          "action": "main",
+          "side": "bull",
+          "target": 305.0,
+          "prior_target": 226.0,
+          "target_vs_mean": 39.5,
+          "upside": 3.9,
+          "why": "target +40% vs mean"
+        },
+        {
+          "date": "2026-09-29",
+          "firm": "Leerink Partners",
+          "from": "Outperform",
+          "to": "Outperform",
+          "action": "main",
+          "side": "bull",
+          "target": 300.0,
+          "prior_target": 220.0,
+          "target_vs_mean": 37.2,
+          "upside": 2.1,
+          "why": "target +37% vs mean"
+        },
         {
           "date": "2026-09-28",
           "firm": "Piper Sandler",
@@ -567,22 +631,9 @@
           "side": "bull",
           "target": 305.0,
           "prior_target": 225.0,
-          "target_vs_mean": 50.5,
-          "upside": 12.7,
-          "why": "target +51% vs mean"
-        },
-        {
-          "date": "2026-09-09",
-          "firm": "UBS",
-          "from": "Neutral",
-          "to": "Buy",
-          "action": "up",
-          "side": "bull",
-          "target": 260.0,
-          "prior_target": 135.0,
-          "target_vs_mean": 28.3,
-          "upside": -3.9,
-          "why": "target +28% vs mean"
+          "target_vs_mean": 39.5,
+          "upside": 3.9,
+          "why": "target +40% vs mean"
         },
         {
           "date": "2026-08-03",
@@ -593,111 +644,98 @@
           "side": "bear",
           "target": 113.0,
           "prior_target": 95.0,
-          "target_vs_mean": -44.2,
-          "upside": -58.2,
-          "why": "bearish vs consensus, target -44% vs mean"
-        },
-        {
-          "date": "2026-07-31",
-          "firm": "Barclays",
-          "from": "Underweight",
-          "to": "Underweight",
-          "action": "main",
-          "side": "bear",
-          "target": 160.0,
-          "prior_target": 145.0,
-          "target_vs_mean": -21.0,
-          "upside": -40.9,
-          "why": "bearish vs consensus"
+          "target_vs_mean": -48.3,
+          "upside": -61.5,
+          "why": "bearish vs consensus, target -48% vs mean"
         }
       ],
-      "score": 7.0,
+      "score": 6.9,
       "path_50": false,
       "path_50_why": null,
       "novel": false,
       "times_picked": 1,
       "last_picked": "2026-04-13",
-      "last_pick_return": 119.76
+      "last_pick_return": 122.24
     },
     {
-      "ticker": "GLW",
-      "name": "Corning Incorporated",
-      "group": "AI Infrastructure / Fiber",
-      "price": 151.4125,
-      "mktcap": 130159919104.0,
+      "ticker": "WVE",
+      "name": "Wave Life Sciences, Inc.",
+      "group": "Nuclear / Next-Gen Energy",
+      "price": 3.75,
+      "mktcap": 738930688.0,
       "counts": {
-        "strong_buy": 0,
-        "buy": 13,
-        "hold": 4,
+        "strong_buy": 2,
+        "buy": 15,
+        "hold": 2,
         "sell": 0,
         "strong_sell": 0
       },
-      "n": 17,
+      "n": 19,
       "consensus": "bull",
-      "target_mean": 189.9375,
-      "target_high": 238.0,
-      "target_low": 129.0,
-      "upside_mean": 25.4,
-      "upside_high": 57.2,
-      "downside_low": -14.8,
+      "target_mean": 18.05556,
+      "target_high": 42.0,
+      "target_low": 10.0,
+      "upside_mean": 381.5,
+      "upside_high": 1020.0,
+      "downside_low": 166.7,
       "flags": [
         "breakaway"
       ],
       "breaks": [
         {
-          "date": "2026-09-08",
-          "firm": "China Renaissance",
+          "date": "2026-10-01",
+          "firm": "Ladenburg Thalmann",
           "from": "",
           "to": "Buy",
           "action": "init",
           "side": "bull",
-          "target": 238.0,
+          "target": 10.0,
           "prior_target": 0.0,
-          "target_vs_mean": 25.3,
-          "upside": 57.2,
-          "why": "target +25% vs mean"
+          "target_vs_mean": -44.6,
+          "upside": 166.7,
+          "why": "target -45% vs mean"
         },
         {
-          "date": "2026-07-29",
-          "firm": "Barclays",
-          "from": "Equal-Weight",
-          "to": "Equal-Weight",
-          "action": "main",
-          "side": "hold",
-          "target": 129.0,
-          "prior_target": 180.0,
-          "target_vs_mean": -32.1,
-          "upside": -14.8,
-          "why": "target -32% vs mean"
-        },
-        {
-          "date": "2026-07-06",
-          "firm": "B of A Securities",
-          "from": "Buy",
-          "to": "Buy",
+          "date": "2026-08-04",
+          "firm": "Mizuho",
+          "from": "Outperform",
+          "to": "Outperform",
           "action": "main",
           "side": "bull",
-          "target": 243.0,
-          "prior_target": 223.0,
-          "target_vs_mean": 27.9,
-          "upside": 60.5,
-          "why": "target +28% vs mean"
+          "target": 23.0,
+          "prior_target": 27.0,
+          "target_vs_mean": 27.4,
+          "upside": 513.3,
+          "why": "target +27% vs mean"
+        },
+        {
+          "date": "2026-07-31",
+          "firm": "Wedbush",
+          "from": "Outperform",
+          "to": "Outperform",
+          "action": "main",
+          "side": "bull",
+          "target": 12.0,
+          "prior_target": 15.0,
+          "target_vs_mean": -33.5,
+          "upside": 220.0,
+          "why": "target -34% vs mean"
         }
       ],
-      "score": 6.3,
+      "score": 6.8,
       "path_50": true,
-      "path_50_why": "Street high target $238.00 is +57%",
+      "path_50_why": "Street high target $42.00 is +1020%",
       "novel": true,
-      "times_picked": 0,
-      "last_picked": null,
-      "last_pick_return": null
+      "times_picked": 1,
+      "last_picked": "2026-03-27",
+      "last_pick_return": -39.03
     },
     {
       "ticker": "INTC",
       "name": "Intel Corporation",
       "group": "Contrarian examples",
-      "price": 115.71,
-      "mktcap": 611655221248.0,
+      "price": 116.19,
+      "mktcap": 614192578560.0,
       "counts": {
         "strong_buy": 1,
         "buy": 14,
@@ -710,9 +748,9 @@
       "target_mean": 116.37209,
       "target_high": 200.0,
       "target_low": 75.0,
-      "upside_mean": 0.6,
-      "upside_high": 72.8,
-      "downside_low": -35.2,
+      "upside_mean": 0.2,
+      "upside_high": 72.1,
+      "downside_low": -35.5,
       "flags": [
         "breakaway"
       ],
@@ -727,7 +765,7 @@
           "target": 145.0,
           "prior_target": 118.0,
           "target_vs_mean": 24.6,
-          "upside": 25.3,
+          "upside": 24.8,
           "why": "bullish vs consensus"
         },
         {
@@ -740,7 +778,7 @@
           "target": 120.0,
           "prior_target": 0.0,
           "target_vs_mean": 3.1,
-          "upside": 3.7,
+          "upside": 3.3,
           "why": "bullish vs consensus"
         },
         {
@@ -753,7 +791,7 @@
           "target": 145.0,
           "prior_target": 160.0,
           "target_vs_mean": 24.6,
-          "upside": 25.3,
+          "upside": 24.8,
           "why": "bullish vs consensus"
         },
         {
@@ -766,7 +804,7 @@
           "target": 84.0,
           "prior_target": 75.0,
           "target_vs_mean": -27.8,
-          "upside": -27.4,
+          "upside": -27.7,
           "why": "target -28% vs mean"
         },
         {
@@ -779,13 +817,13 @@
           "target": 85.0,
           "prior_target": 45.0,
           "target_vs_mean": -27.0,
-          "upside": -26.5,
+          "upside": -26.8,
           "why": "bearish vs consensus, target -27% vs mean"
         }
       ],
       "score": 6.3,
       "path_50": true,
-      "path_50_why": "Street high target $200.00 is +73%",
+      "path_50_why": "Street high target $200.00 is +72%",
       "novel": true,
       "times_picked": 0,
       "last_picked": null,
@@ -795,8 +833,8 @@
       "ticker": "KTOS",
       "name": "Kratos Defense & Security Solut",
       "group": "Defense Tech / Dual-Use",
-      "price": 43.99,
-      "mktcap": 8249004544.0,
+      "price": 42.02,
+      "mktcap": 7888050176.0,
       "counts": {
         "strong_buy": 4,
         "buy": 15,
@@ -806,16 +844,29 @@
       },
       "n": 21,
       "consensus": "bull",
-      "target_mean": 102.7619,
+      "target_mean": 102.19048,
       "target_high": 150.0,
       "target_low": 60.0,
-      "upside_mean": 133.6,
-      "upside_high": 241.0,
-      "downside_low": 36.4,
+      "upside_mean": 143.2,
+      "upside_high": 257.0,
+      "downside_low": 42.8,
       "flags": [
         "breakaway"
       ],
       "breaks": [
+        {
+          "date": "2026-10-01",
+          "firm": "Jefferies",
+          "from": "Buy",
+          "to": "Buy",
+          "action": "main",
+          "side": "bull",
+          "target": 68.0,
+          "prior_target": 80.0,
+          "target_vs_mean": -33.5,
+          "upside": 61.8,
+          "why": "target -33% vs mean"
+        },
         {
           "date": "2026-09-15",
           "firm": "Guggenheim",
@@ -825,8 +876,8 @@
           "side": "bull",
           "target": 74.0,
           "prior_target": 0.0,
-          "target_vs_mean": -28.0,
-          "upside": 68.2,
+          "target_vs_mean": -27.6,
+          "upside": 76.1,
           "why": "target -28% vs mean"
         },
         {
@@ -838,9 +889,9 @@
           "side": "bull",
           "target": 135.0,
           "prior_target": 130.0,
-          "target_vs_mean": 31.4,
-          "upside": 206.9,
-          "why": "target +31% vs mean"
+          "target_vs_mean": 32.1,
+          "upside": 221.3,
+          "why": "target +32% vs mean"
         },
         {
           "date": "2026-08-05",
@@ -851,25 +902,111 @@
           "side": "bull",
           "target": 75.0,
           "prior_target": 75.0,
-          "target_vs_mean": -27.0,
-          "upside": 70.5,
+          "target_vs_mean": -26.6,
+          "upside": 78.5,
           "why": "target -27% vs mean"
         }
       ],
       "score": 6.3,
       "path_50": true,
-      "path_50_why": "Street high target $150.00 is +241%",
+      "path_50_why": "Street high target $150.00 is +257%",
       "novel": false,
       "times_picked": 1,
       "last_picked": "2026-05-29",
-      "last_pick_return": -30.02
+      "last_pick_return": -33.93
+    },
+    {
+      "ticker": "GLW",
+      "name": "Corning Incorporated",
+      "group": "AI Infrastructure / Fiber",
+      "price": 159.37,
+      "mktcap": 137279455232.0,
+      "counts": {
+        "strong_buy": 0,
+        "buy": 13,
+        "hold": 5,
+        "sell": 0,
+        "strong_sell": 0
+      },
+      "n": 18,
+      "consensus": "bull",
+      "target_mean": 187.41176,
+      "target_high": 238.0,
+      "target_low": 129.0,
+      "upside_mean": 17.6,
+      "upside_high": 49.3,
+      "downside_low": -19.1,
+      "flags": [
+        "breakaway"
+      ],
+      "breaks": [
+        {
+          "date": "2026-09-30",
+          "firm": "Bernstein",
+          "from": "",
+          "to": "Market Perform",
+          "action": "init",
+          "side": "hold",
+          "target": 140.0,
+          "prior_target": 0.0,
+          "target_vs_mean": -25.3,
+          "upside": -12.2,
+          "why": "target -25% vs mean"
+        },
+        {
+          "date": "2026-09-08",
+          "firm": "China Renaissance",
+          "from": "",
+          "to": "Buy",
+          "action": "init",
+          "side": "bull",
+          "target": 238.0,
+          "prior_target": 0.0,
+          "target_vs_mean": 27.0,
+          "upside": 49.3,
+          "why": "target +27% vs mean"
+        },
+        {
+          "date": "2026-07-29",
+          "firm": "Barclays",
+          "from": "Equal-Weight",
+          "to": "Equal-Weight",
+          "action": "main",
+          "side": "hold",
+          "target": 129.0,
+          "prior_target": 180.0,
+          "target_vs_mean": -31.2,
+          "upside": -19.1,
+          "why": "target -31% vs mean"
+        },
+        {
+          "date": "2026-07-06",
+          "firm": "B of A Securities",
+          "from": "Buy",
+          "to": "Buy",
+          "action": "main",
+          "side": "bull",
+          "target": 243.0,
+          "prior_target": 223.0,
+          "target_vs_mean": 29.7,
+          "upside": 52.5,
+          "why": "target +30% vs mean"
+        }
+      ],
+      "score": 6.2,
+      "path_50": true,
+      "path_50_why": "B of A Securities target $243.00 is +52%",
+      "novel": true,
+      "times_picked": 0,
+      "last_picked": null,
+      "last_pick_return": null
     },
     {
       "ticker": "LDOS",
       "name": "Leidos Holdings, Inc.",
       "group": "Industrial AI / Robotics",
-      "price": 121.93,
-      "mktcap": 15337021440.0,
+      "price": 119.45,
+      "mktcap": 14990044160.0,
       "counts": {
         "strong_buy": 3,
         "buy": 4,
@@ -879,12 +1016,12 @@
       },
       "n": 17,
       "consensus": "hold",
-      "target_mean": 157.26666,
+      "target_mean": 157.73334,
       "target_high": 225.0,
       "target_low": 132.0,
-      "upside_mean": 29.0,
-      "upside_high": 84.5,
-      "downside_low": 8.3,
+      "upside_mean": 32.0,
+      "upside_high": 88.4,
+      "downside_low": 10.5,
       "flags": [
         "breakaway"
       ],
@@ -898,8 +1035,8 @@
           "side": "bull",
           "target": 161.0,
           "prior_target": 138.0,
-          "target_vs_mean": 2.4,
-          "upside": 32.0,
+          "target_vs_mean": 2.1,
+          "upside": 34.8,
           "why": "bullish vs consensus"
         },
         {
@@ -911,8 +1048,8 @@
           "side": "bull",
           "target": 175.0,
           "prior_target": 165.0,
-          "target_vs_mean": 11.3,
-          "upside": 43.5,
+          "target_vs_mean": 10.9,
+          "upside": 46.5,
           "why": "bullish vs consensus"
         },
         {
@@ -924,8 +1061,8 @@
           "side": "bull",
           "target": 170.0,
           "prior_target": 180.0,
-          "target_vs_mean": 8.1,
-          "upside": 39.4,
+          "target_vs_mean": 7.8,
+          "upside": 42.3,
           "why": "bullish vs consensus"
         },
         {
@@ -937,8 +1074,8 @@
           "side": "bull",
           "target": 160.0,
           "prior_target": 210.0,
-          "target_vs_mean": 1.7,
-          "upside": 31.2,
+          "target_vs_mean": 1.4,
+          "upside": 33.9,
           "why": "bullish vs consensus"
         },
         {
@@ -950,85 +1087,25 @@
           "side": "bull",
           "target": 160.0,
           "prior_target": 195.0,
-          "target_vs_mean": 1.7,
-          "upside": 31.2,
+          "target_vs_mean": 1.4,
+          "upside": 33.9,
           "why": "bullish vs consensus"
         }
       ],
       "score": 6.2,
       "path_50": true,
-      "path_50_why": "Street high target $225.00 is +85%",
+      "path_50_why": "Street high target $225.00 is +88%",
       "novel": false,
       "times_picked": 4,
       "last_picked": "2026-06-05",
-      "last_pick_return": -0.77
-    },
-    {
-      "ticker": "UEC",
-      "name": "Uranium Energy Corp.",
-      "group": "Nuclear / Next-Gen Energy",
-      "price": 9.175,
-      "mktcap": 4540453888.0,
-      "counts": {
-        "strong_buy": 2,
-        "buy": 6,
-        "hold": 2,
-        "sell": 0,
-        "strong_sell": 0
-      },
-      "n": 10,
-      "consensus": "bull",
-      "target_mean": 17.375,
-      "target_high": 26.75,
-      "target_low": 11.5,
-      "upside_mean": 89.4,
-      "upside_high": 191.6,
-      "downside_low": 25.3,
-      "flags": [
-        "breakaway"
-      ],
-      "breaks": [
-        {
-          "date": "2026-09-03",
-          "firm": "Jefferies",
-          "from": "",
-          "to": "Hold",
-          "action": "init",
-          "side": "hold",
-          "target": 11.5,
-          "prior_target": 0.0,
-          "target_vs_mean": -33.8,
-          "upside": 25.3,
-          "why": "target -34% vs mean"
-        },
-        {
-          "date": "2026-06-10",
-          "firm": "HC Wainwright & Co.",
-          "from": "Buy",
-          "to": "Buy",
-          "action": "reit",
-          "side": "bull",
-          "target": 26.75,
-          "prior_target": 26.75,
-          "target_vs_mean": 54.0,
-          "upside": 191.6,
-          "why": "target +54% vs mean"
-        }
-      ],
-      "score": 6.2,
-      "path_50": true,
-      "path_50_why": "Street high target $26.75 is +192%",
-      "novel": false,
-      "times_picked": 2,
-      "last_picked": "2026-05-15",
-      "last_pick_return": -36.46
+      "last_pick_return": -5.48
     },
     {
       "ticker": "ALAB",
       "name": "Astera Labs, Inc.",
       "group": "AI Infrastructure / Fiber",
-      "price": 351.005,
-      "mktcap": 60894138368.0,
+      "price": 362.34,
+      "mktcap": 62860591104.0,
       "counts": {
         "strong_buy": 7,
         "buy": 12,
@@ -1041,9 +1118,9 @@
       "target_mean": 389.9527,
       "target_high": 500.0,
       "target_low": 190.0,
-      "upside_mean": 11.1,
-      "upside_high": 42.4,
-      "downside_low": -45.9,
+      "upside_mean": 7.6,
+      "upside_high": 38.0,
+      "downside_low": -47.6,
       "flags": [
         "breakaway"
       ],
@@ -1058,7 +1135,7 @@
           "target": 500.0,
           "prior_target": 425.0,
           "target_vs_mean": 28.2,
-          "upside": 42.4,
+          "upside": 38.0,
           "why": "target +28% vs mean"
         },
         {
@@ -1071,7 +1148,7 @@
           "target": 275.0,
           "prior_target": 230.0,
           "target_vs_mean": -29.5,
-          "upside": -21.7,
+          "upside": -24.1,
           "why": "target -29% vs mean"
         }
       ],
@@ -1087,8 +1164,8 @@
       "ticker": "QLYS",
       "name": "Qualys, Inc.",
       "group": "Cybersecurity",
-      "price": 172.965,
-      "mktcap": 6091309568.0,
+      "price": 198.68,
+      "mktcap": 6873334272.0,
       "counts": {
         "strong_buy": 1,
         "buy": 3,
@@ -1101,9 +1178,9 @@
       "target_mean": 179.36278,
       "target_high": 220.0,
       "target_low": 130.0,
-      "upside_mean": 3.7,
-      "upside_high": 27.2,
-      "downside_low": -24.8,
+      "upside_mean": -9.7,
+      "upside_high": 10.7,
+      "downside_low": -34.6,
       "flags": [
         "breakaway"
       ],
@@ -1118,7 +1195,7 @@
           "target": 130.0,
           "prior_target": 115.0,
           "target_vs_mean": -27.5,
-          "upside": -24.8,
+          "upside": -34.6,
           "why": "bearish vs consensus, target -28% vs mean"
         },
         {
@@ -1131,7 +1208,7 @@
           "target": 220.0,
           "prior_target": 190.0,
           "target_vs_mean": 22.7,
-          "upside": 27.2,
+          "upside": 10.7,
           "why": "bullish vs consensus"
         }
       ],
@@ -1141,14 +1218,14 @@
       "novel": false,
       "times_picked": 5,
       "last_picked": "2026-04-28",
-      "last_pick_return": 102.38
+      "last_pick_return": 126.53
     },
     {
       "ticker": "LUNR",
       "name": "Intuitive Machines, Inc.",
       "group": "Space / Satellite",
-      "price": 15.19,
-      "mktcap": 2437270528.0,
+      "price": 14.29,
+      "mktcap": 2306591232.0,
       "counts": {
         "strong_buy": 0,
         "buy": 8,
@@ -1161,42 +1238,42 @@
       "target_mean": 29.5,
       "target_high": 43.0,
       "target_low": 13.0,
-      "upside_mean": 94.2,
-      "upside_high": 183.1,
-      "downside_low": -14.4,
+      "upside_mean": 106.4,
+      "upside_high": 200.9,
+      "downside_low": -9.0,
       "flags": [
         "lone_bear"
       ],
       "breaks": [],
       "score": 5.0,
       "path_50": true,
-      "path_50_why": "Street high target $43.00 is +183%",
+      "path_50_why": "Street high target $43.00 is +201%",
       "novel": false,
       "times_picked": 3,
       "last_picked": "2026-06-22",
-      "last_pick_return": -28.0
+      "last_pick_return": -32.15
     },
     {
       "ticker": "META",
       "name": "Meta Platforms, Inc.",
       "group": "AI Infrastructure / Fiber",
-      "price": 717.01,
-      "mktcap": 1826383593472.0,
+      "price": 741.9,
+      "mktcap": 1889994932224.0,
       "counts": {
         "strong_buy": 8,
-        "buy": 46,
+        "buy": 47,
         "hold": 7,
         "sell": 1,
         "strong_sell": 0
       },
-      "n": 62,
+      "n": 63,
       "consensus": "bull",
-      "target_mean": 790.2688,
+      "target_mean": 794.9607,
       "target_high": 1000.0,
       "target_low": 580.0,
-      "upside_mean": 10.2,
-      "upside_high": 39.5,
-      "downside_low": -19.1,
+      "upside_mean": 7.2,
+      "upside_high": 34.8,
+      "downside_low": -21.8,
       "flags": [
         "lone_bear"
       ],
@@ -1213,8 +1290,8 @@
       "ticker": "AAOI",
       "name": "Applied Optoelectronics, Inc.",
       "group": "AI Infrastructure / Fiber",
-      "price": 96.75,
-      "mktcap": 8214683136.0,
+      "price": 121.57,
+      "mktcap": 10322057216.0,
       "counts": {
         "strong_buy": 2,
         "buy": 1,
@@ -1227,9 +1304,9 @@
       "target_mean": 163.4,
       "target_high": 220.0,
       "target_low": 109.0,
-      "upside_mean": 68.9,
-      "upside_high": 127.4,
-      "downside_low": 12.7,
+      "upside_mean": 34.4,
+      "upside_high": 81.0,
+      "downside_low": -10.3,
       "flags": [
         "breakaway"
       ],
@@ -1244,13 +1321,13 @@
           "target": 220.0,
           "prior_target": 220.0,
           "target_vs_mean": 34.6,
-          "upside": 127.4,
+          "upside": 81.0,
           "why": "target +35% vs mean"
         }
       ],
       "score": 4.4,
       "path_50": true,
-      "path_50_why": "Street high target $220.00 is +127%",
+      "path_50_why": "Street high target $220.00 is +81%",
       "novel": true,
       "times_picked": 0,
       "last_picked": null,
@@ -1260,8 +1337,8 @@
       "ticker": "AVGO",
       "name": "Broadcom Inc.",
       "group": "AI Leaders",
-      "price": 349.095,
-      "mktcap": 1666450325504.0,
+      "price": 362.51,
+      "mktcap": 1730488696832.0,
       "counts": {
         "strong_buy": 7,
         "buy": 40,
@@ -1271,12 +1348,12 @@
       },
       "n": 50,
       "consensus": "bull",
-      "target_mean": 531.8468,
+      "target_mean": 531.3149,
       "target_high": 715.0,
       "target_low": 215.88,
-      "upside_mean": 52.4,
-      "upside_high": 104.8,
-      "downside_low": -38.2,
+      "upside_mean": 46.6,
+      "upside_high": 97.2,
+      "downside_low": -40.4,
       "flags": [
         "breakaway"
       ],
@@ -1290,87 +1367,40 @@
           "side": "hold",
           "target": 350.0,
           "prior_target": 400.0,
-          "target_vs_mean": -34.2,
-          "upside": 0.3,
+          "target_vs_mean": -34.1,
+          "upside": -3.5,
           "why": "target -34% vs mean"
         }
       ],
       "score": 4.4,
       "path_50": true,
-      "path_50_why": "Street high target $715.00 is +105%",
+      "path_50_why": "Street high target $715.00 is +97%",
       "novel": true,
       "times_picked": 0,
       "last_picked": null,
       "last_pick_return": null
     },
     {
-      "ticker": "WVE",
-      "name": "Wave Life Sciences, Inc.",
-      "group": "Nuclear / Next-Gen Energy",
-      "price": 3.675,
-      "mktcap": 724152064.0,
-      "counts": {
-        "strong_buy": 2,
-        "buy": 14,
-        "hold": 2,
-        "sell": 0,
-        "strong_sell": 0
-      },
-      "n": 18,
-      "consensus": "bull",
-      "target_mean": 18.52941,
-      "target_high": 42.0,
-      "target_low": 10.0,
-      "upside_mean": 404.2,
-      "upside_high": 1042.9,
-      "downside_low": 172.1,
-      "flags": [
-        "breakaway"
-      ],
-      "breaks": [
-        {
-          "date": "2026-07-31",
-          "firm": "Wedbush",
-          "from": "Outperform",
-          "to": "Outperform",
-          "action": "main",
-          "side": "bull",
-          "target": 12.0,
-          "prior_target": 15.0,
-          "target_vs_mean": -35.2,
-          "upside": 226.5,
-          "why": "target -35% vs mean"
-        }
-      ],
-      "score": 4.4,
-      "path_50": true,
-      "path_50_why": "Street high target $42.00 is +1043%",
-      "novel": true,
-      "times_picked": 1,
-      "last_picked": "2026-03-27",
-      "last_pick_return": -39.03
-    },
-    {
       "ticker": "CIEN",
       "name": "Ciena Corporation",
       "group": "AI Infrastructure / Fiber",
-      "price": 343.545,
-      "mktcap": 48717611008.0,
+      "price": 389.69,
+      "mktcap": 55261364224.0,
       "counts": {
         "strong_buy": 5,
-        "buy": 10,
+        "buy": 11,
         "hold": 5,
         "sell": 0,
         "strong_sell": 0
       },
-      "n": 20,
+      "n": 21,
       "consensus": "bull",
-      "target_mean": 516.83234,
+      "target_mean": 512.9907,
       "target_high": 660.0,
       "target_low": 347.0,
-      "upside_mean": 50.4,
-      "upside_high": 92.1,
-      "downside_low": 1.0,
+      "upside_mean": 31.6,
+      "upside_high": 69.4,
+      "downside_low": -11.0,
       "flags": [
         "breakaway"
       ],
@@ -1384,14 +1414,14 @@
           "side": "hold",
           "target": 347.0,
           "prior_target": 413.0,
-          "target_vs_mean": -32.9,
-          "upside": 1.0,
-          "why": "target -33% vs mean"
+          "target_vs_mean": -32.4,
+          "upside": -11.0,
+          "why": "target -32% vs mean"
         }
       ],
       "score": 4.3,
       "path_50": true,
-      "path_50_why": "Street high target $660.00 is +92%",
+      "path_50_why": "Street high target $660.00 is +69%",
       "novel": true,
       "times_picked": 0,
       "last_picked": null,
@@ -1401,8 +1431,8 @@
       "ticker": "PFE",
       "name": "Pfizer, Inc.",
       "group": "Contrarian examples",
-      "price": 28.825,
-      "mktcap": 164293099520.0,
+      "price": 27.41,
+      "mktcap": 156228059136.0,
       "counts": {
         "strong_buy": 2,
         "buy": 8,
@@ -1412,12 +1442,12 @@
       },
       "n": 28,
       "consensus": "hold",
-      "target_mean": 28.875,
+      "target_mean": 28.91346,
       "target_high": 35.75,
       "target_low": 25.0,
-      "upside_mean": 0.2,
-      "upside_high": 24.0,
-      "downside_low": -13.3,
+      "upside_mean": 5.5,
+      "upside_high": 30.4,
+      "downside_low": -8.8,
       "flags": [
         "breakaway"
       ],
@@ -1431,8 +1461,8 @@
           "side": "bull",
           "target": 31.0,
           "prior_target": 35.0,
-          "target_vs_mean": 7.4,
-          "upside": 7.5,
+          "target_vs_mean": 7.2,
+          "upside": 13.1,
           "why": "bullish vs consensus"
         },
         {
@@ -1444,8 +1474,8 @@
           "side": "bull",
           "target": 30.0,
           "prior_target": 34.0,
-          "target_vs_mean": 3.9,
-          "upside": 4.1,
+          "target_vs_mean": 3.8,
+          "upside": 9.4,
           "why": "bullish vs consensus"
         }
       ],
@@ -1461,8 +1491,8 @@
       "ticker": "LITE",
       "name": "Lumentum Holdings Inc.",
       "group": "AI Infrastructure / Fiber",
-      "price": 919.465,
-      "mktcap": 82476015616.0,
+      "price": 1091.67,
+      "mktcap": 97922801664.0,
       "counts": {
         "strong_buy": 5,
         "buy": 17,
@@ -1472,12 +1502,12 @@
       },
       "n": 26,
       "consensus": "bull",
-      "target_mean": 1149.3787,
+      "target_mean": 1161.9557,
       "target_high": 1400.0,
       "target_low": 820.0,
-      "upside_mean": 25.0,
-      "upside_high": 52.3,
-      "downside_low": -10.8,
+      "upside_mean": 6.4,
+      "upside_high": 28.2,
+      "downside_low": -24.9,
       "flags": [
         "breakaway"
       ],
@@ -1491,14 +1521,14 @@
           "side": "hold",
           "target": 820.0,
           "prior_target": 800.0,
-          "target_vs_mean": -28.7,
-          "upside": -10.8,
+          "target_vs_mean": -29.4,
+          "upside": -24.9,
           "why": "target -29% vs mean"
         }
       ],
-      "score": 4.1,
-      "path_50": true,
-      "path_50_why": "Street high target $1,400.00 is +52%",
+      "score": 4.2,
+      "path_50": false,
+      "path_50_why": null,
       "novel": true,
       "times_picked": 0,
       "last_picked": null,
@@ -1508,8 +1538,8 @@
       "ticker": "TMDX",
       "name": "TransMedics Group, Inc.",
       "group": "Biotech / Life Sciences",
-      "price": 83.34,
-      "mktcap": 2880306176.0,
+      "price": 82.99,
+      "mktcap": 2877690112.0,
       "counts": {
         "strong_buy": 2,
         "buy": 6,
@@ -1522,9 +1552,9 @@
       "target_mean": 97.3,
       "target_high": 125.0,
       "target_low": 65.0,
-      "upside_mean": 16.8,
-      "upside_high": 50.0,
-      "downside_low": -22.0,
+      "upside_mean": 17.2,
+      "upside_high": 50.6,
+      "downside_low": -21.7,
       "flags": [
         "breakaway"
       ],
@@ -1539,24 +1569,118 @@
           "target": 124.0,
           "prior_target": 124.0,
           "target_vs_mean": 27.4,
-          "upside": 48.8,
+          "upside": 49.4,
           "why": "target +27% vs mean"
         }
       ],
       "score": 4.1,
-      "path_50": false,
-      "path_50_why": null,
+      "path_50": true,
+      "path_50_why": "Street high target $125.00 is +51%",
       "novel": false,
       "times_picked": 3,
       "last_picked": "2026-04-27",
-      "last_pick_return": -23.11
+      "last_pick_return": -28.07
+    },
+    {
+      "ticker": "AMD",
+      "name": "Advanced Micro Devices, Inc.",
+      "group": "AI Leaders",
+      "price": 631.75,
+      "mktcap": 1031316111360.0,
+      "counts": {
+        "strong_buy": 5,
+        "buy": 39,
+        "hold": 11,
+        "sell": 0,
+        "strong_sell": 0
+      },
+      "n": 55,
+      "consensus": "bull",
+      "target_mean": 622.008,
+      "target_high": 1250.0,
+      "target_low": 365.0,
+      "upside_mean": -1.5,
+      "upside_high": 97.9,
+      "downside_low": -42.2,
+      "flags": [
+        "breakaway"
+      ],
+      "breaks": [
+        {
+          "date": "2026-08-05",
+          "firm": "Morgan Stanley",
+          "from": "Equal-Weight",
+          "to": "Equal-Weight",
+          "action": "main",
+          "side": "hold",
+          "target": 465.0,
+          "prior_target": 410.0,
+          "target_vs_mean": -25.2,
+          "upside": -26.4,
+          "why": "target -25% vs mean"
+        }
+      ],
+      "score": 4.0,
+      "path_50": true,
+      "path_50_why": "Street high target $1,250.00 is +98%",
+      "novel": true,
+      "times_picked": 0,
+      "last_picked": null,
+      "last_pick_return": null
+    },
+    {
+      "ticker": "MSFT",
+      "name": "Microsoft Corporation",
+      "group": "Quantum / Emerging Tech",
+      "price": 525.18,
+      "mktcap": 3899747991552.0,
+      "counts": {
+        "strong_buy": 14,
+        "buy": 40,
+        "hold": 2,
+        "sell": 0,
+        "strong_sell": 0
+      },
+      "n": 56,
+      "consensus": "bull",
+      "target_mean": 578.82245,
+      "target_high": 870.0,
+      "target_low": 440.0,
+      "upside_mean": 10.2,
+      "upside_high": 65.7,
+      "downside_low": -16.2,
+      "flags": [
+        "breakaway"
+      ],
+      "breaks": [
+        {
+          "date": "2026-10-01",
+          "firm": "Wells Fargo",
+          "from": "Overweight",
+          "to": "Overweight",
+          "action": "main",
+          "side": "bull",
+          "target": 725.0,
+          "prior_target": 700.0,
+          "target_vs_mean": 25.3,
+          "upside": 38.0,
+          "why": "target +25% vs mean"
+        }
+      ],
+      "score": 4.0,
+      "path_50": true,
+      "path_50_why": "Street high target $870.00 is +66%",
+      "novel": false,
+      "times_picked": 1,
+      "last_picked": "2026-04-13",
+      "last_pick_return": 36.76
     },
     {
       "ticker": "UUUU",
       "name": "Energy Fuels Inc",
       "group": "Nuclear / Next-Gen Energy",
-      "price": 11.045,
-      "mktcap": 2924424192.0,
+      "price": 10.82,
+      "mktcap": 2864849920.0,
       "counts": {
         "strong_buy": 1,
         "buy": 7,
@@ -1569,9 +1693,9 @@
       "target_mean": 24.15,
       "target_high": 32.5,
       "target_low": 16.0,
-      "upside_mean": 118.7,
-      "upside_high": 194.3,
-      "downside_low": 44.9,
+      "upside_mean": 123.2,
+      "upside_high": 200.4,
+      "downside_low": 47.9,
       "flags": [
         "breakaway"
       ],
@@ -1586,17 +1710,50 @@
           "target": 18.0,
           "prior_target": 0.0,
           "target_vs_mean": -25.5,
-          "upside": 63.0,
+          "upside": 66.4,
           "why": "target -25% vs mean"
         }
       ],
       "score": 4.0,
       "path_50": true,
-      "path_50_why": "Street high target $32.50 is +194%",
+      "path_50_why": "Street high target $32.50 is +200%",
       "novel": false,
       "times_picked": 6,
       "last_picked": "2026-06-01",
-      "last_pick_return": -38.85
+      "last_pick_return": -42.19
+    },
+    {
+      "ticker": "PANW",
+      "name": "Palo Alto Networks, Inc.",
+      "group": "Cybersecurity",
+      "price": 406.76,
+      "mktcap": 332729679872.0,
+      "counts": {
+        "strong_buy": 10,
+        "buy": 32,
+        "hold": 11,
+        "sell": 1,
+        "strong_sell": 1
+      },
+      "n": 55,
+      "consensus": "bull",
+      "target_mean": 396.92,
+      "target_high": 475.0,
+      "target_low": 190.0,
+      "upside_mean": -2.4,
+      "upside_high": 16.8,
+      "downside_low": -53.3,
+      "flags": [
+        "lone_bear"
+      ],
+      "breaks": [],
+      "score": 3.0,
+      "path_50": false,
+      "path_50_why": null,
+      "novel": false,
+      "times_picked": 2,
+      "last_picked": "2026-06-04",
+      "last_pick_return": 49.2
     }
   ]
 }
