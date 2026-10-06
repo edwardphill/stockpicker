@@ -1,8 +1,8 @@
 {
   "schema": "https://edwardphill.github.io/stockpicker/data/schema/summary.schema.json",
-  "generated": "2026-10-06 18:30 UTC",
+  "generated": "2026-10-06 18:40 UTC",
   "site": "https://edwardphill.github.io/stockpicker",
-  "prices_as_of": "2026-10-06 01:34 UTC",
+  "prices_as_of": "2026-10-06 18:40 UTC",
   "counts": {
     "stocks": 19,
     "picks": 51,
@@ -12,44 +12,44 @@
   },
   "by_stock": {
     "count": 19,
-    "win_rate_pct": 31.6,
-    "avg_return_pct": -0.57,
-    "median_return_pct": -7.78,
-    "avg_return_with_10pct_stop": 16.29
+    "win_rate_pct": 36.8,
+    "avg_return_pct": -0.34,
+    "median_return_pct": -7.58,
+    "avg_return_with_10pct_stop": 16.14
   },
   "by_pick": {
     "count": 51,
-    "win_rate_pct": 33.3,
-    "avg_return_pct": 1.39,
-    "median_return_pct": -7.78,
-    "avg_return_with_10pct_stop": 15.88
+    "win_rate_pct": 35.3,
+    "avg_return_pct": 1.38,
+    "median_return_pct": -8.44,
+    "avg_return_with_10pct_stop": 15.39
   },
   "top": [
-    {
-      "ticker": "ILMN",
-      "theme": "Biotech / Life Sciences",
-      "first_picked": "2026-04-13",
-      "entry_price": 122.86,
-      "current_price": 293.69,
-      "return_pct": 139.04,
-      "times_picked": 1
-    },
     {
       "ticker": "QLYS",
       "theme": "Cybersecurity",
       "first_picked": "2026-04-15",
       "entry_price": 83.22,
-      "current_price": 198.68,
-      "return_pct": 138.74,
+      "current_price": 198.19,
+      "return_pct": 138.15,
       "times_picked": 5
+    },
+    {
+      "ticker": "ILMN",
+      "theme": "Biotech / Life Sciences",
+      "first_picked": "2026-04-13",
+      "entry_price": 122.86,
+      "current_price": 276.73,
+      "return_pct": 125.24,
+      "times_picked": 1
     },
     {
       "ticker": "PANW",
       "theme": "Cybersecurity",
       "first_picked": "2026-05-27",
       "entry_price": 248.17,
-      "current_price": 406.76,
-      "return_pct": 63.9,
+      "current_price": 418.68,
+      "return_pct": 68.71,
       "times_picked": 2
     },
     {
@@ -57,18 +57,18 @@
       "theme": "Quantum / Emerging Tech",
       "first_picked": "2026-04-13",
       "entry_price": 378.42,
-      "current_price": 525.18,
-      "return_pct": 38.78,
+      "current_price": 530.79,
+      "return_pct": 40.26,
       "times_picked": 1
     },
     {
-      "ticker": "IMVT",
-      "theme": "Biotech / Life Sciences",
-      "first_picked": "2026-05-08",
-      "entry_price": 28.34,
-      "current_price": 33.25,
-      "return_pct": 17.33,
-      "times_picked": 6
+      "ticker": "CGNX",
+      "theme": "Industrial AI / Robotics",
+      "first_picked": "2026-04-15",
+      "entry_price": 55.58,
+      "current_price": 65.81,
+      "return_pct": 18.41,
+      "times_picked": 4
     }
   ],
   "bottom": [
@@ -77,8 +77,8 @@
       "theme": "Nuclear / Next-Gen Energy",
       "first_picked": "2026-03-26",
       "entry_price": 3.8,
-      "current_price": 0.23,
-      "return_pct": -93.95,
+      "current_price": 0.25,
+      "return_pct": -93.42,
       "times_picked": 1
     },
     {
@@ -86,8 +86,8 @@
       "theme": "Quantum / Emerging Tech",
       "first_picked": "2026-05-22",
       "entry_price": 31.11,
-      "current_price": 15.64,
-      "return_pct": -49.73,
+      "current_price": 15.77,
+      "return_pct": -49.31,
       "times_picked": 2
     },
     {
@@ -95,8 +95,8 @@
       "theme": "Nuclear / Next-Gen Energy",
       "first_picked": "2026-04-20",
       "entry_price": 20.76,
-      "current_price": 10.82,
-      "return_pct": -47.88,
+      "current_price": 11.31,
+      "return_pct": -45.52,
       "times_picked": 6
     },
     {
@@ -104,8 +104,8 @@
       "theme": "Space / Satellite",
       "first_picked": "2026-06-10",
       "entry_price": 27.27,
-      "current_price": 14.29,
-      "return_pct": -47.6,
+      "current_price": 14.98,
+      "return_pct": -45.07,
       "times_picked": 3
     },
     {
@@ -113,8 +113,8 @@
       "theme": "Nuclear / Next-Gen Energy",
       "first_picked": "2026-03-27",
       "entry_price": 6.2,
-      "current_price": 3.75,
-      "return_pct": -39.52,
+      "current_price": 3.51,
+      "return_pct": -43.39,
       "times_picked": 1
     }
   ],
@@ -122,37 +122,37 @@
     "Biotech / Life Sciences": {
       "stocks": 4,
       "picks": 11,
-      "avg_return_pct": 32.79
+      "avg_return_pct": 27.57
     },
     "Cybersecurity": {
       "stocks": 2,
       "picks": 7,
-      "avg_return_pct": 101.32
+      "avg_return_pct": 103.43
     },
     "Defense Tech / Dual-Use": {
       "stocks": 1,
       "picks": 1,
-      "avg_return_pct": -35.54
+      "avg_return_pct": -33.29
     },
     "Industrial AI / Robotics": {
       "stocks": 2,
       "picks": 8,
-      "avg_return_pct": 5.78
+      "avg_return_pct": 5.9
     },
     "Nuclear / Next-Gen Energy": {
       "stocks": 5,
       "picks": 11,
-      "avg_return_pct": -44.28
+      "avg_return_pct": -41.38
     },
     "Quantum / Emerging Tech": {
       "stocks": 3,
       "picks": 4,
-      "avg_return_pct": -6.24
+      "avg_return_pct": -5.54
     },
     "Space / Satellite": {
       "stocks": 2,
       "picks": 9,
-      "avg_return_pct": -40.25
+      "avg_return_pct": -39.24
     }
   },
   "analyst_mismatch": {
@@ -311,8 +311,8 @@
     }
   },
   "case_studies": [
-    "ILMN",
     "QLYS",
+    "ILMN",
     "PANW",
     "MSFT"
   ],
