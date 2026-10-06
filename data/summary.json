@@ -1,6 +1,6 @@
 {
   "schema": "https://edwardphill.github.io/stockpicker/data/schema/summary.schema.json",
-  "generated": "2026-10-06 01:34 UTC",
+  "generated": "2026-10-06 01:56 UTC",
   "site": "https://edwardphill.github.io/stockpicker",
   "prices_as_of": "2026-10-06 01:34 UTC",
   "counts": {
@@ -234,16 +234,16 @@
     ]
   },
   "portfolio": {
-    "generated": "2026-10-03 00:45 UTC",
+    "generated": "2026-10-06 01:56 UTC",
     "rules": {
       "hold": {
         "label": "Hold",
         "description": "never sell",
         "key": "hold",
         "positions": 51,
-        "ending_value": 50733.5,
-        "total_return_pct": -0.52,
-        "avg_return_pct": -0.52,
+        "ending_value": 51707.4,
+        "total_return_pct": 1.39,
+        "avg_return_pct": 1.39,
         "win_rate_pct": 33.3,
         "stopped_out": 0,
         "stopped_out_winners": 0,
@@ -259,9 +259,9 @@
         "description": "sell at the first close 5% or more below entry",
         "key": "stop_5",
         "positions": 51,
-        "ending_value": 57162.7,
-        "total_return_pct": 12.08,
-        "avg_return_pct": 12.08,
+        "ending_value": 58184.5,
+        "total_return_pct": 14.09,
+        "avg_return_pct": 14.09,
         "win_rate_pct": 23.5,
         "stopped_out": 37,
         "stopped_out_winners": 5,
@@ -277,9 +277,9 @@
         "description": "sell at the first close 10% or more below entry (current managed rule)",
         "key": "stop_10",
         "positions": 51,
-        "ending_value": 56581.4,
-        "total_return_pct": 10.94,
-        "avg_return_pct": 10.94,
+        "ending_value": 57677.3,
+        "total_return_pct": 13.09,
+        "avg_return_pct": 13.09,
         "win_rate_pct": 31.4,
         "stopped_out": 32,
         "stopped_out_winners": 1,
@@ -295,16 +295,16 @@
         "description": "sell at -20%, at +50%, or after 6 months, whichever comes first",
         "key": "v2",
         "positions": 51,
-        "ending_value": 51527.0,
-        "total_return_pct": 1.03,
-        "avg_return_pct": 1.03,
+        "ending_value": 51678.2,
+        "total_return_pct": 1.33,
+        "avg_return_pct": 1.33,
         "win_rate_pct": 33.3,
         "stopped_out": 26,
         "stopped_out_winners": 0,
         "exits": {
-          "open": 14,
+          "open": 13,
           "stop": 26,
-          "target": 11,
+          "target": 12,
           "time": 0
         }
       }

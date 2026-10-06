@@ -1,6 +1,6 @@
 {
   "schema": "https://edwardphill.github.io/stockpicker/data/schema/cases.schema.json",
-  "generated": "2026-10-06 01:34 UTC",
+  "generated": "2026-10-06 01:56 UTC",
   "cases": [
     {
       "ticker": "ILMN",
@@ -50,17 +50,17 @@
       "bear_verdict": "The market is not underpricing Illumina's margin recovery \u2014 it is correctly discounting the durability of that recovery against a competitive landscape that is structurally different from the one in which ILMN built its moat. The bull note treats the GRAIL divestiture as a cleansing event and assumes the remaining business simply re-rates to historical life sciences tools multiples.",
       "path": {
         "max_drawdown_pct": -2.03,
-        "max_runup_pct": 122.94,
+        "max_runup_pct": 139.04,
         "stop_5": {
-          "exit_date": "2026-10-01",
-          "exit_price": 265.72,
-          "return_pct": 116.28,
+          "exit_date": "2026-10-05",
+          "exit_price": 293.69,
+          "return_pct": 139.04,
           "reason": "open"
         },
         "stop_10": {
-          "exit_date": "2026-10-01",
-          "exit_price": 265.72,
-          "return_pct": 116.28,
+          "exit_date": "2026-10-05",
+          "exit_price": 293.69,
+          "return_pct": 139.04,
           "reason": "open"
         }
       },
@@ -119,17 +119,17 @@
       "bear_verdict": "Monitor. The May 5 earnings print \u2014 specifically net new ARR trajectory, DBNER disclosure, and FY26 revenue guide \u2014 will resolve the central debate between sentiment-driven dislocation (bull) and structural competitive erosion (bear); until then, the asymmetry is not clearly favorable enough to size with conviction given the plausible $55-$73 downside range against a $133 bull target that requires multiple expansion\u2026",
       "path": {
         "max_drawdown_pct": -1.47,
-        "max_runup_pct": 135.38,
+        "max_runup_pct": 138.74,
         "stop_5": {
-          "exit_date": "2026-10-01",
-          "exit_price": 187.43,
-          "return_pct": 125.22,
+          "exit_date": "2026-10-05",
+          "exit_price": 198.68,
+          "return_pct": 138.74,
           "reason": "open"
         },
         "stop_10": {
-          "exit_date": "2026-10-01",
-          "exit_price": 187.43,
-          "return_pct": 125.22,
+          "exit_date": "2026-10-05",
+          "exit_price": 198.68,
+          "return_pct": 138.74,
           "reason": "open"
         }
       },
@@ -180,17 +180,17 @@
       "bear_verdict": "Monitor. The June 2 earnings report \u2014 specifically FY26 billings guidance and NGS ARR trajectory \u2014 is the resolution event; the stock is priced for a beat-and-raise, and the asymmetry at 62x forward earnings skews risk to the downside if platformization conversion data disappoints even modestly.",
       "path": {
         "max_drawdown_pct": 0.12,
-        "max_runup_pct": 60.1,
+        "max_runup_pct": 63.9,
         "stop_5": {
-          "exit_date": "2026-10-01",
-          "exit_price": 396.25,
-          "return_pct": 59.67,
+          "exit_date": "2026-10-05",
+          "exit_price": 406.76,
+          "return_pct": 63.9,
           "reason": "open"
         },
         "stop_10": {
-          "exit_date": "2026-10-01",
-          "exit_price": 396.25,
-          "return_pct": 59.67,
+          "exit_date": "2026-10-05",
+          "exit_price": 406.76,
+          "return_pct": 63.9,
           "reason": "open"
         }
       },
@@ -242,7 +242,7 @@
       "bear_verdict": "The bull's mechanism is: P/E expansion from ~20x to ~28-30x + earnings beats to $20+ EPS . Let's stress-test each component.",
       "path": {
         "max_drawdown_pct": -6.76,
-        "max_runup_pct": 36.4,
+        "max_runup_pct": 38.78,
         "stop_5": {
           "exit_date": "2026-06-25",
           "exit_price": 352.83,
@@ -250,9 +250,9 @@
           "reason": "stop"
         },
         "stop_10": {
-          "exit_date": "2026-10-01",
-          "exit_price": 512.8,
-          "return_pct": 35.51,
+          "exit_date": "2026-10-05",
+          "exit_price": 525.18,
+          "return_pct": 38.78,
           "reason": "open"
         }
       },

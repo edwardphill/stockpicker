@@ -1,6 +1,6 @@
 # Case studies: the best picks so far
 
-Built 2026-10-06 01:34 UTC from the tracker's top 4 stocks by return since first pick. Each shows what the system saw at the time (signals, analyst target, macro), what the AI bull and bear reports argued, and what happened. Source: [cases.json](https://edwardphill.github.io/stockpicker/data/cases.json).
+Built 2026-10-06 01:56 UTC from the tracker's top 4 stocks by return since first pick. Each shows what the system saw at the time (signals, analyst target, macro), what the AI bull and bear reports argued, and what happened. Source: [cases.json](https://edwardphill.github.io/stockpicker/data/cases.json).
 
 ## ILMN · +139.0% since 2026-04-13
 
@@ -9,7 +9,7 @@ Built 2026-10-06 01:34 UTC from the tracker's top 4 stocks by return since first
 - Analyst target at pick: $136.11 (+10.8% upside)
 - Signals: analyst target, analyst upside, insider buys, days to catalyst, rev accel, eps growth, fcf yield, pct above 52w low, pct below 52w high, rel strength
 - Macro: VIX 19.23, 10Y 4.31%, risk on · Market cap $18.8B
-- Path: worst close -2.0%, best close +122.9% vs entry
+- Path: worst close -2.0%, best close +139.0% vs entry
 
 **Bull thesis then:** Our analysis suggests the market is underappreciating three dynamics at Illumina. First, the revenue growth inflection: while the trailing YoY growth rate of 5.0% appears modest, sequential quarterly improvement of +17.5% QoQ in the growth rate signals that instrument placement cycles and consumables pull-through are re-accelerating.
 
@@ -30,7 +30,7 @@ Built 2026-10-06 01:34 UTC from the tracker's top 4 stocks by return since first
 - Analyst target at pick: $133.33 (+60.2% upside)
 - Signals: analyst target, analyst upside, insider buys, days to catalyst, vol ratio, rev accel, eps growth, fcf yield, short pct, pct above 52w low, pct below 52w high
 - Macro: VIX 19.12, 10Y 4.3%, risk on · Market cap $3.0B
-- Path: worst close -1.5%, best close +135.4% vs entry
+- Path: worst close -1.5%, best close +138.7% vs entry
 
 **Bull thesis then:** Our analysis suggests the market is mispricing QLYS on two fronts. First, recent share price weakness — driven by fears of AI-enabled cybersecurity disruption — has compressed the forward P/E to 10.4x, a level that, in our view, embeds an implausibly bearish scenario for a company growing revenue at 10% with 83% gross margins and nearly 30% net margins.
 
@@ -51,7 +51,7 @@ Built 2026-10-06 01:34 UTC from the tracker's top 4 stocks by return since first
 - Analyst target at pick: $227.14 (-8.5% upside)
 - Signals: insider buys, days to catalyst, rev accel, eps growth, pct above 52w low, pct below 52w high, rel strength
 - Macro: VIX 17.01, 10Y 4.56%, risk on · Market cap $201.3B
-- Path: worst close +0.1%, best close +60.1% vs entry
+- Path: worst close +0.1%, best close +63.9% vs entry
 
 **Bull thesis then:** We believe the market is underappreciating the durability and pace of Palo Alto Networks' platformization strategy, which is structurally shifting the company from a point-product vendor to the consolidation platform of choice in enterprise security. The company's push to bundle next-gen firewall, SASE, cloud security, and SOC capabilities into unified consumption models — anchored by its Cortex XSIAM platform — is…
 
@@ -73,7 +73,7 @@ Built 2026-10-06 01:34 UTC from the tracker's top 4 stocks by return since first
 - Analyst target at pick: $585.41 (+54.7% upside)
 - Signals: analyst target, analyst upside, insider buys, days to catalyst, rev accel, pct above 52w low, pct below 52w high
 - Macro: VIX 19.23, 10Y 4.31%, risk on · Market cap $2.81T
-- Path: worst close -6.8%, best close +36.4% vs entry
+- Path: worst close -6.8%, best close +38.8% vs entry
 
 **Bull thesis then:** At $378, MSFT trades at ~20x forward earnings — cheap for a business growing revenue 16.7% with 39% profit margins. The 50% path to ~$568+ requires: Azure AI monetization inflection: Azure is already accelerating (QoQ revenue up 7.9%).
 
