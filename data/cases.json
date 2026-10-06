@@ -1,7 +1,74 @@
 {
   "schema": "https://edwardphill.github.io/stockpicker/data/schema/cases.schema.json",
-  "generated": "2026-10-05 20:45 UTC",
+  "generated": "2026-10-06 01:34 UTC",
   "cases": [
+    {
+      "ticker": "ILMN",
+      "theme": "Biotech / Life Sciences",
+      "first_picked": "2026-04-13",
+      "times_picked": 1,
+      "conviction": "Buy",
+      "entry_price": 122.86,
+      "current_price": 293.69,
+      "return_pct": 139.04,
+      "days_held": 176,
+      "analyst_target_at_pick": 136.11,
+      "analyst_upside_at_pick_pct": 10.8,
+      "signals": [
+        "analyst_target",
+        "analyst_upside",
+        "insider_buys",
+        "days_to_catalyst",
+        "rev_accel",
+        "eps_growth",
+        "fcf_yield",
+        "pct_above_52w_low",
+        "pct_below_52w_high",
+        "rel_strength"
+      ],
+      "signal_values": {
+        "analyst_target": 136.11,
+        "analyst_upside": 10.8,
+        "insider_buys": 4,
+        "days_to_catalyst": 17,
+        "rev_accel": 0.175,
+        "eps_growth": 6.9,
+        "fcf_yield": 4.2,
+        "pct_above_52w_low": 75.9,
+        "pct_below_52w_high": 21.0,
+        "rel_strength": 35.3
+      },
+      "macro_at_pick": {
+        "vix": 19.23,
+        "yield_10y": 4.31,
+        "risk_on": true
+      },
+      "mktcap_at_pick": 18786058240.0,
+      "report_url": "https://edwardphill.github.io/stockpicker/reports/ILMN-2026-04-13.html",
+      "thesis": "Our analysis suggests the market is underappreciating three dynamics at Illumina. First, the revenue growth inflection: while the trailing YoY growth rate of 5.0% appears modest, sequential quarterly improvement of +17.5% QoQ in the growth rate signals that instrument placement cycles and consumables pull-through are re-accelerating.",
+      "catalysts": "Q1 FY26 Earnings (April 30, 2026): We expect management to report continued sequential revenue acceleration and potentially raise full-year guidance. A beat-and-raise scenario would validate the growth inflection thesis and could drive a re-rating toward our target.",
+      "bear_verdict": "The market is not underpricing Illumina's margin recovery \u2014 it is correctly discounting the durability of that recovery against a competitive landscape that is structurally different from the one in which ILMN built its moat. The bull note treats the GRAIL divestiture as a cleansing event and assumes the remaining business simply re-rates to historical life sciences tools multiples.",
+      "path": {
+        "max_drawdown_pct": -2.03,
+        "max_runup_pct": 122.94,
+        "stop_5": {
+          "exit_date": "2026-10-01",
+          "exit_price": 265.72,
+          "return_pct": 116.28,
+          "reason": "open"
+        },
+        "stop_10": {
+          "exit_date": "2026-10-01",
+          "exit_price": 265.72,
+          "return_pct": 116.28,
+          "reason": "open"
+        }
+      },
+      "lessons": [
+        "Consensus analyst upside at the pick was +10.8%, under 50%, so a gate on the consensus target would have skipped it; the gate has to accept a single analyst's 50% path.",
+        "Never closed more than -2.0% below entry, so neither stop would have triggered."
+      ]
+    },
     {
       "ticker": "QLYS",
       "theme": "Cybersecurity",
@@ -9,9 +76,9 @@
       "times_picked": 5,
       "conviction": "Strong Buy",
       "entry_price": 83.22,
-      "current_price": 193.0,
-      "return_pct": 131.92,
-      "days_held": 173,
+      "current_price": 198.68,
+      "return_pct": 138.74,
+      "days_held": 174,
       "analyst_target_at_pick": 133.33,
       "analyst_upside_at_pick_pct": 60.2,
       "signals": [
@@ -72,82 +139,15 @@
       ]
     },
     {
-      "ticker": "ILMN",
-      "theme": "Biotech / Life Sciences",
-      "first_picked": "2026-04-13",
-      "times_picked": 1,
-      "conviction": "Buy",
-      "entry_price": 122.86,
-      "current_price": 273.04,
-      "return_pct": 122.24,
-      "days_held": 175,
-      "analyst_target_at_pick": 136.11,
-      "analyst_upside_at_pick_pct": 10.8,
-      "signals": [
-        "analyst_target",
-        "analyst_upside",
-        "insider_buys",
-        "days_to_catalyst",
-        "rev_accel",
-        "eps_growth",
-        "fcf_yield",
-        "pct_above_52w_low",
-        "pct_below_52w_high",
-        "rel_strength"
-      ],
-      "signal_values": {
-        "analyst_target": 136.11,
-        "analyst_upside": 10.8,
-        "insider_buys": 4,
-        "days_to_catalyst": 17,
-        "rev_accel": 0.175,
-        "eps_growth": 6.9,
-        "fcf_yield": 4.2,
-        "pct_above_52w_low": 75.9,
-        "pct_below_52w_high": 21.0,
-        "rel_strength": 35.3
-      },
-      "macro_at_pick": {
-        "vix": 19.23,
-        "yield_10y": 4.31,
-        "risk_on": true
-      },
-      "mktcap_at_pick": 18786058240.0,
-      "report_url": "https://edwardphill.github.io/stockpicker/reports/ILMN-2026-04-13.html",
-      "thesis": "Our analysis suggests the market is underappreciating three dynamics at Illumina. First, the revenue growth inflection: while the trailing YoY growth rate of 5.0% appears modest, sequential quarterly improvement of +17.5% QoQ in the growth rate signals that instrument placement cycles and consumables pull-through are re-accelerating.",
-      "catalysts": "Q1 FY26 Earnings (April 30, 2026): We expect management to report continued sequential revenue acceleration and potentially raise full-year guidance. A beat-and-raise scenario would validate the growth inflection thesis and could drive a re-rating toward our target.",
-      "bear_verdict": "The market is not underpricing Illumina's margin recovery \u2014 it is correctly discounting the durability of that recovery against a competitive landscape that is structurally different from the one in which ILMN built its moat. The bull note treats the GRAIL divestiture as a cleansing event and assumes the remaining business simply re-rates to historical life sciences tools multiples.",
-      "path": {
-        "max_drawdown_pct": -2.03,
-        "max_runup_pct": 122.94,
-        "stop_5": {
-          "exit_date": "2026-10-01",
-          "exit_price": 265.72,
-          "return_pct": 116.28,
-          "reason": "open"
-        },
-        "stop_10": {
-          "exit_date": "2026-10-01",
-          "exit_price": 265.72,
-          "return_pct": 116.28,
-          "reason": "open"
-        }
-      },
-      "lessons": [
-        "Consensus analyst upside at the pick was +10.8%, under 50%, so a gate on the consensus target would have skipped it; the gate has to accept a single analyst's 50% path.",
-        "Never closed more than -2.0% below entry, so neither stop would have triggered."
-      ]
-    },
-    {
       "ticker": "PANW",
       "theme": "Cybersecurity",
       "first_picked": "2026-05-27",
       "times_picked": 2,
       "conviction": "Buy",
       "entry_price": 248.17,
-      "current_price": 403.24,
-      "return_pct": 62.49,
-      "days_held": 131,
+      "current_price": 406.76,
+      "return_pct": 63.9,
+      "days_held": 132,
       "analyst_target_at_pick": 227.14,
       "analyst_upside_at_pick_pct": -8.5,
       "signals": [
@@ -207,9 +207,9 @@
       "times_picked": 1,
       "conviction": "Strong Buy",
       "entry_price": 378.42,
-      "current_price": 517.53,
-      "return_pct": 36.76,
-      "days_held": 175,
+      "current_price": 525.18,
+      "return_pct": 38.78,
+      "days_held": 176,
       "analyst_target_at_pick": 585.41,
       "analyst_upside_at_pick_pct": 54.7,
       "signals": [
