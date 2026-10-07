@@ -4,7 +4,7 @@
 
 Key facts as of 2026-10-06 22:49 UTC: 19 stocks picked in 51 picks between 2026-03-26 and 2026-06-22; by stock the win rate is 36.8% and the average return since first pick is -0.3% (best QLYS +140.2%, worst VNRX -93.7%).
 Latest analyst-mismatch scan 2026-10-05 20:45 UTC: 27 mismatches; this week's candidates (new names with a 50% path): ORCL, MU, NVDA, WVE, INTC, GLW, AAOI, AVGO, CIEN, AMD.
-Stop-rule simulation (2026-10-06 01:56 UTC): Hold +1.4%; Stop -5% +14.1%; Stop -10% +13.1%; v2 exits +1.3%.
+Stop-rule simulation (2026-10-07 01:02 UTC): Hold +1.6%; Stop -5% +13.9%; Stop -10% +13.0%; v2 exits +1.5%.
 
 ## Data (fetch these)
 
@@ -51,4 +51,4 @@ Stop-rule simulation (2026-10-06 01:56 UTC): Hold +1.4%; Stop -5% +14.1%; Stop -
 - `status` is Open for every pick until the pipeline records exits; the -10% stop in `avg_return_with_10pct_stop` is a cap on losses, not a traded rule. `data/portfolio.json` is the path-based simulation.
 - Repository: https://github.com/edwardphill/stockpicker (AGENTS.md describes the layout for coding agents).
 
-Generated 2026-10-06 22:49 UTC by scripts/build_agent_views.py.
+Generated 2026-10-07 01:02 UTC by scripts/build_agent_views.py.

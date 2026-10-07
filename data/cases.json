@@ -1,6 +1,6 @@
 {
   "schema": "https://edwardphill.github.io/stockpicker/data/schema/cases.schema.json",
-  "generated": "2026-10-06 22:49 UTC",
+  "generated": "2026-10-07 01:02 UTC",
   "cases": [
     {
       "ticker": "QLYS",
@@ -11,7 +11,7 @@
       "entry_price": 83.22,
       "current_price": 199.93,
       "return_pct": 140.24,
-      "days_held": 174,
+      "days_held": 175,
       "analyst_target_at_pick": 133.33,
       "analyst_upside_at_pick_pct": 60.2,
       "signals": [
@@ -80,7 +80,7 @@
       "entry_price": 122.86,
       "current_price": 273.54,
       "return_pct": 122.64,
-      "days_held": 176,
+      "days_held": 177,
       "analyst_target_at_pick": 136.11,
       "analyst_upside_at_pick_pct": 10.8,
       "signals": [
@@ -121,15 +121,15 @@
         "max_drawdown_pct": -2.03,
         "max_runup_pct": 139.04,
         "stop_5": {
-          "exit_date": "2026-10-05",
-          "exit_price": 293.69,
-          "return_pct": 139.04,
+          "exit_date": "2026-10-06",
+          "exit_price": 273.54,
+          "return_pct": 122.64,
           "reason": "open"
         },
         "stop_10": {
-          "exit_date": "2026-10-05",
-          "exit_price": 293.69,
-          "return_pct": 139.04,
+          "exit_date": "2026-10-06",
+          "exit_price": 273.54,
+          "return_pct": 122.64,
           "reason": "open"
         }
       },
@@ -147,7 +147,7 @@
       "entry_price": 248.17,
       "current_price": 419.91,
       "return_pct": 69.2,
-      "days_held": 132,
+      "days_held": 133,
       "analyst_target_at_pick": 227.14,
       "analyst_upside_at_pick_pct": -8.5,
       "signals": [
@@ -209,7 +209,7 @@
       "entry_price": 378.42,
       "current_price": 529.3,
       "return_pct": 39.87,
-      "days_held": 176,
+      "days_held": 177,
       "analyst_target_at_pick": 585.41,
       "analyst_upside_at_pick_pct": 54.7,
       "signals": [
@@ -242,7 +242,7 @@
       "bear_verdict": "The bull's mechanism is: P/E expansion from ~20x to ~28-30x + earnings beats to $20+ EPS . Let's stress-test each component.",
       "path": {
         "max_drawdown_pct": -6.76,
-        "max_runup_pct": 38.78,
+        "max_runup_pct": 39.87,
         "stop_5": {
           "exit_date": "2026-06-25",
           "exit_price": 352.83,
@@ -250,9 +250,9 @@
           "reason": "stop"
         },
         "stop_10": {
-          "exit_date": "2026-10-05",
-          "exit_price": 525.18,
-          "return_pct": 38.78,
+          "exit_date": "2026-10-06",
+          "exit_price": 529.3,
+          "return_pct": 39.87,
           "reason": "open"
         }
       },
