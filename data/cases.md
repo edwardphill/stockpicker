@@ -1,15 +1,15 @@
 # Case studies: the best picks so far
 
-Built 2026-10-07 23:38 UTC from the tracker's top 4 stocks by return since first pick. Each shows what the system saw at the time (signals, analyst target, macro), what the AI bull and bear reports argued, and what happened. Source: [cases.json](https://edwardphill.github.io/stockpicker/data/cases.json).
+Built 2026-10-08 01:21 UTC from the tracker's top 4 stocks by return since first pick. Each shows what the system saw at the time (signals, analyst target, macro), what the AI bull and bear reports argued, and what happened. Source: [cases.json](https://edwardphill.github.io/stockpicker/data/cases.json).
 
 ## QLYS · +134.0% since 2026-04-15
 
 - Theme: Cybersecurity · Conviction: Strong Buy · Picked 5×
-- Entry $83.22 → now $194.75 over 175 days
+- Entry $83.22 → now $194.75 over 176 days
 - Analyst target at pick: $133.33 (+60.2% upside)
 - Signals: analyst target, analyst upside, insider buys, days to catalyst, vol ratio, rev accel, eps growth, fcf yield, short pct, pct above 52w low, pct below 52w high
 - Macro: VIX 19.12, 10Y 4.3%, risk on · Market cap $3.0B
-- Path: worst close -1.5%, best close +138.7% vs entry
+- Path: worst close -1.5%, best close +140.2% vs entry
 
 **Bull thesis then:** Our analysis suggests the market is mispricing QLYS on two fronts. First, recent share price weakness — driven by fears of AI-enabled cybersecurity disruption — has compressed the forward P/E to 10.4x, a level that, in our view, embeds an implausibly bearish scenario for a company growing revenue at 10% with 83% gross margins and nearly 30% net margins.
 
@@ -26,7 +26,7 @@ Built 2026-10-07 23:38 UTC from the tracker's top 4 stocks by return since first
 ## ILMN · +117.9% since 2026-04-13
 
 - Theme: Biotech / Life Sciences · Conviction: Buy · Picked 1×
-- Entry $122.86 → now $267.76 over 177 days
+- Entry $122.86 → now $267.76 over 178 days
 - Analyst target at pick: $136.11 (+10.8% upside)
 - Signals: analyst target, analyst upside, insider buys, days to catalyst, rev accel, eps growth, fcf yield, pct above 52w low, pct below 52w high, rel strength
 - Macro: VIX 19.23, 10Y 4.31%, risk on · Market cap $18.8B
@@ -47,11 +47,11 @@ Built 2026-10-07 23:38 UTC from the tracker's top 4 stocks by return since first
 ## PANW · +63.4% since 2026-05-27
 
 - Theme: Cybersecurity · Conviction: Buy · Picked 2×
-- Entry $248.17 → now $405.57 over 133 days
+- Entry $248.17 → now $405.57 over 134 days
 - Analyst target at pick: $227.14 (-8.5% upside)
 - Signals: insider buys, days to catalyst, rev accel, eps growth, pct above 52w low, pct below 52w high, rel strength
 - Macro: VIX 17.01, 10Y 4.56%, risk on · Market cap $201.3B
-- Path: worst close +0.1%, best close +63.9% vs entry
+- Path: worst close +0.1%, best close +69.2% vs entry
 
 **Bull thesis then:** We believe the market is underappreciating the durability and pace of Palo Alto Networks' platformization strategy, which is structurally shifting the company from a point-product vendor to the consolidation platform of choice in enterprise security. The company's push to bundle next-gen firewall, SASE, cloud security, and SOC capabilities into unified consumption models — anchored by its Cortex XSIAM platform — is…
 
@@ -69,7 +69,7 @@ Built 2026-10-07 23:38 UTC from the tracker's top 4 stocks by return since first
 ## MSFT · +40.0% since 2026-04-13
 
 - Theme: Quantum / Emerging Tech · Conviction: Strong Buy · Picked 1×
-- Entry $378.42 → now $529.76 over 177 days
+- Entry $378.42 → now $529.76 over 178 days
 - Analyst target at pick: $585.41 (+54.7% upside)
 - Signals: analyst target, analyst upside, insider buys, days to catalyst, rev accel, pct above 52w low, pct below 52w high
 - Macro: VIX 19.23, 10Y 4.31%, risk on · Market cap $2.81T
