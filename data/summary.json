@@ -1,6 +1,6 @@
 {
   "schema": "https://edwardphill.github.io/stockpicker/data/schema/summary.schema.json",
-  "generated": "2026-10-08 23:48 UTC",
+  "generated": "2026-10-09 01:29 UTC",
   "site": "https://edwardphill.github.io/stockpicker",
   "prices_as_of": "2026-10-08 23:48 UTC",
   "counts": {
@@ -234,17 +234,17 @@
     ]
   },
   "portfolio": {
-    "generated": "2026-10-08 01:21 UTC",
+    "generated": "2026-10-09 01:29 UTC",
     "rules": {
       "hold": {
         "label": "Hold",
         "description": "never sell",
         "key": "hold",
         "positions": 51,
-        "ending_value": 51862.8,
-        "total_return_pct": 1.69,
-        "avg_return_pct": 1.69,
-        "win_rate_pct": 35.3,
+        "ending_value": 49758.9,
+        "total_return_pct": -2.43,
+        "avg_return_pct": -2.43,
+        "win_rate_pct": 31.4,
         "stopped_out": 0,
         "stopped_out_winners": 0,
         "exits": {
@@ -259,15 +259,15 @@
         "description": "sell at the first close 5% or more below entry",
         "key": "stop_5",
         "positions": 51,
-        "ending_value": 58159.2,
-        "total_return_pct": 14.04,
-        "avg_return_pct": 14.04,
+        "ending_value": 57232.2,
+        "total_return_pct": 12.22,
+        "avg_return_pct": 12.22,
         "win_rate_pct": 21.6,
-        "stopped_out": 38,
-        "stopped_out_winners": 7,
+        "stopped_out": 39,
+        "stopped_out_winners": 5,
         "exits": {
-          "open": 13,
-          "stop": 38,
+          "open": 12,
+          "stop": 39,
           "target": 0,
           "time": 0
         }
@@ -277,15 +277,15 @@
         "description": "sell at the first close 10% or more below entry (current managed rule)",
         "key": "stop_10",
         "positions": 51,
-        "ending_value": 57720.3,
-        "total_return_pct": 13.18,
-        "avg_return_pct": 13.18,
-        "win_rate_pct": 31.4,
-        "stopped_out": 32,
-        "stopped_out_winners": 2,
+        "ending_value": 56475.0,
+        "total_return_pct": 10.74,
+        "avg_return_pct": 10.74,
+        "win_rate_pct": 29.4,
+        "stopped_out": 33,
+        "stopped_out_winners": 1,
         "exits": {
-          "open": 19,
-          "stop": 32,
+          "open": 18,
+          "stop": 33,
           "target": 0,
           "time": 0
         }
@@ -295,10 +295,10 @@
         "description": "sell at -20%, at +50%, or after 6 months, whichever comes first",
         "key": "v2",
         "positions": 51,
-        "ending_value": 51793.7,
-        "total_return_pct": 1.56,
-        "avg_return_pct": 1.56,
-        "win_rate_pct": 35.3,
+        "ending_value": 51348.4,
+        "total_return_pct": 0.68,
+        "avg_return_pct": 0.68,
+        "win_rate_pct": 31.4,
         "stopped_out": 26,
         "stopped_out_winners": 0,
         "exits": {
