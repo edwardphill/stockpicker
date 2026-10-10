@@ -1,6 +1,6 @@
 # Stop-rule comparison
 
-Simulated 2026-10-09 01:29 UTC on daily closes from each pick date, $1,000 per pick, 51 picks. Rules: hold: never sell; stop_5: sell at the first close 5% or more below entry; stop_10: sell at the first close 10% or more below entry (current managed rule); v2: sell at -20%, at +50%, or after 6 months, whichever comes first. Source: [portfolio.json](https://edwardphill.github.io/stockpicker/data/portfolio.json).
+Simulated 2026-10-10 01:18 UTC on daily closes from each pick date, $1,000 per pick, 51 picks. Rules: hold: never sell; stop_5: sell at the first close 5% or more below entry; stop_10: sell at the first close 10% or more below entry (current managed rule); v2: sell at -20%, at +50%, or after 6 months, whichever comes first. Source: [portfolio.json](https://edwardphill.github.io/stockpicker/data/portfolio.json).
 
 | Rule | Ending value | Total return | Win rate | Avg return | Stopped out | Stopped-out winners |
 |---|---:|---:|---:|---:|---:|---:|

@@ -1,6 +1,6 @@
 {
   "schema": "https://edwardphill.github.io/stockpicker/data/schema/summary.schema.json",
-  "generated": "2026-10-09 22:57 UTC",
+  "generated": "2026-10-10 01:18 UTC",
   "site": "https://edwardphill.github.io/stockpicker",
   "prices_as_of": "2026-10-09 22:57 UTC",
   "counts": {
@@ -234,7 +234,7 @@
     ]
   },
   "portfolio": {
-    "generated": "2026-10-09 01:29 UTC",
+    "generated": "2026-10-10 01:18 UTC",
     "rules": {
       "hold": {
         "label": "Hold",

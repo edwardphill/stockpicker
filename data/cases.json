@@ -1,6 +1,6 @@
 {
   "schema": "https://edwardphill.github.io/stockpicker/data/schema/cases.schema.json",
-  "generated": "2026-10-09 22:57 UTC",
+  "generated": "2026-10-10 01:18 UTC",
   "cases": [
     {
       "ticker": "QLYS",
@@ -11,7 +11,7 @@
       "entry_price": 83.22,
       "current_price": 202.42,
       "return_pct": 143.23,
-      "days_held": 177,
+      "days_held": 178,
       "analyst_target_at_pick": 133.33,
       "analyst_upside_at_pick_pct": 60.2,
       "signals": [
@@ -80,7 +80,7 @@
       "entry_price": 122.86,
       "current_price": 278.17,
       "return_pct": 126.41,
-      "days_held": 179,
+      "days_held": 180,
       "analyst_target_at_pick": 136.11,
       "analyst_upside_at_pick_pct": 10.8,
       "signals": [
@@ -147,7 +147,7 @@
       "entry_price": 248.17,
       "current_price": 418.78,
       "return_pct": 68.75,
-      "days_held": 135,
+      "days_held": 136,
       "analyst_target_at_pick": 227.14,
       "analyst_upside_at_pick_pct": -8.5,
       "signals": [
@@ -209,7 +209,7 @@
       "entry_price": 378.42,
       "current_price": 535.07,
       "return_pct": 41.4,
-      "days_held": 179,
+      "days_held": 180,
       "analyst_target_at_pick": 585.41,
       "analyst_upside_at_pick_pct": 54.7,
       "signals": [
