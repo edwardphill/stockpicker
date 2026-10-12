@@ -1,6 +1,6 @@
 {
   "schema": "https://edwardphill.github.io/stockpicker/data/schema/summary.schema.json",
-  "generated": "2026-10-10 01:18 UTC",
+  "generated": "2026-10-12 21:17 UTC",
   "site": "https://edwardphill.github.io/stockpicker",
   "prices_as_of": "2026-10-09 22:57 UTC",
   "counts": {
@@ -156,80 +156,94 @@
     }
   },
   "analyst_mismatch": {
-    "scan": "2026-10-05 20:45 UTC",
+    "scan": "2026-10-12 21:17 UTC",
     "scanned": 40,
-    "mismatches": 27,
+    "mismatches": 25,
     "candidate_rule": "new name (not picked in 180 days) and at least one analyst target >= 50% above price; ranked by mismatch score",
     "candidates": [
+      {
+        "ticker": "MU",
+        "group": "AI Infrastructure / Fiber",
+        "score": 13.7,
+        "upside_high_pct": 203.3,
+        "why": "Street high target $3,000.00 is +203%"
+      },
       {
         "ticker": "ORCL",
         "group": "AI Leaders",
         "score": 12.7,
-        "upside_high_pct": 180.7,
-        "why": "Street high target $400.00 is +181%"
-      },
-      {
-        "ticker": "MU",
-        "group": "AI Infrastructure / Fiber",
-        "score": 11.5,
-        "upside_high_pct": 106.8,
-        "why": "Street high target $2,200.00 is +107%"
+        "upside_high_pct": 191.1,
+        "why": "Street high target $400.00 is +191%"
       },
       {
         "ticker": "NVDA",
         "group": "AI Leaders",
         "score": 11.3,
-        "upside_high_pct": 115.6,
-        "why": "Street high target $515.00 is +116%"
+        "upside_high_pct": 127.6,
+        "why": "Street high target $515.00 is +128%"
       },
       {
         "ticker": "WVE",
         "group": "Nuclear / Next-Gen Energy",
         "score": 6.8,
-        "upside_high_pct": 1020.0,
-        "why": "Street high target $42.00 is +1020%"
+        "upside_high_pct": 1180.5,
+        "why": "Street high target $42.00 is +1180%"
+      },
+      {
+        "ticker": "GLW",
+        "group": "AI Infrastructure / Fiber",
+        "score": 6.3,
+        "upside_high_pct": 61.6,
+        "why": "Street high target $238.00 is +62%"
       },
       {
         "ticker": "INTC",
         "group": "Contrarian examples",
         "score": 6.3,
-        "upside_high_pct": 72.1,
-        "why": "Street high target $200.00 is +72%"
+        "upside_high_pct": 97.3,
+        "why": "Street high target $200.00 is +97%"
       },
       {
-        "ticker": "GLW",
+        "ticker": "ALAB",
         "group": "AI Infrastructure / Fiber",
-        "score": 6.2,
-        "upside_high_pct": 49.3,
-        "why": "B of A Securities target $243.00 is +52%"
+        "score": 5.2,
+        "upside_high_pct": 54.3,
+        "why": "Street high target $500.00 is +54%"
+      },
+      {
+        "ticker": "AMD",
+        "group": "AI Leaders",
+        "score": 5.1,
+        "upside_high_pct": 110.4,
+        "why": "Street high target $1,250.00 is +110%"
       },
       {
         "ticker": "AAOI",
         "group": "AI Infrastructure / Fiber",
         "score": 4.4,
-        "upside_high_pct": 81.0,
-        "why": "Street high target $220.00 is +81%"
+        "upside_high_pct": 118.5,
+        "why": "Street high target $220.00 is +119%"
       },
       {
         "ticker": "AVGO",
         "group": "AI Leaders",
         "score": 4.4,
-        "upside_high_pct": 97.2,
-        "why": "Street high target $715.00 is +97%"
+        "upside_high_pct": 101.6,
+        "why": "Street high target $715.00 is +102%"
       },
       {
         "ticker": "CIEN",
         "group": "AI Infrastructure / Fiber",
         "score": 4.3,
-        "upside_high_pct": 69.4,
-        "why": "Street high target $660.00 is +69%"
+        "upside_high_pct": 63.0,
+        "why": "Street high target $660.00 is +63%"
       },
       {
-        "ticker": "AMD",
-        "group": "AI Leaders",
-        "score": 4.0,
-        "upside_high_pct": 97.9,
-        "why": "Street high target $1,250.00 is +98%"
+        "ticker": "LITE",
+        "group": "AI Infrastructure / Fiber",
+        "score": 4.2,
+        "upside_high_pct": 50.7,
+        "why": "Street high target $1,500.00 is +51%"
       }
     ]
   },
