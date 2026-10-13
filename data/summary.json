@@ -1,8 +1,8 @@
 {
   "schema": "https://edwardphill.github.io/stockpicker/data/schema/summary.schema.json",
-  "generated": "2026-10-13 19:23 UTC",
+  "generated": "2026-10-13 19:35 UTC",
   "site": "https://edwardphill.github.io/stockpicker",
-  "prices_as_of": "2026-10-13 02:38 UTC",
+  "prices_as_of": "2026-10-13 19:35 UTC",
   "counts": {
     "stocks": 19,
     "picks": 51,
@@ -13,16 +13,16 @@
   "by_stock": {
     "count": 19,
     "win_rate_pct": 36.8,
-    "avg_return_pct": -3.33,
-    "median_return_pct": -5.51,
-    "avg_return_with_10pct_stop": 15.34
+    "avg_return_pct": -4.08,
+    "median_return_pct": -3.59,
+    "avg_return_with_10pct_stop": 15.19
   },
   "by_pick": {
     "count": 51,
     "win_rate_pct": 29.4,
-    "avg_return_pct": -2.44,
-    "median_return_pct": -15.07,
-    "avg_return_with_10pct_stop": 14.06
+    "avg_return_pct": -3.28,
+    "median_return_pct": -16.36,
+    "avg_return_with_10pct_stop": 13.89
   },
   "top": [
     {
@@ -30,8 +30,8 @@
       "theme": "Cybersecurity",
       "first_picked": "2026-04-15",
       "entry_price": 83.22,
-      "current_price": 196.77,
-      "return_pct": 136.45,
+      "current_price": 199.43,
+      "return_pct": 139.64,
       "times_picked": 5
     },
     {
@@ -39,8 +39,8 @@
       "theme": "Biotech / Life Sciences",
       "first_picked": "2026-04-13",
       "entry_price": 122.86,
-      "current_price": 276.67,
-      "return_pct": 125.19,
+      "current_price": 270.29,
+      "return_pct": 120.0,
       "times_picked": 1
     },
     {
@@ -48,8 +48,8 @@
       "theme": "Cybersecurity",
       "first_picked": "2026-05-27",
       "entry_price": 248.17,
-      "current_price": 403.83,
-      "return_pct": 62.72,
+      "current_price": 400.24,
+      "return_pct": 61.28,
       "times_picked": 2
     },
     {
@@ -57,18 +57,18 @@
       "theme": "Quantum / Emerging Tech",
       "first_picked": "2026-04-13",
       "entry_price": 378.42,
-      "current_price": 541.15,
-      "return_pct": 43.0,
+      "current_price": 545.55,
+      "return_pct": 44.17,
       "times_picked": 1
     },
     {
-      "ticker": "CGNX",
-      "theme": "Industrial AI / Robotics",
-      "first_picked": "2026-04-15",
-      "entry_price": 55.58,
-      "current_price": 61.82,
-      "return_pct": 11.23,
-      "times_picked": 4
+      "ticker": "VST",
+      "theme": "Nuclear / Next-Gen Energy",
+      "first_picked": "2026-06-12",
+      "entry_price": 147.8,
+      "current_price": 162.36,
+      "return_pct": 9.85,
+      "times_picked": 1
     }
   ],
   "bottom": [
@@ -77,8 +77,8 @@
       "theme": "Nuclear / Next-Gen Energy",
       "first_picked": "2026-03-26",
       "entry_price": 3.8,
-      "current_price": 0.2,
-      "return_pct": -94.74,
+      "current_price": 0.18,
+      "return_pct": -95.26,
       "times_picked": 1
     },
     {
@@ -86,35 +86,35 @@
       "theme": "Quantum / Emerging Tech",
       "first_picked": "2026-05-22",
       "entry_price": 31.11,
-      "current_price": 13.74,
-      "return_pct": -55.83,
+      "current_price": 13.48,
+      "return_pct": -56.67,
       "times_picked": 2
-    },
-    {
-      "ticker": "UUUU",
-      "theme": "Nuclear / Next-Gen Energy",
-      "first_picked": "2026-04-20",
-      "entry_price": 20.76,
-      "current_price": 9.66,
-      "return_pct": -53.47,
-      "times_picked": 6
     },
     {
       "ticker": "LUNR",
       "theme": "Space / Satellite",
       "first_picked": "2026-06-10",
       "entry_price": 27.27,
-      "current_price": 12.86,
-      "return_pct": -52.84,
+      "current_price": 12.23,
+      "return_pct": -55.15,
       "times_picked": 3
+    },
+    {
+      "ticker": "UUUU",
+      "theme": "Nuclear / Next-Gen Energy",
+      "first_picked": "2026-04-20",
+      "entry_price": 20.76,
+      "current_price": 9.4,
+      "return_pct": -54.72,
+      "times_picked": 6
     },
     {
       "ticker": "WVE",
       "theme": "Nuclear / Next-Gen Energy",
       "first_picked": "2026-03-27",
       "entry_price": 6.2,
-      "current_price": 3.28,
-      "return_pct": -47.1,
+      "current_price": 3.22,
+      "return_pct": -48.06,
       "times_picked": 1
     }
   ],
@@ -122,37 +122,37 @@
     "Biotech / Life Sciences": {
       "stocks": 4,
       "picks": 11,
-      "avg_return_pct": 24.91
+      "avg_return_pct": 23.46
     },
     "Cybersecurity": {
       "stocks": 2,
       "picks": 7,
-      "avg_return_pct": 99.58
+      "avg_return_pct": 100.46
     },
     "Defense Tech / Dual-Use": {
       "stocks": 1,
       "picks": 1,
-      "avg_return_pct": -36.16
+      "avg_return_pct": -37.71
     },
     "Industrial AI / Robotics": {
       "stocks": 2,
       "picks": 8,
-      "avg_return_pct": 4.34
+      "avg_return_pct": 2.38
     },
     "Nuclear / Next-Gen Energy": {
       "stocks": 5,
       "picks": 11,
-      "avg_return_pct": -45.97
+      "avg_return_pct": -46.64
     },
     "Quantum / Emerging Tech": {
       "stocks": 3,
       "picks": 4,
-      "avg_return_pct": -6.11
+      "avg_return_pct": -5.36
     },
     "Space / Satellite": {
       "stocks": 2,
       "picks": 9,
-      "avg_return_pct": -43.19
+      "avg_return_pct": -44.98
     }
   },
   "analyst_mismatch": {
