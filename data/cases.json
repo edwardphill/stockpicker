@@ -1,6 +1,6 @@
 {
   "schema": "https://edwardphill.github.io/stockpicker/data/schema/cases.schema.json",
-  "generated": "2026-10-13 02:38 UTC",
+  "generated": "2026-10-13 02:43 UTC",
   "cases": [
     {
       "ticker": "QLYS",
@@ -52,17 +52,17 @@
       "bear_verdict": "Monitor. The May 5 earnings print \u2014 specifically net new ARR trajectory, DBNER disclosure, and FY26 revenue guide \u2014 will resolve the central debate between sentiment-driven dislocation (bull) and structural competitive erosion (bear); until then, the asymmetry is not clearly favorable enough to size with conviction given the plausible $55-$73 downside range against a $133 bull target that requires multiple expansion\u2026",
       "path": {
         "max_drawdown_pct": -1.47,
-        "max_runup_pct": 140.24,
+        "max_runup_pct": 143.23,
         "stop_5": {
-          "exit_date": "2026-10-08",
-          "exit_price": 193.86,
-          "return_pct": 132.95,
+          "exit_date": "2026-10-12",
+          "exit_price": 196.77,
+          "return_pct": 136.45,
           "reason": "open"
         },
         "stop_10": {
-          "exit_date": "2026-10-08",
-          "exit_price": 193.86,
-          "return_pct": 132.95,
+          "exit_date": "2026-10-12",
+          "exit_price": 196.77,
+          "return_pct": 136.45,
           "reason": "open"
         }
       },
@@ -121,15 +121,15 @@
         "max_drawdown_pct": -2.03,
         "max_runup_pct": 139.04,
         "stop_5": {
-          "exit_date": "2026-10-08",
-          "exit_price": 264.57,
-          "return_pct": 115.34,
+          "exit_date": "2026-10-12",
+          "exit_price": 276.67,
+          "return_pct": 125.19,
           "reason": "open"
         },
         "stop_10": {
-          "exit_date": "2026-10-08",
-          "exit_price": 264.57,
-          "return_pct": 115.34,
+          "exit_date": "2026-10-12",
+          "exit_price": 276.67,
+          "return_pct": 125.19,
           "reason": "open"
         }
       },
@@ -182,15 +182,15 @@
         "max_drawdown_pct": 0.12,
         "max_runup_pct": 69.2,
         "stop_5": {
-          "exit_date": "2026-10-08",
-          "exit_price": 398.5,
-          "return_pct": 60.58,
+          "exit_date": "2026-10-12",
+          "exit_price": 403.83,
+          "return_pct": 62.72,
           "reason": "open"
         },
         "stop_10": {
-          "exit_date": "2026-10-08",
-          "exit_price": 398.5,
-          "return_pct": 60.58,
+          "exit_date": "2026-10-12",
+          "exit_price": 403.83,
+          "return_pct": 62.72,
           "reason": "open"
         }
       },
@@ -242,7 +242,7 @@
       "bear_verdict": "The bull's mechanism is: P/E expansion from ~20x to ~28-30x + earnings beats to $20+ EPS . Let's stress-test each component.",
       "path": {
         "max_drawdown_pct": -6.76,
-        "max_runup_pct": 39.99,
+        "max_runup_pct": 43.0,
         "stop_5": {
           "exit_date": "2026-06-25",
           "exit_price": 352.83,
@@ -250,9 +250,9 @@
           "reason": "stop"
         },
         "stop_10": {
-          "exit_date": "2026-10-08",
-          "exit_price": 522.61,
-          "return_pct": 38.1,
+          "exit_date": "2026-10-12",
+          "exit_price": 541.15,
+          "return_pct": 43.0,
           "reason": "open"
         }
       },
