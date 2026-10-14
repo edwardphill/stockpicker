@@ -1,11 +1,11 @@
 # Case studies: the best picks so far
 
-Built 2026-10-13 23:28 UTC from the tracker's top 4 stocks by return since first pick. Each shows what the system saw at the time (signals, analyst target, macro), what the AI bull and bear reports argued, and what happened. Source: [cases.json](https://edwardphill.github.io/stockpicker/data/cases.json).
+Built 2026-10-14 00:38 UTC from the tracker's top 4 stocks by return since first pick. Each shows what the system saw at the time (signals, analyst target, macro), what the AI bull and bear reports argued, and what happened. Source: [cases.json](https://edwardphill.github.io/stockpicker/data/cases.json).
 
 ## QLYS · +138.1% since 2026-04-15
 
 - Theme: Cybersecurity · Conviction: Strong Buy · Picked 5×
-- Entry $83.22 → now $198.11 over 181 days
+- Entry $83.22 → now $198.11 over 182 days
 - Analyst target at pick: $133.33 (+60.2% upside)
 - Signals: analyst target, analyst upside, insider buys, days to catalyst, vol ratio, rev accel, eps growth, fcf yield, short pct, pct above 52w low, pct below 52w high
 - Macro: VIX 19.12, 10Y 4.3%, risk on · Market cap $3.0B
@@ -26,7 +26,7 @@ Built 2026-10-13 23:28 UTC from the tracker's top 4 stocks by return since first
 ## ILMN · +120.7% since 2026-04-13
 
 - Theme: Biotech / Life Sciences · Conviction: Buy · Picked 1×
-- Entry $122.86 → now $271.17 over 183 days
+- Entry $122.86 → now $271.17 over 184 days
 - Analyst target at pick: $136.11 (+10.8% upside)
 - Signals: analyst target, analyst upside, insider buys, days to catalyst, rev accel, eps growth, fcf yield, pct above 52w low, pct below 52w high, rel strength
 - Macro: VIX 19.23, 10Y 4.31%, risk on · Market cap $18.8B
@@ -47,7 +47,7 @@ Built 2026-10-13 23:28 UTC from the tracker's top 4 stocks by return since first
 ## PANW · +60.0% since 2026-05-27
 
 - Theme: Cybersecurity · Conviction: Buy · Picked 2×
-- Entry $248.17 → now $397.03 over 139 days
+- Entry $248.17 → now $397.03 over 140 days
 - Analyst target at pick: $227.14 (-8.5% upside)
 - Signals: insider buys, days to catalyst, rev accel, eps growth, pct above 52w low, pct below 52w high, rel strength
 - Macro: VIX 17.01, 10Y 4.56%, risk on · Market cap $201.3B
@@ -69,7 +69,7 @@ Built 2026-10-13 23:28 UTC from the tracker's top 4 stocks by return since first
 ## MSFT · +43.6% since 2026-04-13
 
 - Theme: Quantum / Emerging Tech · Conviction: Strong Buy · Picked 1×
-- Entry $378.42 → now $543.45 over 183 days
+- Entry $378.42 → now $543.45 over 184 days
 - Analyst target at pick: $585.41 (+54.7% upside)
 - Signals: analyst target, analyst upside, insider buys, days to catalyst, rev accel, pct above 52w low, pct below 52w high
 - Macro: VIX 19.23, 10Y 4.31%, risk on · Market cap $2.81T
