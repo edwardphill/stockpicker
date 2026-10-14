@@ -1,6 +1,6 @@
 # Case studies: the best picks so far
 
-Built 2026-10-14 21:02 UTC from the tracker's top 4 stocks by return since first pick. Each shows what the system saw at the time (signals, analyst target, macro), what the AI bull and bear reports argued, and what happened. Source: [cases.json](https://edwardphill.github.io/stockpicker/data/cases.json).
+Built 2026-10-14 23:59 UTC from the tracker's top 4 stocks by return since first pick. Each shows what the system saw at the time (signals, analyst target, macro), what the AI bull and bear reports argued, and what happened. Source: [cases.json](https://edwardphill.github.io/stockpicker/data/cases.json).
 
 ## QLYS · +127.9% since 2026-04-15
 
