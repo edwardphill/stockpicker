@@ -1,6 +1,6 @@
 # StockPicker picks
 
-Prices as of 2026-10-15 20:25 UTC. 19 stocks, 51 picks (2026-03-26 to 2026-06-22). By stock: 31.6% win rate, -6.6% average return since first pick. Source: [picks.json](https://edwardphill.github.io/stockpicker/data/picks.json). Not financial advice.
+Prices as of 2026-10-15 23:07 UTC. 19 stocks, 51 picks (2026-03-26 to 2026-06-22). By stock: 31.6% win rate, -6.6% average return since first pick. Source: [picks.json](https://edwardphill.github.io/stockpicker/data/picks.json). Not financial advice.
 
 ## By stock (return since the first pick)
 
