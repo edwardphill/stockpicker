@@ -1,6 +1,6 @@
 {
   "schema": "https://edwardphill.github.io/stockpicker/data/schema/cases.schema.json",
-  "generated": "2026-10-14 23:59 UTC",
+  "generated": "2026-10-15 00:08 UTC",
   "cases": [
     {
       "ticker": "QLYS",
@@ -11,7 +11,7 @@
       "entry_price": 83.22,
       "current_price": 189.63,
       "return_pct": 127.87,
-      "days_held": 182,
+      "days_held": 183,
       "analyst_target_at_pick": 133.33,
       "analyst_upside_at_pick_pct": 60.2,
       "signals": [
@@ -54,15 +54,15 @@
         "max_drawdown_pct": -1.47,
         "max_runup_pct": 143.23,
         "stop_5": {
-          "exit_date": "2026-10-12",
-          "exit_price": 196.77,
-          "return_pct": 136.45,
+          "exit_date": "2026-10-13",
+          "exit_price": 198.11,
+          "return_pct": 138.06,
           "reason": "open"
         },
         "stop_10": {
-          "exit_date": "2026-10-12",
-          "exit_price": 196.77,
-          "return_pct": 136.45,
+          "exit_date": "2026-10-13",
+          "exit_price": 198.11,
+          "return_pct": 138.06,
           "reason": "open"
         }
       },
@@ -80,7 +80,7 @@
       "entry_price": 122.86,
       "current_price": 271.76,
       "return_pct": 121.19,
-      "days_held": 184,
+      "days_held": 185,
       "analyst_target_at_pick": 136.11,
       "analyst_upside_at_pick_pct": 10.8,
       "signals": [
@@ -121,15 +121,15 @@
         "max_drawdown_pct": -2.03,
         "max_runup_pct": 139.04,
         "stop_5": {
-          "exit_date": "2026-10-12",
-          "exit_price": 276.67,
-          "return_pct": 125.19,
+          "exit_date": "2026-10-13",
+          "exit_price": 271.18,
+          "return_pct": 120.72,
           "reason": "open"
         },
         "stop_10": {
-          "exit_date": "2026-10-12",
-          "exit_price": 276.67,
-          "return_pct": 125.19,
+          "exit_date": "2026-10-13",
+          "exit_price": 271.18,
+          "return_pct": 120.72,
           "reason": "open"
         }
       },
@@ -147,7 +147,7 @@
       "entry_price": 248.17,
       "current_price": 375.04,
       "return_pct": 51.12,
-      "days_held": 140,
+      "days_held": 141,
       "analyst_target_at_pick": 227.14,
       "analyst_upside_at_pick_pct": -8.5,
       "signals": [
@@ -182,15 +182,15 @@
         "max_drawdown_pct": 0.12,
         "max_runup_pct": 69.2,
         "stop_5": {
-          "exit_date": "2026-10-12",
-          "exit_price": 403.83,
-          "return_pct": 62.72,
+          "exit_date": "2026-10-13",
+          "exit_price": 397.03,
+          "return_pct": 59.98,
           "reason": "open"
         },
         "stop_10": {
-          "exit_date": "2026-10-12",
-          "exit_price": 403.83,
-          "return_pct": 62.72,
+          "exit_date": "2026-10-13",
+          "exit_price": 397.03,
+          "return_pct": 59.98,
           "reason": "open"
         }
       },
@@ -209,7 +209,7 @@
       "entry_price": 378.42,
       "current_price": 533.69,
       "return_pct": 41.03,
-      "days_held": 184,
+      "days_held": 185,
       "analyst_target_at_pick": 585.41,
       "analyst_upside_at_pick_pct": 54.7,
       "signals": [
@@ -242,7 +242,7 @@
       "bear_verdict": "The bull's mechanism is: P/E expansion from ~20x to ~28-30x + earnings beats to $20+ EPS . Let's stress-test each component.",
       "path": {
         "max_drawdown_pct": -6.76,
-        "max_runup_pct": 43.0,
+        "max_runup_pct": 43.61,
         "stop_5": {
           "exit_date": "2026-06-25",
           "exit_price": 352.83,
@@ -250,9 +250,9 @@
           "reason": "stop"
         },
         "stop_10": {
-          "exit_date": "2026-10-12",
-          "exit_price": 541.15,
-          "return_pct": 43.0,
+          "exit_date": "2026-10-13",
+          "exit_price": 543.45,
+          "return_pct": 43.61,
           "reason": "open"
         }
       },
