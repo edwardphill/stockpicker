@@ -1,6 +1,6 @@
 {
   "schema": "https://edwardphill.github.io/stockpicker/data/schema/cases.schema.json",
-  "generated": "2026-10-15 23:07 UTC",
+  "generated": "2026-10-15 23:54 UTC",
   "cases": [
     {
       "ticker": "QLYS",
@@ -54,15 +54,15 @@
         "max_drawdown_pct": -1.47,
         "max_runup_pct": 143.23,
         "stop_5": {
-          "exit_date": "2026-10-13",
-          "exit_price": 198.11,
-          "return_pct": 138.06,
+          "exit_date": "2026-10-15",
+          "exit_price": 192.65,
+          "return_pct": 131.49,
           "reason": "open"
         },
         "stop_10": {
-          "exit_date": "2026-10-13",
-          "exit_price": 198.11,
-          "return_pct": 138.06,
+          "exit_date": "2026-10-15",
+          "exit_price": 192.65,
+          "return_pct": 131.49,
           "reason": "open"
         }
       },
@@ -121,15 +121,15 @@
         "max_drawdown_pct": -2.03,
         "max_runup_pct": 139.04,
         "stop_5": {
-          "exit_date": "2026-10-13",
-          "exit_price": 271.18,
-          "return_pct": 120.72,
+          "exit_date": "2026-10-15",
+          "exit_price": 267.93,
+          "return_pct": 118.08,
           "reason": "open"
         },
         "stop_10": {
-          "exit_date": "2026-10-13",
-          "exit_price": 271.18,
-          "return_pct": 120.72,
+          "exit_date": "2026-10-15",
+          "exit_price": 267.93,
+          "return_pct": 118.08,
           "reason": "open"
         }
       },
@@ -182,15 +182,15 @@
         "max_drawdown_pct": 0.12,
         "max_runup_pct": 69.2,
         "stop_5": {
-          "exit_date": "2026-10-13",
-          "exit_price": 397.03,
-          "return_pct": 59.98,
+          "exit_date": "2026-10-15",
+          "exit_price": 370.27,
+          "return_pct": 49.2,
           "reason": "open"
         },
         "stop_10": {
-          "exit_date": "2026-10-13",
-          "exit_price": 397.03,
-          "return_pct": 59.98,
+          "exit_date": "2026-10-15",
+          "exit_price": 370.27,
+          "return_pct": 49.2,
           "reason": "open"
         }
       },
@@ -250,9 +250,9 @@
           "reason": "stop"
         },
         "stop_10": {
-          "exit_date": "2026-10-13",
-          "exit_price": 543.45,
-          "return_pct": 43.61,
+          "exit_date": "2026-10-15",
+          "exit_price": 539.44,
+          "return_pct": 42.55,
           "reason": "open"
         }
       },
