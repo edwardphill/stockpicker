@@ -1,32 +1,11 @@
 # Case studies: the best picks so far
 
-Built 2026-10-15 23:54 UTC from the tracker's top 4 stocks by return since first pick. Each shows what the system saw at the time (signals, analyst target, macro), what the AI bull and bear reports argued, and what happened. Source: [cases.json](https://edwardphill.github.io/stockpicker/data/cases.json).
+Built 2026-10-16 17:01 UTC from the tracker's top 4 stocks by return since first pick. Each shows what the system saw at the time (signals, analyst target, macro), what the AI bull and bear reports argued, and what happened. Source: [cases.json](https://edwardphill.github.io/stockpicker/data/cases.json).
 
-## QLYS · +131.5% since 2026-04-15
-
-- Theme: Cybersecurity · Conviction: Strong Buy · Picked 5×
-- Entry $83.22 → now $192.65 over 183 days
-- Analyst target at pick: $133.33 (+60.2% upside)
-- Signals: analyst target, analyst upside, insider buys, days to catalyst, vol ratio, rev accel, eps growth, fcf yield, short pct, pct above 52w low, pct below 52w high
-- Macro: VIX 19.12, 10Y 4.3%, risk on · Market cap $3.0B
-- Path: worst close -1.5%, best close +143.2% vs entry
-
-**Bull thesis then:** Our analysis suggests the market is mispricing QLYS on two fronts. First, recent share price weakness — driven by fears of AI-enabled cybersecurity disruption — has compressed the forward P/E to 10.4x, a level that, in our view, embeds an implausibly bearish scenario for a company growing revenue at 10% with 83% gross margins and nearly 30% net margins.
-
-**Catalysts cited:** Q1 FY26 Earnings (May 5, 2026): With revenue acceleration already visible in recent quarters (+8.7% QoQ improvement in growth rate), a beat-and-raise print could serve as the near-term catalyst for multiple re-rating. We will be focused on net new ARR, dollar-based net retention, and management commentary on AI-related product extensions.
-
-**Bear verdict then:** Monitor. The May 5 earnings print — specifically net new ARR trajectory, DBNER disclosure, and FY26 revenue guide — will resolve the central debate between sentiment-driven dislocation (bull) and structural competitive erosion (bear); until then, the asymmetry is not clearly favorable enough to size with conviction given the plausible $55-$73 downside range against a $133 bull target that requires multiple expansion…
-
-**Takeaways:**
-- Never closed more than -1.5% below entry, so neither stop would have triggered.
-- Picked 5 times; the repeats added exposure to the same name rather than a new idea.
-
-[Full bull/bear report](https://edwardphill.github.io/stockpicker/reports/QLYS-2026-04-15.html)
-
-## ILMN · +118.1% since 2026-04-13
+## ILMN · +117.1% since 2026-04-13
 
 - Theme: Biotech / Life Sciences · Conviction: Buy · Picked 1×
-- Entry $122.86 → now $267.93 over 185 days
+- Entry $122.86 → now $266.72 over 186 days
 - Analyst target at pick: $136.11 (+10.8% upside)
 - Signals: analyst target, analyst upside, insider buys, days to catalyst, rev accel, eps growth, fcf yield, pct above 52w low, pct below 52w high, rel strength
 - Macro: VIX 19.23, 10Y 4.31%, risk on · Market cap $18.8B
@@ -44,10 +23,51 @@ Built 2026-10-15 23:54 UTC from the tracker's top 4 stocks by return since first
 
 [Full bull/bear report](https://edwardphill.github.io/stockpicker/reports/ILMN-2026-04-13.html)
 
-## PANW · +49.2% since 2026-05-27
+## QLYS · +116.9% since 2026-04-15
+
+- Theme: Cybersecurity · Conviction: Strong Buy · Picked 5×
+- Entry $83.22 → now $180.50 over 184 days
+- Analyst target at pick: $133.33 (+60.2% upside)
+- Signals: analyst target, analyst upside, insider buys, days to catalyst, vol ratio, rev accel, eps growth, fcf yield, short pct, pct above 52w low, pct below 52w high
+- Macro: VIX 19.12, 10Y 4.3%, risk on · Market cap $3.0B
+- Path: worst close -1.5%, best close +143.2% vs entry
+
+**Bull thesis then:** Our analysis suggests the market is mispricing QLYS on two fronts. First, recent share price weakness — driven by fears of AI-enabled cybersecurity disruption — has compressed the forward P/E to 10.4x, a level that, in our view, embeds an implausibly bearish scenario for a company growing revenue at 10% with 83% gross margins and nearly 30% net margins.
+
+**Catalysts cited:** Q1 FY26 Earnings (May 5, 2026): With revenue acceleration already visible in recent quarters (+8.7% QoQ improvement in growth rate), a beat-and-raise print could serve as the near-term catalyst for multiple re-rating. We will be focused on net new ARR, dollar-based net retention, and management commentary on AI-related product extensions.
+
+**Bear verdict then:** Monitor. The May 5 earnings print — specifically net new ARR trajectory, DBNER disclosure, and FY26 revenue guide — will resolve the central debate between sentiment-driven dislocation (bull) and structural competitive erosion (bear); until then, the asymmetry is not clearly favorable enough to size with conviction given the plausible $55-$73 downside range against a $133 bull target that requires multiple expansion…
+
+**Takeaways:**
+- Never closed more than -1.5% below entry, so neither stop would have triggered.
+- Picked 5 times; the repeats added exposure to the same name rather than a new idea.
+
+[Full bull/bear report](https://edwardphill.github.io/stockpicker/reports/QLYS-2026-04-15.html)
+
+## MSFT · +39.5% since 2026-04-13
+
+- Theme: Quantum / Emerging Tech · Conviction: Strong Buy · Picked 1×
+- Entry $378.42 → now $527.82 over 186 days
+- Analyst target at pick: $585.41 (+54.7% upside)
+- Signals: analyst target, analyst upside, insider buys, days to catalyst, rev accel, pct above 52w low, pct below 52w high
+- Macro: VIX 19.23, 10Y 4.31%, risk on · Market cap $2.81T
+- Path: worst close -6.8%, best close +43.6% vs entry
+
+**Bull thesis then:** At $378, MSFT trades at ~20x forward earnings — cheap for a business growing revenue 16.7% with 39% profit margins. The 50% path to ~$568+ requires: Azure AI monetization inflection: Azure is already accelerating (QoQ revenue up 7.9%).
+
+**Catalysts cited:** Apr 29, 2025 Q3 FY25 Earnings — binary catalyst in 16 days . Azure growth guidance is the key number.
+
+**Bear verdict then:** The bull's mechanism is: P/E expansion from ~20x to ~28-30x + earnings beats to $20+ EPS . Let's stress-test each component.
+
+**Takeaways:**
+- A -5% stop would have sold it on 2026-06-25 at -6.8%; the worst close on the way was -6.8%.
+
+[Full bull/bear report](https://edwardphill.github.io/stockpicker/reports/MSFT-2026-04-13.html)
+
+## PANW · +37.9% since 2026-05-27
 
 - Theme: Cybersecurity · Conviction: Buy · Picked 2×
-- Entry $248.17 → now $370.27 over 141 days
+- Entry $248.17 → now $342.32 over 142 days
 - Analyst target at pick: $227.14 (-8.5% upside)
 - Signals: insider buys, days to catalyst, rev accel, eps growth, pct above 52w low, pct below 52w high, rel strength
 - Macro: VIX 17.01, 10Y 4.56%, risk on · Market cap $201.3B
@@ -65,23 +85,3 @@ Built 2026-10-15 23:54 UTC from the tracker's top 4 stocks by return since first
 - Picked 2 times; the repeats added exposure to the same name rather than a new idea.
 
 [Full bull/bear report](https://edwardphill.github.io/stockpicker/reports/PANW-2026-05-27.html)
-
-## MSFT · +42.5% since 2026-04-13
-
-- Theme: Quantum / Emerging Tech · Conviction: Strong Buy · Picked 1×
-- Entry $378.42 → now $539.44 over 185 days
-- Analyst target at pick: $585.41 (+54.7% upside)
-- Signals: analyst target, analyst upside, insider buys, days to catalyst, rev accel, pct above 52w low, pct below 52w high
-- Macro: VIX 19.23, 10Y 4.31%, risk on · Market cap $2.81T
-- Path: worst close -6.8%, best close +43.6% vs entry
-
-**Bull thesis then:** At $378, MSFT trades at ~20x forward earnings — cheap for a business growing revenue 16.7% with 39% profit margins. The 50% path to ~$568+ requires: Azure AI monetization inflection: Azure is already accelerating (QoQ revenue up 7.9%).
-
-**Catalysts cited:** Apr 29, 2025 Q3 FY25 Earnings — binary catalyst in 16 days . Azure growth guidance is the key number.
-
-**Bear verdict then:** The bull's mechanism is: P/E expansion from ~20x to ~28-30x + earnings beats to $20+ EPS . Let's stress-test each component.
-
-**Takeaways:**
-- A -5% stop would have sold it on 2026-06-25 at -6.8%; the worst close on the way was -6.8%.
-
-[Full bull/bear report](https://edwardphill.github.io/stockpicker/reports/MSFT-2026-04-13.html)
